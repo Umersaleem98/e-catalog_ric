@@ -13,3 +13,7 @@
 
 {{-- <link rel="stylesheet" type="text/css" href="{{ asset('templates/styles/teachers_styles.css') }}"> --}}
 <link rel="stylesheet" type="text/css" href="{{ asset('templates/styles/teachers_responsive.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('templates/styles/payment.css') }}">
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
