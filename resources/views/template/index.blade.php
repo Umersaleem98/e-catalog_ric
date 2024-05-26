@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Students Stories</title>
     @include('template.head')
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
@@ -30,13 +31,9 @@
 		<div class="menu_close_container">
 			<div class="menu_close"></div>
 		</div>
-
 		<!-- Menu Items -->
-
 			</div>
-
 		</div>
-
 	</div>
 
 	<!-- Home -->
@@ -46,8 +43,9 @@
 
             <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/teachers_background.jpg') }}')"></div>
 		</div>
-		<div class="home_content">
-			<h1>Students Stories</h1>
+		<div class="home_content  bg-transparent">
+			<h1 class="display-1">Students Stories</h1>
+            {{-- <span>Student Stories</span> --}}
 		</div>
 	</div>
 
@@ -55,16 +53,37 @@
 
 	<div class="teachers page_section">
         <div class="container">
-            <div class="col-md-3">
-                <form action="{{ url('student_stories') }}" method="GET">
-                    <select name="gender" id="genderFilter" class="form-select" aria-label="Default select example">
-                        <option value="all" selected>Show All</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
-                    <button type="submit" class="btn btn-primary mt-3">Filter</button>
-                </form>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form action="{{ url('student_stories') }}" method="GET" id="filterForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <select name="gender" id="genderFilter" class="form-select" aria-label="Select Gender">
+                                        <option value="all" selected>Show All Genders</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <select name="province" id="provinceFilter" class="form-select" aria-label="Select Province">
+                                        <option value="all" selected>Show All Provinces</option>
+                                        <option value="Panjab">Panjab</option>
+                                        <option value="sindh">Sindh</option>
+                                        <!-- Add more options for provinces -->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-primary">Filter</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
+
 
             <div class="row mt-3">
                 <!-- Teacher -->
@@ -81,6 +100,7 @@
                             <div class="card-title"><a href="#">{{$item->name}}</a></div>
                             <div class="card-text">{{$item->father_name}}</div>
                             <div class="card-text">{{$item->gender}}</div>
+                            <div class="card-text">{{$item->province}}</div>
                             <div class="teacher_social">
                                 <ul class="menu_social">
                                     <li class="menu_social_item"><a href="#"><i class="fab fa-pinterest"></i></a></li>

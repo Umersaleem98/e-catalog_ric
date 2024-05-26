@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Story</title>
     @include('template.head')
 </head>
 <body>
@@ -24,8 +25,8 @@
 
             <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/teachers_background.jpg') }}')"></div>
 		</div>
-		<div class="home_content">
-			<h1> Student Stories</h1>
+		<div class="home_content  bg-transparent">
+			<h1 class="display-1"> Story</h1>
 		</div>
 	</div>
 
@@ -74,6 +75,7 @@
                         <p id="statement_of_purpose">{{$students->statement_of_purpose}}</p>
                         <!-- Add a button to toggle visibility -->
                         <button type="button" id="show_more_btn" class="btn btn-primary btn-sm">Show More</button>
+                        <a href="{{url('payment')}}"  class="btn btn-primary btn-sm">Payment</a>
                     </div>
                 </div>
             </div>
