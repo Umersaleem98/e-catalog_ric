@@ -24,13 +24,13 @@ class StudentController extends Controller
         $students = Student::paginate(6);
     }
 
-    return view('template.index', compact('students'));
+    return view('template.support_scholar.index', compact('students'));
 }
 
     public function stuedent_stories_ind($id)
     {
         // $students = Student::all();
         $students = Student::find($id);
-        return view('template.student_stories', compact('students'));
+        return view('template.support_scholar.student_stories', compact('students'));
     }
 }

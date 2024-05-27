@@ -3,6 +3,12 @@
 <head>
     <title>Story</title>
     @include('template.head')
+    <style>
+        .info_container {
+    color: black;
+}
+
+    </style>
 </head>
 <body>
 
@@ -52,7 +58,7 @@
                 </div>
                 <!-- Right Section for Information -->
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="info_container">
+                    <div class="info_container" style="color: black;">
                         <h3>Student Name: <span>{{$students->name}}</span>  <span>{{$students->qalam_id}}</span></h3>
                         <!-- Add an ID to the paragraph tag for easier targeting with JavaScript -->
                         <h4>Father Name: <span>{{$students->father_name}}</span></h4>
@@ -70,14 +76,15 @@
                         <h4>Monthly Income: <span>{{$students->monthly_income}}</span></h4>
                         <!-- Add a unique ID to the paragraph tag for targeting -->
                         <br>
-                        <h3>Statement of Purpose</h3>
                         <!-- Add an ID to the paragraph tag for easier targeting with JavaScript -->
-                        <p id="statement_of_purpose">{{$students->statement_of_purpose}}</p>
+                        <p id="statement_of_purpose">"{{$students->statement_of_purpose}}"</p>
                         <!-- Add a button to toggle visibility -->
                         <button type="button" id="show_more_btn" class="btn btn-primary btn-sm">Show More</button>
-                        <a href="{{url('payment')}}"  class="btn btn-primary btn-sm">Payment</a>
+                        {{-- <a href="{{url('payment')}}"  class="btn btn-primary btn-sm">Payment</a> --}}
+                        <a href="{{ url('payment', ['id' => $students->id]) }}" class="btn btn-primary btn-sm">Payment</a>
                     </div>
                 </div>
+
             </div>
 
 		</div>

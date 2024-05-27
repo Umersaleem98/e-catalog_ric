@@ -2,65 +2,32 @@
 <html lang="en">
 
 <head>
+    <title>Payments</title>
     @include('template.head')
 </head>
 
 <body>
     <div class="wrapper">
-        <h2>Payment Form</h2>
+        <h2>Payment for {{$students->name}}</h2>
         <form action="" method="post">
             <!--Account Information Start-->
             <h4>Account</h4>
             <div class="input_group">
                 <div class="input_box">
-                    <input type="text" placeholder="Full Name" required class="name">
+                    <input type="text" name="donner_name" placeholder="Full Name" required class="name">
                     <i class="fa fa-user icon"></i>
                 </div>
                 <div class="input_box">
-                    <input type="text" placeholder="Name on Card" required class="name">
+                    <input type="text" name="card_on_name" placeholder="Name on Card" required class="name">
                     <i class="fa fa-user icon"></i>
                 </div>
             </div>
             <div class="input_group">
                 <div class="input_box">
-                    <input type="email" placeholder="Email Address" required class="name">
+                    <input type="email" name="donner_email" placeholder="Email Address" required class="name">
                     <i class="fa fa-envelope icon"></i>
                 </div>
             </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="text" placeholder="Address" required class="name">
-                    <i class="fa fa-map-marker icon" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="text" placeholder="City" required class="name">
-                    <i class="fa fa-institution icon"></i>
-                </div>
-            </div>
-            <!--Account Information End-->
-
-
-            <!--DOB & Gender Start-->
-            <div class="input_group">
-                <div class="input_box">
-                    <h4>Date Of Birth</h4>
-                    <input type="text" placeholder="DD" required class="dob">
-                    <input type="text" placeholder="MM" required class="dob">
-                    <input type="text" placeholder="YYYY" required class="dob">
-                </div>
-                <div class="input_box">
-                    <h4>Gender</h4>
-                    <input type="radio" name="gender" class="radio" id="b1" checked>
-                    <label for="b1">Male</label>
-                    <input type="radio" name="gender" class="radio" id="b2">
-                    <label for="b2">Female</label>
-                </div>
-            </div>
-            <!--DOB & Gender End-->
-
-
             <!--Payment Details Start-->
             <div class="input_group">
                 <div class="input_box">
@@ -105,7 +72,7 @@
 
             <div class="input_group">
                 <div class="input_box">
-                    <button type="submit">PAY NOW</button>
+                    <button type="submit" name="submit">PAY NOW</button>
                 </div>
             </div>
 

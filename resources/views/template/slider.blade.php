@@ -54,7 +54,7 @@
                 <a href="{{url('student_stories')}}"> <img src="{{ asset('templates/images/professor.svg') }}" class="svg" alt="">
                  <div class="hero_box_content">
                      <h2 class="hero_box_title">Support a Scholar</h2>
-                     <a href="" class="hero_box_link">View More</a>
+                     <a href="{{url('student_stories')}}" class="hero_box_link">View More</a>
                  </div></a>
              </div>
         </div>
