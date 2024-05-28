@@ -22,7 +22,7 @@
                 <ul class="main_nav_list">
                     <li class="main_nav_item"><a href="{{url('/')}}">home</a></li>
                     <li class="main_nav_item"><a href="{{url('about_us')}}">about us</a></li>
-                    <li class="main_nav_item"><a href="courses.html">Students</a></li>
+                    <li class="main_nav_item"><a href="{{url('/out_team')}}">Our Team</a></li>
                     <li class="main_nav_item"><a href="contact.html">contact</a></li>
                 </ul>
             </div>

@@ -60,12 +60,12 @@
         </div>
         <div class="col-12 col-sm-6 col-md-4 mb-3">
             <div class="hero_box d-flex flex-row align-items-center justify-content-start">
-                <img src="{{ asset('templates/images/earth-globe.svg') }}" class="svg" alt="">
-                <div class="hero_box_content">
-                    <h2 class="hero_box_title">Fund a Project</h2>
-                    <a href="courses.html" class="hero_box_link">View More</a>
-                </div>
-            </div>
+                <a href="{{url('select_project')}}"> <img src="{{ asset('templates/images/earth-globe.svg') }}" class="svg" alt="">
+                 <div class="hero_box_content">
+                     <h2 class="hero_box_title">Fund a Project</h2>
+                     <a href="{{url('select_project')}}" class="hero_box_link">View More</a>
+                 </div></a>
+             </div>
         </div>
     </div>
 </div>

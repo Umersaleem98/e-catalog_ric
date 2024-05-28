@@ -16,6 +16,7 @@ class HomeController extends Controller
 
     public function about_us()
     {
+
         return view('template.about_us');
     }
 }

@@ -1,84 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Payments</title>
+    <title>Payment </title>
     @include('template.head')
+    <style>
+        /* Custom CSS for responsiveness */
+        @media (max-width: 767px) {
+            .ml-sm-5 {
+                margin-left: 0 !important;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <div class="wrapper">
-        <h2>Payment for {{$students->name}}</h2>
-        <form action="" method="post">
-            <!--Account Information Start-->
-            <h4>Account</h4>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="text" name="donner_name" placeholder="Full Name" required class="name">
-                    <i class="fa fa-user icon"></i>
-                </div>
-                <div class="input_box">
-                    <input type="text" name="card_on_name" placeholder="Name on Card" required class="name">
-                    <i class="fa fa-user icon"></i>
-                </div>
-            </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="email" name="donner_email" placeholder="Email Address" required class="name">
-                    <i class="fa fa-envelope icon"></i>
-                </div>
-            </div>
-            <!--Payment Details Start-->
-            <div class="input_group">
-                <div class="input_box">
-                    <h4>Payment Details</h4>
-                    <input type="radio" name="pay" class="radio" id="bc1" checked>
-                    <label for="bc1"><span>
-                            <i class="fa fa-cc-visa"></i>Credit Card</span></label>
-                    <input type="radio" name="pay" class="radio" id="bc2">
-                    <label for="bc2"><span>
-                            <i class="fa fa-cc-paypal"></i>Paypal</span></label>
-                </div>
-            </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="tel" name="" class="name" placeholder="Card Number 1111-2222-3333-4444" required>
-                    <i class="fa fa-credit-card icon"></i>
-                </div>
-            </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <input type="tel" name="" class="name" placeholder="Card CVC 632" required>
-                    <i class="fa fa-user icon"></i>
-                </div>
-            </div>
-            <div class="input_group">
-                <div class="input_box">
-                    <div class="input_box">
-                        <input type="number" placeholder="Exp Month" required class="name">
-                        <i class="fa fa-calendar icon" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="input_box">
-                    <input type="number" placeholder="Exp Year" required class="name">
-                    <i class="fa fa-calendar-o icon" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="input_box">
-                <input type="number" placeholder="Enter Amount" required class="name">
-                <i class="fa fa-money icon" aria-hidden="true"></i>
-            </div>
-            <!--Payment Details End-->
 
-            <div class="input_group">
-                <div class="input_box">
-                    <button type="submit" name="submit">PAY NOW</button>
-                </div>
-            </div>
+<div class="super_container">
 
-        </form>
+    <!-- Header -->
+
+    @include('template.navbar')
+
+    <div class="home">
+        <div class="home_background_container prlx_parent">
+
+            <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/teachers_background.jpg') }}')"></div>
+        </div>
+        <div class="home_content  bg-transparent">
+            {{-- <h1 class="display-1">Select Project for Funds</h1> --}}
+            {{-- <span>Student Stories</span> --}}
+        </div>
     </div>
 
-</body>
 
+    <div class="events page_section">
+        <div class="container">
+
+            <div class="row">
+                <div class="col">
+                    <div class="section_title text-center">
+                        <h1 class="">Pay the fund</h1>
+                    </div>
+                </div>
+            </div>
+
+            @if(session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <form method="POST" action="{{ url('payments') }}" enctype="multipart/form-data">
+                            @csrf
+                            <input type="text" name="student_name" class="form-control" value="{{$students->name}}" hidden>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="donor_name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="donor_name" name="donor_name">
+                                </div>
+                                <div class="col">
+                                    <label for="card_on_name" class="form-label">Card Holder's Name</label>
+                                    <input type="text" class="form-control" id="card_on_name" name="card_on_name">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="donor_email" class="form-label">Your Email</label>
+                                    <input type="email" class="form-control" id="donor_email" name="donor_email">
+                                </div>
+                                <div class="col">
+                                    <label for="cnic_number" class="form-label">CNIC Number</label>
+                                    <input type="text" class="form-control" id="cnic_number" name="cnic_number">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="card_number" class="form-label">Card Number</label>
+                                    <input type="text" class="form-control" id="card_number" name="card_number">
+                                </div>
+                                <div class="col">
+                                    <label for="card_cvc" class="form-label">Card CVC</label>
+                                    <input type="text" class="form-control" id="card_cvc" name="card_cvc">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="duration" class="form-label">Duration</label>
+                                    <select class="form-select" aria-label="Default select example" id="duration" name="duration">
+                                        <option value="6">6 Months</option>
+                                        <option value="1">1 Year</option>
+                                        <option value="2">2 Years</option>
+                                        <option value="4">4 Years</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="amount" class="form-label">Amount</label>
+                                    <input type="text" class="form-control" id="amount" name="amount">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="" class="form-label">Prove </label>
+                                    <input type="file" class="form-control"  name="prove">
+                                </div>
+
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    @include('template.footer')
+</body>
 </html>
+<script>
+    $(document).ready(function() {
+        $('#duration').change(function() {
+            var duration = $(this).val();
+            var amount = 0;
+
+            if (duration == '6') {
+                amount = 200000;
+            } else if (duration == '1') {
+                amount = 400000;
+            } else if (duration == '2') {
+                amount = 1000000;
+            } else if (duration == '4') {
+                amount = 2000000;
+            }
+
+            $('#amount').val(amount);
+        });
+    });
+</script>
