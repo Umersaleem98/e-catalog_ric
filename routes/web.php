@@ -12,7 +12,8 @@ use App\Http\Controllers\StudentController;
 // Home Screens
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about_us', [HomeController::class, 'about_us']);
-Route::get('/out_team', [TeamController::class, 'team']);
+Route::get('/our_team', [TeamController::class, 'team']);
+Route::get('/meet_out_team/{id}', [TeamController::class, 'meet_team']);
 
 Route::get('/students', [StudentController::class, 'index']);
 

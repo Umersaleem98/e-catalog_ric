@@ -11,16 +11,7 @@
 
 @include('template.navbar')
 
-<div class="home">
-    <div class="home_background_container prlx_parent">
-
-        <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/teachers_background.jpg') }}')"></div>
-    </div>
-    <div class="home_content  bg-transparent">
-        {{-- <h1 class="display-1">Select Project for Funds</h1> --}}
-        {{-- <span>Student Stories</span> --}}
-    </div>
-</div>
+@include('template.home')
 
 
 <div class="events page_section">

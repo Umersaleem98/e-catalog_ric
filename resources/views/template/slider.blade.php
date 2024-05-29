@@ -49,7 +49,7 @@
 
  <div class="container-fluid" style="background-color: #1A1A1A">
     <div class="row justify-content-center">
-        <div class="col-12 col-sm-6 col-md-4 mb-3">
+        <div class="col-12 col-sm-6 col-md-4 ">
             <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                 <a href="{{url('student_stories')}}"> <img src="{{ asset('templates/images/professor.svg') }}" class="svg" alt="">
                  <div class="hero_box_content">
@@ -58,7 +58,7 @@
                  </div></a>
              </div>
         </div>
-        <div class="col-12 col-sm-6 col-md-4 mb-3">
+        <div class="col-12 col-sm-6 col-md-4 ">
             <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                 <a href="{{url('select_project')}}"> <img src="{{ asset('templates/images/earth-globe.svg') }}" class="svg" alt="">
                  <div class="hero_box_content">

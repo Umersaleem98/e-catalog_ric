@@ -4,53 +4,58 @@
     <title>About Us</title>
     @include('template.head')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .img{
+            border-radius: 50%;
+        }
+
+                    .justified-content {
+                        text-align: justify;
+                    }
+    </style>
 </head>
 <body>
 <div class="super_container">
     <!-- Header -->
     @include('template.navbar')
     <!-- Home -->
-    <div class="home">
-        <div class="home_background_container prlx_parent">
-            <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/teachers_background.jpg') }}')"></div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center mt-5" style="color:black">About Us</h1>
+    @include('template.home')
+    <div class="row mt-5">
+        <div class="col">
+            <div class="section_title text-center">
+                <h1 class="">About Us</h1>
             </div>
         </div>
     </div>
     <!-- About Section -->
-    <div class="about-section" style="border-top: 1px solid black; border-bottom: 1px solid black">
-        <div class="container">
+    <div class="about-section mt-4" style="border-top: 1px solid black; border-bottom: 1px solid black">
+        <div class="container ">
             <div class="row">
                 <!-- Left Section for Images -->
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="image-container">
-                        <img src="{{ asset('templates/images/teacher_1.jpg') }}" alt="Image 1">
+                <div class="col-lg-4 col-md-4 col-sm-12 ">
+                    <div class="image-container" class="">
+                        <img src="{{ asset('team/dr_rizwan.png') }}" alt="Image 1" class="">
                     </div>
                 </div>
                 <!-- Right Section for Content -->
                 <div class="col-lg-8 col-md-8 col-sm-12">
                     <div class="content-container">
-                        <h2>The Legacy of Change in a Nutshell &nbsp;&nbsp;&nbsp;<span onclick="toggleContent()"><i class="fa-solid fa-plus" id="icon1"></i><i class="fa-solid fa-minus" id="icon1-minus" style="display:none;"></i></span></h2>
-                        <p>
+                        <h2>NUST: The Legacy of Change in a Nutshell &nbsp;&nbsp;&nbsp;<span onclick="toggleContent()"><i class="fa-solid fa-plus" id="icon1"></i><i class="fa-solid fa-minus" id="icon1-minus" style="display:none;"></i></span></h2>
+                        <p class="justified-content">
                             For more than 30 years NUST has been deploying scientific and technological innovation to meet the greater challenges of our age by translating world-leading academic research into commercial, scalable innovations that can respond to complex societal problems. To do that, NUST skims the cream of the brilliance Pakistan produces and trains those brilliant minds to produce top-class innovation and research. Unfortunately, the economic landscape of Pakistan does not allow for many of those bright minds to afford higher education.  Our aim is to not only become the driving force of Pakistan’s knowledge economy but at the heart of our objective lies the very dream of turning NUST into a need-blind university. 
                         </p>
                         <div class="more-content">
-                            <p>
+                            <p class="justified-content">
                                 To rise to the challenge, NUST strategically initiated the NUST Trust Fund (NTF) in 2012. Since its inception, NTF has dedicated itself to provide essential financial support for the university's mission—advancing cutting-edge research, supporting teaching and learning, developing world-class infrastructure, and financing scholarships for deserving students. 
                                 <br>
                                 <br>
                                 In tandem, the University Advancement Office serves as a dynamic resource mobilization hub, fostering partnerships and collaborations to propel the university's developmental projects. At its core, the office champions equity, diversity, and inclusion (EDI), ensuring that every aspiring mind, irrespective of background, can script their unique journey within our diverse university community.
                             </p>
-
                         </div>
                         {{-- <a class="read-more" onclick="toggleContent()">Read More</a> --}}
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
