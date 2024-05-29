@@ -15,17 +15,32 @@ class StudentController extends Controller
     }
 
     public function stuedent_stories(Request $request)
-{
-    $gender = $request->input('gender');
+    {
+        $gender = $request->input('gender');
+        $province = $request->input('province');
+        $discipline = $request->input('discipline');
 
-    if ($gender && $gender !== 'all') {
-        $students = Student::where('gender', $gender)->paginate(6);
-    } else {
-        $students = Student::paginate(6);
+        $query = Student::query();
+
+        if ($gender && $gender !== 'all') {
+            $query->where('gender', $gender);
+        }
+
+        if ($province && $province !== 'all') {
+            $query->where('province', $province);
+        }
+
+        if ($discipline && $discipline !== 'all') {
+            $query->where('discipline', $discipline);
+        }
+
+        $students = $query->paginate(8); // Always paginate by default
+
+        return view('template.support_scholar.index', compact('students'));
     }
 
-    return view('template.support_scholar.index', compact('students'));
-}
+
+
 
     public function stuedent_stories_ind($id)
     {

@@ -28,13 +28,13 @@
         </div>
     </div>
     <!-- About Section -->
-    <div class="about-section mt-4" style="border-top: 1px solid black; border-bottom: 1px solid black">
+    <div class="about-section mt-4" >
         <div class="container ">
             <div class="row">
                 <!-- Left Section for Images -->
                 <div class="col-lg-4 col-md-4 col-sm-12 ">
-                    <div class="image-container" class="">
-                        <img src="{{ asset('team/dr_rizwan.png') }}" alt="Image 1" class="">
+                    <div class="image-container" style="border-radius: 50%;">
+                        <img src="{{ asset('team/dr_rizwan.png') }}" alt="Image 1" style="border-radius: 5%;">
                     </div>
                 </div>
                 <!-- Right Section for Content -->
@@ -60,7 +60,25 @@
         </div>
     </div>
     <!-- New Section with Image on the Right -->
-    <div class="about-section" style="border-top: 1px solid black; border-bottom: 1px solid black">
+    <div class="container ">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <h2 class="text-dark">Our Vision</h2>
+                <p class="justified-content text-dark">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quia nam labore odio quisquam sapiente rerum dicta modi nisi voluptas, minus blanditiis doloremque porro incidunt beatae magnam illum ipsam odit!
+                </p>
+            </div>
+            <div class="col-md-6 text-center">
+                <h2 class="text-dark">Our Mission</h2>
+                <p class="justified-content text-dark">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quia nam labore odio quisquam sapiente rerum dicta modi nisi voluptas, minus blanditiis doloremque porro incidunt beatae magnam illum ipsam odit!
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    {{-- <div class="about-section" style="border-top: 1px solid black; border-bottom: 1px solid black">
         <div class="container">
             <div class="row">
                 <!-- Left Section for Content -->
@@ -84,7 +102,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 <!------ Include the above in your HEAD tag ---------->
 <!-- Team -->
 <br>

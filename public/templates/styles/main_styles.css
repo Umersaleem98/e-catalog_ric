@@ -370,9 +370,9 @@ section
 .main_nav_item a
 {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
+	font-size: 15px;
 	text-transform: uppercase;
-	font-weight: 900;
+	font-weight: 800;
 	color: #3a3a3a;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;

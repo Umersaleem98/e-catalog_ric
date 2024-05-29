@@ -19,4 +19,10 @@ class HomeController extends Controller
 
         return view('template.about_us');
     }
+
+    public function contact_us()
+    {
+
+        return view('template.contact_us');
+    }
 }

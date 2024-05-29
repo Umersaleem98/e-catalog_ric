@@ -29,7 +29,7 @@
                     <li class="main_nav_item"><a href="{{url('/')}}">home</a></li>
                     <li class="main_nav_item"><a href="{{url('about_us')}}">about us</a></li>
                     <li class="main_nav_item"><a href="{{url('/our_team')}}">Our Team</a></li>
-                    <li class="main_nav_item"><a href="contact.html">contact</a></li>
+                    <li class="main_nav_item"><a href="{{url('/contact_us')}}">contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -60,10 +60,8 @@
 				<ul class="menu_list menu_mm">
 					<li class="menu_item menu_mm"><a href="{{url('/')}}">home</a>/li>
 					<li class="menu_item menu_mm"><a href="{{url('about_us')}}">About us</a></li>
-					<li class="menu_item menu_mm"><a href="courses.html">Courses</a></li>
-					<li class="menu_item menu_mm"><a href="elements.html">Elements</a></li>
-					<li class="menu_item menu_mm"><a href="news.html">News</a></li>
-					<li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
+                    <li class="menu_item menu_mm"><a href="{{url('/our_team')}}">Our Team</a></li>
+					<li class="menu_item menu_mm"><a href="{{url('/contact_us')}}">contact</a></li>
 				</ul>
 
 				<!-- Menu Social -->
