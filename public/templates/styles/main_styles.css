@@ -84,7 +84,7 @@ p
 {
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
-	line-height: 2.29;
+	line-height: 1.7;
 	font-weight: 400;
 	color: #a5a5a5;
 	-webkit-font-smoothing: antialiased;
@@ -803,11 +803,11 @@ section
 }
 .svg path
 {
-	fill: #00548E;
+	fill: yellow;
 }
 .hero_box svg
 {
-	width: 62px;
+	width: 72px;
 	height: auto;
 }
 .hero_box:hover svg path
@@ -822,7 +822,7 @@ section
 }
 .hero_box_title
 {
-	font-size: 24px;
+	font-size: 26px;
 	font-weight: 500;
 	color: #FFFFFF;
 	margin-bottom: 7px;
@@ -1632,7 +1632,7 @@ input:last-of-type
 	font-size: 22px;
 	font-weight: 500;
 	color: #1a1a1a;
-	line-height: 1.2;
+	line-height: 1;
 }
 .card-title a:hover
 {

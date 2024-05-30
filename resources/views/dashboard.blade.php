@@ -30,7 +30,9 @@
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
 
+
     <!-- BEGIN: Footer-->
+  @include('layouts.content')
   @include('layouts.footer')
     <!-- END: Footer-->
 

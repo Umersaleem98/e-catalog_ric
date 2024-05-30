@@ -28,10 +28,10 @@
 <div class="container mt-5">
     <!-- First Section -->
     <div class="row mb-4">
-        <div class="col-md-3">
-            <img src="{{ asset('templates/images/teacher_1.jpg') }}" class="img-fluid" alt="Responsive image">
+        <div class="col-md-6">
+            <img src="{{ asset('project_category/boyes_hotel_2.png') }}" class="img-fluid" alt="Responsive image">
         </div>
-        <div class="col-md-9 d-flex align-items-center">
+        <div class="col-md-6 d-flex align-items-center">
             <div>
                 <br>
                 <h1 class="text-center">{{$project_category->project_name}}</h1>

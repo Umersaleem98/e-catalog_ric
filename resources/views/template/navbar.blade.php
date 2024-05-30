@@ -1,9 +1,3 @@
-<style>
-
-
-</style>
-
-
 <header class="header d-flex flex-row">
     <div class="header_content d-flex flex-row align-items-center">
         <!-- Logo -->
@@ -29,7 +23,7 @@
                     <li class="main_nav_item"><a href="{{url('/')}}">home</a></li>
                     <li class="main_nav_item"><a href="{{url('about_us')}}">about us</a></li>
                     <li class="main_nav_item"><a href="{{url('/our_team')}}">Our Team</a></li>
-                    <li class="main_nav_item"><a href="{{url('/contact_us')}}">contact</a></li>
+                    <li class="main_nav_item"><a href="{{url('/contact_us')}}">contact Us</a></li>
                 </ul>
             </div>
         </nav>
@@ -37,7 +31,9 @@
     <div class="header_side d-flex flex-row justify-content-center align-items-center " style="background-color:#FFFFFF;">
 
         {{-- <a href="#" class="btn btn-success btn-lg rounded-pill" style="width: 60%;">Donate Now</a> --}}
-        <i class="fas fa-donate" style="font-size: 60px"></i>
+        {{-- <i class="fas fa-donate" style="font-size: 60px"></i> --}}
+        {{-- <img src="{{ asset('templates/images/logo3.png') }}" alt="" class="img-fluid" style="height: 100px; width:100px"> --}}
+        <img src="{{ asset('templates/images/logo3.png') }}" alt="" class="img-fluid blinking-animation" style="height: 100px; width: 100px">
 
     </div>
 
@@ -58,7 +54,7 @@
 		<div class="menu_inner menu_mm">
 			<div class="menu menu_mm">
 				<ul class="menu_list menu_mm">
-					<li class="menu_item menu_mm"><a href="{{url('/')}}">home</a>/li>
+					<li class="menu_item menu_mm"><a href="{{url('/')}}">home</a></li>
 					<li class="menu_item menu_mm"><a href="{{url('about_us')}}">About us</a></li>
                     <li class="menu_item menu_mm"><a href="{{url('/our_team')}}">Our Team</a></li>
 					<li class="menu_item menu_mm"><a href="{{url('/contact_us')}}">contact</a></li>
@@ -66,7 +62,7 @@
 
 				<!-- Menu Social -->
 
-				<div class="menu_social_container menu_mm">
+				{{-- <div class="menu_social_container menu_mm">
 					<ul class="menu_social menu_mm">
 						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-pinterest"></i></a></li>
 						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
@@ -74,9 +70,9 @@
 						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
 					</ul>
-				</div>
+				</div> --}}
 
-				<div class="menu_copyright menu_mm">Colorlib All rights reserved</div>
+				{{-- <div class="menu_copyright menu_mm">Colorlib All rights reserved</div> --}}
 			</div>
 
 		</div>

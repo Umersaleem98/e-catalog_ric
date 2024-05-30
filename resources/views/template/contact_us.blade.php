@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Contact us</title>
     @include('template.head')
     <style>
 
@@ -25,7 +26,7 @@
         <div class="row mt-5">
             <div class="col">
                 <div class="section_title text-center">
-                    <h1 class="">About Us</h1>
+                    <h1 class="">Contact Us</h1>
                 </div>
             </div>
         </div>

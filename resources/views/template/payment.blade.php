@@ -53,7 +53,7 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <form method="POST" action="{{ url('payments') }}" enctype="multipart/form-data">
                             @csrf
                             <input type="text" name="student_name" class="form-control" value="{{$students->name}}" hidden>
@@ -113,6 +113,10 @@
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
+                    <div class="col-md-6 d-flex justify-content-center">
+                        <img src="{{ asset('templates/images/charity2.gif') }}" alt="Image 1" class="img-fluid rounded" style="max-width: 100%; height:400px">
+                    </div>
+
                 </div>
             </div>
         </div>

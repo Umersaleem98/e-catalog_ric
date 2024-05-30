@@ -13,23 +13,23 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id(); // Auto-incrementing primary key
-            $table->string('qalam_id')->unique();
+            $table->id('qalam_id')->unique(); // Primary key
             $table->string('name');
             $table->string('father_name');
             $table->string('institution');
             $table->string('discipline');
             $table->string('scholarship_name');
-            $table->string('donor_name')->nullable();
+            $table->string('donor_name');
             $table->string('province');
-            $table->enum('gender', ['Male', 'Female', 'Other']);
+            $table->string('gender');
             $table->string('program');
             $table->string('degree');
             $table->year('year_of_admission');
-            $table->enum('father_status', ['Alive', 'Deceased']);
+            $table->string('father_status');
             $table->string('father_profession');
-            $table->decimal('monthly_income', 10, 2); // Assuming the income might be a decimal value
-            $table->text('statement_of_purpose')->nullable(); // Assuming it can be a long text
-            $table->timestamps(); // Created at and updated at timestamps
+            $table->decimal('monthly_income', 10, 2);
+            $table->text('statement_of_purpose')->nullable();
+        
         });
     }
 

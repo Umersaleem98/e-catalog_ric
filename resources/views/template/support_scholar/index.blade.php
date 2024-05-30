@@ -94,7 +94,7 @@
                         <div class="card_img">
                             <div class="card_plus trans_200 text-center"><a href="">+</a></div>
                             <div class="card_plus trans_200 text-center"><a href="{{ url('student_stories_indiviual', ['id' => $item->id]) }}">+</a></div>
-                            <img class="card-img-top trans_200" src="{{ asset('templates/images/teacher_1.jpg') }}" alt="Teacher Image">
+                            <img class="card-img-top trans_200" src="{{ asset('students_images/' . $item->images) }}" alt="Teacher Image" style="filter: blur(10px)">
                         </div>
 
                         <div class="card-body text-center">

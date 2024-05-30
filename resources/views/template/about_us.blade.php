@@ -60,7 +60,7 @@
         </div>
     </div>
     <!-- New Section with Image on the Right -->
-    <div class="container ">
+    {{-- <div class="container ">
         <div class="row justify-content-center">
             <div class="col-md-6 text-center">
                 <h2 class="text-dark">Our Vision</h2>
@@ -75,10 +75,10 @@
                 </p>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
-    {{-- <div class="about-section" style="border-top: 1px solid black; border-bottom: 1px solid black">
+    <div class="about-section" >
         <div class="container">
             <div class="row">
                 <!-- Left Section for Content -->
@@ -102,13 +102,71 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
 <!------ Include the above in your HEAD tag ---------->
 <!-- Team -->
-<br>
+
+<section class="container ">
+    <div class="row">
+        <div class="col-12 col-md-12">
+            <img src="{{ asset('templates/images/animation.gif') }}" class="img-fluid" alt="Responsive Image" style="min-height:400px; width:100%; margin-top:-6%">
+        </div>
+        {{-- <div class="col-12 col-md-6">
+            <h2>Section Title</h2>
+            <p>This is a description text that accompanies the image. It is placed beside the image on larger screens and below the image on smaller screens.</p>
+        </div> --}}
+    </div>
+</section>
 
 
+<div class="row mt-5">
+    <div class="col">
+        <div class="section_title text-center">
+            <h1 class="">Accomplishments</h1>
+        </div>
+    </div>
+</div>
 
+<section class="container my-5">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div class="card">
+                <img src="path_to_image_1.jpg" class="card-img-top" alt="Accomplishment 1">
+                <div class="card-body">
+                    <h5 class="card-title">Accomplishment 1</h5>
+                    <p class="card-text">Description of accomplishment 1.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div class="card">
+                <img src="path_to_image_2.jpg" class="card-img-top" alt="Accomplishment 2">
+                <div class="card-body">
+                    <h5 class="card-title">Accomplishment 2</h5>
+                    <p class="card-text">Description of accomplishment 2.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div class="card">
+                <img src="path_to_image_3.jpg" class="card-img-top" alt="Accomplishment 3">
+                <div class="card-body">
+                    <h5 class="card-title">Accomplishment 3</h5>
+                    <p class="card-text">Description of accomplishment 3.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div class="card">
+                <img src="path_to_image_4.jpg" class="card-img-top" alt="Accomplishment 4">
+                <div class="card-body">
+                    <h5 class="card-title">Accomplishment 4</h5>
+                    <p class="card-text">Description of accomplishment 4.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 </div>
 

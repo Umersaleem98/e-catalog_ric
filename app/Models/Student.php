@@ -12,8 +12,21 @@ class Student extends Model
     protected $table = 'students';
 
     protected $fillable = [
-        'name', 'father_name', 'school', 'field', 'scholarship_fund', 'scholarship_type',
-        'province', 'gender', 'program', 'degree', 'year', 'parents_status',
-        'financial_support', 'monthly_income', 'current_status', 'financial_justification'
+        'name',
+        'father_name',
+        'institution',
+        'discipline',
+        'scholarship_name',
+        'donor_name',
+        'province',
+        'gender',
+        'program',
+        'degree',
+        'year_of_admission',
+        'father_status',
+        'father_profession',
+        'monthly_income',
+        'statement_of_purpose',
+        'images'
     ];
 }

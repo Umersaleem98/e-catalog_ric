@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Team;
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class TeamController extends Controller
 {
     public function team()
     {
+        $events = Event::all();
         $teams = Team::all();
 
-        return view('template.teams.teams', compact('teams'));
+        return view('template.teams.teams', compact('events','teams'));
     }
 
     public function meet_team($id)

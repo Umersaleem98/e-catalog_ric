@@ -45,7 +45,8 @@
                 <!-- Left Section for Images -->
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="image_container">
-                        <img src="{{ asset('templates/images/teacher_1.jpg') }}" class="img-fluid" alt="Left Image">
+                        <img src="{{ asset('students_images/' . $students->images) }}" class="img-fluid" alt="Left Image">
+
                     </div>
                 </div>
                 <!-- Right Section for Information -->
