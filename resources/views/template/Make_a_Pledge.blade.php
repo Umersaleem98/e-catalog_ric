@@ -29,7 +29,7 @@
             <div class="row mb-5">
                 <div class="col">
                     <div class="section_title text-center">
-                        <h1 class="">Pay the fund</h1>
+                        <h1 class=""> Make a Pledge</h1>
                     </div>
                 </div>
             </div>
@@ -58,55 +58,53 @@
                             @csrf
                             <input type="text" name="student_name" class="form-control" value="{{$students->name}}" hidden>
                             <div class="row mb-3">
-                                <div class="col-10">
+                                <div class="col-9">
                                     <label for="donor_name" class="form-label">Your Name</label>
-                                    <input type="text" class="form-control" placeholder="Enter Your Nmae" id="donor_name" name="donor_name">
+                                    <input type="text" class="form-control" id="donor_name" name="donor_name" placeholder="Enter Your Name">
                                 </div>
+
                             </div>
                             <div class="row mb-3">
-                                <div class="col-10">
-                                    <label for="donor_email" class="form-label">Your Email</label>
+                                <div class="col-9">
+                                    <label for="donor_email" class="form-label">Your Valid Email</label>
                                     <input type="email" class="form-control" placeholder="Enter Your Valid Email" id="donor_email" name="donor_email">
                                 </div>
 
                             </div>
                             <div class="row mb-3">
-                                <div class="col-10">
+
+                                <div class="col-9">
                                     <label for="cnic_number" class="form-label">CNIC Number</label>
-                                    <input type="text" class="form-control" placeholder="Enter Your CNIC" id="cnic_number" name="cnic_number">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-10">
-                                    <label for="cnic_number" class="form-label">Phone Number</label>
-                                    <input type="text" class="form-control" placeholder="Enter Your Phone Number" id="cnic_number" name="cnic_number">
+                                    <input type="text" class="form-control" placeholder="Enter Your CNIC " id="cnic_number" name="cnic_number">
                                 </div>
                             </div>
 
                             <div class="row mb-3">
+
+                                <div class="col-9">
+                                    <label for="cnic_number" class="form-label">Phone Number</label>
+                                    <input type="text" class="form-control" placeholder="Enter Your Phone Number " id="cnic_number" name="cnic_number">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+
                                 <div class="col">
-                                    <label for="duration" class="form-label">Duration</label>
-                                    <select class="form-control" aria-label="Default select example"  id="duration" name="duration">
-                                        <option value="6">6 Months</option>
-                                        <option value="1">1 Year</option>
-                                        <option value="2">2 Years</option>
-                                        <option value="4">4 Years</option>
+                                    <label for="cnic_number" class="form-label">Donation</label>
+                                    <select name="" id="" class="form-control">
+                                        <option value="50%">50%</option>
+                                        <option value="100%">100%</option>
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <label for="amount" class="form-label">Amount</label>
-                                    <input type="text" class="form-control" placeholder="Enter Your" id="amount" name="amount">
+                                    <label for="cnic_number" class="form-label">For</label>
+                                    <select name="" id="" class="form-control">
+                                        <option value="50%">Tuition Fee </option>
+                                        <option value="50%">Accommodation </option>
+                                        <option value="100%">Messing</option>
+                                    </select>
                                 </div>
-
                             </div>
-
-                            {{-- <div class="row mb-3">
-                                <div class="col">
-                                    <label for="" class="form-label">Prove </label>
-                                    <input type="file" class="form-control"  name="prove">
-                                </div>
-
-                            </div> --}}
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
@@ -124,23 +122,3 @@
     @include('template.footer')
 </body>
 </html>
-<script>
-    $(document).ready(function() {
-        $('#duration').change(function() {
-            var duration = $(this).val();
-            var amount = 0;
-
-            if (duration == '6') {
-                amount = 200000;
-            } else if (duration == '1') {
-                amount = 400000;
-            } else if (duration == '2') {
-                amount = 1000000;
-            } else if (duration == '4') {
-                amount = 2000000;
-            }
-
-            $('#amount').val(amount);
-        });
-    });
-</script>

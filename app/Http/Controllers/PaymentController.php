@@ -14,6 +14,12 @@ class PaymentController extends Controller
         return view('template.payment', compact('students'));
     }
 
+    public function Make_a_Pledge($id)
+    {
+        $students= Student::find($id);
+        return view('template.Make_a_Pledge', compact('students'));
+    }
+
     public function store(Request $request)
 {
     // Validate the request data

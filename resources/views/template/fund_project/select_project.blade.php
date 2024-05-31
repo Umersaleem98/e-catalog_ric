@@ -44,7 +44,7 @@
     <div class="row">
 
         <div class="col-md-6" id="abc">
-            <h2 class="text-center bg-primary">
+            <h2 class="text-center bg-primary p-4" style="height:70px">
                 Why Invest in Girl’s Hostel?
             </h2>
             <hr>
@@ -53,7 +53,7 @@
             </p>
         </div>
         <div class="col-md-6 border" id="abcd">
-            <h2 class="text-center  bg-primary">
+            <h2 class="text-center p-4  bg-primary" style="height:70px">
                 Why Invest in a Mosque?
             </h2>
             <hr>
@@ -86,7 +86,7 @@
                 <img src="{{ asset('project_category/' . $item->project_image) }}" class="card-img-top rounded" alt="{{ $item->project_name }} image">
                 <div class="card-body">
                     <h2 class="card-title text-dark text-center">{{ $item->project_name }}</h2>
-                    <p class="card-text text-dark">{{ $item->description }}</p>
+                    {{-- <p class="card-text text-dark">{{ $item->description }}</p> --}}
                 </div>
                 <div class="card-footer">
                     <a href="{{ url('fund_project', ['id' => $item->id]) }}" class="btn btn-primary">Go somewhere</a>

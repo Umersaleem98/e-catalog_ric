@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use App\Models\Student;
 use Illuminate\Http\Request;
 
@@ -45,7 +46,8 @@ class StudentController extends Controller
     public function stuedent_stories_ind($id)
     {
         // $students = Student::all();
+        $events = Event::all();
         $students = Student::find($id);
-        return view('template.support_scholar.student_stories', compact('students'));
+        return view('template.support_scholar.student_stories', compact('events','students'));
     }
 }

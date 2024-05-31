@@ -15,13 +15,13 @@
 
             @foreach ($events as $item)
 
-            <div class="row event_item">
+            <div class="row event_item ">
                 <div class="col">
-                    <div class="row d-flex flex-row align-items-end">
+                    <div class="row d-flex flex-row align-items-end boardered" >
 
                         <div class="col-lg-2 order-lg-1 order-2">
                             <div class="event_date d-flex flex-column align-items-center justify-content-center">
-                                <h2 class="text-dark">{{$item->date}}</h2>
+                                <h2 class="event-date text-dark">{{$item->date}}</h2>
                             </div>
                         </div>
 
@@ -35,7 +35,7 @@
 
                         <div class="col-lg-4 order-lg-3 order-1">
                             <div class="event_image">
-                                <img src="{{ asset('templates/events/' . $item->images) }}" class="img-fluid mb-3" alt="{{ $item->images }} Image" style="max-height: 140px; width:100%">
+                                <img src="{{ asset('templates/events/' . $item->images) }}" class="img-fluid mb-3" alt="{{ $item->images }} Image" style="max-height: 220px; width:100%">
                             </div>
                         </div>
 
@@ -49,5 +49,3 @@
 
     </div>
 </div>
-
-

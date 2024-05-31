@@ -18,8 +18,9 @@ class TeamController extends Controller
 
     public function meet_team($id)
     {
+        $events = Event::all();
         $teams = Team::find($id);
 
-        return view('template.teams.meet_our_team', compact('teams'));
+        return view('template.teams.meet_our_team', compact('events','teams'));
     }
 }

@@ -28,11 +28,10 @@
                     <div class="footer_column_title">Menu</div>
                     <div class="footer_column_content">
                         <ul>
-                            <li class="footer_list_item"><a href="#">Home</a></li>
-                            <li class="footer_list_item"><a href="#">About Us</a></li>
-                            <li class="footer_list_item"><a href="courses.html">Courses</a></li>
-                            <li class="footer_list_item"><a href="news.html">News</a></li>
-                            <li class="footer_list_item"><a href="contact.html">Contact</a></li>
+                            <li class="footer_list_item"><a href="{{url('/')}}">home</a></li>
+                            <li class="footer_list_item"><a href="{{url('about_us')}}">About us</a></li>
+                            <li class="footer_list_item"><a href="{{url('/our_team')}}">Our Team</a></li>
+                            <li class="footer_list_item"><a href="{{url('/contact_us')}}">contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -43,12 +42,11 @@
                     <div class="footer_column_title">Usefull Links</div>
                     <div class="footer_column_content">
                         <ul>
-                            <li class="footer_list_item"><a href="#">Testimonials</a></li>
-                            <li class="footer_list_item"><a href="#">FAQ</a></li>
-                            <li class="footer_list_item"><a href="#">Community</a></li>
-                            <li class="footer_list_item"><a href="#">Campus Pictures</a></li>
-                            <li class="footer_list_item"><a href="#">Tuitions</a></li>
-                        </ul>
+                            <li class="footer_list_item"><a href="{{url('https://nust.edu.pk/about-us')}}">NUST </a></li>
+                            {{-- <li class="footer_list_item"><a href="{{url('/')}}">Testimonials</a></li> --}}
+                            <li class="footer_list_item"><a href="{{url('https://advancement.nust.edu.pk/#/')}}">Advancement </a></li>
+                            <li class="footer_list_item"><a href="{{url('-  https://www.linkedin.com/company/uaonust/posts/?feedView=all')}}">LinkedIn </a></li>
+                          </ul>
                     </div>
                 </div>
 
@@ -63,21 +61,25 @@
                                     <!-- Use asset function for the image URL -->
                                     <img src="{{ asset('templates/images/placeholder.svg') }}" alt="Placeholder Icon">
                                 </div>
-                                Blvd Libertad, 34 m05200 Arévalo
+                                {{-- <span> RIC Secretariat National University of Science & Technology(NUST) H12 Islamabad</span> --}}
+                                <span> RIC Secretariat NUST H-12 </span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Islamabad</span>
                             </li>
                             <li class="footer_contact_item">
                                 <div class="footer_contact_icon">
                                     <!-- Use asset function for the image URL -->
                                     <img src="{{ asset('templates/images/smartphone.svg') }}" alt="Smartphone Icon">
                                 </div>
-                                0034 37483 2445 322
+                                <span>+92 51 9085 6821</span>
+
                             </li>
                             <li class="footer_contact_item">
                                 <div class="footer_contact_icon">
                                     <!-- Use asset function for the image URL -->
                                     <img src="{{ asset('templates/images/envelope.svg') }}" alt="Envelope Icon">
                                 </div>
-                                hello@company.com
+                                Advancement.nust.edu.pk
                             </li>
                         </ul>
                     </div>
@@ -91,19 +93,8 @@
 
         <div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
             <div class="footer_copyright">
-                <span><!-- Link back to Colorlib can't be removed. Templates is licensed under CC BY 3.0. -->
-{{-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This templates is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> --}}
-<!-- Link back to Colorlib can't be removed. Templates is licensed under CC BY 3.0. --></span>
-            </div>
-            <div class="footer_social ml-sm-auto">
-                <ul class="menu_social">
-                    <li class="menu_social_item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                    <li class="menu_social_item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li class="menu_social_item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li class="menu_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="menu_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                </ul>
-            </div>
+
+
         </div>
 
     </div>

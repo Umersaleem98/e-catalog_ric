@@ -23,6 +23,7 @@ Route::get('/student_stories', [StudentController::class, 'stuedent_stories']);
 Route::get('/student_stories_indiviual/{id}', [StudentController::class, 'stuedent_stories_ind']);
 
 Route::get('/payment/{id}', [PaymentController::class, 'payment_index']);
+Route::get('/Make_a_Pledge/{id}', [PaymentController::class, 'Make_a_Pledge']);
 Route::post('/payments', [PaymentController::class, 'store']);
 
 // Funds the project routes

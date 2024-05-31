@@ -34,7 +34,7 @@
                 <!-- Left Section for Images -->
                 <div class="col-lg-4 col-md-4 col-sm-12 ">
                     <div class="image-container" style="border-radius: 50%;">
-                        <img src="{{ asset('team/dr_rizwan.png') }}" alt="Image 1" style="border-radius: 5%;">
+                        <img src="{{ asset('team/nust3.jpg') }}" alt="Image 1" style="border-radius: 5%; height:240px">
                     </div>
                 </div>
                 <!-- Right Section for Content -->
@@ -119,7 +119,7 @@
 </section>
 
 
-<div class="row mt-5">
+{{-- <div class="row mt-5">
     <div class="col">
         <div class="section_title text-center">
             <h1 class="">Accomplishments</h1>
@@ -166,7 +166,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 </div>
 

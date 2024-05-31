@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col">
                 <div class="section_title text-center">
-                    <h1>Student Spotlight Series</h1>
+                    <h1>Transformative Tales</h1>
                 </div>
             </div>
         </div>

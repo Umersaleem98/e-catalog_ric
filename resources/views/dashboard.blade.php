@@ -32,7 +32,7 @@
 
 
     <!-- BEGIN: Footer-->
-  @include('layouts.content')
+
   @include('layouts.footer')
     <!-- END: Footer-->
 
