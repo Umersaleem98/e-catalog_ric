@@ -1,3 +1,26 @@
+<style>
+    .container-fluid {
+    background-color: #1A1A1A;
+    /* padding: 50px 0; */
+}
+
+.hero_box {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-out;
+}
+
+.hero_box.right {
+    transform: translateX(100%);
+}
+
+.hero_box.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+</style>
+
 
 <div class="home">
 
@@ -45,10 +68,10 @@
 </div>
 
 
- <div class="container-fluid" style="background-color: #1A1A1A">
+<div class="container-fluid" style="background-color: #1A1A1A">
     <div class="row justify-content-center">
         <div class="col-12 col-sm-6 col-md-4 ">
-            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+            <div class="hero_box left d-flex flex-row align-items-center justify-content-start">
                 <a href="{{url('student_stories')}}"> <img src="{{ asset('templates/images/professor.svg') }}" class="svg" alt="">
                  <div class="hero_box_content">
                      <h2 class="hero_box_title">Support a Scholar</h2>
@@ -57,7 +80,7 @@
              </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4 ">
-            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+            <div class="hero_box right d-flex flex-row align-items-center justify-content-start">
                 <a href="{{url('select_project')}}"> <img src="{{ asset('templates/images/earth-globe.svg') }}" class="svg" alt="">
                  <div class="hero_box_content">
                      <h2 class="hero_box_title">Fund a Project</h2>
@@ -69,33 +92,29 @@
 </div>
 
 
+ <script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const heroBoxes = document.querySelectorAll('.hero_box');
 
-{{-- <div class="hero_boxes">
-    <div class="hero_boxes_inner">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 hero_box_col">
-                    <div class="hero_box d-flex flex-row align-items-center justify-content-start">
-                       <a href="{{url('student_stories')}}"> <img src="{{ asset('templates/images/professor.svg') }}" class="svg" alt="">
-                        <div class="hero_box_content">
-                            <h2 class="hero_box_title">Support a Scholar</h2>
-                            <a href="" class="hero_box_link">View More</a>
-                        </div></a>
-                    </div>
-                </div>
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
 
-                <div class="col-lg-6 hero_box_col">
-                    <div class="hero_box d-flex flex-row align-items-center justify-content-start">
-                        <img src="{{ asset('templates/images/earth-globe.svg') }}" class="svg" alt="">
-                        <div class="hero_box_content">
-                            <h2 class="hero_box_title">Fund a Project</h2>
-                            <a href="courses.html" class="hero_box_link">View More</a>
-                        </div>
-                    </div>
-                </div>
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, observerOptions);
 
-            </div>
-        </div>
-    </div>
-</div>
- --}}
+    heroBoxes.forEach(box => {
+        observer.observe(box);
+    });
+});
+
+</script>

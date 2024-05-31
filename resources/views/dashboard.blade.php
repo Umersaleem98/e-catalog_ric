@@ -1,47 +1,90 @@
 <!DOCTYPE html>
-<html class="loading bordered-layout" lang="en" data-layout="bordered-layout" data-textdirection="ltr">
-<!-- BEGIN: Head-->
+<html lang="en">
 
 <head>
-   @include('layouts.css')
+    @include('layouts.css')
+
 </head>
-<!-- END: Head-->
 
-<!-- BEGIN: Body-->
+<body>
 
-<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="">
-
-    <!-- BEGIN: Header-->
-    @include('layouts.navbar')
-
-
-
-    <!-- END: Header-->
-
-
-    <!-- BEGIN: Main Menu-->
-    @include('layouts.sidebar')
-    <!-- END: Main Menu-->
-
-    <!-- BEGIN: Content-->
-   {{-- @include('layouts.content') --}}
-    <!-- END: Content-->
-
-    <div class="sidenav-overlay"></div>
-    <div class="drag-target"></div>
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
 
 
-    <!-- BEGIN: Footer-->
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
 
-  @include('layouts.footer')
-    <!-- END: Footer-->
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <a href="index.html" class="brand-logo">
+                <img class="logo-abbr" src="admin/images/logo.png" alt="">
+                <img class="logo-compact" src="admin/images/logo-text.png" alt="">
+                <img class="brand-title" src="admin/images/logo-text.png" alt="">
+            </a>
+
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Header start
+        ***********************************-->
+        @include('layouts.header')
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+       @include('layouts.sidebar')
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        @include('layouts.content')
+        <!--**********************************
+            Content body end
+        ***********************************-->
 
 
-<!-- BEGIN: Vendor JS -->
+        <!--**********************************
+            Footer start
+        ***********************************-->
+       @include('layouts.footer')
 
-@include('layouts.script')
+
+
+    </div>
+
+    <!-- Required vendors -->
+   @include('layouts.script')
 
 </body>
-<!-- END: Body-->
 
 </html>

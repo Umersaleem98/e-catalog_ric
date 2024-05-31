@@ -35,7 +35,7 @@ Route::get('/payments_project/{id}', [HostelController::class, 'payments_project
 
 
 // Dashboard Screens Routes
-Route::get('/dashbaord', [authController::class, 'index']);
+Route::get('/dashboard', [authController::class, 'index']);
 
 Route::get('/students_get', [authController::class, 'view_data']);
 Route::get('/add_students', [authController::class, 'store']);

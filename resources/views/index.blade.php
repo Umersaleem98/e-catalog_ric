@@ -2,10 +2,48 @@
 <html lang="en">
 <head>
     @include('template.head')
+    <style>
+        #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+
+    animation: spin 0.2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: scale(0.5) rotate(0deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+
+    </style>
 </head>
 <body>
 
 <div class="super_container">
+
+
+    <div id="preloader">
+        <div class="loader">
+            <img src="{{ asset('templates/images/logo3.png') }}" alt="" class="img-fluid blinking-animation" style="height: 100px; width: 100px">
+        </div>
+    </div>
+
 
 	<!-- Header -->
 
@@ -141,3 +179,18 @@
     @include('template.footer')
 </body>
 </html>
+
+
+<script>
+    // script.js
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("load", function() {
+        var preloader = document.getElementById('preloader');
+        preloader.style.display = 'none';
+
+        var content = document.getElementById('content');
+        content.style.display = 'block';
+    });
+});
+
+</script>

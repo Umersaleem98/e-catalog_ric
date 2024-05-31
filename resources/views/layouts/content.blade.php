@@ -1,313 +1,158 @@
-<div class="app-content content ">
-    <div class="content-overlay"></div>
-    <div class="header-navbar-shadow"></div>
-    <div class="content-wrapper container-xxl p-0">
-        <div class="content-header row">
-        </div>
-        <div class="content-body">
-            <!-- Dashboard Ecommerce Starts -->
-            <section id="dashboard-ecommerce">
-
-
-
-
-                {{-- hhhhhh --}}
-                <div class="row match-height">
-                    <!-- Company Table Card -->
-                    <div class="col-lg-12 col-12">
-                        <div class="card card-company-table">
-                            <div class="card-body p-0">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Company</th>
-                                                <th>Category</th>
-                                                <th>Views</th>
-                                                <th>Revenue</th>
-                                                <th>Sales</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar rounded">
-                                                            <div class="avatar-content">
-                                                                <img src="dashboard/app-assets/images/icons/toolbox.svg" alt="Toolbar svg" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="fw-bolder">Dixons</div>
-                                                            <div class="font-small-2 text-muted">meguc@ruj.io</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar bg-light-primary me-1">
-                                                            <div class="avatar-content">
-                                                                <i data-feather="monitor" class="font-medium-3"></i>
-                                                            </div>
-                                                        </div>
-                                                        <span>Technology</span>
-                                                    </div>
-                                                </td>
-                                                <td class="text-nowrap">
-                                                    <div class="d-flex flex-column">
-                                                        <span class="fw-bolder mb-25">23.4k</span>
-                                                        <span class="font-small-2 text-muted">in 24 hours</span>
-                                                    </div>
-                                                </td>
-                                                <td>$891.2</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="fw-bolder me-1">68%</span>
-                                                        <i data-feather="trending-down" class="text-danger font-medium-1"></i>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar rounded">
-                                                            <div class="avatar-content">
-                                                                <img src="dashboard/app-assets/images/icons/parachute.svg" alt="Parachute svg" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="fw-bolder">Motels</div>
-                                                            <div class="font-small-2 text-muted">vecav@hodzi.co.uk</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar bg-light-success me-1">
-                                                            <div class="avatar-content">
-                                                                <i data-feather="coffee" class="font-medium-3"></i>
-                                                            </div>
-                                                        </div>
-                                                        <span>Grocery</span>
-                                                    </div>
-                                                </td>
-                                                <td class="text-nowrap">
-                                                    <div class="d-flex flex-column">
-                                                        <span class="fw-bolder mb-25">78k</span>
-                                                        <span class="font-small-2 text-muted">in 2 days</span>
-                                                    </div>
-                                                </td>
-                                                <td>$668.51</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="fw-bolder me-1">97%</span>
-                                                        <i data-feather="trending-up" class="text-success font-medium-1"></i>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar rounded">
-                                                            <div class="avatar-content">
-                                                                <img src="dashboard/app-assets/images/icons/brush.svg" alt="Brush svg" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="fw-bolder">Zipcar</div>
-                                                            <div class="font-small-2 text-muted">davcilse@is.gov</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar bg-light-warning me-1">
-                                                            <div class="avatar-content">
-                                                                <i data-feather="watch" class="font-medium-3"></i>
-                                                            </div>
-                                                        </div>
-                                                        <span>Fashion</span>
-                                                    </div>
-                                                </td>
-                                                <td class="text-nowrap">
-                                                    <div class="d-flex flex-column">
-                                                        <span class="fw-bolder mb-25">162</span>
-                                                        <span class="font-small-2 text-muted">in 5 days</span>
-                                                    </div>
-                                                </td>
-                                                <td>$522.29</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="fw-bolder me-1">62%</span>
-                                                        <i data-feather="trending-up" class="text-success font-medium-1"></i>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar rounded">
-                                                            <div class="avatar-content">
-                                                                <img src="dashboard/app-assets/images/icons/star.svg" alt="Star svg" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="fw-bolder">Owning</div>
-                                                            <div class="font-small-2 text-muted">us@cuhil.gov</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar bg-light-primary me-1">
-                                                            <div class="avatar-content">
-                                                                <i data-feather="monitor" class="font-medium-3"></i>
-                                                            </div>
-                                                        </div>
-                                                        <span>Technology</span>
-                                                    </div>
-                                                </td>
-                                                <td class="text-nowrap">
-                                                    <div class="d-flex flex-column">
-                                                        <span class="fw-bolder mb-25">214</span>
-                                                        <span class="font-small-2 text-muted">in 24 hours</span>
-                                                    </div>
-                                                </td>
-                                                <td>$291.01</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="fw-bolder me-1">88%</span>
-                                                        <i data-feather="trending-up" class="text-success font-medium-1"></i>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar rounded">
-                                                            <div class="avatar-content">
-                                                                <img src="dashboard/app-assets/images/icons/book.svg" alt="Book svg" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="fw-bolder">Cafés</div>
-                                                            <div class="font-small-2 text-muted">pudais@jife.com</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar bg-light-success me-1">
-                                                            <div class="avatar-content">
-                                                                <i data-feather="coffee" class="font-medium-3"></i>
-                                                            </div>
-                                                        </div>
-                                                        <span>Grocery</span>
-                                                    </div>
-                                                </td>
-                                                <td class="text-nowrap">
-                                                    <div class="d-flex flex-column">
-                                                        <span class="fw-bolder mb-25">208</span>
-                                                        <span class="font-small-2 text-muted">in 1 week</span>
-                                                    </div>
-                                                </td>
-                                                <td>$783.93</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="fw-bolder me-1">16%</span>
-                                                        <i data-feather="trending-down" class="text-danger font-medium-1"></i>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar rounded">
-                                                            <div class="avatar-content">
-                                                                <img src="dashboard/app-assets/images/icons/rocket.svg" alt="Rocket svg" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="fw-bolder">Kmart</div>
-                                                            <div class="font-small-2 text-muted">bipri@cawiw.com</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar bg-light-warning me-1">
-                                                            <div class="avatar-content">
-                                                                <i data-feather="watch" class="font-medium-3"></i>
-                                                            </div>
-                                                        </div>
-                                                        <span>Fashion</span>
-                                                    </div>
-                                                </td>
-                                                <td class="text-nowrap">
-                                                    <div class="d-flex flex-column">
-                                                        <span class="fw-bolder mb-25">990</span>
-                                                        <span class="font-small-2 text-muted">in 1 month</span>
-                                                    </div>
-                                                </td>
-                                                <td>$780.05</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="fw-bolder me-1">78%</span>
-                                                        <i data-feather="trending-up" class="text-success font-medium-1"></i>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar rounded">
-                                                            <div class="avatar-content">
-                                                                <img src="dashboard/app-assets/images/icons/speaker.svg" alt="Speaker svg" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="fw-bolder">Payers</div>
-                                                            <div class="font-small-2 text-muted">luk@izug.io</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar bg-light-warning me-1">
-                                                            <div class="avatar-content">
-                                                                <i data-feather="watch" class="font-medium-3"></i>
-                                                            </div>
-                                                        </div>
-                                                        <span>Fashion</span>
-                                                    </div>
-                                                </td>
-                                                <td class="text-nowrap">
-                                                    <div class="d-flex flex-column">
-                                                        <span class="fw-bolder mb-25">12.9k</span>
-                                                        <span class="font-small-2 text-muted">in 12 hours</span>
-                                                    </div>
-                                                </td>
-                                                <td>$531.49</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="fw-bolder me-1">42%</span>
-                                                        <i data-feather="trending-up" class="text-success font-medium-1"></i>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+<div class="content-body">
+    <!-- row -->
+    <div class="container-fluid">
+        <div class="row">
+            {{-- <div class="col-lg-3 col-sm-6">
+                <div class="card">
+                    <div class="stat-widget-two card-body">
+                        <div class="stat-content">
+                            <div class="stat-text">Today Expenses </div>
+                            <div class="stat-digit"> <i class="fa fa-usd"></i>8500</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success w-85" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
-                    <!--/ Company Table Card -->
-
-                     <!--/ Transaction Card -->
                 </div>
-            </section>
-            <!-- Dashboard Ecommerce ends -->
-
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card">
+                    <div class="stat-widget-two card-body">
+                        <div class="stat-content">
+                            <div class="stat-text">Income Detail</div>
+                            <div class="stat-digit"> <i class="fa fa-usd"></i>7800</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-primary w-75" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card">
+                    <div class="stat-widget-two card-body">
+                        <div class="stat-content">
+                            <div class="stat-text">Task Completed</div>
+                            <div class="stat-digit"> <i class="fa fa-usd"></i> 500</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-warning w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card">
+                    <div class="stat-widget-two card-body">
+                        <div class="stat-content">
+                            <div class="stat-text">Task Completed</div>
+                            <div class="stat-digit"> <i class="fa fa-usd"></i>650</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger w-65" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /# card -->
+            </div> --}}
+            <!-- /# column -->
         </div>
+
+        <div class="row">
+
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">New Orders</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Product</th>
+                                        <th>quantity</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="round-img">
+                                                <a href=""><img width="35" src="./images/avatar/1.png" alt=""></a>
+                                            </div>
+                                        </td>
+                                        <td>Lew Shawon</td>
+                                        <td><span>Dell-985</span></td>
+                                        <td><span>456 pcs</span></td>
+                                        <td><span class="badge badge-success">Done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="round-img">
+                                                <a href=""><img width="35" src="./images/avatar/1.png" alt=""></a>
+                                            </div>
+                                        </td>
+                                        <td>Lew Shawon</td>
+                                        <td><span>Asus-565</span></td>
+                                        <td><span>456 pcs</span></td>
+                                        <td><span class="badge badge-warning">Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="round-img">
+                                                <a href=""><img width="35" src="./images/avatar/1.png" alt=""></a>
+                                            </div>
+                                        </td>
+                                        <td>lew Shawon</td>
+                                        <td><span>Dell-985</span></td>
+                                        <td><span>456 pcs</span></td>
+                                        <td><span class="badge badge-success">Done</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="round-img">
+                                                <a href=""><img width="35" src="./images/avatar/1.png" alt=""></a>
+                                            </div>
+                                        </td>
+                                        <td>Lew Shawon</td>
+                                        <td><span>Asus-565</span></td>
+                                        <td><span>456 pcs</span></td>
+                                        <td><span class="badge badge-warning">Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="round-img">
+                                                <a href=""><img width="35" src="./images/avatar/1.png" alt=""></a>
+                                            </div>
+                                        </td>
+                                        <td>lew Shawon</td>
+                                        <td><span>Dell-985</span></td>
+                                        <td><span>456 pcs</span></td>
+                                        <td><span class="badge badge-success">Done</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="round-img">
+                                                <a href=""><img width="35" src="./images/avatar/1.png" alt=""></a>
+                                            </div>
+                                        </td>
+                                        <td>Lew Shawon</td>
+                                        <td><span>Asus-565</span></td>
+                                        <td><span>456 pcs</span></td>
+                                        <td><span class="badge badge-warning">Pending</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>

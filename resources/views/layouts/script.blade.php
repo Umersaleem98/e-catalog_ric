@@ -1,29 +1,26 @@
-<script src="{{ asset('dashboard/app-assets/vendors/js/vendors.min.js') }}"></script>
-<!-- END: Vendor JS -->
+<script src="{{ asset('admin/vendor/global/global.min.js') }}"></script>
+<script src="{{ asset('admin/js/quixnav-init.js') }}"></script>
+<script src="{{ asset('admin/js/custom.min.js') }}"></script>
 
-<!-- BEGIN: Page Vendor JS -->
-<script src="{{ asset('dashboard/app-assets/vendors/js/charts/apexcharts.min.js') }}"></script>
-<script src="{{ asset('dashboard/app-assets/vendors/js/extensions/toastr.min.js') }}"></script>
-<!-- END: Page Vendor JS -->
+<!-- Vectormap -->
+<script src="{{ asset('admin/vendor/raphael/raphael.min.js') }}"></script>
+<script src="{{ asset('admin/vendor/morris/morris.min.js') }}"></script>
 
-<!-- BEGIN: Theme JS -->
-<script src="{{ asset('dashboard/app-assets/js/core/app-menu.js') }}"></script>
-<script src="{{ asset('dashboard/app-assets/js/core/app.js') }}"></script>
-<!-- END: Theme JS -->
+<script src="{{ asset('admin/vendor/circle-progress/circle-progress.min.js') }}"></script>
+<script src="{{ asset('admin/vendor/chart.js/Chart.bundle.min.js') }}"></script>
 
-<!-- BEGIN: Page JS -->
-<script src="{{ asset('dashboard/app-assets/js/scripts/pages/dashboard-ecommerce.js') }}"></script>
-<!-- END: Page JS -->
+<script src="{{ asset('admin/vendor/gaugeJS/dist/gauge.min.js') }}"></script>
 
-    <!-- END: Page JS-->
+<!-- flot-chart js -->
+<script src="{{ asset('admin/vendor/flot/jquery.flot.js') }}"></script>
+<script src="{{ asset('admin/vendor/flot/jquery.flot.resize.js') }}"></script>
 
-    <script>
-        $(window).on('load', function() {
-            if (feather) {
-                feather.replace({
-                    width: 14,
-                    height: 14
-                });
-            }
-        })
-    </script>
+<!-- Owl Carousel -->
+<script src="{{ asset('admin/vendor/owl-carousel/js/owl.carousel.min.js') }}"></script>
+
+<!-- Counter Up -->
+<script src="{{ asset('admin/vendor/jqvmap/js/jquery.vmap.min.js') }}"></script>
+<script src="{{ asset('admin/vendor/jqvmap/js/jquery.vmap.usa.js') }}"></script>
+<script src="{{ asset('admin/vendor/jquery.counterup/jquery.counterup.min.js') }}"></script>
+
+<script src="{{ asset('admin/js/dashboard/dashboard-1.js') }}"></script>

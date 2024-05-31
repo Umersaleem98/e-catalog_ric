@@ -12,12 +12,6 @@ class authController extends Controller
         return view('dashboard');
     }
 
-    // public function view_data()
-    // {
-    //     $students = Student::all();
-    //     return view('layouts.screens.students_list', compact('students'));
-    // }
-
 
     public function view_data(Request $request)
     {
@@ -42,7 +36,7 @@ class authController extends Controller
 
         return view('layouts.screens.students_list', compact('students', 'searchQuery'));
     }
- 
+
 
 
 
