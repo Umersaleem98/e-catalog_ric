@@ -8,12 +8,14 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\HostelController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SignatureStoryController;
 
 // Home Screens
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about_us', [HomeController::class, 'about_us']);
+
 Route::get('/contact_us', [HomeController::class, 'contact_us']);
-Route::get('/our_team', [TeamController::class, 'team']);
+
 Route::get('/meet_out_team/{id}', [TeamController::class, 'meet_team']);
 
 Route::get('/students', [StudentController::class, 'index']);
@@ -37,8 +39,30 @@ Route::get('/payments_project/{id}', [HostelController::class, 'payments_project
 // Dashboard Screens Routes
 Route::get('/dashboard', [authController::class, 'index']);
 
+
 Route::get('/students_get', [authController::class, 'view_data']);
 Route::get('/add_students', [authController::class, 'store']);
 Route::get('/students_edit/{id}', [authController::class, 'edit']);
 Route::post('/students_update/{id}', [authController::class, 'update']);
 // Route::get('/students_add', [authController::class, 'store']);
+
+// signature storires Routes
+Route::get('/signature_stories', [SignatureStoryController::class, 'index']);
+Route::post('/signature_stories_store', [SignatureStoryController::class, 'store']);
+Route::get('/signature_stories_list', [SignatureStoryController::class, 'show']);
+Route::get('/signature_stories_edit/{id}', [SignatureStoryController::class, 'edit']);
+Route::post('/signature_stories_update/{id}', [SignatureStoryController::class, 'update']);
+Route::get('/signature_stories_delete/{id}', [SignatureStoryController::class, 'destroy']);
+// index route
+Route::get('/signrature_program', [SignatureStoryController::class, 'signrature_program']);
+
+// Team routes
+Route::get('/add_team', [TeamController::class, 'index']);
+Route::post('/add_team_member', [TeamController::class, 'store']);
+Route::get('/team_list', [TeamController::class, 'show']);
+Route::get('/edit/{id}', [TeamController::class, 'edit']);
+Route::post('/update/{id}', [TeamController::class, 'update']);
+Route::get('/delete/{id}', [TeamController::class, 'delete']);
+
+
+Route::get('/our_team', [TeamController::class, 'team']);

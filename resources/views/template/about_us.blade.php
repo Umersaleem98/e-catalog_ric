@@ -40,7 +40,7 @@
                 <!-- Right Section for Content -->
                 <div class="col-lg-8 col-md-8 col-sm-12">
                     <div class="content-container">
-                        <h2>NUST: The Legacy of Change in a Nutshell &nbsp;&nbsp;&nbsp;<span onclick="toggleContent()"><i class="fa-solid fa-plus" id="icon1"></i><i class="fa-solid fa-minus" id="icon1-minus" style="display:none;"></i></span></h2>
+                        <h2>NUST: The Legacy of Change in a Nutshell </h2>
                         <p class="justified-content">
                             For more than 30 years NUST has been deploying scientific and technological innovation to meet the greater challenges of our age by translating world-leading academic research into commercial, scalable innovations that can respond to complex societal problems. To do that, NUST skims the cream of the brilliance Pakistan produces and trains those brilliant minds to produce top-class innovation and research. Unfortunately, the economic landscape of Pakistan does not allow for many of those bright minds to afford higher education.  Our aim is to not only become the driving force of Pakistan’s knowledge economy but at the heart of our objective lies the very dream of turning NUST into a need-blind university. 
                         </p>
@@ -51,7 +51,10 @@
                                 <br>
                                 In tandem, the University Advancement Office serves as a dynamic resource mobilization hub, fostering partnerships and collaborations to propel the university's developmental projects. At its core, the office champions equity, diversity, and inclusion (EDI), ensuring that every aspiring mind, irrespective of background, can script their unique journey within our diverse university community.
                             </p>
+
                         </div>
+                        <span onclick="toggleContent()" style="font-size: 20px; color:black">read more &nbsp;&nbsp;<i class="fa-solid fa-plus" id="icon1" style="font-size: 20px;"></i><i class="fa-solid fa-minus" id="icon1-minus" style="display:none;"></i></span>
+
                         {{-- <a class="read-more" onclick="toggleContent()">Read More</a> --}}
                     </div>
                 </div>
