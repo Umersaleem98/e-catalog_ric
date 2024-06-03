@@ -54,7 +54,8 @@
                 <!-- Right Section for Information -->
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <div class="info_container" style="color: black;">
-                        <h2>Student Name: <span>{{$students->name}}</span>  <span>{{$students->qalam_id}}</span></h2>
+                        <h2>Student Name: <span>{{$students->name}} </h2>
+                        <h2>Qalam ID: <span>{{$students->qalam_id}}</span></h2>
                         <!-- Add an ID to the paragraph tag for easier targeting with JavaScript -->
                         <h2>Father Name: <span>{{$students->father_name}}</span></h2>
                         <!-- Add a unique ID to the paragraph tag for targeting -->
@@ -63,22 +64,20 @@
                         <h3>Province: <span>{{$students->province}}</span></h3>
                         <!-- Add a unique ID to the paragraph tag for targeting -->
                         <h3>Gender: <span>{{$students->gender}}</span></h3>
-                        <!-- Add a unique ID to the paragraph tag for targeting -->
-                        {{-- <h3>Father Status: <span>{{$students->father_status}}</span></h3> --}}
-                        <!-- Add a unique ID to the paragraph tag for targeting -->
-                        {{-- <h3>Father Profession: <span>{{$students->father_profession}}</span></h3> --}}
-                        <!-- Add a unique ID to the paragraph tag for targeting -->
+
                         <h3>Monthly Income: <span>{{$students->monthly_income}}</span></h3>
                         <!-- Add a unique ID to the paragraph tag for targeting -->
                         <br>
 
                         <!-- Add an ID to the paragraph tag for easier targeting with JavaScript -->
                         <span ><img src="{{ asset('templates/images/quotation-right-mark-svgrepo-com.svg') }}" alt="" style="width:15px; height:15px; color:bluel; transform: rotate(180deg);"></span>
-                        <p  class="text-dark ">{{$students->statement_of_purpose}}
-                        </p>
-                        <p>
-                            <span class="quote"><img src="{{ asset('templates/images/quotation-right-mark-svgrepo-com.svg') }}" alt="" style="width:15px; height:15px; color:bluel; margin-left:75%; margin-top:-110px"></span>
-                        </p>
+                        <div style="position: relative;">
+                            <p class="text-dark">{{$students->statement_of_purpose}}</p>
+                            <p style="position: absolute; top: 0; right: 0;">
+                                <span class="quote"><img src="{{ asset('templates/images/quotation-right-mark-svgrepo-com.svg') }}" alt="" style="width:15px; height:15px; color:bluel; margin-top:auto"></span>
+                            </p>
+                        </div>
+
 
                         <!-- Add a button to toggle visibility -->
 

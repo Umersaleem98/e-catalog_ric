@@ -11,11 +11,10 @@ class TeamController extends Controller
     public function team()
     {
         $events = Event::all();
-        $teams = Team::all();
+        $teams = Team::where('status', 'active')->get(); // Filter teams with status 'active'
 
-        return view('template.teams.teams', compact('events','teams'));
+        return view('template.teams.teams', compact('events', 'teams'));
     }
-
     public function index()
     {
         return view('layouts.team.index');

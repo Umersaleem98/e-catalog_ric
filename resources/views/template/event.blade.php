@@ -1,6 +1,18 @@
 <div class="events page_section">
     <div class="container">
 
+        <!-- Alert -->
+        <div class="alert alert-info text-center" role="alert">
+            Check out our upcoming events below and stay updated with the latest news!
+        </div>
+
+        <!-- Marquee -->
+        <div class="marquee-container mb-4">
+            <marquee behavior="scroll" direction="left">
+                Don't miss our special event on June 15th! | Register now for the annual fundraiser on July 20th! | Join our Zakat Campaign to support students in need!
+            </marquee>
+        </div>
+
         <div class="row">
             <div class="col">
                 <div class="section_title text-center">
@@ -12,9 +24,7 @@
         <div class="event_items">
 
             <!-- Event Item -->
-
             @foreach ($events as $item)
-
             <div class="row event_item ">
                 <div class="col">
                     <div class="row d-flex flex-row align-items-end boardered" >
@@ -42,7 +52,6 @@
                     </div>
                 </div>
             </div>
-
             @endforeach
 
         </div>

@@ -5,6 +5,21 @@
     @include('template.head')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
+.custom-paragraph {
+            font-size: 16px; /* Adjust the font size as needed */
+            line-height: 1.4; /* Adjust the line height as needed */
+            position: relative; /* Required for positioning the signature */
+        }
+        .signature {
+            font-size: 18px;
+            color: black;
+
+            margin-right: 40px;
+            text-align: right; /* Aligns the text to the right */
+            font-weight: bold; /* Makes the text bold */
+            margin-top: 10px; /* Adds some space before the signature */
+        }
+
         .hover-card:hover {
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Example box shadow for hover effect */
             transform: translateY(-5px); /* Example translateY for hover effect */
@@ -35,28 +50,38 @@
     </div>
 
     <!-- Header -->
-    <section class="container mt-5">
 
+
+    <style>
+
+    </style>
+
+    <section class="container mt-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-4">
                     <img src="{{ asset('team/Arooba_Gillani.png') }}" class="img-fluid" alt="CEO Image" style="max-height: 400px; width:100%">
                 </div>
                 <div class="col-md-8">
-                    <p class="text-dark" style="font-size: 15px">
-                        <span class="quote"><img src="{{ asset('templates/images/quotation-right-mark-svgrepo-com.svg') }}" alt="" style="width:25px; height:25px; color:bluel; transform: rotate(180deg);"></span>
+                    <p class="text-dark custom-paragraph">
+                        <span class="quote">
+                            <img src="{{ asset('templates/images/quotation-right-mark-svgrepo-com.svg') }}" alt="" style="width:25px; height:25px; color:bluel; transform: rotate(180deg);">
+                        </span>
                         A commitment to quality faculty and students has fueled NUST’s impressive rise in rankings and the success of our international alumni network. As Director Advancement, I am privileged to steer a self-sustaining system that supports Pakistan’s leading science and technology university. Our aim is to become the driving force of Pakistan’s knowledge economy, with the dream of making NUST a need-blind university.
                         <br>
                         Many deserving students face significant financial challenges, with nearly half of our undergraduates requiring scholarships. Despite our best efforts, a gap remains, affecting 150 to 250 students annually. Our NEED Initiative Campaign aims to bridge this gap, ensuring all talented students can afford higher education.
                         <br>
-                        Your support is crucial to this campaign, dedicated to making need-blind admissions a reality and empowering our youth. Join us in sponsoring dreams and lighting the way for a more equitable future. span>
-                        <span class="quote"><img src="{{ asset('templates/images/quotation-right-mark-svgrepo-com.svg') }}" alt="" style="width:25px; height:25px; color:bluel;"></span>
+                        Your support is crucial to this campaign, dedicated to making need-blind admissions a reality and empowering our youth. Join us in sponsoring dreams and lighting the way for a more equitable future.
+                        <span class="quote">
+                            <img src="{{ asset('templates/images/quotation-right-mark-svgrepo-com.svg') }}" alt="" style="width:25px; height:25px; color:bluel;">
+                        </span>
                     </p>
-
+                    <div class="signature">Arooba Gillani</div>
+                    <div  style="font-size: 18px; color: black;margin-right: 35px;text-align: right;
+                    font-weight: bold; margin-top: -4px; "> (Director of UAO)</div>
                 </div>
             </div>
         </div>
-
     </section>
 
 

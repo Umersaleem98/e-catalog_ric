@@ -769,16 +769,19 @@ section
 }
 .svg path
 {
-	fill: yellow;
+	fill: #EFA500;
+    font-weight: 900;
 }
 .hero_box svg
 {
 	width: 72px;
 	height: auto;
+    color: #EFA500;
 }
 .hero_box:hover svg path
 {
-	fill: #FFFFFF;
+	fill: #eaebec;
+    /* color: #EFA500; */
 }
 .hero_box_content
 {

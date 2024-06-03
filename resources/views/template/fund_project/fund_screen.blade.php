@@ -29,7 +29,7 @@
     <!-- First Section -->
     <div class="row mb-4">
         <div class="col-md-6">
-            <img src="{{ asset('project_category/boyes_hotel_2.png') }}" class="img-fluid" alt="Responsive image">
+            <img src="{{ asset('project_category/boyes_hotel_2.png') }}" class="img-fluid" alt="Responsive image" >
         </div>
         <div class="col-md-6 d-flex align-items-center">
             <div>

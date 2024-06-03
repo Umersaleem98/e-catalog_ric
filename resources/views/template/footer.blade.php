@@ -30,6 +30,7 @@
                         <ul>
                             <li class="footer_list_item"><a href="{{url('/')}}">home</a></li>
                             <li class="footer_list_item"><a href="{{url('about_us')}}">About us</a></li>
+                            <li class="footer_list_item"><a href="{{url('/signrature_program')}}">Signature Program</a></li>
                             <li class="footer_list_item"><a href="{{url('/our_team')}}">Our Team</a></li>
                             <li class="footer_list_item"><a href="{{url('/contact_us')}}">contact</a></li>
                         </ul>
@@ -79,7 +80,7 @@
                                     <!-- Use asset function for the image URL -->
                                     <img src="{{ asset('templates/images/envelope.svg') }}" alt="Envelope Icon">
                                 </div>
-                                Advancement.nust.edu.pk
+                                advancement.nust.edu.pk
                             </li>
                         </ul>
                     </div>

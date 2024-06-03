@@ -7,14 +7,14 @@
 }
 </style>
 
-<header class="header d-flex flex-row">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+{{-- <header class="header d-flex flex-row"> --}}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light w-100 fixed-top">
         <!-- Left-side logos -->
         <a class="navbar-brand ml-3" href="{{url('/')}}">
-            <img src="{{ asset('templates/images/logo.png') }}" alt="Left Logo" class="navbar-logo">
-            <a href="{{ url('/') }}">
+            <img src="{{ asset('templates/images/logo4.png') }}" alt="Left Logo" class="navbar-logo">
+            {{-- <a href="{{ url('/') }}">
                 <img src="{{ asset('templates/images/logo2.png') }}" alt="Additional Logo" class="additional-logo">
-            </a>
+            </a> --}}
         </a>
 
         <!-- Toggler/collapsing button for small screens -->
@@ -35,10 +35,10 @@
                     <a class="nav-link" href="{{url('signrature_program')}}">Signature Program</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"  href="{{url('/our_team')}}" >Services</a>
+                    <a class="nav-link"  href="{{url('/our_team')}}" >Our Team</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url('/contact_us')}}" >Contact</a>
+                    <a class="nav-link" href="{{url('/contact_us')}}" >Contact Us</a>
                 </li>
             </ul>
 
@@ -53,4 +53,4 @@
             <img src="{{ asset('templates/images/logo3.png') }}" alt="Right Logo" class="navbar-logo img-fluid blinking-animation">
         </a>
     </nav>
-</header>
+{{-- </header> --}}

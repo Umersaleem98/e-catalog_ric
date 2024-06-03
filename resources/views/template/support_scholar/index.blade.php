@@ -3,7 +3,6 @@
 <head>
     <title>Students Stories</title>
     @include('template.head')
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
  .pagination li.active a {
         background-color: #007bff;
@@ -50,14 +49,14 @@
                         <form action="{{ url('student_stories') }}" method="GET" id="filterForm">
                             <div class="row">
                                 <div class="col-md-3 mb-3">
-                                    <select name="gender" id="genderFilter" class="form-select" aria-label="Select Gender">
+                                    <select name="gender" id="genderFilter" class="form-control" aria-label="Select Gender">
                                         <option value="all" selected>All Genders</option>
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
                                     </select>
                                 </div>
                                 <div class="col-md-3 mb-3">
-                                    <select name="province" id="provinceFilter" class="form-select" aria-label="Select Province">
+                                    <select name="province" id="provinceFilter" class="form-control" aria-label="Select Province">
                                         <option value="all" selected>All Provinces</option>
                                         <option value="Punjab">Punjab</option>
                                         <option value="sindh">Sindh</option>
@@ -65,7 +64,7 @@
                                     </select>
                                 </div>
                                 <div class="col-md-3 mb-3">
-                                    <select name="discipline" id="disciplineFilter" class="form-select" aria-label="Select Discipline">
+                                    <select name="discipline" id="disciplineFilter" class="form-control" aria-label="Select Discipline">
                                         <option value="all" selected>All Disciplines</option>
                                         <option value="Engineering & IT">Engineering & IT</option>
                                         <option value="Bio Sciences">Bio Sciences</option>
@@ -94,7 +93,7 @@
                         <div class="card_img">
                             <div class="card_plus trans_200 text-center"><a href="">+</a></div>
                             <div class="card_plus trans_200 text-center"><a href="{{ url('student_stories_indiviual', ['id' => $item->id]) }}">+</a></div>
-                            <img class="card-img-top trans_200" src="{{ asset('students_images/' . $item->images) }}" alt="Teacher Image" style="filter: blur(10px)">
+                            <img class="card-img-top trans_200" src="{{ asset('students_images/' . $item->images) }}" alt="Teacher Image" style="filter: blur(10px); max-height: 250px;">
                         </div>
 
                         <div class="card-body text-center">
@@ -102,13 +101,13 @@
                             <div class="card-text text-dark mb-2">{{$item->father_name}}</div>
                             <div class="card-text text-dark mb-2">{{$item->gender}}</div>
                             <div class="card-text text-dark mb-2">{{$item->province}}</div>
-                            <div class="teacher_social">
+                            {{-- <div class="teacher_social">
                                 <ul class="menu_social">
                                     <li class="menu_social_item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                     <li class="menu_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                     <li class="menu_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
                                 </ul>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>

@@ -33,7 +33,7 @@
                 <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/abc.jpg') }}')"></div>
                 <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                     <div class="hero_slide_content text-center mt-5">
-                        <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Transformative Education </h1>
+                        <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="color: #EFA500">Transformative Education </h1>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                 <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/ghi.jpg') }}')"></div>
                 <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                     <div class="hero_slide_content text-center mt-5">
-                        <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Creating Impact for a Better Tomorrow </h1>
+                        <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="color: #EFA500">Creating Impact for a Better Tomorrow </h1>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                 <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/def.jpg') }}')"></div>
                 <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                     <div class="hero_slide_content text-center mt-5">
-                        <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Empower Minds, Shape Futures </h1>
+                        <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="color: #EFA500">Empower Minds, Shape Futures </h1>
                     </div>
                 </div>
             </div>
@@ -72,19 +72,19 @@
     <div class="row justify-content-center">
         <div class="col-12 col-sm-6 col-md-4 ">
             <div class="hero_box left d-flex flex-row align-items-center justify-content-start">
-                <a href="{{url('student_stories')}}"> <img src="{{ asset('templates/images/professor.svg') }}" class="svg" alt="">
+                <a href="{{url('student_stories')}}"> <img src="{{ asset('templates/images/professor.svg') }}" style="color: #EFA500" class="svg" alt="">
                  <div class="hero_box_content">
-                     <h2 class="hero_box_title">Support a Scholar</h2>
-                     <a href="{{url('student_stories')}}" class="hero_box_link">View More</a>
+                     <h2 class="hero_box_title" style="color: #EFA500">Support a Scholar</h2>
+                     <a href="{{url('student_stories')}}" class="hero_box_link" hidden style="color: #EFA500">View More</a>
                  </div></a>
              </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4 ">
             <div class="hero_box right d-flex flex-row align-items-center justify-content-start">
-                <a href="{{url('select_project')}}"> <img src="{{ asset('templates/images/earth-globe.svg') }}" class="svg" alt="">
+                <a href="{{url('select_project')}}"> <img src="{{ asset('templates/images/earth-globe.svg') }}" style="color: #EFA500" class="svg" alt="">
                  <div class="hero_box_content">
-                     <h2 class="hero_box_title">Fund a Project</h2>
-                     <a href="{{url('select_project')}}" class="hero_box_link">View More</a>
+                     <h2 class="hero_box_title" style="color: #EFA500">Fund a Project</h2>
+                     <a href="{{url('select_project')}}" class="hero_box_link" hidden style="color: #EFA500">View More</a>
                  </div></a>
              </div>
         </div>

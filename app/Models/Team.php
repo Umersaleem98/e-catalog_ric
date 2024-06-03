@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Team extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'email', 'designation', 'gender', 'image'];
+    protected $fillable = ['name', 'email', 'designation', 'gender', 'image', 'status'];
 }
