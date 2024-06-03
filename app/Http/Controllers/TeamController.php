@@ -87,6 +87,18 @@ public function update(Request $request, $id)
 
     // Handle image upload
     if ($request->hasFile('image')) {
+        // Check if the team member has an existing image
+        if ($teamMember->image) {
+            // Define the image path
+            $existingImagePath = public_path('team') . '/' . $teamMember->image;
+
+            // Delete the existing image if it exists
+            if (file_exists($existingImagePath)) {
+                unlink($existingImagePath);
+            }
+        }
+
+        // Upload the new image
         $image = $request->file('image');
         $imageName = time() . '.' . $image->getClientOriginalExtension();
         $image->move(public_path('team'), $imageName);
@@ -95,8 +107,9 @@ public function update(Request $request, $id)
 
     $teamMember->save();
 
-    return redirect()->back()->with('success', 'Team member update successfully');
+    return redirect()->back()->with('success', 'Team member updated successfully');
 }
+
 
 public function delete($id)
 {

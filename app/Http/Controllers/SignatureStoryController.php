@@ -75,6 +75,17 @@ class SignatureStoryController extends Controller
                 'images' => 'image|mimes:jpeg,png,jpg,gif|max:2048' // Adjust max file size as needed
             ]);
 
+            // Check if there is an existing image
+            if ($SignatureStories->images) {
+                // Define the image path
+                $existingImagePath = public_path('signature_storie_images') . '/' . $SignatureStories->images;
+
+                // Delete the existing image if it exists
+                if (file_exists($existingImagePath)) {
+                    unlink($existingImagePath);
+                }
+            }
+
             // Process and move the uploaded image
             $image = $request->file('images');
             $imageName = time() . '.' . $image->getClientOriginalExtension();
@@ -90,6 +101,7 @@ class SignatureStoryController extends Controller
         // Redirect back with a success message
         return view('layouts.signature_stories.signature_stories_list')->with('success', 'Signature Story updated successfully');
     }
+
 
     /**
      * Remove the specified resource from storage.

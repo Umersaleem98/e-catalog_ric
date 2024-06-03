@@ -71,6 +71,7 @@ class authController extends Controller
         return view('layouts.screens.update_students', compact('students'));
     }
 
+
     public function update(Request $request, $id)
     {
         // Find the student record by ID
@@ -101,6 +102,18 @@ class authController extends Controller
 
         // Handle file upload if 'images' is included in the form
         if ($request->hasFile('images')) {
+            // Check if there is an existing image
+            if ($student->images) {
+                // Define the image path
+                $existingImagePath = public_path('students_images') . '/' . $student->images;
+
+                // Delete the existing image if it exists
+                if (file_exists($existingImagePath)) {
+                    unlink($existingImagePath);
+                }
+            }
+
+            // Process and move the new uploaded image
             $file = $request->file('images');
             $fileName = time() . '_' . $file->getClientOriginalName();
             if ($file->move(public_path('students_images'), $fileName)) {
@@ -118,9 +131,6 @@ class authController extends Controller
         // Redirect back with a success message
         return redirect()->back()->with('success', 'Student updated successfully');
     }
-
-
-
 
 
 }
