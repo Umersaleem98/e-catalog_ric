@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\authController;
 use App\Http\Controllers\FundController;
@@ -8,16 +9,15 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\HostelController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\CredentialController;
 use App\Http\Controllers\SignatureStoryController;
 
 // Home Screens
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/r_m_o', [HomeController::class, 'r_m_o_page']);
 Route::get('/about_us', [HomeController::class, 'about_us']);
-
 Route::get('/contact_us', [HomeController::class, 'contact_us']);
-
 Route::get('/meet_out_team/{id}', [TeamController::class, 'meet_team']);
-
 Route::get('/students', [StudentController::class, 'index']);
 
 // Stories screens
@@ -66,3 +66,7 @@ Route::get('/delete/{id}', [TeamController::class, 'delete']);
 
 
 Route::get('/our_team', [TeamController::class, 'team']);
+
+Route::get('login', [CredentialController::class, 'index']);
+Route::post('login', [CredentialController::class, 'login']);
+Route::post('logout', [CredentialController::class, 'logout'])->name('logout');

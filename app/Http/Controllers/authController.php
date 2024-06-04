@@ -37,10 +37,6 @@ class authController extends Controller
         return view('layouts.screens.students_list', compact('students', 'searchQuery'));
     }
 
-
-
-
-
     public function store(Request $request)
     {
 

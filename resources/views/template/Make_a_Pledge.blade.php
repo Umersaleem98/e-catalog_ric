@@ -10,10 +10,30 @@
                 margin-left: 0 !important;
             }
         }
-        h2,p{
+        h2, p {
             color: black;
         }
-    </style>
+
+        /* Style for input text color */
+        input.form-control {
+            color: black;
+        }
+
+        /* Style for placeholder text color */
+        input.form-control::placeholder {
+            color: black;
+            opacity: 1; /* Override default opacity */
+        }
+
+        select.form-control {
+        color: black;
+    }
+
+    /* Style for select option text color */
+    select.form-control option {
+        color: black;
+    }
+        </style>
 </head>
 <body>
 
@@ -58,14 +78,13 @@
                 <div class="row">
                     <div class="col-12 mb-4">
                         <div class="card">
-                            <div class="card-header">
-                                <h2 class="text-dark">Bank Details</h2>
+                            <div class="alert alert-info mt-3 text-center" role="alert">
+                                For further details, we will contact you on valid email.
                             </div>
-                            <div class="card-body mt-3">
+                            {{-- <div class="card-body mt-3">
                                 <div class="row">
                                     <div class="col-md-4">
                                         <h2>Non-Zakat Donation</h2>
-                                        {{-- <p>Bank Name: XYZ Bank</p> --}}
                                         <p>Account Number: 2292-79173812-01</p>
                                         <p>IBAN Number: PK80HABB0022927917381201</p>
                                     </div>
@@ -75,11 +94,10 @@
                                         <p>IBAN Number: PK34habb0022927917386103</p>                                    </div>
                                     <div class="col-md-4">
                                         <h2>Endowment Fund Donations</h2>
-                                        {{-- <p>Bank Name: ABC Bank</p> --}}
-                                        <p>Account Number: 2292-79173811-01</p>
+                                         <p>Account Number: 2292-79173811-01</p>
                                         <p>IBAN Number: PK64habb0022927917381101</p>                                    </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -136,9 +154,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
-                        <div class="alert alert-info mt-3 text-center" role="alert">
-                            For further details, we will contact you on valid email.
-                        </div>
+
                     </div>
                     <div class="col-md-6 d-flex justify-content-center">
                         <img src="{{ asset('templates/images/charity2.gif') }}" alt="Image 1" class="img-fluid rounded" style="max-width: 100%; height:400px">

@@ -10,10 +10,30 @@
                 margin-left: 0 !important;
             }
         }
-        h2,p{
+        h2, p {
             color: black;
         }
-    </style>
+
+        /* Style for input text color */
+        input.form-control {
+            color: black;
+        }
+
+        /* Style for placeholder text color */
+        input.form-control::placeholder {
+            color: black;
+            opacity: 1; /* Override default opacity */
+        }
+
+        select.form-control {
+        color: black;
+    }
+
+    /* Style for select option text color */
+    select.form-control option {
+        color: black;
+    }
+        </style>
 </head>
 <body>
 
@@ -80,8 +100,14 @@
                                         <p>IBAN Number: PK64habb0022927917381101</p>                                    </div>
                                 </div>
                             </div>
+                            <div class="card-footer">
+                                <div class="alert alert-info text-center" role="alert">
+                                    For further details, we will contact you on valid email.
+                                </div>
+                            </div>
                         </div>
                     </div>
+
 
                     <div class="col-md-6">
                         <form method="POST" action="{{ url('payments') }}" enctype="multipart/form-data">
@@ -139,9 +165,7 @@
                             </div> --}}
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
-                        <div class="alert alert-info mt-3 text-center" role="alert">
-                            For further details, we will contact you on valid email.
-                        </div>
+
                     </div>
 
                     <div class="col-md-6 d-flex justify-content-center">

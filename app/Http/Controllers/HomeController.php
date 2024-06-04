@@ -40,5 +40,9 @@ class HomeController extends Controller
         return view('template.contact_us');
     }
 
-   
+    public function r_m_o_page()
+    {
+        return view('template.r_m_o');
+    }
+
 }
