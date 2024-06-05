@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <!-- Repeat the above card structure for other cards -->
-                {{-- <div class="col-md-6 mb-2">
+                <div class="col-md-6 mb-2">
                     <div class="card">
                         <div class="card-body">
                             <a href="{{'support_for_four_year'}}" class="card-link">
@@ -113,7 +113,7 @@
                             </a>
                         </div>
                     </div>
-                </div> --}}
+                </div>
                 <!-- Repeat the structure for other cards -->
             </div>
 

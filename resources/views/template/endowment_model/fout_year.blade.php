@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>One Year</title>
+    <title>4  Year</title>
     @include('template.head')
     <style>
-        .btn-details {
-            width: 150px;
-        }
-        .heading-image {
-            max-width: 100px; /* Adjust size as needed */
-            margin-right: 15px;
+        /* Your CSS styles here */
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Adjust the gap as needed */
         }
     </style>
 </head>
@@ -37,62 +36,77 @@
                 </div>
             </div>
 
-            <!-- Fee Breakdown Section -->
+            <!-- Undergraduate Students Section -->
             <div class="row mt-2">
                 <div class="col-12">
-                    <ul class="list-group list-group-flush text-dark">
+                    <ul class="list-group list-group-flush text-dark btn-container"> <!-- Added btn-container class -->
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
-                                <img src="{{ asset('templates/endowment_model/images1.jpg') }}" alt="" class="heading-image">
+                                {{-- <img src="{{ asset('templates/endowment_model/images1.jpg') }}" alt="" class="heading-image"> --}}
                                 <h3>Undergraduate Students (UG)</h3>
                             </div>
-                            <button class="btn btn-primary btn-details" type="button" data-bs-toggle="collapse" data-bs-target="#ugFeeDetails" aria-expanded="false" aria-controls="ugFeeDetails">
-                                More Details
-                            </button>
                         </li>
-                        <div class="collapse mt-3" id="ugFeeDetails">
-                            <div class="card card-body">
-                                <h4 class="text-dark">Detailed Fee Breakdown for UG:</h4>
-                                <ul class="list-group list-group-flush text-dark">
-                                    <li class="list-group-item">Tuition: 200,000 PKR</li>
-                                    <li class="list-group-item">Accommodation: 50,000 PKR</li>
-                                    <li class="list-group-item">Books and Materials: 30,000 PKR</li>
-                                    <li class="list-group-item">Other Fees: 20,000 PKR</li>
-                                    <li>
-                                        <a href="#" class="btn btn-success">Make a Pledge</a>
-                                        <a href="#" class="btn btn-primary">Pay Now</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img src="{{ asset('templates/endowment_model/images1.jpg') }}" alt="" class="heading-image">
-                                <h3>Postgraduate Students (PG)</h3>
-                            </div>
-                            <button class="btn btn-primary btn-details" type="button" data-bs-toggle="collapse" data-bs-target="#pgFeeDetails" aria-expanded="false" aria-controls="pgFeeDetails">
-                                More Details
-                            </button>
-                        </li>
-                        <div class="collapse mt-3" id="pgFeeDetails">
-                            <div class="card card-body">
-                                <h4 class="text-dark">Detailed Fee Breakdown for PG:</h4>
-                                <ul class="list-group list-group-flush text-dark">
-                                    <li class="list-group-item">Tuition: 200,000 PKR</li>
-                                    <li class="list-group-item">Accommodation: 50,000 PKR</li>
-                                    <li class="list-group-item">Books and Materials: 30,000 PKR</li>
-                                    <li class="list-group-item">Other Fees: 20,000 PKR</li>
-                                    <li>
-                                        <a href="#" class="btn btn-success">Make a Pledge</a>
-                                        <a href="#" class="btn btn-primary">Pay Now</a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="card card-body mt-3">
+                            <h4 class="text-dark">Detailed Fee Breakdown for UG:</h4>
+                            <ul class="list-group list-group-flush text-dark">
+                                <li class="list-group-item">
+                                    <input type="checkbox" id="ugTuition" name="ugTuition" value="200000">
+                                    <label for="ugTuition">Tuition: 200,000 PKR</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="checkbox" id="ugAccommodation" name="ugAccommodation" value="50000">
+                                    <label for="ugAccommodation">Accommodation: 50,000 PKR</label>
+                                </li>
+                                <div class="total-amount">
+                                    Total Amount (UG): <span id="ugTotalAmount">0</span> PKR
+                                </div>
+                                <!-- Use a "plus" icon for adding a card -->
+                                <li class="btn-container d-flex justify-content-center gap-2">
+                                    <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
+                                    <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
+                                </li>
+                            </ul>
                         </div>
                     </ul>
                 </div>
             </div>
-            <!-- End of Fee Breakdown Section -->
+            <!-- End of Undergraduate Students Section -->
+
+            <!-- Postgraduate Students Section -->
+            <div class="row mt-2">
+                <div class="col-12">
+                    <ul class="list-group list-group-flush text-dark btn-container"> <!-- Added btn-container class -->
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="{{ asset('templates/endowment_model/images2.jpg') }}" alt="" class="heading-image">
+                                <h3>Postgraduate Students (PG)</h3>
+                            </div>
+                        </li>
+                        <div class="card card-body mt-3">
+                            <h4 class="text-dark">Detailed Fee Breakdown for PG:</h4>
+                            <ul class="list-group list-group-flush text-dark">
+                                <li class="list-group-item">
+                                    <input type="checkbox" id="pgTuition" name="pgTuition" value="250000">
+                                    <label for="pgTuition">Tuition: 250,000 PKR</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="checkbox" id="pgAccommodation" name="pgAccommodation" value="60000">
+                                    <label for="pgAccommodation">Accommodation: 60,000 PKR</label>
+                                </li>
+                                <div class="total-amount">
+                                    Total Amount (PG): <span id="pgTotalAmount">0</span> PKR
+                                </div>
+                                <!-- Use a "plus" icon for adding a card -->
+                                <li class="btn-container d-flex justify-content-center gap-2">
+                                    <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
+                                    <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <!-- End of Postgraduate Students Section -->
         </div>
     </div>
 
@@ -103,6 +117,25 @@
 <!-- Bootstrap Bundle with Popper -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('input[name="ugTuition"], input[name="ugAccommodation"]').change(function() {
+            var ugTotal = 0;
+            $('input[name="ugTuition"]:checked, input[name="ugAccommodation"]:checked').each(function() {
+                ugTotal += parseInt($(this).val());
+            });
+            $('#ugTotalAmount').text(ugTotal);
+        });
+
+        $('input[name="pgTuition"], input[name="pgAccommodation"]').change(function() {
+            var pgTotal = 0;
+            $('input[name="pgTuition"]:checked, input[name="pgAccommodation"]:checked').each(function() {
+                pgTotal += parseInt($(this).val());
+            });
+            $('#pgTotalAmount').text(pgTotal);
+        });
+    });
+</script>
 
 </body>
 </html>
