@@ -14,6 +14,26 @@
         border-color: #0056b3;
         color: white;
     }
+
+       /* Style for input text color */
+       input.form-control {
+            color: black;
+        }
+
+        /* Style for placeholder text color */
+        input.form-control::placeholder {
+            color: black;
+            opacity: 1; /* Override default opacity */
+        }
+
+        select.form-control {
+        color: black;
+    }
+
+    /* Style for select option text color */
+    select.form-control option {
+        color: black;
+    }
     </style>
 <body>
 
@@ -205,7 +225,7 @@
 
 @include('template.footer')
 
-<<script>
+<script>
     document.addEventListener('DOMContentLoaded', function() {
         const genderFilter = document.getElementById('genderFilter');
         const teachers = document.querySelectorAll('.teacher');

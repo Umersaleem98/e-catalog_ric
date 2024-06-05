@@ -35,31 +35,23 @@
         .loader img {
             height: 500px; /* Adjust height as needed */
             width: 500px;  /* Adjust width as needed */
-            animation: slowBlink 1.5s infinite; /* Add animation for slow blinking */
-        }
-
-        @keyframes slowBlink {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
         }
     </style>
 </head>
 <body>
-    <div id="preloader">
-        <div class="loader">
-            <img src="{{ asset('templates/videos/preloader.gif') }}" alt="" class="img-fluid blinking-animation">
+    <div class="super_container">
+        <div id="preloader">
+            <div class="loader">
+                <img src="{{ asset('templates/videos/preloader.gif') }}" alt="" class="img-fluid blinking-animation">
+            </div>
         </div>
-    </div>
 
-    <div id="content" class="super_container">
         <!-- Header -->
         @include('template.navbar')
+
         @include('template.slider')
         <!-- Home -->
+
 
         <!-- Popular -->
         @include('template.stories')
@@ -88,7 +80,7 @@
 
                 var content = document.getElementById('content');
                 content.style.display = 'block';
-            }, 2000); // 8000 milliseconds = 8 seconds
+            }, 2000); // 2000 milliseconds = 2 seconds
         });
     </script>
 </body>

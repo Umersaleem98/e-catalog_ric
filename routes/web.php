@@ -9,6 +9,7 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\HostelController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\EndowmentController;
 use App\Http\Controllers\CredentialController;
 use App\Http\Controllers\SignatureStoryController;
 
@@ -27,6 +28,13 @@ Route::get('/student_stories_indiviual/{id}', [StudentController::class, 'stuede
 Route::get('/payment/{id}', [PaymentController::class, 'payment_index']);
 Route::get('/Make_a_Pledge/{id}', [PaymentController::class, 'Make_a_Pledge']);
 Route::post('/payments', [PaymentController::class, 'store']);
+
+Route::get('endowment_model', [EndowmentController::class, 'index']);
+Route::get('support_for_one_year', [EndowmentController::class, 'one_year']);
+Route::get('support_for_four_year', [EndowmentController::class, 'four_year']);
+Route::get('perpetual_seat_your_name', [EndowmentController::class, 'perpetual_seat']);
+Route::get('zakat_for_students', [EndowmentController::class, 'zakat']);
+
 
 // Funds the project routes
 
