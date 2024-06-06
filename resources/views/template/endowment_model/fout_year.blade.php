@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>4  Year</title>
+    <title>4 Year</title>
     @include('template.head')
     <style>
         /* Your CSS styles here */
@@ -29,33 +29,28 @@
                 </div>
             </div>
 
-            <!--  Breakdown Heading -->
+            <!-- Breakdown Heading -->
             <div class="row mt-5">
                 <div class="col-12">
-                    <h1 class="text-center text-dark mb-3"> Breakdown</h1>
+                    <h1 class="text-center text-dark mb-3">Breakdown</h1>
                 </div>
             </div>
 
             <!-- Undergraduate Students Section -->
             <div class="row mt-2">
                 <div class="col-12">
-                    <ul class="list-group list-group-flush text-dark btn-container"> <!-- Added btn-container class -->
+                    <ul class="list-group list-group-flush text-dark btn-container">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
-                                {{-- <img src="{{ asset('templates/endowment_model/images1.jpg') }}" alt="" class="heading-image"> --}}
                                 <h3>Undergraduate Students (UG)</h3>
                             </div>
                         </li>
                         <div class="card card-body mt-3">
-                            <h4 class="text-dark">Detailed  Breakdown for UG:</h4>
+                            <h4 class="text-dark">Detailed Breakdown for UG:</h4>
                             <ul class="list-group list-group-flush text-dark">
                                 <li class="list-group-item">
-                                    <input type="checkbox" id="ugTuition" name="ugTuition" value="200000">
-                                    <label for="ugTuition">Tuition: 200,000 PKR</label>
-                                </li>
-                                <li class="list-group-item">
-                                    <input type="checkbox" id="ugAccommodation" name="ugAccommodation" value="50000">
-                                    <label for="ugAccommodation">Accommodation: 50,000 PKR</label>
+                                    <input type="checkbox" id="ugTuition" name="ugTuition" value="1500000">
+                                    <label for="ugTuition">Tuition: 15,00,000 PKR</label>
                                 </li>
                                 <div class="total-amount">
                                     Total Amount (UG): <span id="ugTotalAmount">0</span> PKR
@@ -75,7 +70,7 @@
             <!-- Postgraduate Students Section -->
             <div class="row mt-2">
                 <div class="col-12">
-                    <ul class="list-group list-group-flush text-dark btn-container"> <!-- Added btn-container class -->
+                    <ul class="list-group list-group-flush text-dark btn-container">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
                                 <img src="{{ asset('templates/endowment_model/images2.jpg') }}" alt="" class="heading-image">
@@ -83,7 +78,7 @@
                             </div>
                         </li>
                         <div class="card card-body mt-3">
-                            <h4 class="text-dark">Detailed  Breakdown for PG:</h4>
+                            <h4 class="text-dark">Detailed Breakdown for PG:</h4>
                             <ul class="list-group list-group-flush text-dark">
                                 <li class="list-group-item">
                                     <input type="checkbox" id="pgTuition" name="pgTuition" value="250000">
@@ -107,6 +102,38 @@
                 </div>
             </div>
             <!-- End of Postgraduate Students Section -->
+            <div class="row mt-2">
+                <div class="col-12">
+                    <ul class="list-group list-group-flush text-dark btn-container">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="{{ asset('templates/endowment_model/images2.jpg') }}" alt="" class="heading-image">
+                                <h3>PhD Students</h3>
+                            </div>
+                        </li>
+                        <div class="card card-body mt-3">
+                            <h4 class="text-dark">Detailed Breakdown for PhD:</h4>
+                            <ul class="list-group list-group-flush text-dark">
+                                <li class="list-group-item">
+                                    <input type="checkbox" id="phdTuition" name="phdTuition" value="250000">
+                                    <label for="phdTuition">Tuition: 250,000 PKR</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="checkbox" id="phdAccommodation" name="phdAccommodation" value="60000">
+                                    <label for="phdAccommodation">Accommodation: 60,000 PKR</label>
+                                </li>
+                                <div class="total-amount">
+                                    Total Amount (PhD): <span id="phdTotalAmount">0</span> PKR
+                                </div>
+                                <li class="btn-container d-flex justify-content-center gap-2">
+                                    <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
+                                    <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+
         </div>
     </div>
 
@@ -133,6 +160,15 @@
                 pgTotal += parseInt($(this).val());
             });
             $('#pgTotalAmount').text(pgTotal);
+        });
+
+
+        $('input[name="phdTuition"], input[name="phdAccommodation"]').change(function() {
+            var phdTotal = 0;
+            $('input[name="phdTuition"]:checked, input[name="phdAccommodation"]:checked').each(function() {
+                phdTotal += parseInt($(this).val());
+            });
+            $('#phdTotalAmount').text(phdTotal);
         });
     });
 </script>

@@ -52,7 +52,7 @@
             font-family: 'Brush Script MT', cursive;
             /* font-size: 2.5em; */
             font-size: 20px;
-            color: #333;
+            color: black;
         }
         .img-fluid {
             border-radius: 8px;
@@ -92,7 +92,7 @@
                     <span class="quote">
                         <img src="{{ asset('templates/images/quotation-right-mark-svgrepo-com.svg') }}" alt="" style="transform: rotate(180deg);">
                     </span>
-                    <b style="font-size:25px; color:#007bff; font-family: cursive;">A commitment</b> to quality faculty and students has fueled NUST’s impressive rise in rankings</span> and the success of our international alumni network. As Director Advancement, I am privileged to steer a self-sustaining system that supports<span class="highlight"> Pakistan’s leading science and technology university.</span>  Our aim is to become the driving force of Pakistan’s knowledge economy, with the<span class="highlight"> dream of making NUST a need-blind university.</span>
+                    <b style="font-size:25px; color:black; font-family: cursive;">A commitment</b> to quality faculty and students has fueled NUST’s impressive rise in rankings</span> and the success of our international alumni network. As Director Advancement, I am privileged to steer a self-sustaining system that supports<span class="highlight"> Pakistan’s leading science and technology university.</span>  Our aim is to become the driving force of Pakistan’s knowledge economy, with the<span class="highlight"> dream of making NUST a need-blind university.</span>
                     <br>
                     Many deserving students face significant financial challenges, with<span class="highlight"> nearly half of our undergraduates requiring scholarships. Despite our best efforts, a gap remains, affecting 150 to 250 students </span>  annually. Our <span class="highlight">NEED Initiative Campaign</span> aims to bridge this gap, ensuring all talented students can afford higher education.
                     <br>

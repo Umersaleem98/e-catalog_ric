@@ -43,7 +43,7 @@
                         <!-- Testimonials Item -->
                         <div class="owl-item">
                             <div class="testimonials_item text-center">
-                                <div class="quote">“</div>
+                                {{-- <div class="quote">“</div> --}}
                                 <p class="testimonials_text"> <span class="quote">"</span>I'm Hina Leeza Malik, working as a Community Development Specialist in the Government's Ten Billion Tree Tsunami Program. From Alipur in District Muzaffargarh, I tackled NUST challenges with a positive attitude, backed by an incredibly supportive community at NUST. Now, I'm turning hurdles into opportunities, proving that with determination, a positive mindset, and the right support, dreams do come true. To all dreamers out there, trust your journey – the bumps make it worthwhile! <span class="quote">"</span></p>
                                 <div class="testimonial_user">
                                     <div class="testimonial_image mx-auto">

@@ -43,15 +43,13 @@
 
             <!-- Breakdown Heading -->
             <div class="row mt-5">
-
                 <div class="col-lg-6">
                     <!-- Left Part -->
                     <div class="row mt-2">
                         <div class="col-12">
-                            <ul class="list-group list-group-flush text-dark btn-container"> <!-- Added btn-container class -->
+                            <ul class="list-group list-group-flush text-dark btn-container">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{-- <img src="{{ asset('templates/endowment_model/images1.jpg') }}" alt="" class="heading-image"> --}}
                                         <h3 class="pl-3">Single Endowment for Undergraduate Students (UG)</h3>
                                     </div>
                                 </li>
@@ -59,23 +57,16 @@
                                     <h4 class="text-dark">Detailed Breakdown for UG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <input type="checkbox" id="ugTuition" name="ugTuition" value="4000000">
-                                            <label for="ugTuition">Tuition: 40,00,000 Million PKR</label>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input type="checkbox" id="ugAccommodation" name="ugAccommodation" value="50000">
-                                            <label for="ugAccommodation">Accommodation: 50,000 PKR</label>
+                                            <input type="checkbox" id="ugTuitionLeft" name="ugTuitionLeft" value="4000000">
+                                            <label for="ugTuitionLeft">Tuition: 40,00,000 Million PKR</label>
                                         </li>
                                         <div class="total-amount">
-                                            Total Amount (UG): <span id="ugTotalAmount">0</span> PKR
+                                            Total Amount (UG): <span id="ugTotalAmountLeft">0</span> PKR
                                         </div>
-                                        <!-- Use a "plus" icon for adding a card -->
-                                        <!-- Use Bootstrap utility classes to center the buttons and add a gap -->
-                                        <li class="btn-container d-flex justify-content-center gap-4 mt-4">
-                                            <a href="{{url('payments_project')}}" class="btn btn-success">Make a Pledge</a>
-                                            <a href="{{url('payments_project')}}" class="btn btn-primary">Pay Now</a>
+                                        <li class="btn-container d-flex justify-content-center gap-2">
+                                            <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
+                                            <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
                                         </li>
-
                                     </ul>
                                 </div>
                             </ul>
@@ -87,10 +78,9 @@
                     <!-- Right Part -->
                     <div class="row mt-2">
                         <div class="col-12">
-                            <ul class="list-group list-group-flush text-dark btn-container"> <!-- Added btn-container class -->
+                            <ul class="list-group list-group-flush text-dark btn-container">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{-- <img src="{{ asset('templates/endowment_model/images1.jpg') }}" alt="" class="heading-image"> --}}
                                         <h3 class="pl-3">Circular Endowment for Undergraduate Students (UG)</h3>
                                     </div>
                                 </li>
@@ -98,23 +88,16 @@
                                     <h4 class="text-dark">Detailed Breakdown for UG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <input type="checkbox" id="ugTuition" name="ugTuition" value="4000000">
-                                            <label for="ugTuition">Tuition: 40,00,000 Million PKR</label>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input type="checkbox" id="ugAccommodation" name="ugAccommodation" value="50000">
-                                            <label for="ugAccommodation">Accommodation: 50,000 PKR</label>
+                                            <input type="checkbox" id="ugTuitionRight" name="ugTuitionRight" value="5000000">
+                                            <label for="ugTuitionRight">Tuition: 50,00,000  (5)Million PKR</label>
                                         </li>
                                         <div class="total-amount">
-                                            Total Amount (UG): <span id="ugTotalAmount">0</span> PKR
+                                            Total Amount (UG): <span id="ugTotalAmountRight">0</span> PKR
                                         </div>
-                                        <!-- Use a "plus" icon for adding a card -->
-                                        <!-- Use Bootstrap utility classes to center the buttons and add a gap -->
-                                        <li class="btn-container d-flex justify-content-center gap-4 mt-4">
-                                            <a href="{{url('payments_project')}}" class="btn btn-success">Make a Pledge</a>
-                                            <a href="{{url('payments_project')}}" class="btn btn-primary">Pay Now</a>
+                                        <li class="btn-container d-flex justify-content-center gap-2">
+                                            <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
+                                            <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
                                         </li>
-
                                     </ul>
                                 </div>
                             </ul>
@@ -123,48 +106,38 @@
                     <!-- End of Right Part -->
                 </div>
             </div>
+
             <!-- End of Breakdown Section -->
             <div class="container mt-3">
                 <div class="row justify-content-center">
                     <h2 class="text-center">Postgraduate</h2>
                 </div>
             </div>
-
-
             <div class="row mt-5">
-
                 <div class="col-lg-6">
                     <!-- Left Part -->
                     <div class="row mt-2">
                         <div class="col-12">
-                            <ul class="list-group list-group-flush text-dark btn-container"> <!-- Added btn-container class -->
+                            <ul class="list-group list-group-flush text-dark btn-container">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{-- <img src="{{ asset('templates/endowment_model/images1.jpg') }}" alt="" class="heading-image"> --}}
-                                        <h3 class="pl-3">Single Endowment for Postgraduate Students (UG)</h3>
+                                        <h3 class="pl-3">Single Endowment for Postgraduate Students (PG)</h3>
                                     </div>
                                 </li>
                                 <div class="card card-body mt-3">
-                                    <h4 class="text-dark">Detailed Breakdown for UG:</h4>
+                                    <h4 class="text-dark">Detailed Breakdown for PG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <input type="checkbox" id="ugTuition" name="ugTuition" value="4000000">
-                                            <label for="ugTuition">Tuition: 40,00,000 Million PKR</label>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input type="checkbox" id="ugAccommodation" name="ugAccommodation" value="50000">
-                                            <label for="ugAccommodation">Accommodation: 50,000 PKR</label>
+                                            <input type="checkbox" id="pgTuitionLeft" name="pgTuitionLeft" value="3000000">
+                                            <label for="pgTuitionLeft">Tuition: 30,00,000 PKR</label>
                                         </li>
                                         <div class="total-amount">
-                                            Total Amount (UG): <span id="ugTotalAmount">0</span> PKR
+                                            Total Amount (PG): <span id="pgTotalAmountLeft">0</span> PKR
                                         </div>
-                                        <!-- Use a "plus" icon for adding a card -->
-                                        <!-- Use Bootstrap utility classes to center the buttons and add a gap -->
-                                        <li class="btn-container d-flex justify-content-center gap-4 mt-4">
-                                            <a href="{{url('payments_project')}}" class="btn btn-success">Make a Pledge</a>
-                                            <a href="{{url('payments_project')}}" class="btn btn-primary">Pay Now</a>
+                                        <li class="btn-container d-flex justify-content-center gap-2">
+                                            <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
+                                            <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
                                         </li>
-
                                     </ul>
                                 </div>
                             </ul>
@@ -176,34 +149,26 @@
                     <!-- Right Part -->
                     <div class="row mt-2">
                         <div class="col-12">
-                            <ul class="list-group list-group-flush text-dark btn-container"> <!-- Added btn-container class -->
+                            <ul class="list-group list-group-flush text-dark btn-container">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{-- <img src="{{ asset('templates/endowment_model/images1.jpg') }}" alt="" class="heading-image"> --}}
-                                        <h3 class="pl-3">Circular Endowment for Postgraduate Students (UG)</h3>
+                                        <h3 class="pl-3">Circular Endowment for Postgraduate Students (PG)</h3>
                                     </div>
                                 </li>
                                 <div class="card card-body mt-3">
-                                    <h4 class="text-dark">Detailed Breakdown for UG:</h4>
+                                    <h4 class="text-dark">Detailed Breakdown for PG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <input type="checkbox" id="ugTuition" name="ugTuition" value="4000000">
-                                            <label for="ugTuition">Tuition: 40,00,000 Million PKR</label>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input type="checkbox" id="ugAccommodation" name="ugAccommodation" value="50000">
-                                            <label for="ugAccommodation">Accommodation: 50,000 PKR</label>
+                                            <input type="checkbox" id="pgTuitionRight" name="pgTuitionRight" value="6000000">
+                                            <label for="pgTuitionRight">Tuition: 60,00,000 PKR</label>
                                         </li>
                                         <div class="total-amount">
-                                            Total Amount (UG): <span id="ugTotalAmount">0</span> PKR
+                                            Total Amount (PG): <span id="pgTotalAmountRight">0</span> PKR
                                         </div>
-                                        <!-- Use a "plus" icon for adding a card -->
-                                        <!-- Use Bootstrap utility classes to center the buttons and add a gap -->
-                                        <li class="btn-container d-flex justify-content-center gap-4 mt-4">
-                                            <a href="{{url('payments_project')}}" class="btn btn-success">Make a Pledge</a>
-                                            <a href="{{url('payments_project')}}" class="btn btn-primary">Pay Now</a>
+                                        <li class="btn-container d-flex justify-content-center gap-2">
+                                            <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
+                                            <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
                                         </li>
-
                                     </ul>
                                 </div>
                             </ul>
@@ -224,39 +189,30 @@
 
 
             <div class="row mt-5">
-
                 <div class="col-lg-6">
                     <!-- Left Part -->
                     <div class="row mt-2">
                         <div class="col-12">
-                            <ul class="list-group list-group-flush text-dark btn-container"> <!-- Added btn-container class -->
+                            <ul class="list-group list-group-flush text-dark btn-container">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{-- <img src="{{ asset('templates/endowment_model/images1.jpg') }}" alt="" class="heading-image"> --}}
                                         <h3 class="pl-3">Single Endowment for PhD Students</h3>
                                     </div>
                                 </li>
                                 <div class="card card-body mt-3">
-                                    <h4 class="text-dark">Detailed Breakdown for UG:</h4>
+                                    <h4 class="text-dark">Detailed Breakdown for PhD:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <input type="checkbox" id="ugTuition" name="ugTuition" value="4000000">
-                                            <label for="ugTuition">Tuition: 40,00,000 Million PKR</label>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input type="checkbox" id="ugAccommodation" name="ugAccommodation" value="50000">
-                                            <label for="ugAccommodation">Accommodation: 50,000 PKR</label>
+                                            <input type="checkbox" id="phdTuitionLeft" name="phdTuitionLeft" value="5000000">
+                                            <label for="phdTuitionLeft">Tuition: 50,00,000 PKR</label>
                                         </li>
                                         <div class="total-amount">
-                                            Total Amount (UG): <span id="ugTotalAmount">0</span> PKR
+                                            Total Amount: <span id="phdTotalAmountLeft">0</span> PKR
                                         </div>
-                                        <!-- Use a "plus" icon for adding a card -->
-                                        <!-- Use Bootstrap utility classes to center the buttons and add a gap -->
-                                        <li class="btn-container d-flex justify-content-center gap-4 mt-4">
-                                            <a href="{{url('payments_project')}}" class="btn btn-success">Make a Pledge</a>
-                                            <a href="{{url('payments_project')}}" class="btn btn-primary">Pay Now</a>
+                                        <li class="btn-container d-flex justify-content-center gap-2">
+                                            <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
+                                            <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
                                         </li>
-
                                     </ul>
                                 </div>
                             </ul>
@@ -268,34 +224,26 @@
                     <!-- Right Part -->
                     <div class="row mt-2">
                         <div class="col-12">
-                            <ul class="list-group list-group-flush text-dark btn-container"> <!-- Added btn-container class -->
+                            <ul class="list-group list-group-flush text-dark btn-container">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     <div class="d-flex align-items-center">
-                                        {{-- <img src="{{ asset('templates/endowment_model/images1.jpg') }}" alt="" class="heading-image"> --}}
                                         <h3 class="pl-3">Circular Endowment for PhD Students</h3>
                                     </div>
                                 </li>
                                 <div class="card card-body mt-3">
-                                    <h4 class="text-dark">Detailed Breakdown for UG:</h4>
+                                    <h4 class="text-dark">Detailed Breakdown for PhD:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <input type="checkbox" id="ugTuition" name="ugTuition" value="4000000">
-                                            <label for="ugTuition">Tuition: 40,00,000 Million PKR</label>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input type="checkbox" id="ugAccommodation" name="ugAccommodation" value="50000">
-                                            <label for="ugAccommodation">Accommodation: 50,000 PKR</label>
+                                            <input type="checkbox" id="phdTuitionRight" name="phdTuitionRight" value="12000000">
+                                            <label for="phdTuitionRight">Tuition: 120,00,000 Million PKR</label>
                                         </li>
                                         <div class="total-amount">
-                                            Total Amount (UG): <span id="ugTotalAmount">0</span> PKR
+                                            Total Amount (UG): <span id="phdTotalAmountRight">0</span> PKR
                                         </div>
-                                        <!-- Use a "plus" icon for adding a card -->
-                                        <!-- Use Bootstrap utility classes to center the buttons and add a gap -->
-                                        <li class="btn-container d-flex justify-content-center gap-4 mt-4">
-                                            <a href="{{url('payments_project')}}" class="btn btn-success">Make a Pledge</a>
-                                            <a href="{{url('payments_project')}}" class="btn btn-primary">Pay Now</a>
+                                        <li class="btn-container d-flex justify-content-center gap-2">
+                                            <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
+                                            <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
                                         </li>
-
                                     </ul>
                                 </div>
                             </ul>
@@ -304,6 +252,8 @@
                     <!-- End of Right Part -->
                 </div>
             </div>
+
+
         </div>
     </div>
     <div class="container">
@@ -327,22 +277,68 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('input[name="ugTuition"], input[name="ugAccommodation"]').change(function() {
-            var ugTotal = 0;
-            $('input[name="ugTuition"]:checked, input[name="ugAccommodation"]:checked').each(function() {
-                ugTotal += parseInt($(this).val());
+        // Calculate total amount for left part
+        $('input[name="ugTuitionLeft"]').change(function() {
+            var ugTotalLeft = 0;
+            $('input[name="ugTuitionLeft"]:checked').each(function() {
+                ugTotalLeft += parseInt($(this).val());
             });
-            $('#ugTotalAmount').text(ugTotal);
+            $('#ugTotalAmountLeft').text(ugTotalLeft);
         });
 
-        $('input[name="pgTuition"], input[name="pgAccommodation"]').change(function() {
-            var pgTotal = 0;
-            $('input[name="pgTuition"]:checked, input[name="pgAccommodation"]:checked').each(function() {
-                pgTotal += parseInt($(this).val());
+        // Calculate total amount for right part
+        $('input[name="ugTuitionRight"]').change(function() {
+            var ugTotalRight = 0;
+            $('input[name="ugTuitionRight"]:checked').each(function() {
+                ugTotalRight += parseInt($(this).val());
             });
-            $('#pgTotalAmount').text(pgTotal);
+            $('#ugTotalAmountRight').text(ugTotalRight);
         });
     });
+
+
+
+    $(document).ready(function() {
+        // Calculation for Single Endowment (PG)
+        $('input[name="pgTuitionLeft"]').change(function() {
+            var pgTotalLeft = 0;
+            $('input[name="pgTuitionLeft"]:checked').each(function() {
+                pgTotalLeft += parseInt($(this).val());
+            });
+            $('#pgTotalAmountLeft').text(pgTotalLeft);
+        });
+
+        // Calculation for Circular Endowment (PG)
+        $('input[name="pgTuitionRight"]').change(function() {
+            var pgTotalRight = 0;
+            $('input[name="pgTuitionRight"]:checked').each(function() {
+                pgTotalRight += parseInt($(this).val());
+            });
+            $('#pgTotalAmountRight').text(pgTotalRight);
+        });
+    });
+
+
+    $(document).ready(function() {
+        // Calculation for Single Endowment (PhD)
+        $('input[name="phdTuitionLeft"]').change(function() {
+            var phdTotalLeft = 0;
+            $('input[name="phdTuitionLeft"]:checked').each(function() {
+                phdTotalLeft += parseInt($(this).val());
+            });
+            $('#phdTotalAmountLeft').text(phdTotalLeft);
+        });
+
+        // Calculation for Circular Endowment (PhD)
+        $('input[name="phdTuitionRight"]').change(function() {
+            var phdTotalRight = 0;
+            $('input[name="phdTuitionRight"]:checked').each(function() {
+                phdTotalRight += parseInt($(this).val());
+            });
+            $('#phdTotalAmountRight').text(phdTotalRight);
+        });
+    });
+
 </script>
 
 </body>

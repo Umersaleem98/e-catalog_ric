@@ -77,7 +77,7 @@
             <!-- Postgraduate Students Section -->
             <div class="row mt-2">
                 <div class="col-12">
-                    <ul class="list-group list-group-flush text-dark btn-container"> <!-- Added btn-container class -->
+                    <ul class="list-group list-group-flush text-dark btn-container">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
                                 <img src="{{ asset('templates/endowment_model/images2.jpg') }}" alt="" class="heading-image">
@@ -88,18 +88,19 @@
                             <h4 class="text-dark">Detailed Breakdown for PG:</h4>
                             <ul class="list-group list-group-flush text-dark">
                                 <li class="list-group-item">
-                                    <input type="checkbox" id="pgTuition" name="pgTuition" value="250000">
-                                    <label for="pgTuition">Tuition: 250,000 PKR</label>
-                                </li>
-                                <li class="list-group-item">
-                                    <input type="checkbox" id="pgAccommodation" name="pgAccommodation" value="60000">
-                                    <label for="pgAccommodation">Accommodation: 60,000 PKR</label>
+                                    <label for="pgTuition">Tuition</label>
+                                    <select id="pgTuition" class="form-control" name="pgTuition">
+                                        <option value="0" selected disabled>Select Tuition Amount</option>
+                                        <option value="210,000">Engineering /IT, Bio Sciences, programs
+                                        </option>
+                                        <option value="300000">MS HRM, MS Logistics & Supply Chain Management, MS Innovation & Entrepreneurship
+                                        </option>
+                                        <option value="350000">350,000 PKR</option>
+                                    </select>
                                 </li>
                                 <div class="total-amount">
                                     Total Amount (PG): <span id="pgTotalAmount">0</span> PKR
                                 </div>
-                                <!-- Use a "plus" icon for adding a card -->
-                                <!-- Use Bootstrap utility classes to center the buttons and add a gap -->
                                 <li class="btn-container d-flex justify-content-center gap-2">
                                     <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
                                     <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
@@ -109,6 +110,7 @@
                     </ul>
                 </div>
             </div>
+
             <!-- End of Postgraduate Students Section -->
         </div>
     </div>
@@ -136,6 +138,29 @@
                 pgTotal += parseInt($(this).val());
             });
             $('#pgTotalAmount').text(pgTotal);
+        });
+    });
+</script>
+
+
+
+<script>
+    $(document).ready(function() {
+        function calculateTotalPG() {
+            var pgTotal = 0;
+            var tuition = parseInt($('#pgTuition').val());
+            var accommodation = parseInt($('#pgAccommodation').val());
+            if (!isNaN(tuition)) {
+                pgTotal += tuition;
+            }
+            if (!isNaN(accommodation)) {
+                pgTotal += accommodation;
+            }
+            $('#pgTotalAmount').text(pgTotal);
+        }
+
+        $('#pgTuition, #pgAccommodation').change(function() {
+            calculateTotalPG();
         });
     });
 </script>

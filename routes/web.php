@@ -34,8 +34,8 @@ Route::get('support_for_one_year', [EndowmentController::class, 'one_year']);
 Route::get('support_for_four_year', [EndowmentController::class, 'four_year']);
 Route::get('perpetual_seat_your_name', [EndowmentController::class, 'perpetual_seat']);
 Route::get('zakat_for_students', [EndowmentController::class, 'zakat']);
+Route::get('Make_a_Pledge', [EndowmentController::class, 'pledge_payments']);
 Route::get('payment', [EndowmentController::class, 'payments']);
-Route::get('Make_a_Pledge', [EndowmentController::class, 'pledge_payment']);
 
 
 // Funds the project routes

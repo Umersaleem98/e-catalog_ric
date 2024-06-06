@@ -36,8 +36,8 @@ class EndowmentController extends Controller
         return view('template.endowment_model.payments');
     }
 
-    public function pledge_payment()
+    public function pledge_payments()
     {
-        return view('template.endowment_model.pledge');
+        return view('template.endowment_model.pledge_payments');
     }
 }

@@ -58,7 +58,7 @@
                                     <i class="fas fa-graduation-cap"></i> <!-- Font Awesome icon for education/degree -->
                                 </div>
                                 <div>
-                                    <h2 class="card-title">Support a degree for 1 year</h2>
+                                    <h2 class="card-title">Support a Degree for 1 Year</h2>
                                     <p class="card-text">Click here for more information.</p>
                                 </div>
                             </a>
@@ -75,7 +75,7 @@
                                     <i class="fas fa-graduation-cap"></i> <!-- Font Awesome icon for education/degree -->
                                 </div>
                                 <div>
-                                    <h2 class="card-title">Support a degree program for 4 year</h2>
+                                    <h2 class="card-title">Support a Degree Program for 4 Year</h2>
                                     <p class="card-text">Click here for more information.</p>
                                 </div>
                             </a>
@@ -91,7 +91,7 @@
                                     <i class="fas fa-chair"></i> <!-- Font Awesome icon for seat/chair -->
                                 </div>
                                 <div>
-                                    <h2 class="card-title">Create a perpetual seat in your name</h2>
+                                    <h2 class="card-title">Create a Perpetual Seat in Your Name</h2>
                                     <p class="card-text">Click here for more information.</p>
                                 </div>
                             </a>

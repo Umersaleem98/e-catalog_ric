@@ -101,7 +101,7 @@
             </div>
             <!-- Hero Slide -->
             <div class="hero_slide">
-                <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/ghi.jpg') }}')"></div>
+                <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/ijk.jpg') }}')"></div>
                 <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                     <div class="hero_slide_content text-center mt-5">
                         <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="color: #EFA500">Creating Impact for a Better Tomorrow</h1>
