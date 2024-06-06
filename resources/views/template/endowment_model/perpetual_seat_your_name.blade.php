@@ -11,6 +11,17 @@
             justify-content: center;
             gap: 10px; /* Adjust the gap as needed */
         }
+        .card-body p {
+            font-size: 1.2em; /* Increase font size */
+            color: #333; /* Darken text color */
+            line-height: 1.6;
+        }
+        .alert p {
+            font-size: 1.2em; /* Increase font size */
+            color: #333; /* Darken text color */
+            line-height: 1.6;
+            margin: 0; /* Remove default margin */
+        }
     </style>
 </head>
 <body>
@@ -30,7 +41,7 @@
                 </div>
             </div>
 
-            <!-- Fee Breakdown Heading -->
+            <!-- Breakdown Heading -->
             <div class="row mt-5">
 
                 <div class="col-lg-6">
@@ -45,7 +56,7 @@
                                     </div>
                                 </li>
                                 <div class="card card-body mt-3">
-                                    <h4 class="text-dark">Detailed Fee Breakdown for UG:</h4>
+                                    <h4 class="text-dark">Detailed Breakdown for UG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
                                             <input type="checkbox" id="ugTuition" name="ugTuition" value="4000000">
@@ -84,7 +95,7 @@
                                     </div>
                                 </li>
                                 <div class="card card-body mt-3">
-                                    <h4 class="text-dark">Detailed Fee Breakdown for UG:</h4>
+                                    <h4 class="text-dark">Detailed Breakdown for UG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
                                             <input type="checkbox" id="ugTuition" name="ugTuition" value="4000000">
@@ -112,7 +123,7 @@
                     <!-- End of Right Part -->
                 </div>
             </div>
-            <!-- End of Fee Breakdown Section -->
+            <!-- End of Breakdown Section -->
             <div class="container mt-3">
                 <div class="row justify-content-center">
                     <h2 class="text-center">Postgraduate</h2>
@@ -134,7 +145,7 @@
                                     </div>
                                 </li>
                                 <div class="card card-body mt-3">
-                                    <h4 class="text-dark">Detailed Fee Breakdown for UG:</h4>
+                                    <h4 class="text-dark">Detailed Breakdown for UG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
                                             <input type="checkbox" id="ugTuition" name="ugTuition" value="4000000">
@@ -173,7 +184,7 @@
                                     </div>
                                 </li>
                                 <div class="card card-body mt-3">
-                                    <h4 class="text-dark">Detailed Fee Breakdown for UG:</h4>
+                                    <h4 class="text-dark">Detailed Breakdown for UG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
                                             <input type="checkbox" id="ugTuition" name="ugTuition" value="4000000">
@@ -226,7 +237,7 @@
                                     </div>
                                 </li>
                                 <div class="card card-body mt-3">
-                                    <h4 class="text-dark">Detailed Fee Breakdown for UG:</h4>
+                                    <h4 class="text-dark">Detailed Breakdown for UG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
                                             <input type="checkbox" id="ugTuition" name="ugTuition" value="4000000">
@@ -265,7 +276,7 @@
                                     </div>
                                 </li>
                                 <div class="card card-body mt-3">
-                                    <h4 class="text-dark">Detailed Fee Breakdown for UG:</h4>
+                                    <h4 class="text-dark">Detailed Breakdown for UG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
                                             <input type="checkbox" id="ugTuition" name="ugTuition" value="4000000">
@@ -291,6 +302,17 @@
                         </div>
                     </div>
                     <!-- End of Right Part -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-info shadow-sm">
+                    <p>
+                        An additional contribution of 2 million PKR is available to donors who wish to sponsor the hostel and messing expenses too, which can be combined with any of the aforementioned scholarship proposals.
+                    </p>
                 </div>
             </div>
         </div>

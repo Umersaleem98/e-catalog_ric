@@ -32,6 +32,36 @@
 
         /* Custom CSS to reduce line height for h2 tags within .card-body */
 
+        .custom-paragraph {
+            font-size: 1.1em;
+            color: #333;
+            line-height: 1.8;
+        }
+        .custom-paragraph .highlight {
+            font-weight: bold;
+            color: #007bff; /* Bootstrap primary color for emphasis */
+        }
+        .quote img {
+            width: 25px;
+            height: 25px;
+            color: blue;
+            transform: rotate(180deg);
+        }
+        .signature {
+            margin-top: 15px;
+            font-family: 'Brush Script MT', cursive;
+            /* font-size: 2.5em; */
+            font-size: 20px;
+            color: #333;
+        }
+        .img-fluid {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .img-fluid:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -51,38 +81,32 @@
 
     <!-- Header -->
 
-
-    <style>
-
-    </style>
-
-    <section class="container mt-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-4">
-                    <img src="{{ asset('team/Arooba_Gillani.png') }}" class="img-fluid" alt="CEO Image" style="max-height: 400px; width:100%">
-                </div>
-                <div class="col-md-8">
-                    <p class="text-dark custom-paragraph">
-                        <span class="quote">
-                            <img src="{{ asset('templates/images/quotation-right-mark-svgrepo-com.svg') }}" alt="" style="width:25px; height:25px; color:bluel; transform: rotate(180deg);">
-                        </span>
-                        A commitment to quality faculty and students has fueled NUST’s impressive rise in rankings and the success of our international alumni network. As Director Advancement, I am privileged to steer a self-sustaining system that supports Pakistan’s leading science and technology university. Our aim is to become the driving force of Pakistan’s knowledge economy, with the dream of making NUST a need-blind university.
-                        <br>
-                        Many deserving students face significant financial challenges, with nearly half of our undergraduates requiring scholarships. Despite our best efforts, a gap remains, affecting 150 to 250 students annually. Our NEED Initiative Campaign aims to bridge this gap, ensuring all talented students can afford higher education.
-                        <br>
-                        Your support is crucial to this campaign, dedicated to making need-blind admissions a reality and empowering our youth. Join us in sponsoring dreams and lighting the way for a more equitable future.
-                        <span class="quote">
-                            <img src="{{ asset('templates/images/quotation-right-mark-svgrepo-com.svg') }}" alt="" style="width:25px; height:25px; color:bluel;">
-                        </span>
-                    </p>
-                    <div class="signature">Arooba Gillani</div>
-                    <div  style="font-size: 18px; color: black;margin-right: 35px;text-align: right;
-                    font-weight: bold; margin-top: -4px; "> (Director of UAO)</div>
-                </div>
+<section class="container mt-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <img src="{{ asset('team/Arooba_Gillani.png') }}" class="img-fluid" alt="CEO Image" style="max-height: 400px; width: 100%;">
+            </div>
+            <div class="col-md-8">
+                <p class="text-dark custom-paragraph">
+                    <span class="quote">
+                        <img src="{{ asset('templates/images/quotation-right-mark-svgrepo-com.svg') }}" alt="" style="transform: rotate(180deg);">
+                    </span>
+                    <b style="font-size:25px; color:#007bff; font-family: cursive;">A commitment</b> to quality faculty and students has fueled NUST’s impressive rise in rankings</span> and the success of our international alumni network. As Director Advancement, I am privileged to steer a self-sustaining system that supports<span class="highlight"> Pakistan’s leading science and technology university.</span>  Our aim is to become the driving force of Pakistan’s knowledge economy, with the<span class="highlight"> dream of making NUST a need-blind university.</span>
+                    <br>
+                    Many deserving students face significant financial challenges, with<span class="highlight"> nearly half of our undergraduates requiring scholarships. Despite our best efforts, a gap remains, affecting 150 to 250 students </span>  annually. Our <span class="highlight">NEED Initiative Campaign</span> aims to bridge this gap, ensuring all talented students can afford higher education.
+                    <br>
+                    Your support is crucial to this campaign, dedicated to making need-blind admissions a reality and empowering our youth. <span class="highlight"> Join us in sponsoring dreams and lighting the way for a more equitable future.</span>
+                    <span class="quote">
+                        <img src="{{ asset('templates/images/quotation-right-mark-svgrepo-com.svg') }}" alt="">
+                    </span>
+                </p>
+                <div class="signature">Arooba Gillani</div>
+                <div style="font-size: 18px; color: black; margin-right: 35px; text-align: right; font-weight: bold; margin-top: -4px;">(Director of UAO)</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
     <!-- Other card elements -->

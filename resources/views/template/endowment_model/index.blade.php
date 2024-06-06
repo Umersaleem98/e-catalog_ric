@@ -88,7 +88,7 @@
                             <a href="{{url('perpetual_seat_your_name')}}" class="card-link">
                                 <div class="icon-container mr-3">
                                     <br>
-                                    <i class="fas fa-graduation-cap"></i> <!-- Font Awesome icon for education/degree -->
+                                    <i class="fas fa-chair"></i> <!-- Font Awesome icon for seat/chair -->
                                 </div>
                                 <div>
                                     <h2 class="card-title">Create a perpetual seat in your name</h2>
@@ -104,7 +104,7 @@
                             <a href="{{url('zakat_for_students')}}" class="card-link">
                                 <div class="icon-container mr-3">
                                     <br>
-                                    <i class="fas fa-graduation-cap"></i> <!-- Font Awesome icon for education/degree -->
+                                    <i class="fas fa-hands-helping"></i> <!-- Font Awesome icon for helping hand -->
                                 </div>
                                 <div>
                                     <h2 class="card-title">Zakat for Students</h2>

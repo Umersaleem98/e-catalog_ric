@@ -29,10 +29,10 @@
                 </div>
             </div>
 
-            <!-- Fee Breakdown Heading -->
+            <!--  Breakdown Heading -->
             <div class="row mt-5">
                 <div class="col-12">
-                    <h1 class="text-center text-dark mb-3">Fee Breakdown</h1>
+                    <h1 class="text-center text-dark mb-3"> Breakdown</h1>
                 </div>
             </div>
 
@@ -47,7 +47,7 @@
                             </div>
                         </li>
                         <div class="card card-body mt-3">
-                            <h4 class="text-dark">Detailed Fee Breakdown for UG:</h4>
+                            <h4 class="text-dark">Detailed  Breakdown for UG:</h4>
                             <ul class="list-group list-group-flush text-dark">
                                 <li class="list-group-item">
                                     <input type="checkbox" id="ugTuition" name="ugTuition" value="200000">
@@ -83,7 +83,7 @@
                             </div>
                         </li>
                         <div class="card card-body mt-3">
-                            <h4 class="text-dark">Detailed Fee Breakdown for PG:</h4>
+                            <h4 class="text-dark">Detailed  Breakdown for PG:</h4>
                             <ul class="list-group list-group-flush text-dark">
                                 <li class="list-group-item">
                                     <input type="checkbox" id="pgTuition" name="pgTuition" value="250000">

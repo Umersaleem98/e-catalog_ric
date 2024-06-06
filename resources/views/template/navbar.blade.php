@@ -15,9 +15,6 @@
     <!-- Left-side logos -->
     <a class="navbar-brand ml-3" href="{{url('/')}}">
         <img src="{{ asset('templates/images/logo4.png') }}" alt="Left Logo" class="navbar-logo">
-        {{-- <a href="{{ url('/') }}">
-            <img src="{{ asset('templates/images/logo2.png') }}" alt="Additional Logo" class="additional-logo">
-        </a> --}}
     </a>
 
     <!-- Toggler/collapsing button for small screens -->
@@ -34,11 +31,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{url('about_us')}}">About</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('signrature_program')}}">Signature Program</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('r_m_o')}}">RMO</a>
+            <!-- Dropdown Menu -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Programs
+                </a>
+                <div class="dropdown-menu" aria-labelledby="programsDropdown">
+                    <a class="dropdown-item" href="{{url('signrature_program')}}">Signature Program</a>
+                    <a class="dropdown-item" href="{{url('r_m_o')}}">Resource mobilization Officer</a>
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{url('/our_team')}}">Our Team</a>
@@ -50,7 +51,7 @@
 
         <!-- Right-side logo inside nav items for small screens -->
         <a class="navbar-brand d-lg-none mr-3" href="{{url('/')}}">
-            <img src="{{ asset('templates/images/logo3.png') }}" alt="Right Logo" id="right_logo"  class="navbar-logo img-fluid blinking-animation" >
+            <img src="{{ asset('templates/images/logo3.png') }}" alt="Right Logo" id="right_logo" class="navbar-logo img-fluid blinking-animation">
         </a>
     </div>
 

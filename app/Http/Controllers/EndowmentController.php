@@ -30,4 +30,14 @@ class EndowmentController extends Controller
     {
         return view('template.endowment_model.zakat');
     }
+
+    public function payments()
+    {
+        return view('template.endowment_model.payments');
+    }
+
+    public function pledge_payment()
+    {
+        return view('template.endowment_model.pledge');
+    }
 }
