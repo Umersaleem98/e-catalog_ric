@@ -22,6 +22,24 @@
             line-height: 1.6;
             margin: 0; /* Remove default margin */
         }
+        input.form-control {
+            color: black;
+        }
+
+        /* Style for placeholder text color */
+        input.form-control::placeholder {
+            color: black;
+            opacity: 1; /* Override default opacity */
+        }
+
+        select.form-control {
+        color: black;
+    }
+
+    /* Style for select option text color */
+    select.form-control option {
+        color: black;
+    }
     </style>
 </head>
 <body>
@@ -57,8 +75,10 @@
                                     <h4 class="text-dark">Detailed Breakdown for UG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <input type="checkbox" id="ugTuitionLeft" name="ugTuitionLeft" value="4000000">
-                                            <label for="ugTuitionLeft">Tuition: 40,00,000 Million PKR</label>
+                                            <label for="ugTuitionLeft">Tuition:</label>
+                                            <select id="ugTuitionLeft" name="ugTuitionLeft" class="form-control">
+                                                <option value="4000000">40,00,000 PKR</option>
+                                            </select>
                                         </li>
                                         <div class="total-amount">
                                             Total Amount (UG): <span id="ugTotalAmountLeft">0</span> PKR
@@ -88,8 +108,10 @@
                                     <h4 class="text-dark">Detailed Breakdown for UG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <input type="checkbox" id="ugTuitionRight" name="ugTuitionRight" value="5000000">
-                                            <label for="ugTuitionRight">Tuition: 50,00,000  (5)Million PKR</label>
+                                            <label for="ugTuitionRight">Tuition:</label>
+                                            <select id="ugTuitionRight" name="ugTuitionRight" class="form-control">
+                                                <option value="5000000">50,00,000 (5) Million PKR</option>
+                                            </select>
                                         </li>
                                         <div class="total-amount">
                                             Total Amount (UG): <span id="ugTotalAmountRight">0</span> PKR
@@ -106,6 +128,7 @@
                     <!-- End of Right Part -->
                 </div>
             </div>
+
 
             <!-- End of Breakdown Section -->
             <div class="container mt-3">
@@ -128,8 +151,10 @@
                                     <h4 class="text-dark">Detailed Breakdown for PG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <input type="checkbox" id="pgTuitionLeft" name="pgTuitionLeft" value="3000000">
-                                            <label for="pgTuitionLeft">Tuition: 30,00,000 PKR</label>
+                                            <label for="pgTuitionLeft">Tuition:</label>
+                                            <select id="pgTuitionLeft" name="pgTuitionLeft" class="form-control">
+                                                <option value="3000000">30,00,000 PKR</option>
+                                            </select>
                                         </li>
                                         <div class="total-amount">
                                             Total Amount (PG): <span id="pgTotalAmountLeft">0</span> PKR
@@ -159,8 +184,10 @@
                                     <h4 class="text-dark">Detailed Breakdown for PG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <input type="checkbox" id="pgTuitionRight" name="pgTuitionRight" value="6000000">
-                                            <label for="pgTuitionRight">Tuition: 60,00,000 PKR</label>
+                                            <label for="pgTuitionRight">Tuition:</label>
+                                            <select id="pgTuitionRight" name="pgTuitionRight" class="form-control">
+                                                <option value="6000000">60,00,000 PKR</option>
+                                            </select>
                                         </li>
                                         <div class="total-amount">
                                             Total Amount (PG): <span id="pgTotalAmountRight">0</span> PKR
@@ -203,8 +230,10 @@
                                     <h4 class="text-dark">Detailed Breakdown for PhD:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <input type="checkbox" id="phdTuitionLeft" name="phdTuitionLeft" value="5000000">
-                                            <label for="phdTuitionLeft">Tuition: 50,00,000 PKR</label>
+                                            <label for="phdTuitionLeft">Tuition:</label>
+                                            <select id="phdTuitionLeft" name="phdTuitionLeft" class="form-control">
+                                                <option value="5000000">50,00,000 PKR</option>
+                                            </select>
                                         </li>
                                         <div class="total-amount">
                                             Total Amount: <span id="phdTotalAmountLeft">0</span> PKR
@@ -234,11 +263,13 @@
                                     <h4 class="text-dark">Detailed Breakdown for PhD:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <input type="checkbox" id="phdTuitionRight" name="phdTuitionRight" value="12000000">
-                                            <label for="phdTuitionRight">Tuition: 120,00,000 Million PKR</label>
+                                            <label for="phdTuitionRight">Tuition:</label>
+                                            <select id="phdTuitionRight" name="phdTuitionRight" class="form-control">
+                                                <option value="12000000">120,00,000 PKR</option>
+                                            </select>
                                         </li>
                                         <div class="total-amount">
-                                            Total Amount (UG): <span id="phdTotalAmountRight">0</span> PKR
+                                            Total Amount: <span id="phdTotalAmountRight">0</span> PKR
                                         </div>
                                         <li class="btn-container d-flex justify-content-center gap-2">
                                             <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
@@ -275,71 +306,117 @@
 <!-- Bootstrap Bundle with Popper -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
 <script>
-    $(document).ready(function() {
-        // Calculate total amount for left part
-        $('input[name="ugTuitionLeft"]').change(function() {
-            var ugTotalLeft = 0;
-            $('input[name="ugTuitionLeft"]:checked').each(function() {
-                ugTotalLeft += parseInt($(this).val());
-            });
-            $('#ugTotalAmountLeft').text(ugTotalLeft);
-        });
+    document.addEventListener("DOMContentLoaded", function() {
+    const ugTuitionLeftSelect = document.getElementById('ugTuitionLeft');
+    const ugTotalAmountLeftSpan = document.getElementById('ugTotalAmountLeft');
+    const ugTuitionRightSelect = document.getElementById('ugTuitionRight');
+    const ugTotalAmountRightSpan = document.getElementById('ugTotalAmountRight');
 
-        // Calculate total amount for right part
-        $('input[name="ugTuitionRight"]').change(function() {
-            var ugTotalRight = 0;
-            $('input[name="ugTuitionRight"]:checked').each(function() {
-                ugTotalRight += parseInt($(this).val());
-            });
-            $('#ugTotalAmountRight').text(ugTotalRight);
-        });
-    });
+    // Function to update the total amount for Single Endowment UG
+    function updateUGTotalAmountLeft() {
+        const selectedValue = parseInt(ugTuitionLeftSelect.value);
+        ugTotalAmountLeftSpan.textContent = selectedValue.toLocaleString('en-US') + " PKR";
+    }
 
+    // Function to update the total amount for Circular Endowment UG
+    function updateUGTotalAmountRight() {
+        const selectedValue = parseInt(ugTuitionRightSelect.value);
+        ugTotalAmountRightSpan.textContent = selectedValue.toLocaleString('en-US') + " PKR";
+    }
 
+    // Add event listeners to the select elements
+    ugTuitionLeftSelect.addEventListener('change', updateUGTotalAmountLeft);
+    ugTuitionRightSelect.addEventListener('change', updateUGTotalAmountRight);
 
-    $(document).ready(function() {
-        // Calculation for Single Endowment (PG)
-        $('input[name="pgTuitionLeft"]').change(function() {
-            var pgTotalLeft = 0;
-            $('input[name="pgTuitionLeft"]:checked').each(function() {
-                pgTotalLeft += parseInt($(this).val());
-            });
-            $('#pgTotalAmountLeft').text(pgTotalLeft);
-        });
-
-        // Calculation for Circular Endowment (PG)
-        $('input[name="pgTuitionRight"]').change(function() {
-            var pgTotalRight = 0;
-            $('input[name="pgTuitionRight"]:checked').each(function() {
-                pgTotalRight += parseInt($(this).val());
-            });
-            $('#pgTotalAmountRight').text(pgTotalRight);
-        });
-    });
-
-
-    $(document).ready(function() {
-        // Calculation for Single Endowment (PhD)
-        $('input[name="phdTuitionLeft"]').change(function() {
-            var phdTotalLeft = 0;
-            $('input[name="phdTuitionLeft"]:checked').each(function() {
-                phdTotalLeft += parseInt($(this).val());
-            });
-            $('#phdTotalAmountLeft').text(phdTotalLeft);
-        });
-
-        // Calculation for Circular Endowment (PhD)
-        $('input[name="phdTuitionRight"]').change(function() {
-            var phdTotalRight = 0;
-            $('input[name="phdTuitionRight"]:checked').each(function() {
-                phdTotalRight += parseInt($(this).val());
-            });
-            $('#phdTotalAmountRight').text(phdTotalRight);
-        });
-    });
+    // Initialize total amounts on page load
+    updateUGTotalAmountLeft();
+    updateUGTotalAmountRight();
+});
 
 </script>
+{{-- // post grauate --}}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const ugTuitionLeftSelect = document.getElementById('ugTuitionLeft');
+    const ugTotalAmountLeftSpan = document.getElementById('ugTotalAmountLeft');
+    const ugTuitionRightSelect = document.getElementById('ugTuitionRight');
+    const ugTotalAmountRightSpan = document.getElementById('ugTotalAmountRight');
 
+    const pgTuitionLeftSelect = document.getElementById('pgTuitionLeft');
+    const pgTotalAmountLeftSpan = document.getElementById('pgTotalAmountLeft');
+    const pgTuitionRightSelect = document.getElementById('pgTuitionRight');
+    const pgTotalAmountRightSpan = document.getElementById('pgTotalAmountRight');
+
+    // Function to update the total amount for Single Endowment UG
+    function updateUGTotalAmountLeft() {
+        const selectedValue = parseInt(ugTuitionLeftSelect.value);
+        ugTotalAmountLeftSpan.textContent = selectedValue.toLocaleString('en-US') + " PKR";
+    }
+
+    // Function to update the total amount for Circular Endowment UG
+    function updateUGTotalAmountRight() {
+        const selectedValue = parseInt(ugTuitionRightSelect.value);
+        ugTotalAmountRightSpan.textContent = selectedValue.toLocaleString('en-US') + " PKR";
+    }
+
+    // Function to update the total amount for Single Endowment PG
+    function updatePGTotalAmountLeft() {
+        const selectedValue = parseInt(pgTuitionLeftSelect.value);
+        pgTotalAmountLeftSpan.textContent = selectedValue.toLocaleString('en-US') + " PKR";
+    }
+
+    // Function to update the total amount for Circular Endowment PG
+    function updatePGTotalAmountRight() {
+        const selectedValue = parseInt(pgTuitionRightSelect.value);
+        pgTotalAmountRightSpan.textContent = selectedValue.toLocaleString('en-US') + " PKR";
+    }
+
+    // Add event listeners to the select elements
+    ugTuitionLeftSelect.addEventListener('change', updateUGTotalAmountLeft);
+    ugTuitionRightSelect.addEventListener('change', updateUGTotalAmountRight);
+    pgTuitionLeftSelect.addEventListener('change', updatePGTotalAmountLeft);
+    pgTuitionRightSelect.addEventListener('change', updatePGTotalAmountRight);
+
+    // Initialize total amounts on page load
+    updateUGTotalAmountLeft();
+    updateUGTotalAmountRight();
+    updatePGTotalAmountLeft();
+    updatePGTotalAmountRight();
+});
+
+</script>
+{{-- phd students  --}}
+
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    const phdTuitionLeftSelect = document.getElementById('phdTuitionLeft');
+    const phdTotalAmountLeftSpan = document.getElementById('phdTotalAmountLeft');
+    const phdTuitionRightSelect = document.getElementById('phdTuitionRight');
+    const phdTotalAmountRightSpan = document.getElementById('phdTotalAmountRight');
+
+    // Function to update the total amount for Single Endowment PhD
+    function updatePhdTotalAmountLeft() {
+        const selectedValue = parseInt(phdTuitionLeftSelect.value);
+        phdTotalAmountLeftSpan.textContent = selectedValue.toLocaleString('en-US') + " PKR";
+    }
+
+    // Function to update the total amount for Circular Endowment PhD
+    function updatePhdTotalAmountRight() {
+        const selectedValue = parseInt(phdTuitionRightSelect.value);
+        phdTotalAmountRightSpan.textContent = selectedValue.toLocaleString('en-US') + " PKR";
+    }
+
+    // Add event listeners to the select elements
+    phdTuitionLeftSelect.addEventListener('change', updatePhdTotalAmountLeft);
+    phdTuitionRightSelect.addEventListener('change', updatePhdTotalAmountRight);
+
+    // Initialize total amounts on page load
+    updatePhdTotalAmountLeft();
+    updatePhdTotalAmountRight();
+});
+
+</script>
 </body>
 </html>

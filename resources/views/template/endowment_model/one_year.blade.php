@@ -10,6 +10,24 @@
             justify-content: center;
             gap: 10px; /* Adjust the gap as needed */
         }
+        input.form-control {
+            color: black;
+        }
+
+        /* Style for placeholder text color */
+        input.form-control::placeholder {
+            color: black;
+            opacity: 1; /* Override default opacity */
+        }
+
+        select.form-control {
+        color: black;
+    }
+
+    /* Style for select option text color */
+    select.form-control option {
+        color: black;
+    }
     </style>
 </head>
 <body>
@@ -91,11 +109,19 @@
                                     <label for="pgTuition">Tuition</label>
                                     <select id="pgTuition" class="form-control" name="pgTuition">
                                         <option value="0" selected disabled>Select Tuition Amount</option>
-                                        <option value="210,000">Engineering /IT, Bio Sciences, programs
+                                        <option value="210000">Engineering /IT, Bio Sciences, programs
                                         </option>
-                                        <option value="300000">MS HRM, MS Logistics & Supply Chain Management, MS Innovation & Entrepreneurship
+                                        <option value="700800">MS HRM, MS Logistics & Supply Chain Management, MS Innovation & Entrepreneurship
                                         </option>
-                                        <option value="350000">350,000 PKR</option>
+                                        <option value="793800">Business Studies (MBA)
+                                        </option>
+                                        <option value="100570">Business Studies (EMBA)
+                                        </option>
+                                        <option value="73800 ">Engineering Management & Construction Engineering Management
+                                        </option>
+                                        <option value="488800">Architecture & Social sciences
+                                        </option>
+
                                     </select>
                                 </li>
                                 <div class="total-amount">

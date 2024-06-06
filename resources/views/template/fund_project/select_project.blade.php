@@ -32,7 +32,7 @@
     @include('template.navbar')
 
     @include('template.home')
-
+<br>
     <div class="container mt-5">
         <div class="row">
             <div class="col">
@@ -106,8 +106,8 @@
                 </p>
                 <p>
                     Additionally, the Atlas Foundation funded the renovation and uplift of the old hostel building at a cost of approximately PKR 5.4 million. This comprehensive upgrade included the expansion of the dining hall, the construction of a new kitchen, and roof treatment.
-                </p >
-                    This initiative stands as a testament to the significant impact that philanthropic contributions can make in enhancing educational facilities. We invite other donors to join us in creating similar opportunities and fostering an environment that supports and empowers our students.
+                </p>
+                <p> This initiative stands as a testament to the significant impact that philanthropic contributions can make in enhancing educational facilities. We invite other donors to join us in creating similar opportunities and fostering an environment that supports and empowers our students.
                 </p>
             </div>
             <div class="col-md-6">
@@ -117,6 +117,7 @@
         </div>
     </div>
 
+    <br><br>
     <!-- Footer -->
     @include('template.footer')
 

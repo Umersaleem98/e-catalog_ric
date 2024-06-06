@@ -10,6 +10,24 @@
             justify-content: center;
             gap: 10px; /* Adjust the gap as needed */
         }
+        input.form-control {
+            color: black;
+        }
+
+        /* Style for placeholder text color */
+        input.form-control::placeholder {
+            color: black;
+            opacity: 1; /* Override default opacity */
+        }
+
+        select.form-control {
+        color: black;
+    }
+
+    /* Style for select option text color */
+    select.form-control option {
+        color: black;
+    }
     </style>
 </head>
 <body>
@@ -24,7 +42,7 @@
             <div class="row mb-5">
                 <div class="col">
                     <div class="section_title text-center">
-                        <h1 class="text-dark">Support a Degree for 4 Year</h1>
+                        <h1 class="text-dark">Support the Entire degree program</h1>
                     </div>
                 </div>
             </div>
@@ -49,8 +67,10 @@
                             <h4 class="text-dark">Detailed Breakdown for UG:</h4>
                             <ul class="list-group list-group-flush text-dark">
                                 <li class="list-group-item">
-                                    <input type="checkbox" id="ugTuition" name="ugTuition" value="1500000">
-                                    <label for="ugTuition">Tuition: 15,00,000 PKR</label>
+                                    <label for="ugTuition">Tuition:</label>
+                                    <select id="ugTuition" class="form-control" name="ugTuition">
+                                        <option value="1500000">15,00,000 PKR</option>
+                                    </select>
                                 </li>
                                 <div class="total-amount">
                                     Total Amount (UG): <span id="ugTotalAmount">0</span> PKR
@@ -65,6 +85,7 @@
                     </ul>
                 </div>
             </div>
+
             <!-- End of Undergraduate Students Section -->
 
             <!-- Postgraduate Students Section -->
@@ -81,17 +102,27 @@
                             <h4 class="text-dark">Detailed Breakdown for PG:</h4>
                             <ul class="list-group list-group-flush text-dark">
                                 <li class="list-group-item">
-                                    <input type="checkbox" id="pgTuition" name="pgTuition" value="250000">
-                                    <label for="pgTuition">Tuition: 250,000 PKR</label>
-                                </li>
-                                <li class="list-group-item">
-                                    <input type="checkbox" id="pgAccommodation" name="pgAccommodation" value="60000">
-                                    <label for="pgAccommodation">Accommodation: 60,000 PKR</label>
+                                    <label for="pgTuition">Tuition</label>
+                                    <select id="pgTuition" class="form-control" name="pgTuition">
+                                        <option value="0" selected disabled>Select Tuition Amount</option>
+                                        <option value="210000">Engineering /IT, Bio Sciences, programs
+                                        </option>
+                                        <option value="700800">MS HRM, MS Logistics & Supply Chain Management, MS Innovation & Entrepreneurship
+                                        </option>
+                                        <option value="793800">Business Studies (MBA)
+                                        </option>
+                                        <option value="100570">Business Studies (EMBA)
+                                        </option>
+                                        <option value="73800 ">Engineering Management & Construction Engineering Management
+                                        </option>
+                                        <option value="488800">Architecture & Social sciences
+                                        </option>
+
+                                    </select>
                                 </li>
                                 <div class="total-amount">
                                     Total Amount (PG): <span id="pgTotalAmount">0</span> PKR
                                 </div>
-                                <!-- Use a "plus" icon for adding a card -->
                                 <li class="btn-container d-flex justify-content-center gap-2">
                                     <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
                                     <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
@@ -101,6 +132,7 @@
                     </ul>
                 </div>
             </div>
+
             <!-- End of Postgraduate Students Section -->
             <div class="row mt-2">
                 <div class="col-12">
@@ -115,12 +147,10 @@
                             <h4 class="text-dark">Detailed Breakdown for PhD:</h4>
                             <ul class="list-group list-group-flush text-dark">
                                 <li class="list-group-item">
-                                    <input type="checkbox" id="phdTuition" name="phdTuition" value="250000">
-                                    <label for="phdTuition">Tuition: 250,000 PKR</label>
-                                </li>
-                                <li class="list-group-item">
-                                    <input type="checkbox" id="phdAccommodation" name="phdAccommodation" value="60000">
-                                    <label for="phdAccommodation">Accommodation: 60,000 PKR</label>
+                                    <label for="phdTuition">Tuition:</label>
+                                    <select id="phdTuition" name="phdTuition" class="form-control">
+                                        <option value="250000">250,000 PKR</option>
+                                    </select>
                                 </li>
                                 <div class="total-amount">
                                     Total Amount (PhD): <span id="phdTotalAmount">0</span> PKR
@@ -133,6 +163,8 @@
                         </div>
                     </ul>
                 </div>
+            </div>
+
 
         </div>
     </div>
@@ -145,32 +177,75 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script>
+   document.addEventListener("DOMContentLoaded", function() {
+    const ugTuitionSelect = document.getElementById('ugTuition');
+    const ugTotalAmountSpan = document.getElementById('ugTotalAmount');
+
+    // Function to update the total amount
+    function updateTotalAmount() {
+        const selectedValue = parseInt(ugTuitionSelect.value);
+        ugTotalAmountSpan.textContent = selectedValue.toLocaleString('en-US');
+    }
+
+    // Add event listener to the select element
+    ugTuitionSelect.addEventListener('change', updateTotalAmount);
+
+    // Initialize total amount on page load
+    updateTotalAmount();
+});
+
+</script>
+
+
+<script>
     $(document).ready(function() {
-        $('input[name="ugTuition"], input[name="ugAccommodation"]').change(function() {
-            var ugTotal = 0;
-            $('input[name="ugTuition"]:checked, input[name="ugAccommodation"]:checked').each(function() {
-                ugTotal += parseInt($(this).val());
-            });
-            $('#ugTotalAmount').text(ugTotal);
-        });
-
-        $('input[name="pgTuition"], input[name="pgAccommodation"]').change(function() {
+        function calculateTotalPG() {
             var pgTotal = 0;
-            $('input[name="pgTuition"]:checked, input[name="pgAccommodation"]:checked').each(function() {
-                pgTotal += parseInt($(this).val());
-            });
+            var tuition = parseInt($('#pgTuition').val());
+            var accommodation = parseInt($('#pgAccommodation').val());
+            if (!isNaN(tuition)) {
+                pgTotal += tuition;
+            }
+            if (!isNaN(accommodation)) {
+                pgTotal += accommodation;
+            }
             $('#pgTotalAmount').text(pgTotal);
-        });
+        }
 
-
-        $('input[name="phdTuition"], input[name="phdAccommodation"]').change(function() {
-            var phdTotal = 0;
-            $('input[name="phdTuition"]:checked, input[name="phdAccommodation"]:checked').each(function() {
-                phdTotal += parseInt($(this).val());
-            });
-            $('#phdTotalAmount').text(phdTotal);
+        $('#pgTuition, #pgAccommodation').change(function() {
+            calculateTotalPG();
         });
     });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const ugTuitionSelect = document.getElementById('ugTuition');
+    const ugTotalAmountSpan = document.getElementById('ugTotalAmount');
+    const phdTuitionSelect = document.getElementById('phdTuition');
+    const phdTotalAmountSpan = document.getElementById('phdTotalAmount');
+
+    // Function to update the total amount for UG
+    function updateUGTotalAmount() {
+        const selectedValue = parseInt(ugTuitionSelect.value);
+        ugTotalAmountSpan.textContent = selectedValue.toLocaleString('en-US') + " PKR";
+    }
+
+    // Function to update the total amount for PhD
+    function updatePhdTotalAmount() {
+        const selectedValue = parseInt(phdTuitionSelect.value);
+        phdTotalAmountSpan.textContent = selectedValue.toLocaleString('en-US') + " PKR";
+    }
+
+    // Add event listeners to the select elements
+    ugTuitionSelect.addEventListener('change', updateUGTotalAmount);
+    phdTuitionSelect.addEventListener('change', updatePhdTotalAmount);
+
+    // Initialize total amounts on page load
+    updateUGTotalAmount();
+    updatePhdTotalAmount();
+});
+
 </script>
 
 </body>
