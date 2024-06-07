@@ -102,7 +102,7 @@
                             </div>
                             <div class="card-footer">
                                 <div class="alert alert-info text-center" role="alert">
-                                    For further details, we will contact you on valid email.
+                                    further Correspondence will be Carried out on Your Provided velid email address..
                                 </div>
                             </div>
                         </div>

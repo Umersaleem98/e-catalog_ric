@@ -28,11 +28,12 @@
                     <div class="footer_column_title">Menu</div>
                     <div class="footer_column_content">
                         <ul>
-                            <li class="footer_list_item"><a href="{{url('/')}}">home</a></li>
+                            <li class="footer_list_item"><a href="{{url('/')}}">Home</a></li>
                             <li class="footer_list_item"><a href="{{url('about_us')}}">About us</a></li>
-                            <li class="footer_list_item"><a href="{{url('/signrature_program')}}">Signature Program</a></li>
+                            <li class="footer_list_item"><a href="{{url('/signrature_program')}}">Signature Programs</a></li>
+                            <li class="footer_list_item"><a href="{{url('r_m_o')}}">Resource Mobilization Officer</a></li>
                             <li class="footer_list_item"><a href="{{url('/our_team')}}">Our Team</a></li>
-                            <li class="footer_list_item"><a href="{{url('/contact_us')}}">contact</a></li>
+                            <li class="footer_list_item"><a href="{{url('/contact_us')}}">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -40,7 +41,7 @@
                 <!-- Footer Column - Usefull Links -->
 
                 <div class="col-lg-3 footer_col">
-                    <div class="footer_column_title">Usefull Links</div>
+                    <div class="footer_column_title">Useful Links</div>
                     <div class="footer_column_content">
                         <ul>
                             <li class="footer_list_item"><a href="{{url('https://nust.edu.pk/about-us')}}">NUST </a></li>

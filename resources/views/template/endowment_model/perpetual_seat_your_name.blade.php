@@ -40,6 +40,9 @@
     select.form-control option {
         color: black;
     }
+    .total-amount{
+        font-size: 18px;
+    }
     </style>
 </head>
 <body>
@@ -58,9 +61,14 @@
                     </div>
                 </div>
             </div>
+            <div class="container mt-3">
+                <div class="row justify-content-center">
+                    <h2 class="text-center text-dark">Undergraduate Students</h2>
+                </div>
+            </div>
 
             <!-- Breakdown Heading -->
-            <div class="row mt-5">
+            <div class="row mt-3">
                 <div class="col-lg-6">
                     <!-- Left Part -->
                     <div class="row mt-2">
@@ -75,15 +83,15 @@
                                     <h4 class="text-dark">Detailed Breakdown for UG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <label for="ugTuitionLeft">Tuition:</label>
+                                            <label for="ugTuitionLeft">Programs:</label>
                                             <select id="ugTuitionLeft" name="ugTuitionLeft" class="form-control">
                                                 <option value="4000000">40,00,000 PKR</option>
                                             </select>
                                         </li>
-                                        <div class="total-amount">
+                                        <div class="total-amount text-center">
                                             Total Amount (UG): <span id="ugTotalAmountLeft">0</span> PKR
                                         </div>
-                                        <li class="btn-container d-flex justify-content-center gap-2">
+                                        <li class="btn-container d-flex justify-content-center gap-2 mt-3">
                                             <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
                                             <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
                                         </li>
@@ -108,15 +116,15 @@
                                     <h4 class="text-dark">Detailed Breakdown for UG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <label for="ugTuitionRight">Tuition:</label>
+                                            <label for="ugTuitionRight">Programs:</label>
                                             <select id="ugTuitionRight" name="ugTuitionRight" class="form-control">
                                                 <option value="5000000">50,00,000 (5) Million PKR</option>
                                             </select>
                                         </li>
-                                        <div class="total-amount">
+                                        <div class="total-amount text-center">
                                             Total Amount (UG): <span id="ugTotalAmountRight">0</span> PKR
                                         </div>
-                                        <li class="btn-container d-flex justify-content-center gap-2">
+                                        <li class="btn-container d-flex justify-content-center gap-2 mt-3">
                                             <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
                                             <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
                                         </li>
@@ -128,12 +136,10 @@
                     <!-- End of Right Part -->
                 </div>
             </div>
-
-
             <!-- End of Breakdown Section -->
-            <div class="container mt-3">
+            <div class="container mt-5">
                 <div class="row justify-content-center">
-                    <h2 class="text-center">Postgraduate</h2>
+                    <h2 class="text-center text-dark">Postgraduate Students</h2>
                 </div>
             </div>
             <div class="row mt-5">
@@ -151,15 +157,15 @@
                                     <h4 class="text-dark">Detailed Breakdown for PG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <label for="pgTuitionLeft">Tuition:</label>
+                                            <label for="pgTuitionLeft">Programs:</label>
                                             <select id="pgTuitionLeft" name="pgTuitionLeft" class="form-control">
                                                 <option value="3000000">30,00,000 PKR</option>
                                             </select>
                                         </li>
-                                        <div class="total-amount">
+                                        <div class="total-amount text-center">
                                             Total Amount (PG): <span id="pgTotalAmountLeft">0</span> PKR
                                         </div>
-                                        <li class="btn-container d-flex justify-content-center gap-2">
+                                        <li class="btn-container d-flex justify-content-center gap-2 mt-3">
                                             <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
                                             <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
                                         </li>
@@ -184,15 +190,15 @@
                                     <h4 class="text-dark">Detailed Breakdown for PG:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <label for="pgTuitionRight">Tuition:</label>
+                                            <label for="pgTuitionRight">Programs:</label>
                                             <select id="pgTuitionRight" name="pgTuitionRight" class="form-control">
                                                 <option value="6000000">60,00,000 PKR</option>
                                             </select>
                                         </li>
-                                        <div class="total-amount">
+                                        <div class="total-amount text-center">
                                             Total Amount (PG): <span id="pgTotalAmountRight">0</span> PKR
                                         </div>
-                                        <li class="btn-container d-flex justify-content-center gap-2">
+                                        <li class="btn-container d-flex justify-content-center gap-2 mt-3">
                                             <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
                                             <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
                                         </li>
@@ -205,16 +211,11 @@
                 </div>
             </div>
 
-
-
-
-            <div class="container mt-3">
+            <div class="container mt-5">
                 <div class="row justify-content-center">
-                    <h2 class="text-center">PhD Students</h2>
+                    <h2 class="text-center text-dark">PhD Students</h2>
                 </div>
             </div>
-
-
             <div class="row mt-5">
                 <div class="col-lg-6">
                     <!-- Left Part -->
@@ -230,15 +231,15 @@
                                     <h4 class="text-dark">Detailed Breakdown for PhD:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <label for="phdTuitionLeft">Tuition:</label>
+                                            <label for="phdTuitionLeft">Programs:</label>
                                             <select id="phdTuitionLeft" name="phdTuitionLeft" class="form-control">
                                                 <option value="5000000">50,00,000 PKR</option>
                                             </select>
                                         </li>
-                                        <div class="total-amount">
+                                        <div class="total-amount text-center">
                                             Total Amount: <span id="phdTotalAmountLeft">0</span> PKR
                                         </div>
-                                        <li class="btn-container d-flex justify-content-center gap-2">
+                                        <li class="btn-container d-flex justify-content-center gap-2 mt-3">
                                             <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
                                             <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
                                         </li>
@@ -263,15 +264,15 @@
                                     <h4 class="text-dark">Detailed Breakdown for PhD:</h4>
                                     <ul class="list-group list-group-flush text-dark">
                                         <li class="list-group-item">
-                                            <label for="phdTuitionRight">Tuition:</label>
+                                            <label for="phdTuitionRight">Programs:</label>
                                             <select id="phdTuitionRight" name="phdTuitionRight" class="form-control">
                                                 <option value="12000000">120,00,000 PKR</option>
                                             </select>
                                         </li>
-                                        <div class="total-amount">
+                                        <div class="total-amount text-center">
                                             Total Amount: <span id="phdTotalAmountRight">0</span> PKR
                                         </div>
-                                        <li class="btn-container d-flex justify-content-center gap-2">
+                                        <li class="btn-container d-flex justify-content-center gap-2 mt-3">
                                             <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
                                             <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
                                         </li>
@@ -287,10 +288,11 @@
 
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="alert alert-info shadow-sm">
+
+    <div class="container mb-3">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="alert alert-info shadow-sm text-center">
                     <p>
                         An additional contribution of 2 million PKR is available to donors who wish to sponsor the hostel and messing expenses too, which can be combined with any of the aforementioned scholarship proposals.
                     </p>

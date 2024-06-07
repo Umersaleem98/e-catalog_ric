@@ -72,10 +72,10 @@
                             <a href="{{'support_for_four_year'}}" class="card-link">
                                 <div class="icon-container mr-3">
                                     <br>
-                                    <i class="fas fa-graduation-cap"></i> <!-- Font Awesome icon for education/degree -->
+                                    <i class="fas fa-book"></i> <!-- Font Awesome icon for education/degree -->
                                 </div>
                                 <div>
-                                    <h2 class="card-title">Support a Degree Program for 4 Year</h2>
+                                    <h2 class="card-title">Support the Entire Degree Program</h2>
                                     <p class="card-text">Click here for more information.</p>
                                 </div>
                             </a>

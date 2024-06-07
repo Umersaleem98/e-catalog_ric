@@ -102,7 +102,7 @@
                             </div>
                             <div class="card-footer">
                                 <div class="alert alert-info text-center" role="alert">
-                                    For further details, we will contact you on valid email.
+                                    further Correspondence will be Carried out on Your Provided velid email address..
                                 </div>
                             </div>
                         </div>
@@ -126,12 +126,12 @@
                                 </div>
 
                             </div>
-                            <div class="row mb-3">
+                            {{-- <div class="row mb-3">
                                 <div class="col-10">
                                     <label for="cnic_number" class="form-label">CNIC Number</label>
                                     <input type="text" class="form-control" placeholder="Enter Your CNIC" id="cnic_number" name="cnic_number">
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="row mb-3">
                                 <div class="col-10">
                                     <label for="phone_number" class="form-label">Phone Number</label>

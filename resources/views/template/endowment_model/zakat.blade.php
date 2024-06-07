@@ -10,6 +10,12 @@
             justify-content: center;
             gap: 10px; /* Adjust the gap as needed */
         }
+
+        .h3-box {
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 5px; /* Rounded corners */
+}
+
     </style>
 </head>
 <body>
@@ -39,23 +45,30 @@
             <!-- Undergraduate Students Section -->
             <div class="row mt-2">
                 <div class="col-12">
-                    <ul class="list-group list-group-flush text-dark btn-container"> <!-- Added btn-container class -->
+                    <ul class="list-group list-group-flush text-dark btn-container">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
                                 {{-- <img src="{{ asset('templates/endowment_model/images1.jpg') }}" alt="" class="heading-image"> --}}
-                                <h3>Undergraduate Students </h3>
+                                {{-- <h3>Undergraduate Students </h3> --}}
                             </div>
                         </li>
-                        <div class="card card-body mt-3">
-                            <h4 class="text-dark">Detailed Breakdown:</h4>
+
+                        <div class="text-center mt-3">
+                            <h2>Invest Your Zakat in Deserving Students with Verified Financial Needs</h2>
+                        </div>
+
+                        <div class="card card-body">
+
+                            <div class="h3-box my-1 p-3">
+                                <h3>Zero Operational Overheads</h3>
+                            </div>
+                            <div class="h3-box my-1 p-3">
+                                <h3>Impact Oriented Giving</h3>
+                            </div>
+                            <div class="h3-box my-1 p-3">
+                                <h3>Shariah Compliant</h3>
+                            </div>
                             <ul class="list-group list-group-flush text-dark">
-                                <li class="list-group-item">
-                                    <label for="ugTuition">Tuition:</label>
-                                    <input type="number" id="ugTuition" name="ugTuition" value="0" placeholder="Enter tuition amount in PKR">
-                                </li>
-                                <div class="total-amount">
-                                    Total Amount : <span id="ugTotalAmount">0</span> PKR
-                                </div>
                                 <!-- Use Bootstrap utility classes to center the buttons and add a gap -->
                                 <li class="btn-container d-flex justify-content-center gap-2">
                                     <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
@@ -66,6 +79,7 @@
                     </ul>
                 </div>
             </div>
+
             <!-- End of Undergraduate Students Section -->
         </div>
     </div>
@@ -79,17 +93,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
 <!-- JavaScript for calculating total amount -->
-<script>
-    $(document).ready(function() {
-        // Update total amount when input values change
-        $('input[name="ugTuition"], input[name="ugAccommodation"]').on('input', function() {
-            var tuitionAmount = parseInt($('#ugTuition').val()) || 0;
-            var accommodationAmount = parseInt($('#ugAccommodation').val()) || 0;
-            var totalAmount = tuitionAmount + accommodationAmount;
-            $('#ugTotalAmount').text(totalAmount);
-        });
-    });
-</script>
 
 </body>
 </html>

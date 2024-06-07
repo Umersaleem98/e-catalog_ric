@@ -28,6 +28,9 @@
     select.form-control option {
         color: black;
     }
+    .total-amount{
+        font-size: 20px;
+    }
     </style>
 </head>
 <body>
@@ -55,41 +58,42 @@
             </div>
 
             <!-- Undergraduate Students Section -->
-            <div class="row mt-2">
-                <div class="col-12">
-                    <ul class="list-group list-group-flush text-dark btn-container"> <!-- Added btn-container class -->
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                {{-- <img src="{{ asset('templates/endowment_model/images1.jpg') }}" alt="" class="heading-image"> --}}
-                                <h3>Undergraduate Students (UG)</h3>
-                            </div>
-                        </li>
-                        <div class="card card-body mt-3">
-                            <h4 class="text-dark">Detailed Breakdown for UG:</h4>
-                            <ul class="list-group list-group-flush text-dark">
-                                <li class="list-group-item">
-                                    <input type="checkbox" id="ugTuition" name="ugTuition" value="200000">
-                                    <label for="ugTuition">Tuition: 200,000 PKR</label>
-                                </li>
-                                <li class="list-group-item">
-                                    <input type="checkbox" id="ugAccommodation" name="ugAccommodation" value="50000">
-                                    <label for="ugAccommodation">Accommodation: 50,000 PKR</label>
-                                </li>
-                                <div class="total-amount">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="list-group list-group-flush text-dark btn-container"> <!-- Added btn-container class -->
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <h3>Undergraduate Students (UG)</h3>
+                                </div>
+                            </li>
+                            <div class="card card-body mt-3">
+                                <h4 class="text-dark">Detailed Breakdown for UG:</h4>
+                                <div class="form-group">
+                                    <label for="ugSelect">Select Options:</label>
+                                    <select id="ugSelect" class="form-control">
+                                        <option value="300000">Tuition: 300,000 PKR</option>
+                                    </select>
+                                </div>
+
+                                <div class="total-amount mt-3 text-center">
                                     Total Amount (UG): <span id="ugTotalAmount">0</span> PKR
                                 </div>
-                                <!-- Use a "plus" icon for adding a card -->
-                                <!-- Use Bootstrap utility classes to center the buttons and add a gap -->
-                                    <li class="btn-container d-flex justify-content-center gap-2">
-                                        <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
-                                        <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
-                                    </li>
 
-                            </ul>
-                        </div>
-                    </ul>
+                                <div class="form-group mt-3">
+                                    <input type="checkbox" id="additionalExpenses" value="240000">
+                                    <label for="additionalExpenses">Include mess and hostel expenses (240,000 PKR)</label>
+                                </div>
+                                <div class="btn-container d-flex justify-content-center gap-2 mt-3">
+                                    <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
+                                    <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
             <!-- End of Undergraduate Students Section -->
 
             <!-- Postgraduate Students Section -->
@@ -106,27 +110,26 @@
                             <h4 class="text-dark">Detailed Breakdown for PG:</h4>
                             <ul class="list-group list-group-flush text-dark">
                                 <li class="list-group-item">
-                                    <label for="pgTuition">Tuition</label>
+                                    <label for="pgTuition">Programs</label>
                                     <select id="pgTuition" class="form-control" name="pgTuition">
-                                        <option value="0" selected disabled>Select Tuition Amount</option>
-                                        <option value="210000">Engineering /IT, Bio Sciences, programs
-                                        </option>
-                                        <option value="700800">MS HRM, MS Logistics & Supply Chain Management, MS Innovation & Entrepreneurship
-                                        </option>
-                                        <option value="793800">Business Studies (MBA)
-                                        </option>
-                                        <option value="100570">Business Studies (EMBA)
-                                        </option>
-                                        <option value="73800 ">Engineering Management & Construction Engineering Management
-                                        </option>
-                                        <option value="488800">Architecture & Social sciences
-                                        </option>
-
+                                        <option value="0" selected disabled>Select PRograms Amount</option>
+                                        <option value="210000">Engineering /IT, Bio Sciences, programs</option>
+                                        <option value="700800">MS HRM, MS Logistics & Supply Chain Management, MS Innovation & Entrepreneurship</option>
+                                        <option value="793800">Business Studies (MBA)</option>
+                                        <option value="100570">Business Studies (EMBA)</option>
+                                        <option value="73800">Engineering Management & Construction Engineering Management</option>
+                                        <option value="488800">Architecture & Social sciences</option>
                                     </select>
                                 </li>
-                                <div class="total-amount">
+
+                                <div class="total-amount text-center">
                                     Total Amount (PG): <span id="pgTotalAmount">0</span> PKR
                                 </div>
+
+                                <li class="list-group-item">
+                                    <input type="checkbox" id="messHostelExpenses" value="259000">
+                                    <label for="messHostelExpenses">Include Mess and Hostel Expenses (PKR 259,000)</label>
+                                </li>
                                 <li class="btn-container d-flex justify-content-center gap-2">
                                     <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
                                     <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
@@ -136,6 +139,7 @@
                     </ul>
                 </div>
             </div>
+
 
             <!-- End of Postgraduate Students Section -->
         </div>
@@ -148,48 +152,49 @@
 <!-- Bootstrap Bundle with Popper -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('input[name="ugTuition"], input[name="ugAccommodation"]').change(function() {
-            var ugTotal = 0;
-            $('input[name="ugTuition"]:checked, input[name="ugAccommodation"]:checked').each(function() {
-                ugTotal += parseInt($(this).val());
-            });
-            $('#ugTotalAmount').text(ugTotal);
-        });
-
-        $('input[name="pgTuition"], input[name="pgAccommodation"]').change(function() {
-            var pgTotal = 0;
-            $('input[name="pgTuition"]:checked, input[name="pgAccommodation"]:checked').each(function() {
-                pgTotal += parseInt($(this).val());
-            });
-            $('#pgTotalAmount').text(pgTotal);
-        });
-    });
-</script>
-
-
 
 <script>
-    $(document).ready(function() {
-        function calculateTotalPG() {
-            var pgTotal = 0;
-            var tuition = parseInt($('#pgTuition').val());
-            var accommodation = parseInt($('#pgAccommodation').val());
-            if (!isNaN(tuition)) {
-                pgTotal += tuition;
+    document.addEventListener('DOMContentLoaded', function() {
+        const ugSelect = document.getElementById('ugSelect');
+        const additionalExpensesCheckbox = document.getElementById('additionalExpenses');
+        const ugTotalAmount = document.getElementById('ugTotalAmount');
+
+        function calculateTotal() {
+            let total = parseInt(ugSelect.value);
+            if (additionalExpensesCheckbox.checked) {
+                total += parseInt(additionalExpensesCheckbox.value);
             }
-            if (!isNaN(accommodation)) {
-                pgTotal += accommodation;
-            }
-            $('#pgTotalAmount').text(pgTotal);
+            ugTotalAmount.textContent = total + ' PKR';
         }
 
-        $('#pgTuition, #pgAccommodation').change(function() {
-            calculateTotalPG();
-        });
+        ugSelect.addEventListener('change', calculateTotal);
+        additionalExpensesCheckbox.addEventListener('change', calculateTotal);
+
+        calculateTotal();
     });
-</script>
+    </script>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const pgTuitionSelect = document.getElementById('pgTuition');
+        const messHostelCheckbox = document.getElementById('messHostelExpenses');
+        const pgTotalAmountSpan = document.getElementById('pgTotalAmount');
+
+        function updateTotalAmount() {
+            let totalAmount = 0;
+            const tuitionAmount = parseInt(pgTuitionSelect.value) || 0;
+            const messHostelAmount = messHostelCheckbox.checked ? parseInt(messHostelCheckbox.value) : 0;
+            totalAmount = tuitionAmount + messHostelAmount;
+            pgTotalAmountSpan.textContent = totalAmount;
+        }
+
+        pgTuitionSelect.addEventListener('change', updateTotalAmount);
+        messHostelCheckbox.addEventListener('change', updateTotalAmount);
+    });
+    </script>
+
 
 </body>
 </html>

@@ -37,8 +37,8 @@
                     Programs
                 </a>
                 <div class="dropdown-menu" aria-labelledby="programsDropdown">
-                    <a class="dropdown-item" href="{{url('signrature_program')}}">Signature Program</a>
-                    <a class="dropdown-item" href="{{url('r_m_o')}}">Resource mobilization Officer</a>
+                    <a class="dropdown-item" href="{{url('signrature_program')}}">Signature Programs</a>
+                    <a class="dropdown-item" href="{{url('r_m_o')}}">Resource Mobilization Officer</a>
                 </div>
             </li>
             <li class="nav-item">
