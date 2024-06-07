@@ -119,7 +119,7 @@
                                 <li class="list-group-item">
                                     <label for="pgTuition">Select Programs</label>
                                     <select id="pgTuition" class="form-control" name="pgTuition">
-                                        <option value="0" selected disabled>Select Programs Amount</option>
+                                        <option value="0" selected disabled>Select Programs</option>
                                         <option value="210000">Engineering /IT, Bio Sciences, programs</option>
                                         <option value="700800">MS HRM, MS Logistics & Supply Chain Management, MS Innovation & Entrepreneurship</option>
                                         <option value="793800">Business Studies (MBA)</option>
