@@ -5,19 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Payment extends Model
+class SupportPleagePayment extends Model
 {
     use HasFactory;
+
+    protected $table = 'support_pleage_payment';
     protected $fillable = [
         'student_name',
         'donor_name',
-        'card_on_name',
         'donor_email',
-        'cnic_number',
-        'card_number',
-        'card_cvc',
-        'duration',
-        'amount',
-        'prove',
+        'phone',
+        'donation_percent',
+        'donation_for',
     ];
 }

@@ -112,7 +112,7 @@
                     <div class="col-md-6">
                         <form method="POST" action="{{ url('payments') }}" enctype="multipart/form-data">
                             @csrf
-                            <input type="text" name="student_name" class="form-control" value="{{$students->name}}" hidden>
+                            <input type="text" name="student_name" class="form-control" value="{{$students->name}}" >
                             <div class="row mb-3">
                                 <div class="col-10">
                                     <label for="donor_name" class="form-label">Your Name</label>
@@ -126,12 +126,7 @@
                                 </div>
 
                             </div>
-                            <div class="row mb-3">
-                                <div class="col-10">
-                                    <label for="cnic_number" class="form-label">CNIC Number</label>
-                                    <input type="text" class="form-control" placeholder="Enter Your CNIC" id="cnic_number" name="cnic_number">
-                                </div>
-                            </div>
+
                             <div class="row mb-3">
                                 <div class="col-10">
                                     <label for="phone_number" class="form-label">Phone Number</label>
@@ -156,13 +151,13 @@
 
                             </div>
 
-                            {{-- <div class="row mb-3">
+                            <div class="row mb-3">
                                 <div class="col">
                                     <label for="" class="form-label">Prove </label>
                                     <input type="file" class="form-control"  name="prove">
                                 </div>
 
-                            </div> --}}
+                            </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
 

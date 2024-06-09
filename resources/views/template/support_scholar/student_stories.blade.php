@@ -70,20 +70,18 @@
                         <br>
 
                         <!-- Add an ID to the paragraph tag for easier targeting with JavaScript -->
-                        <span ><img src="{{ asset('templates/images/quotation-right-mark-svgrepo-com.svg') }}" alt="" style="width:15px; height:15px; color:bluel; transform: rotate(180deg);"></span>
-                        <div style="position: relative;">
-                            <p class="text-dark">{{$students->statement_of_purpose}}</p>
-                            <p style="position: absolute; top: 0; right: 0;">
-                                <span class="quote"><img src="{{ asset('templates/images/quotation-right-mark-svgrepo-com.svg') }}" alt="" style="width:15px; height:15px; color:bluel; margin-top:auto"></span>
-                            </p>
+                        {{-- <span ><img src="{{ asset('templates/images/quotation-right-mark-svgrepo-com.svg') }}" alt="" style="width:15px; height:15px; color:bluel; transform: rotate(180deg);"></span> --}}
+
+                        <div class="owl-item">
+                            <div class="testimonials_item text-center">
+                                {{-- <div class="quote">“</div> --}}
+                                <p class="testimonials_text"><span class="quote">"</span>
+                                    {{$students->statement_of_purpose}}
+                                    <span class="quote">"</span> </p>
+
+                            </div>
                         </div>
-
-
                         <!-- Add a button to toggle visibility -->
-
-
-
-
                     </div>
                 </div>
 

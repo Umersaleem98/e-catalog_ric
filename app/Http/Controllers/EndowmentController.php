@@ -2,18 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Endowment;
 use Illuminate\Http\Request;
+use App\Models\EndowmentCategory;
+use App\Models\Program;
 
 class EndowmentController extends Controller
 {
     public function index()
     {
-        return view('template.endowment_model.index');
+
+        $categories = EndowmentCategory::all();
+        return view('template.endowment_model.index', compact('categories'));
     }
 
-    public function one_year()
+    public function one_year($id)
     {
-        return view('template.endowment_model.one_year');
+        // Fetch all programs with their associated fees
+        $programs = Program::with('fees')->get();
+
+        return view('template.endowment_model.one_year', compact('programs'));
     }
     public function four_year()
     {

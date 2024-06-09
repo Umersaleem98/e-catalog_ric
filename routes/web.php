@@ -11,7 +11,9 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\EndowmentController;
 use App\Http\Controllers\CredentialController;
+use App\Http\Controllers\FundAProjectController;
 use App\Http\Controllers\SignatureStoryController;
+use App\Http\Controllers\SupportScholarPaymentController;
 
 // Home Screens
 Route::get('/', [HomeController::class, 'index']);
@@ -25,12 +27,14 @@ Route::get('/students', [StudentController::class, 'index']);
 Route::get('/student_stories', [StudentController::class, 'stuedent_stories']);
 Route::get('/student_stories_indiviual/{id}', [StudentController::class, 'stuedent_stories_ind']);
 
-Route::get('/payment/{id}', [PaymentController::class, 'payment_index']);
-Route::get('/Make_a_Pledge/{id}', [PaymentController::class, 'Make_a_Pledge']);
-Route::post('/payments', [PaymentController::class, 'store']);
+Route::get('/payment/{id}', [SupportScholarPaymentController::class, 'payment_index']);
+Route::get('/Make_a_Pledge/{id}', [SupportScholarPaymentController::class, 'Make_a_Pledge']);
+Route::post('/payments', [SupportScholarPaymentController::class, 'store']);
+Route::post('/pledge_payment', [SupportScholarPaymentController::class, 'pledge_store']);
 
+// Endowment routes
 Route::get('endowment_model', [EndowmentController::class, 'index']);
-Route::get('support_for_one_year', [EndowmentController::class, 'one_year']);
+Route::get('support_for_one_year/{id}', [EndowmentController::class, 'one_year']);
 Route::get('support_for_four_year', [EndowmentController::class, 'four_year']);
 Route::get('perpetual_seat_your_name', [EndowmentController::class, 'perpetual_seat']);
 Route::get('zakat_for_students', [EndowmentController::class, 'zakat']);
@@ -40,10 +44,10 @@ Route::get('payment', [EndowmentController::class, 'payments']);
 
 // Funds the project routes
 
-Route::get('/select_project', [HostelController::class, 'select_project_fund']);
-Route::get('/fund_project/{id}', [HostelController::class, 'fund_project_screen']);
-Route::get('/payments_project/{id}', [HostelController::class, 'payments_project']);
-// Route::get('/mosque_project', [FundController::class, 'mosque_project']);
+Route::get('/select_project', [FundAProjectController::class, 'select_project_fund']);
+Route::get('/fund_project/{id}', [FundAProjectController::class, 'fund_project_screen']);
+Route::get('/payments_project/{id}', [FundAProjectController::class, 'payments_project']);
+Route::post('/fund_a_project', [FundAProjectController::class, 'payment_fund_a_project']);
 
 
 // Dashboard Screens Routes

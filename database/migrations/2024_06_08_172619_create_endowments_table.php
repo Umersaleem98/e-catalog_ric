@@ -13,13 +13,14 @@ return new class extends Migration
     {
         Schema::create('endowments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('donor_id')->constrained('donors')->onDelete('cascade');
-            $table->foreignId('endowment_type_id')->constrained('endowment_types')->onDelete('cascade');
-            $table->decimal('amount', 10, 2);
-            $table->date('start_date')->nullable();
-            $table->date('end_date')->nullable();
-            $table->string('status')->default('Active');
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('program_id');
+            $table->string('type');
+            $table->decimal('amount', 15, 2);
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('endowment_categories')->onDelete('cascade');
+            $table->foreign('program_id')->references('id')->on('programs')->onDelete('cascade');
         });
     }
 

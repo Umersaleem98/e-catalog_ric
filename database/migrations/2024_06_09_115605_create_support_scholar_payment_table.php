@@ -11,15 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('payments', function (Blueprint $table) {
+        Schema::create('support_scholar_payment', function (Blueprint $table) {
             $table->id();
             $table->string('student_name');
             $table->string('donor_name');
-            $table->string('card_on_name');
             $table->string('donor_email');
-            $table->string('cnic_number');
-            $table->string('card_number');
-            $table->string('card_cvc');
             $table->integer('duration');
             $table->decimal('amount', 10, 2);
             $table->string('prove');
@@ -32,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('payments');
+        Schema::dropIfExists('support_scholar_payment');
     }
 };

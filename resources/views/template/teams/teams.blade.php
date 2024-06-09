@@ -92,23 +92,29 @@
                     <img src="{{ asset('team/Arooba_Gillani.png') }}" class="img-fluid" alt="CEO Image" style="max-height: 400px; width: 100%;">
                 </div>
                 <div class="col-md-8">
-                    <p class="text-dark custom-paragraph">
-                        <span class="quote">
-                            <img src="{{ asset('templates/images/quotation-right-mark-svgrepo-com.svg') }}" alt="" style="transform: rotate(180deg);">
-                        </span>
-                        <b style="font-size:25px; color:black;">A commitment</b> to quality faculty and students has fueled NUST’s impressive rise in rankings and the success of our international alumni network. As Director Advancement, I am privileged to steer a self-sustaining system that supports<span style="font-size:16px; font-weight: bold"> Pakistan’s leading science and technology university.</span>  Our aim is to become the driving force of Pakistan’s knowledge economy, with the<span style="font-size:16px; font-weight: bold"> dream of making NUST a need-blind university.</span>
-                        <br>
-                        Many deserving students face significant financial challenges, with<span style="font-size:16px; font-weight: bold"> nearly half of our undergraduates requiring scholarships. Despite our best efforts, a gap remains, affecting 150 to 250 students </span>  annually. Our <span style="font-size:16px; font-weight: bold">NEED Initiative Campaign</span> aims to bridge this gap, ensuring all talented students can afford higher education.
-                        <br>
-                        Your support is crucial to this campaign, dedicated to making need-blind admissions a reality and empowering our youth. <span style="font-size:16px; font-weight: bold"> Join us in sponsoring dreams and lighting the way for a more equitable future.</span>
-                        <span class="quote">
-                            <img src="{{ asset('templates/images/quotation-right-mark-svgrepo-com.svg') }}" alt="">
-                        </span>
-                    </p>
-                    <div class="signature">Arooba Gillani</div>
-                    <div style="font-size: 14px; color: black; margin-right: 55px; text-align: right; font-weight: bold; margin-top: -4px;">Director</div>
-                    <div style="font-size: 14px; color: black; margin-right: 25px; text-align: right; font-weight: bold; margin-top: -4px;">Univerity Advancement Office</div>
+                    <div class="owl-item">
+                        <div class="testimonials_item text-center" style="text-align: left;">
+                            <p class="testimonials_text text-black" style="text-align: justify;">
+                                <span class="quote" style="font-size: 50px;">"</span>
+                                <b style="font-size:25px; color:black;">A commitment</b> to quality faculty and students has fueled NUST’s impressive rise in rankings and the success of our international alumni network. As Director Advancement, I am privileged to steer a self-sustaining system that supports<span style="font-size:16px; font-weight: bold"> Pakistan’s leading science and technology university.</span> Our aim is to become the driving force of Pakistan’s knowledge economy, with the<span style="font-size:16px; font-weight: bold"> dream of making NUST a need-blind university.</span>
+                                <br>
+                                Many deserving students face significant financial challenges, with<span style="font-size:16px; font-weight: bold"> nearly half of our undergraduates requiring scholarships. Despite our best efforts, a gap remains, affecting 150 to 250 students </span> annually. Our <span style="font-size:16px; font-weight: bold">NEED Initiative Campaign</span> aims to bridge this gap, ensuring all talented students can afford higher education.
+                                <br>
+                                Your support is crucial to this campaign, dedicated to making need-blind admissions a reality and empowering our youth. <span style="font-size:16px; font-weight: bold"> Join us in sponsoring dreams and lighting the way for a more equitable future.
+
+                                <span class="quote" style="font-size: 50px;">"</span>
+                            </p>
+                            <div class="signature" style="text-align: right;">Arooba Gillani</div>
+                            <div style="font-size: 14px; color: black; margin-right: 55px; text-align: right; font-weight: bold; margin-top: -4px;">Director</div>
+                            <div style="font-size: 14px; color: black; margin-right: 25px; text-align: right; font-weight: bold; margin-top: -4px;">University Advancement Office</div>
+                        </div>
+                    </div>
+
+
                 </div>
+
+
+
             </div>
         </div>
     </section>

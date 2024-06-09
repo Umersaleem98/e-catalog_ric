@@ -1192,8 +1192,9 @@ input:last-of-type
 }
 .testimonials_text
 {
-	color: #FFFFFF;
+	color: black;
 	margin-bottom: 0px;
+    text-decoration: solid;
 }
 .testimonial_user
 {

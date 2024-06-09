@@ -101,9 +101,9 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <form method="POST" action="{{ url('payments') }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ url('pledge_payment') }}">
                             @csrf
-                            <input type="text" name="student_name" class="form-control" value="{{$students->name}}" hidden>
+                            <input type="text" name="student_name" class="form-control" value="{{$students->name}}" >
                             <div class="row mb-3">
                                 <div class="col-9">
                                     <label for="donor_name" class="form-label">Your Name</label>
@@ -118,48 +118,35 @@
                                 </div>
 
                             </div>
-                            {{-- <div class="row mb-3">
-
-                                <div class="col-9">
-                                    <label for="cnic_number" class="form-label">CNIC Number</label>
-                                    <input type="text" class="form-control" placeholder="Enter Your CNIC " id="cnic_number" name="cnic_number">
-                                </div>
-                            </div> --}}
-
                             <div class="row mb-3">
 
                                 <div class="col-9">
-                                    <label for="cnic_number" class="form-label">Phone Number</label>
-                                    <input type="text" class="form-control" placeholder="Enter Your Phone Number " id="cnic_number" name="cnic_number">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="text" class="form-control" placeholder="Enter Your Phone Number " id="phone" name="phone">
                                 </div>
                             </div>
 
                             <div class="row mb-3">
 
                                 <div class="col">
-                                    <label for="cnic_number" class="form-label">Donation</label>
-                                    <select name="" id="" class="form-control">
+                                    <label for="" class="form-label">Donation</label>
+                                    <select name="donation_percent" id="" class="form-control">
                                         <option value="50%">50%</option>
                                         <option value="100%">100%</option>
                                     </select>
                                 </div>
                                 <div class="col">
                                     <label for="cnic_number" class="form-label">For</label>
-                                    <select name="" id="" class="form-control">
-                                        <option value="50%">Tuition Fee </option>
-                                        <option value="50%">Accommodation </option>
-                                        <option value="100%">Messing</option>
+                                    <select name="donation_for" id="" class="form-control">
+                                        <option value="tution_fee">Tuition Fee </option>
+                                        <option value="accommodation">Accommodation </option>
+                                        <option value="mesing">Messing</option>
                                     </select>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
-
                     </div>
-                    <div class="col-md-6 d-flex justify-content-center">
-                        <img src="{{ asset('templates/images/charity2.gif') }}" alt="Image 1" class="img-fluid rounded" style="max-width: 100%; height:400px">
-                    </div>
-
                 </div>
             </div>
         </div>

@@ -11,10 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('endowment_types', function (Blueprint $table) {
+        Schema::create('fund_a_project', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->text('description')->nullable();
+            $table->string('project_name');
+            $table->string('donor_name');
+            $table->string('donor_email');
+            $table->string('phone');
+            $table->string('amount_for');
+            $table->string('amount');
             $table->timestamps();
         });
     }
@@ -24,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('endowment_types');
+        Schema::dropIfExists('fund_a_project');
     }
 };
