@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Payment </title>
+    <title>Payment</title>
     @include('template.head')
     <style>
         /* Custom CSS for responsiveness */
@@ -26,29 +26,23 @@
         }
 
         select.form-control {
-        color: black;
-    }
+            color: black;
+        }
 
-    /* Style for select option text color */
-    select.form-control option {
-        color: black;
-    }
-        </style>
+        /* Style for select option text color */
+        select.form-control option {
+            color: black;
+        }
+    </style>
 </head>
 <body>
 
 <div class="super_container">
-
     <!-- Header -->
-
     @include('template.navbar')
-
     @include('template.home')
-
     <div class="events page_section">
-
         <div class="container">
-
             <div class="row mb-5">
                 <div class="col">
                     <div class="section_title text-center">
@@ -79,68 +73,54 @@
                     <div class="col-12 mb-4">
                         <div class="card">
                             <div class="alert alert-info mt-3 text-center" role="alert">
-                                further Correspondence will be Carried out on Your Provided velid email address..
+                                Further correspondence will be carried out on your provided valid email address.
                             </div>
-                            {{-- <div class="card-body mt-3">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <h2>Non-Zakat Donation</h2>
-                                        <p>Account Number: 2292-79173812-01</p>
-                                        <p>IBAN Number: PK80HABB0022927917381201</p>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h2>Zakat Donation</h2>
-                                        <p>Account Number: 2292-79173861-03</p>
-                                        <p>IBAN Number: PK34habb0022927917386103</p>                                    </div>
-                                    <div class="col-md-4">
-                                        <h2>Endowment Fund Donations</h2>
-                                         <p>Account Number: 2292-79173811-01</p>
-                                        <p>IBAN Number: PK64habb0022927917381101</p>                                    </div>
-                                </div>
-                            </div> --}}
                         </div>
                     </div>
                     <div class="col-md-6">
                         <form method="POST" action="{{ url('pledge_payment') }}">
                             @csrf
-                            <input type="text" name="student_name" class="form-control" value="{{$students->name}}" >
+                            <input type="text" name="student_name" class="form-control" value="{{$students->name}}">
                             <div class="row mb-3">
                                 <div class="col-9">
                                     <label for="donor_name" class="form-label">Your Name</label>
                                     <input type="text" class="form-control" id="donor_name" name="donor_name" placeholder="Enter Your Name">
                                 </div>
-
                             </div>
                             <div class="row mb-3">
                                 <div class="col-9">
                                     <label for="donor_email" class="form-label">Your Valid Email</label>
                                     <input type="email" class="form-control" placeholder="Enter Your Valid Email" id="donor_email" name="donor_email">
                                 </div>
-
                             </div>
                             <div class="row mb-3">
-
                                 <div class="col-9">
                                     <label for="phone" class="form-label">Phone Number</label>
-                                    <input type="text" class="form-control" placeholder="Enter Your Phone Number " id="phone" name="phone">
+                                    <input type="text" class="form-control" placeholder="Enter Your Phone Number" id="phone" name="phone">
                                 </div>
                             </div>
 
                             <div class="row mb-3">
-
                                 <div class="col">
-                                    <label for="" class="form-label">Donation</label>
-                                    <select name="donation_percent" id="" class="form-control">
-                                        <option value="50%">50%</option>
-                                        <option value="100%">100%</option>
+                                    <label for="" class="form-label">Donation Percentage</label>
+                                    <select name="donation_percent" id="donation_percent" class="form-control" onchange="setDonationAmount()">
+                                        <option value="50">50%</option>
+                                        <option value="100">100%</option>
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <label for="cnic_number" class="form-label">For</label>
-                                    <select name="donation_for" id="" class="form-control">
-                                        <option value="tution_fee">Tuition Fee </option>
-                                        <option value="accommodation">Accommodation </option>
-                                        <option value="mesing">Messing</option>
+                                    <label for="donation_amount" class="form-label">Donation Amount (PKR)</label>
+                                    <input type="number" class="form-control" placeholder="Donation Amount" id="donation_amount" name="donation_amount" readonly>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="donation_for" class="form-label">For</label>
+                                    <select name="donation_for" id="donation_for" class="form-control" onchange="setAdditionalAmount()">
+                                        <option value="tution_fee">Tuition Fee</option>
+                                        <option value="accommodation">Accommodation</option>
+                                        <option value="messing">Messing</option>
                                     </select>
                                 </div>
                             </div>
@@ -153,7 +133,31 @@
     </div>
 
     <!-- Footer -->
-
     @include('template.footer')
 </body>
+<script>
+    // Function to set donation amount based on selected percentage
+    function setDonationAmount() {
+        var percentage = document.getElementById('donation_percent').value;
+        var amountInput = document.getElementById('donation_amount');
+        var maxAmount = 300000; // Maximum amount
+
+        if (percentage == 100) {
+            amountInput.value = maxAmount;
+        } else {
+            amountInput.value = maxAmount / 2;
+        }
+    }
+
+    // Function to add additional amount for "Accommodation"
+    function setAdditionalAmount() {
+        var donationFor = document.getElementById('donation_for').value;
+        var amountInput = document.getElementById('donation_amount');
+        var currentAmount = parseInt(amountInput.value);
+
+        if (donationFor == 'accommodation') {
+            amountInput.value = currentAmount + 259000;
+        }
+    }
+</script>
 </html>

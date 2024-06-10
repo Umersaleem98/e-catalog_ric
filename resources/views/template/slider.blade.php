@@ -92,9 +92,10 @@
                     <div class="hero_slide_content text-center mt-5">
                         <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="color: #EFA500">Transformative Education</h1>
                         <div class="hero_slide_buttons">
+                            <a href="{{url('endowment_model')}}" class="button" data-animation-in="popIn">Endowment Model</a>
                             <a href="{{url('student_stories')}}" class="button" data-animation-in="popIn">Support a Scholar</a>
                             <a href="{{url('select_project')}}" class="button" data-animation-in="popIn">Fund a Project</a>
-                            <a href="{{url('endowment_model')}}" class="button" data-animation-in="popIn">Endowment Model</a>
+
                         </div>
                     </div>
                 </div>
@@ -106,9 +107,10 @@
                     <div class="hero_slide_content text-center mt-5">
                         <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="color: #EFA500">Creating Impact for a Better Tomorrow</h1>
                         <div class="hero_slide_buttons">
+                            <a href="{{url('endowment_model')}}" class="button" data-animation-in="popIn">Endowment Model</a>
                             <a href="{{url('student_stories')}}" class="button" data-animation-in="popIn">Support a Scholar</a>
                             <a href="{{url('select_project')}}" class="button" data-animation-in="popIn">Fund a Project</a>
-                            <a href="{{url('endowment_model')}}" class="button" data-animation-in="popIn">Endowment Model</a>
+
                         </div>
                     </div>
                 </div>
@@ -120,9 +122,10 @@
                     <div class="hero_slide_content text-center mt-5">
                         <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="color: #EFA500">Empower Minds, Shape Futures</h1>
                         <div class="hero_slide_buttons">
+                            <a href="{{url('endowment_model')}}" class="button" data-animation-in="popIn">Endowment Model</a>
                             <a href="{{url('student_stories')}}" class="button" data-animation-in="popIn">Support a Scholar</a>
                             <a href="{{url('select_project')}}" class="button" data-animation-in="popIn">Fund a Project</a>
-                            <a href="{{url('endowment_model')}}" class="button" data-animation-in="popIn">Endowment Model</a>
+
                         </div>
                     </div>
                 </div>

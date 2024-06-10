@@ -79,7 +79,7 @@
                     <div class="col-12 mb-4">
                         <div class="card">
                             <div class="alert alert-info mt-3 text-center" role="alert">
-                                further Correspondence will be Carried out on Your Provided velid email address..
+                                Further correspondence will be carried out on your provided valid email address..
                             </div>
                             {{-- <div class="card-body mt-3">
                                 <div class="row">

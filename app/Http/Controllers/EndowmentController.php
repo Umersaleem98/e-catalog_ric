@@ -16,6 +16,13 @@ class EndowmentController extends Controller
         return view('template.endowment_model.index', compact('categories'));
     }
 
+    public function one_year1()
+    {
+        // Fetch all programs with their associated fees
+        // $programs = Program::with('fees')->get();
+
+        return view('template.endowment_model.one_year');
+    }
     public function one_year($id)
     {
         // Fetch all programs with their associated fees

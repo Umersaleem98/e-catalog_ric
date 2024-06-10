@@ -6,8 +6,12 @@
     }
 
     .nav-item {
-        margin-left: 5px; /* Adjust the margin value as needed */
-        margin-right: 5px; /* Adjust the margin value as needed */
+        margin-left: 3px; /* Adjust the margin value as needed */
+        margin-right: 3px; /* Adjust the margin value as needed */
+    }
+
+    .dropdown-item {
+        font-weight: bold; /* Makes the dropdown items bold */
     }
 </style>
 
@@ -38,7 +42,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="programsDropdown">
                     <a class="dropdown-item" href="{{url('signrature_program')}}">Signature Programs</a>
-                    <a class="dropdown-item" href="{{url('r_m_o')}}">Resource Mobilization Officer</a>
+                    <a class="dropdown-item" href="{{url('r_m_o')}}">Resource Mobilization Officers</a>
                 </div>
             </li>
             <li class="nav-item">

@@ -52,7 +52,7 @@
             <div class="row mb-5">
                 <div class="col">
                     <div class="section_title text-center">
-                        <h1 class="text-dark">Pay the fund</h1>
+                        <h1 class="text-dark">Pay Now</h1>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
                             </div>
                             <div class="card-footer">
                                 <div class="alert alert-info text-center" role="alert">
-                                    further Correspondence will be Carried out on Your Provided velid email address..
+                                    Further correspondence will be carried out on your provided valid email address..
                                 </div>
                             </div>
                         </div>
@@ -155,6 +155,8 @@
                                 <div class="col">
                                     <label for="" class="form-label">Prove </label>
                                     <input type="file" class="form-control"  name="prove">
+
+                                    <span class="text-success">"If you have already made the payment, kindly attach payment proof/ screenshot of the payment"</span>
                                 </div>
 
                             </div>

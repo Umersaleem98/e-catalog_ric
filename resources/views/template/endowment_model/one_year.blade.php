@@ -4,27 +4,33 @@
     <title>One Year</title>
     @include('template.head')
     <style>
+        /* Your CSS styles here */
         .btn-container {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 10px; /* Adjust the gap as needed */
         }
         input.form-control {
             color: black;
         }
+
+        /* Style for placeholder text color */
         input.form-control::placeholder {
             color: black;
-            opacity: 1;
+            opacity: 1; /* Override default opacity */
         }
+
         select.form-control {
-            color: black;
-        }
-        select.form-control option {
-            color: black;
-        }
-        .total-amount{
-            font-size: 20px;
-        }
+        color: black;
+    }
+
+    /* Style for select option text color */
+    select.form-control option {
+        color: black;
+    }
+    .total-amount{
+        font-size: 20px;
+    }
     </style>
 </head>
 <body>
@@ -51,48 +57,91 @@
                 </div>
             </div>
 
-            <!-- Programs Section -->
-            @foreach ($programs as $program)
+            <!-- Undergraduate Students Section -->
             <div class="container mt-5">
                 <div class="row">
                     <div class="col-12">
-                        <ul class="list-group list-group-flush text-dark btn-container">
+                        <ul class="list-group list-group-flush text-dark btn-container"> <!-- Added btn-container class -->
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 <div class="d-flex align-items-center">
-                                    <h3>{{ $program->name }} ({{ $program->level }})</h3>
+                                    <h3>Undergraduate Students (UG)</h3>
                                 </div>
                             </li>
                             <div class="card card-body mt-3">
-                                <h4 class="text-dark">Detailed Breakdown for {{ $program->name }}:</h4>
+                                <h4 class="text-dark">Detailed Breakdown for UG:</h4>
                                 <div class="form-group">
-                                    <label for="select{{ $program->id }}">Select Options:</label>
-                                    <select id="select{{ $program->id }}" class="form-control">
-                                        @foreach ($program->fees as $fee)
-                                        <option value="{{ $fee->amount }}">{{ $fee->duration }}: {{ number_format($fee->amount, 0) }} PKR</option>
-                                        @endforeach
+                                    <label for="ugSelect">Select Options:</label>
+                                    <select id="ugSelect" class="form-control">
+                                        <option value="300000">Tuition: 300,000 PKR</option>
                                     </select>
                                 </div>
 
                                 <div class="total-amount mt-3 text-center">
-                                    Total Amount ({{ $program->name }}): <span id="totalAmount{{ $program->id }}">0</span> PKR
+                                    Total Amount (UG): <span id="ugTotalAmount">0</span> PKR
                                 </div>
 
                                 <div class="form-group mt-3">
-                                    <input type="checkbox" id="additionalExpenses{{ $program->id }}" value="240000">
-                                    <label for="additionalExpenses{{ $program->id }}">Include mess and hostel expenses (240,000 PKR)</label>
+                                    <input type="checkbox" id="additionalExpenses" value="240000">
+                                    <label for="additionalExpenses">Include mess and hostel expenses (240,000 PKR)</label>
                                 </div>
                                 <div class="btn-container d-flex justify-content-center gap-2 mt-3">
-                                    <a href="{{ url('Make_a_Pledge') }}" class="btn btn-success">Make a Pledge</a>
-                                    <a href="{{ url('payment') }}" class="btn btn-primary">Pay Now</a>
+                                    <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
+                                    <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
                                 </div>
                             </div>
                         </ul>
                     </div>
                 </div>
             </div>
-            @endforeach
-            <!-- End of Programs Section -->
 
+            <!-- End of Undergraduate Students Section -->
+
+            <!-- Postgraduate Students Section -->
+            <div class="row mt-2">
+                <div class="col-12">
+                    <ul class="list-group list-group-flush text-dark btn-container">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="{{ asset('templates/endowment_model/images2.jpg') }}" alt="" class="heading-image">
+                                <h3>Postgraduate Students (PG)</h3>
+                            </div>
+                        </li>
+                        <div class="card card-body mt-3">
+                            <h4 class="text-dark">Detailed Breakdown for PG:</h4>
+                            <ul class="list-group list-group-flush text-dark">
+                                <li class="list-group-item">
+                                    <label for="pgTuition">Programs</label>
+                                    <select id="pgTuition" class="form-control" name="pgTuition">
+                                        <option value="0" selected disabled>Select Programs</option>
+                                        <option value="210000">Engineering /IT, Bio Sciences, programs</option>
+                                        <option value="700800">MS HRM, MS Logistics & Supply Chain Management, MS Innovation & Entrepreneurship</option>
+                                        <option value="793800">Business Studies (MBA)</option>
+                                        <option value="100570">Business Studies (EMBA)</option>
+                                        <option value="73800">Engineering Management & Construction Engineering Management</option>
+                                        <option value="488800">Architecture & Social sciences</option>
+                                    </select>
+                                </li>
+
+                                <div class="total-amount text-center">
+                                    Total Amount (PG): <span id="pgTotalAmount">0</span> PKR
+                                </div>
+
+                                <li class="list-group-item">
+                                    <input type="checkbox" id="messHostelExpenses" value="259000">
+                                    <label for="messHostelExpenses">Include Mess and Hostel Expenses (PKR 259,000)</label>
+                                </li>
+                                <li class="btn-container d-flex justify-content-center gap-2">
+                                    <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
+                                    <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- End of Postgraduate Students Section -->
         </div>
     </div>
 
@@ -106,26 +155,46 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        @foreach ($programs as $program)
-        const select{{ $program->id }} = document.getElementById('select{{ $program->id }}');
-        const additionalExpensesCheckbox{{ $program->id }} = document.getElementById('additionalExpenses{{ $program->id }}');
-        const totalAmount{{ $program->id }} = document.getElementById('totalAmount{{ $program->id }}');
+        const ugSelect = document.getElementById('ugSelect');
+        const additionalExpensesCheckbox = document.getElementById('additionalExpenses');
+        const ugTotalAmount = document.getElementById('ugTotalAmount');
 
-        function calculateTotal{{ $program->id }}() {
-            let total = parseInt(select{{ $program->id }}.value);
-            if (additionalExpensesCheckbox{{ $program->id }}.checked) {
-                total += parseInt(additionalExpensesCheckbox{{ $program->id }}.value);
+        function calculateTotal() {
+            let total = parseInt(ugSelect.value);
+            if (additionalExpensesCheckbox.checked) {
+                total += parseInt(additionalExpensesCheckbox.value);
             }
-            totalAmount{{ $program->id }}.textContent = total + ' PKR';
+            ugTotalAmount.textContent = total + ' PKR';
         }
 
-        select{{ $program->id }}.addEventListener('change', calculateTotal{{ $program->id }});
-        additionalExpensesCheckbox{{ $program->id }}.addEventListener('change', calculateTotal{{ $program->id }});
+        ugSelect.addEventListener('change', calculateTotal);
+        additionalExpensesCheckbox.addEventListener('change', calculateTotal);
 
-        calculateTotal{{ $program->id }}();
-        @endforeach
+        calculateTotal();
     });
-</script>
+    </script>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const pgTuitionSelect = document.getElementById('pgTuition');
+        const messHostelCheckbox = document.getElementById('messHostelExpenses');
+        const pgTotalAmountSpan = document.getElementById('pgTotalAmount');
+
+        function updateTotalAmount() {
+            let totalAmount = 0;
+            const tuitionAmount = parseInt(pgTuitionSelect.value) || 0;
+            const messHostelAmount = messHostelCheckbox.checked ? parseInt(messHostelCheckbox.value) : 0;
+            totalAmount = tuitionAmount + messHostelAmount;
+            pgTotalAmountSpan.textContent = totalAmount;
+        }
+
+        pgTuitionSelect.addEventListener('change', updateTotalAmount);
+        messHostelCheckbox.addEventListener('change', updateTotalAmount);
+    });
+    </script>
+
 
 </body>
 </html>

@@ -20,6 +20,7 @@ class StudentController extends Controller
         $gender = $request->input('gender');
         $province = $request->input('province');
         $discipline = $request->input('discipline');
+        $degree = $request->input('degree');
 
         $query = Student::query();
 
@@ -33,6 +34,9 @@ class StudentController extends Controller
 
         if ($discipline && $discipline !== 'all') {
             $query->where('discipline', $discipline);
+        }
+        if ($degree && $degree !== 'all') {
+            $query->where('degree', $degree);
         }
 
         $students = $query->paginate(8); // Always paginate by default

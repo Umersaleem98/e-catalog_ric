@@ -49,20 +49,16 @@
             </div>
 
             <div class="row">
-
-               @foreach ($categories  as $item)
-
                 <div class="col-md-6 mb-2">
                     <div class="card">
                         <div class="card-body">
-                            {{-- <a href="{{'support_for_one_year'}}" class="card-link"> --}}
-                                <a href="{{ url('support_for_one_year', $item->id) }}" class="card-link">
+                            <a href="{{'support_for_one_year'}}" class="card-link">
                                 <div class="icon-container mr-3">
                                     <br>
                                     <i class="fas fa-graduation-cap"></i> <!-- Font Awesome icon for education/degree -->
                                 </div>
                                 <div>
-                                    <h2 class="card-title"> {{ $item->name }} </h2>
+                                    <h2 class="card-title">Support a Degree for 1 Year</h2>
                                     <p class="card-text">Click here for more information.</p>
                                 </div>
                             </a>
@@ -70,8 +66,54 @@
                     </div>
                 </div>
                 <!-- Repeat the above card structure for other cards -->
-
-                @endforeach
+                <div class="col-md-6 mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="{{'support_for_four_year'}}" class="card-link">
+                                <div class="icon-container mr-3">
+                                    <br>
+                                    <i class="fas fa-book"></i> <!-- Font Awesome icon for education/degree -->
+                                </div>
+                                <div>
+                                    <h2 class="card-title">Support the Entire Degree Program</h2>
+                                    <p class="card-text">Click here for more information.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="{{url('perpetual_seat_your_name')}}" class="card-link">
+                                <div class="icon-container mr-3">
+                                    <br>
+                                    <i class="fas fa-chair"></i> <!-- Font Awesome icon for seat/chair -->
+                                </div>
+                                <div>
+                                    <h2 class="card-title">Create a Perpetual Seat in Your Name</h2>
+                                    <p class="card-text">Click here for more information.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="{{url('zakat_for_students')}}" class="card-link">
+                                <div class="icon-container mr-3">
+                                    <br>
+                                    <i class="fas fa-hands-helping"></i> <!-- Font Awesome icon for helping hand -->
+                                </div>
+                                <div>
+                                    <h2 class="card-title">Zakat for Students</h2>
+                                    <p class="card-text">Click here for more information.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <!-- Repeat the structure for other cards -->
             </div>
 
