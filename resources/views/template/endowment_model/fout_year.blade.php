@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>One Year</title>
+    <title>Four Year</title>
     @include('template.head')
     <style>
         /* Your CSS styles here */
@@ -42,6 +42,13 @@
             flex: 1; /* Take up remaining space */
             margin-right: 10px; /* Adjust margin as needed */
         }
+        label{
+            color: black;
+        }
+        .btn{
+            background-color: #004476;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -70,10 +77,10 @@
             <div class="d-flex justify-content-center">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="undergraduate-tab" data-bs-toggle="tab" data-bs-target="#undergraduate" type="button" role="tab" aria-controls="undergraduate" aria-selected="true" style="background-color: #FFB606; color:white" >Undergraduate</button>
+                        <button class="nav-link active" id="undergraduate-tab" data-bs-toggle="tab" data-bs-target="#undergraduate" type="button" role="tab" aria-controls="undergraduate" aria-selected="true" style="background-color: #004476 ; color:white" >Undergraduate</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="postgraduate-tab" data-bs-toggle="tab" data-bs-target="#postgraduate" type="button" role="tab" aria-controls="postgraduate" aria-selected="false" style="background-color: #FFB606; color:white">Postgraduate</button>
+                        <button class="nav-link" id="postgraduate-tab" data-bs-toggle="tab" data-bs-target="#postgraduate" type="button" role="tab" aria-controls="postgraduate" aria-selected="false" style="background-color: #004476; color:white">Postgraduate</button>
                     </li>
                 </ul>
             </div>
@@ -88,7 +95,20 @@
                             <!-- Example form structure -->
                             <form action="{{url('endowmentsupportentireyear')}}" method="post">
                                 @csrf
-                                <h4 class="text-dark">Detailed Breakdown for UG:</h4>
+                                <h3 class="text-dark text-center mb-4">Detailed Breakdown for UG:</h3>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="make_a_pledge">
+                                        Make a Pledge
+                                    </label>
+                                    <input class="form-check-input ml-3" name="payments_status" type="radio" name="options" id="option2" value="option2">
+                                    <label class="form-check-label ml-4" for="make_a_pledge">
+                                        Paynow
+                                    </label>
+                                    <input class="form-check-input ml-3" name="payments_status" type="radio" name="options" id="option2" value="Paynow">
+
+                                </div>
+                                <br>
+
                                 <div class="row">
 
                                     <div class="col-md-6">
@@ -147,17 +167,7 @@
 
                                    </div>
                                 </div>
-                                <div class="form-check">
-                                    <label class="form-check-label" for="make_a_pledge">
-                                        Make a Pledge
-                                    </label>
-                                    <input class="form-check-input ml-3" name="payments_status" type="radio" name="options" id="option2" value="option2">
-                                    <label class="form-check-label ml-4" for="make_a_pledge">
-                                        Paynow
-                                    </label>
-                                    <input class="form-check-input ml-3" name="payments_status" type="radio" name="options" id="option2" value="Paynow">
 
-                                </div>
 
                                 <input type="submit" name="submit" class="btn btn-primary">
                                </form>
@@ -170,7 +180,20 @@
                         <div class="col-12">
                             <form action="{{url('endowmentsupportentireyear')}}" method="post">
                                 @csrf
-                                <h4 class="text-dark">Detailed Breakdown for PG:</h4>
+                                <h3 class="text-dark text-center">Detailed Breakdown for PG:</h3>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="make_a_pledge">
+                                        Make a Pledge
+                                    </label>
+                                    <input class="form-check-input ml-3" name="payments_status" type="radio"  id="option2" value="male_a_pledge">
+                                    <label class="form-check-label ml-4" for="make_a_pledge">
+                                        Paynow
+                                    </label>
+                                    <input class="form-check-input ml-3" name="payments_status" type="radio"  id="option2" value="Paynow">
+
+                                </div>
+                                <br>
+
                                 <div class="row">
                                     <input type="text" name="program" value="PG" hidden id="">
                                     <div class="col-md-6">
@@ -225,7 +248,7 @@
                                    </div>
                                 </div>
 
-                                <div class="form-check">
+                                {{-- <div class="form-check">
                                     <label class="form-check-label" for="make_a_pledge">
                                         Make a Pledge
                                     </label>
@@ -235,7 +258,7 @@
                                     </label>
                                     <input class="form-check-input ml-3" name="payments_status" type="radio" name="options" id="option2" value="Paynow">
 
-                                </div>
+                                </div> --}}
                                 <input type="submit" name="submit" class="btn  btn-primary">
                             </form>
                         </div>

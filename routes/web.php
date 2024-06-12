@@ -33,11 +33,8 @@ Route::get('/Make_a_Pledge/{id}', [SupportScholarPaymentController::class, 'Make
 Route::post('/payments', [SupportScholarPaymentController::class, 'store']);
 Route::post('/pledge_payment', [SupportScholarPaymentController::class, 'pledge_store']);
 
-// Endowment routes
-Route::get('endowment_model', [EndowmentController::class, 'index']);
-// Route::get('support_for_one_year', [EndowmentController::class, 'one_year1']);
-
 // support a degree one year
+Route::get('endowment_model', [EndowmentController::class, 'index']);
 Route::get('support_for_one_year', [EndowmentController::class, 'one_year_index']);
 Route::post('endowmentsupportoneyear', [EndowmentController::class, 'one_year_store']);
 Route::get('support_for_entire_year', [EndowmentController::class, 'entire_index']);
@@ -45,10 +42,6 @@ Route::post('endowmentsupportentireyear', [EndowmentController::class, 'entire_s
 
 Route::get('perpetualseatyourname', [EndowmentController::class, 'Perpetual_index']);
 Route::post('perpetualseatyourname', [EndowmentController::class, 'Perpetual_store']);
-
-// Route::get('support_for_one_year/{id}', [EndowmentController::class, 'one_year']);
-Route::get('support_for_four_year', [EndowmentController::class, 'four_year']);
-Route::get('perpetual_seat_your_name', [EndowmentController::class, 'perpetual_seat']);
 Route::get('zakat_for_students', [EndowmentController::class, 'zakat']);
 Route::get('Make_a_Pledge', [EndowmentController::class, 'pledge_payments']);
 Route::get('payment', [EndowmentController::class, 'payments']);

@@ -43,23 +43,23 @@
             <div class="row mb-5">
                 <div class="col">
                     <div class="section_title text-center">
-                        <h1 class="">Endowment Model</h1>
+                        <h1 class="">Giving Avenues</h1>
                     </div>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-6 mb-2">
-                    <div class="card">
+                    <div class="card" style="background-color: #004476;">
                         <div class="card-body">
                             <a href="{{'support_for_one_year'}}" class="card-link">
                                 <div class="icon-container mr-3">
                                     <br>
-                                    <i class="fas fa-graduation-cap"></i> <!-- Font Awesome icon for education/degree -->
+                                    <i class="fas fa-graduation-cap text-light"></i> <!-- Font Awesome icon for education/degree -->
                                 </div>
                                 <div>
-                                    <h2 class="card-title">Support a Degree for 1 Year</h2>
-                                    <p class="card-text">Click here for more information.</p>
+                                    <h2 class="card-title text-light">Soponser One Year Education</h2>
+                                    <p class="card-text text-light">Click here for more information.</p>
                                 </div>
                             </a>
                         </div>
@@ -67,48 +67,48 @@
                 </div>
                 <!-- Repeat the above card structure for other cards -->
                 <div class="col-md-6 mb-2">
-                    <div class="card">
+                    <div class="card" style="background-color: #004476;">
                         <div class="card-body">
                             <a href="{{'support_for_entire_year'}}" class="card-link">
                                 <div class="icon-container mr-3">
                                     <br>
-                                    <i class="fas fa-book"></i> <!-- Font Awesome icon for education/degree -->
+                                    <i class="fas fa-book text-light"></i> <!-- Font Awesome icon for education/degree -->
                                 </div>
                                 <div>
-                                    <h2 class="card-title">Support the Entire Degree Program</h2>
-                                    <p class="card-text">Click here for more information.</p>
+                                    <h2 class="card-title text-light">Adopt a Scholor</h2>
+                                    <p class="card-text text-light">Click here for more information.</p>
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-2">
-                    <div class="card">
+                    <div class="card" style="background-color: #004476;">
                         <div class="card-body">
                             <a href="{{url('perpetualseatyourname')}}" class="card-link">
                                 <div class="icon-container mr-3">
                                     <br>
-                                    <i class="fas fa-chair"></i> <!-- Font Awesome icon for seat/chair -->
+                                    <i class="fas fa-chair text-light"></i> <!-- Font Awesome icon for seat/chair -->
                                 </div>
                                 <div>
-                                    <h2 class="card-title">Create a Perpetual Seat in Your Name</h2>
-                                    <p class="card-text">Click here for more information.</p>
+                                    <h2 class="card-title text-light">Create a Perpetual Seat in Your Name</h2>
+                                    <p class="card-text text-light">Click here for more information.</p>
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-2">
-                    <div class="card">
+                    <div class="card" style="background-color: #004476;">
                         <div class="card-body">
                             <a href="{{url('zakat_for_students')}}" class="card-link">
                                 <div class="icon-container mr-3">
                                     <br>
-                                    <i class="fas fa-hands-helping"></i> <!-- Font Awesome icon for helping hand -->
+                                    <i class="fas fa-hands-helping text-light"></i> <!-- Font Awesome icon for helping hand -->
                                 </div>
                                 <div>
-                                    <h2 class="card-title">Zakat for Students</h2>
-                                    <p class="card-text">Click here for more information.</p>
+                                    <h2 class="card-title text-light">Zakat for Students</h2>
+                                    <p class="card-text text-light">Click here for more information.</p>
                                 </div>
                             </a>
                         </div>

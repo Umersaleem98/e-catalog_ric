@@ -18,7 +18,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light w-100 fixed-top">
     <!-- Left-side logos -->
     <a class="navbar-brand ml-3" href="{{url('/')}}">
-        <img src="{{ asset('templates/images/logo4.png') }}" alt="Left Logo" class="navbar-logo">
+        <img src="{{ asset('templates/images/logo4.png') }}" style="max-width: 280px" alt="Left Logo" class="navbar-logo">
     </a>
 
     <!-- Toggler/collapsing button for small screens -->

@@ -71,6 +71,10 @@
                                     <option value="all" selected>All Provinces</option>
                                     <option value="Punjab">Punjab</option>
                                     <option value="sindh">Sindh</option>
+                                    <option value="Azad Jamu & Kashmir">Azad Jamu & Kashmir</option>
+                                    <option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option>
+                                    <option value="Gilgit Baltistan">Gilgit Baltistan</option>
+                                    <option value="Balochistan">Balochistan</option>
                                     <!-- Add more options for provinces -->
                                 </select>
                             </div>

@@ -46,6 +46,10 @@
         label{
             color: black;
         }
+        .btn{
+            background-color: #004476;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -74,14 +78,12 @@
             <div class="d-flex justify-content-center">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="undergraduate-tab" data-bs-toggle="tab" data-bs-target="#undergraduate" type="button" role="tab" aria-controls="undergraduate" aria-selected="true" style="background-color: #FFB606; color:white" >Undergraduate</button>
+                        <button class="nav-link active" id="undergraduate-tab" data-bs-toggle="tab" data-bs-target="#undergraduate" type="button" role="tab" aria-controls="undergraduate" aria-selected="true" style="background-color: ##004476; color:white" >Undergraduate</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="postgraduate-tab" data-bs-toggle="tab" data-bs-target="#postgraduate" type="button" role="tab" aria-controls="postgraduate" aria-selected="false" style="background-color: #FFB606; color:white">Postgraduate</button>
+                        <button class="nav-link" id="postgraduate-tab" data-bs-toggle="tab" data-bs-target="#postgraduate" type="button" role="tab" aria-controls="postgraduate" aria-selected="false" style="background-color: ##004476; color:white" style="background-color: " >Postgraduate</button>
                     </li>
-                    {{-- <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="phd-tab" data-bs-toggle="tab" data-bs-target="#phd" type="button" role="tab" aria-controls="postgraduate" aria-selected="false" style="background-color: #FFB606; color:white">PhD</button>
-                    </li> --}}
+
                 </ul>
             </div>
 
@@ -96,6 +98,18 @@
                                 <form action="{{url('perpetualseatyourname')}}" method="post">
                                     @csrf
                                     <h3 class="text-dark text-center mb-4">Single Endowment for UG:</h3>
+
+                                    <div class="col-12 mt-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="payments_status" type="radio" id="make_a_pledge" value="Make a Pledge">
+                                            <label class="form-check-label" for="make_a_pledge">Make a Pledge</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="payments_status" type="radio" id="paynow" value="Paynow">
+                                            <label class="form-check-label" for="paynow">Pay now</label>
+                                        </div>
+                                    </div>
+                                    <br>
                                     <div class="row">
 
                                         <div class="col-md-6">
@@ -154,16 +168,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12 mt-3">
-                                            <div class="form-check">
-                                                <input class="form-check-input" name="payments_status" type="radio" id="make_a_pledge" value="Make a Pledge">
-                                                <label class="form-check-label" for="make_a_pledge">Make a Pledge</label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" name="payments_status" type="radio" id="paynow" value="Paynow">
-                                                <label class="form-check-label" for="paynow">Pay now</label>
-                                            </div>
-                                        </div>
+
                                     </div>
                                     <input type="submit" name="submit" class="btn btn-primary mt-3">
                                 </form>
@@ -175,6 +180,18 @@
                                     <form action="{{url('perpetualseatyourname')}}" method="post">
                                         @csrf
                                         <h3 class="text-dark text-center mb-4">Circular Endowment for UG:</h3>
+                                        <div class="col-12 mt-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" name="payments_status" type="radio" id="circular_ugMakeAPledge" value="Make a Pledge">
+                                                <label class="form-check-label" for="circular_ugMakeAPledge">Make a Pledge</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" name="payments_status" type="radio" id="circular_ugPayNow" value="Paynow">
+                                                <label class="form-check-label" for="circular_ugPayNow">Pay now</label>
+                                            </div>
+                                        </div>
+                                        <br>
+
                                         <div class="row">
 
                                             <div class="col-md-6">
@@ -233,16 +250,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-12 mt-3">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" name="payments_status" type="radio" id="circular_ugMakeAPledge" value="Make a Pledge">
-                                                    <label class="form-check-label" for="circular_ugMakeAPledge">Make a Pledge</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" name="payments_status" type="radio" id="circular_ugPayNow" value="Paynow">
-                                                    <label class="form-check-label" for="circular_ugPayNow">Pay now</label>
-                                                </div>
-                                            </div>
+
                                         </div>
                                         <input type="submit" name="submit" class="btn btn-primary mt-3">
                                     </form>

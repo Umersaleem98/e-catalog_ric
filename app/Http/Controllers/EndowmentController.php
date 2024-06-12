@@ -46,7 +46,8 @@ class EndowmentController extends Controller
         $oneyear->save();
 
         // return view('template.endowment_model.one_year', compact('undergraduate','postgraduate' ));
-        return view('template.endowment_model.one_year', compact('undergraduate', 'postgraduate'))->with('success', 'Data saved successfully!');
+        return back()->with('success', 'Data saved successfully!');
+        // return view('template.endowment_model.one_year', compact('undergraduate', 'postgraduate'))->with('success', 'Data saved successfully!');
     }
     public function entire_index()
     {
@@ -108,6 +109,11 @@ class EndowmentController extends Controller
 
         // return view('template.endowment_model.one_year', compact('undergraduate','postgraduate' ));
         return view('template.endowment_model.perpetual_seat_your_name', compact('undergraduate', 'postgraduate'))->with('success', 'Data saved successfully!');
+    }
+
+    public function zakat()
+    {
+        return view('template.endowment_model.zakat');
     }
 
     public function payments()
