@@ -14,6 +14,7 @@ use App\Http\Controllers\CredentialController;
 use App\Http\Controllers\FundAProjectController;
 use App\Http\Controllers\SignatureStoryController;
 use App\Http\Controllers\SupportScholarPaymentController;
+use App\Http\Controllers\SupportADegreeForOneYearController;
 
 // Home Screens
 Route::get('/', [HomeController::class, 'index']);
@@ -34,7 +35,17 @@ Route::post('/pledge_payment', [SupportScholarPaymentController::class, 'pledge_
 
 // Endowment routes
 Route::get('endowment_model', [EndowmentController::class, 'index']);
-Route::get('support_for_one_year', [EndowmentController::class, 'one_year1']);
+// Route::get('support_for_one_year', [EndowmentController::class, 'one_year1']);
+
+// support a degree one year
+Route::get('support_for_one_year', [EndowmentController::class, 'one_year_index']);
+Route::post('endowmentsupportoneyear', [EndowmentController::class, 'one_year_store']);
+Route::get('support_for_entire_year', [EndowmentController::class, 'entire_index']);
+Route::post('endowmentsupportentireyear', [EndowmentController::class, 'entire_store']);
+
+Route::get('perpetualseatyourname', [EndowmentController::class, 'Perpetual_index']);
+Route::post('perpetualseatyourname', [EndowmentController::class, 'Perpetual_store']);
+
 // Route::get('support_for_one_year/{id}', [EndowmentController::class, 'one_year']);
 Route::get('support_for_four_year', [EndowmentController::class, 'four_year']);
 Route::get('perpetual_seat_your_name', [EndowmentController::class, 'perpetual_seat']);

@@ -69,7 +69,7 @@
                 <div class="col-md-6 mb-2">
                     <div class="card">
                         <div class="card-body">
-                            <a href="{{'support_for_four_year'}}" class="card-link">
+                            <a href="{{'support_for_entire_year'}}" class="card-link">
                                 <div class="icon-container mr-3">
                                     <br>
                                     <i class="fas fa-book"></i> <!-- Font Awesome icon for education/degree -->
@@ -85,7 +85,7 @@
                 <div class="col-md-6 mb-2">
                     <div class="card">
                         <div class="card-body">
-                            <a href="{{url('perpetual_seat_your_name')}}" class="card-link">
+                            <a href="{{url('perpetualseatyourname')}}" class="card-link">
                                 <div class="icon-container mr-3">
                                     <br>
                                     <i class="fas fa-chair"></i> <!-- Font Awesome icon for seat/chair -->

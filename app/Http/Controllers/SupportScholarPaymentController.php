@@ -64,4 +64,11 @@ class SupportScholarPaymentController extends Controller
     // Return a response, redirecting back with a success message
     return redirect()->back()->with('success', 'Payment successfully made.');
 }
+
+
+
+
+
+
+
 }

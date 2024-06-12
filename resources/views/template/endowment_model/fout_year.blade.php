@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>4 Year</title>
+    <title>One Year</title>
     @include('template.head')
     <style>
         /* Your CSS styles here */
@@ -13,25 +13,35 @@
         input.form-control {
             color: black;
         }
-
         /* Style for placeholder text color */
         input.form-control::placeholder {
             color: black;
             opacity: 1; /* Override default opacity */
         }
-
         select.form-control {
-        color: black;
-    }
-
-    /* Style for select option text color */
-    select.form-control option {
-        color: black;
-    }
-
-    .total-amount{
-        font-size: 20px;
-    }
+            color: black;
+        }
+        /* Style for select option text color */
+        select.form-control option {
+            color: black;
+        }
+        .total-amount{
+            font-size: 20px;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; /* Adjust margin as needed */
+        }
+        .form-group label {
+            margin-right: 10px; /* Adjust margin as needed */
+        }
+        /* Adjust the input width and margin */
+        .form-group input,
+        .form-group select {
+            flex: 1; /* Take up remaining space */
+            margin-right: 10px; /* Adjust margin as needed */
+        }
     </style>
 </head>
 <body>
@@ -44,6 +54,11 @@
     <div class="events page_section">
         <div class="container">
             <div class="row mb-5">
+                @if(session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
                 <div class="col">
                     <div class="section_title text-center">
                         <h1 class="text-dark">Support the Entire Degree Program</h1>
@@ -51,137 +66,182 @@
                 </div>
             </div>
 
-            <!-- Breakdown Heading -->
-            <div class="row mt-5">
-                <div class="col-12">
-                    <h1 class="text-center text-dark mb-3">Breakdown</h1>
-                </div>
+            <!-- Center Tabs Navigation -->
+            <div class="d-flex justify-content-center">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="undergraduate-tab" data-bs-toggle="tab" data-bs-target="#undergraduate" type="button" role="tab" aria-controls="undergraduate" aria-selected="true" style="background-color: #FFB606; color:white" >Undergraduate</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="postgraduate-tab" data-bs-toggle="tab" data-bs-target="#postgraduate" type="button" role="tab" aria-controls="postgraduate" aria-selected="false" style="background-color: #FFB606; color:white">Postgraduate</button>
+                    </li>
+                </ul>
             </div>
 
-            <!-- Undergraduate Students Section -->
-            <div class="row mt-2">
-                <div class="col-12">
-                    <ul class="list-group list-group-flush text-dark btn-container">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <h3>Undergraduate Students (UG)</h3>
-                            </div>
-                        </li>
-                        <div class="card card-body mt-3">
-                            <h4 class="text-dark">Detailed Breakdown for UG:</h4>
-                            <ul class="list-group list-group-flush text-dark">
-                                <li class="list-group-item">
-                                    <label for="ugTuition">Tuition:</label>
-                                    <select id="ugTuition" class="form-control" name="ugTuition">
-                                        <option value="1500000">15,00,000 PKR</option>
-                                    </select>
-                                </li>
+            <!-- Tabs Content -->
+            <div class="tab-content" id="myTabContent">
+                <!-- Undergraduate Tab -->
+                <div class="tab-pane fade show active" id="undergraduate" role="tabpanel" aria-labelledby="undergraduate-tab">
+                    <div class="row mt-5">
+                        <div class="col-12">
+                            <!-- Add your undergraduate content here -->
+                            <!-- Example form structure -->
+                            <form action="{{url('endowmentsupportentireyear')}}" method="post">
+                                @csrf
+                                <h4 class="text-dark">Detailed Breakdown for UG:</h4>
+                                <div class="row">
 
-                                <div class="total-amount text-center">
-                                    Total Amount (UG): <span id="ugTotalAmount">1500000</span> PKR
+                                    <div class="col-md-6">
+                                        <input type="text" name="program" id="" value="UG" hidden>
+                                        <div class="form-group">
+                                            <label for="program">Select Options:</label>
+                                            <select id="program" name="degree" class="form-control">
+                                                <option value="">Select Degree</option>
+                                                @foreach ($undergraduate as $degree)
+                                                    <option value="{{ $degree->fee }}">{{ $degree->degree }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="no_of_seat">No of seats:</label>
+                                            <input type="number" id="no_of_seat" name="seats" class="form-control" value="1" min="1">
+                                        </div>
+                                    </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="additionalExpenses" value="240000">
+                                            <label for="additionalExpenses">Include mess and hostel expenses (240,000 PKR)</label>
+                                        </div>
                                 </div>
-                                <li class="list-group-item">
-                                    <input type="checkbox" id="ugMessHostelExpenses" value="960000">
-                                    <label for="ugMessHostelExpenses">Include Mess and Hostel Expenses (PKR 960,000)</label>
-                                </li>
 
-                                {{-- <div>
-                                    <h3>
-                                        You can cover mess and hostel expenses of a UG student for the entire duration of a degree program by contributing PKR 960,000 in addition to the mentioned scholarship dues.
-                                    </h3>
-                                </div> --}}
-                                <!-- Use a "plus" icon for adding a card -->
-                                <li class="btn-container d-flex justify-content-center gap-2">
-                                    <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
-                                    <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
-                                </li>
-                            </ul>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="totalAmount">Total Amount (UG):</label>
+                                        <input type="text" id="totalAmount" name="totalAmount" class="form-control" readonly>
+                                    </div>
+                                </div>
+                                <div id="donorInfo" style="">
+                                    <h4 class="text-dark mt-4">Donor Information:</h4>
+                                   <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="donor_name">Donor Name:</label>
+                                        <input type="text" id="donor_name" name="donor_name" class="form-control" required>
+                                    </div>
+                                   </div>
+
+                                   <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="donor_email">Donor Email:</label>
+                                        <input type="email" id="donor_email" name="donor_email" class="form-control" required>
+                                    </div>
+                                   </div>
+                                   <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone">Phone:</label>
+                                        <input type="text" id="phone" name="phone" class="form-control" required>
+                                    </div>
+
+                                   </div>
+                                <div class="col-md-6">
+
+                                   </div>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label" for="make_a_pledge">
+                                        Make a Pledge
+                                    </label>
+                                    <input class="form-check-input ml-3" name="payments_status" type="radio" name="options" id="option2" value="option2">
+                                    <label class="form-check-label ml-4" for="make_a_pledge">
+                                        Paynow
+                                    </label>
+                                    <input class="form-check-input ml-3" name="payments_status" type="radio" name="options" id="option2" value="Paynow">
+
+                                </div>
+
+                                <input type="submit" name="submit" class="btn btn-primary">
+                               </form>
                         </div>
-                    </ul>
+                    </div>
+                </div>
+                <!-- Postgraduate Tab -->
+                <div class="tab-pane fade" id="postgraduate" role="tabpanel" aria-labelledby="postgraduate-tab">
+                    <div class="row mt-5">
+                        <div class="col-12">
+                            <form action="{{url('endowmentsupportentireyear')}}" method="post">
+                                @csrf
+                                <h4 class="text-dark">Detailed Breakdown for PG:</h4>
+                                <div class="row">
+                                    <input type="text" name="program" value="PG" hidden id="">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="pgDegree">Select Options:</label>
+                                            <select id="pgDegree" name="degree" class="form-control">
+                                                <option value="">Select Degree</option>
+                                                @foreach ($postgraduate as $pgDegree)
+                                                    <option value="{{ $pgDegree->fee }}">{{ $pgDegree->degree }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="pgQuantity">No of seats:</label>
+                                            <input type="number" id="pgQuantity" name="seats" class="form-control" value="1" min="1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" id="pgAdditionalExpenses" value="240000">
+                                        <label for="pgAdditionalExpenses">Include mess and hostel expenses (240,000 PKR)</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="pgTotalAmount">Total Amount (PG):</label>
+                                        <input type="text" id="pgTotalAmount" name="totalAmount" class="form-control" readonly>
+                                    </div>
+                                </div>
+                                <div id="donorInfo1" style=";">
+                                    <h4 class="text-dark mt-4">Donor Information:</h4>
+                                   <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="donor_name">Donor Name:</label>
+                                        <input type="text" id="donor_name" name="donor_name" class="form-control">
+                                    </div>
+                                   </div>
+
+                                   <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="donor_email">Donor Email:</label>
+                                        <input type="email" id="donor_email" name="donor_email" class="form-control">
+                                    </div>
+                                   </div>
+                                   <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone">Phone:</label>
+                                        <input type="text" id="phone" name="phone" class="form-control">
+                                    </div>
+                                   </div>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label" for="make_a_pledge">
+                                        Make a Pledge
+                                    </label>
+                                    <input class="form-check-input ml-3" name="payments_status" type="radio" name="options" id="option2" value="option2">
+                                    <label class="form-check-label ml-4" for="make_a_pledge">
+                                        Paynow
+                                    </label>
+                                    <input class="form-check-input ml-3" name="payments_status" type="radio" name="options" id="option2" value="Paynow">
+
+                                </div>
+                                <input type="submit" name="submit" class="btn  btn-primary">
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <!-- End of Undergraduate Students Section -->
-
-            <!-- Postgraduate Students Section -->
-            <div class="row mt-2">
-                <div class="col-12">
-                    <ul class="list-group list-group-flush text-dark btn-container">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img src="{{ asset('templates/endowment_model/images2.jpg') }}" alt="" class="heading-image">
-                                <h3>Postgraduate Students (PG)</h3>
-                            </div>
-                        </li>
-                        <div class="card card-body mt-3">
-                            <h4 class="text-dark">Detailed Breakdown for PG:</h4>
-                            <ul class="list-group list-group-flush text-dark">
-                                <li class="list-group-item">
-                                    <label for="pgTuition">Select Programs</label>
-                                    <select id="pgTuition" class="form-control" name="pgTuition">
-                                        <option value="0" selected disabled>Select Programs</option>
-                                        <option value="210000">Engineering /IT, Bio Sciences, programs</option>
-                                        <option value="700800">MS HRM, MS Logistics & Supply Chain Management, MS Innovation & Entrepreneurship</option>
-                                        <option value="793800">Business Studies (MBA)</option>
-                                        <option value="100570">Business Studies (EMBA)</option>
-                                        <option value="73800">Engineering Management & Construction Engineering Management</option>
-                                        <option value="488800">Architecture & Social sciences</option>
-                                    </select>
-                                </li>
-
-                                <div class="total-amount text-center">
-                                    Total Amount (PG): <span id="pgTotalAmount">0</span> PKR
-                                </div>
-                                {{-- <h3>
-                                    You can cover mess and hostel expenses of a PG student for the entire duration of a degree program by contributing PKR 518,000 in addition to the mentioned scholarship dues.
-                                </h3> --}}
-                                <li class="list-group-item">
-                                    <input type="checkbox" id="pgMessHostelExpenses" value="518000">
-                                    <label for="pgMessHostelExpenses">Include Mess and Hostel Expenses (PKR 518,000)</label>
-                                </li>
-                                <li class="btn-container d-flex justify-content-center gap-2">
-                                    <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
-                                    <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- End of Postgraduate Students Section -->
-            {{-- <div class="row mt-2">
-                <div class="col-12">
-                    <ul class="list-group list-group-flush text-dark btn-container">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img src="{{ asset('templates/endowment_model/images2.jpg') }}" alt="" class="heading-image">
-                                <h3>PhD Students</h3>
-                            </div>
-                        </li>
-                        <div class="card card-body mt-3">
-                            <h4 class="text-dark">Detailed Breakdown for PhD:</h4>
-                            <ul class="list-group list-group-flush text-dark">
-                                <li class="list-group-item">
-                                    <label for="phdTuition">Tuition:</label>
-                                    <select id="phdTuition" name="phdTuition" class="form-control">
-                                        <option value="250000">250,000 PKR</option>
-                                    </select>
-                                </li>
-                                <div class="total-amount text-center">
-                                    Total Amount (PhD): <span id="phdTotalAmount">0</span> PKR
-                                </div>
-                                <li class="btn-container d-flex justify-content-center gap-2">
-                                    <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
-                                    <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </ul>
-                </div>
-            </div> --}}
-
-
         </div>
     </div>
 
@@ -194,72 +254,50 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const ugTuitionSelect = document.getElementById('ugTuition');
-        const ugMessHostelCheckbox = document.getElementById('ugMessHostelExpenses');
-        const ugTotalAmountSpan = document.getElementById('ugTotalAmount');
+    document.addEventListener('DOMContentLoaded', function() {
+        const programSelect = document.getElementById('program');
+        const additionalExpensesCheckbox = document.getElementById('additionalExpenses');
+        const quantityInput = document.getElementById('no_of_seat');
+        const totalAmountInput = document.getElementById('totalAmount');
 
-        function updateTotalAmount() {
-            let totalAmount = 0;
-            const tuitionAmount = parseInt(ugTuitionSelect.value) || 0;
-            const messHostelAmount = ugMessHostelCheckbox.checked ? parseInt(ugMessHostelCheckbox.value) : 0;
-            totalAmount = tuitionAmount + messHostelAmount;
-            ugTotalAmountSpan.textContent = totalAmount;
+        function calculateTotal() {
+            let total = (parseFloat(programSelect.value) || 0) * parseFloat(quantityInput.value);
+            if (additionalExpensesCheckbox.checked) {
+                total += parseFloat(additionalExpensesCheckbox.value) * parseFloat(quantityInput.value);
+            }
+            totalAmountInput.value = total.toFixed(2) + ' PKR';
         }
 
-        ugTuitionSelect.addEventListener('change', updateTotalAmount);
-        ugMessHostelCheckbox.addEventListener('change', updateTotalAmount);
-    });
-    </script>
+        programSelect.addEventListener('change', calculateTotal);
+        additionalExpensesCheckbox.addEventListener('change', calculateTotal);
+        quantityInput.addEventListener('input', calculateTotal);
 
+        calculateTotal();
+    });
+</script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const pgTuitionSelect = document.getElementById('pgTuition');
-        const pgMessHostelCheckbox = document.getElementById('pgMessHostelExpenses');
-        const pgTotalAmountSpan = document.getElementById('pgTotalAmount');
+    document.addEventListener('DOMContentLoaded', function() {
+        const pgDegreeSelect = document.getElementById('pgDegree');
+        const pgAdditionalExpensesCheckbox = document.getElementById('pgAdditionalExpenses');
+        const pgQuantityInput = document.getElementById('pgQuantity');
+        const pgTotalAmountInput = document.getElementById('pgTotalAmount');
 
-        function updateTotalAmount() {
-            let totalAmount = 0;
-            const tuitionAmount = parseInt(pgTuitionSelect.value) || 0;
-            const messHostelAmount = pgMessHostelCheckbox.checked ? parseInt(pgMessHostelCheckbox.value) : 0;
-            totalAmount = tuitionAmount + messHostelAmount;
-            pgTotalAmountSpan.textContent = totalAmount;
+        function calculatePgTotal() {
+            let pgTotal = (parseInt(pgDegreeSelect.value) || 0) * parseInt(pgQuantityInput.value);
+            if (pgAdditionalExpensesCheckbox.checked) {
+                pgTotal += parseInt(pgAdditionalExpensesCheckbox.value) * parseInt(pgQuantityInput.value);
+            }
+            pgTotalAmountInput.value = pgTotal + ' PKR';
         }
 
-        pgTuitionSelect.addEventListener('change', updateTotalAmount);
-        pgMessHostelCheckbox.addEventListener('change', updateTotalAmount);
+        pgDegreeSelect.addEventListener('change', calculatePgTotal);
+        pgAdditionalExpensesCheckbox.addEventListener('change', calculatePgTotal);
+        pgQuantityInput.addEventListener('input', calculatePgTotal);
+
+        calculatePgTotal();
     });
-    </script>
 
-{{--
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-    const ugTuitionSelect = document.getElementById('ugTuition');
-    const ugTotalAmountSpan = document.getElementById('ugTotalAmount');
-    const phdTuitionSelect = document.getElementById('phdTuition');
-    const phdTotalAmountSpan = document.getElementById('phdTotalAmount');
-
-    // Function to update the total amount for UG
-    function updateUGTotalAmount() {
-        const selectedValue = parseInt(ugTuitionSelect.value);
-        ugTotalAmountSpan.textContent = selectedValue.toLocaleString('en-US') + " PKR";
-    }
-
-    // Function to update the total amount for PhD
-    function updatePhdTotalAmount() {
-        const selectedValue = parseInt(phdTuitionSelect.value);
-        phdTotalAmountSpan.textContent = selectedValue.toLocaleString('en-US') + " PKR";
-    }
-
-    // Add event listeners to the select elements
-    ugTuitionSelect.addEventListener('change', updateUGTotalAmount);
-    phdTuitionSelect.addEventListener('change', updatePhdTotalAmount);
-
-    // Initialize total amounts on page load
-    updateUGTotalAmount();
-    updatePhdTotalAmount();
-}); --}}
 
 </script>
 
