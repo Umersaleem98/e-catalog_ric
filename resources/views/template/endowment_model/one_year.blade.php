@@ -130,8 +130,8 @@
                                         </div>
                                     </div>
                                         <div class="form-group ml-">
-                                            <input type="checkbox" id="additionalExpenses" value="240000">
-                                            <label for="additionalExpenses">Include mess and hostel expenses (240,000 PKR)</label>
+                                            <input type="checkbox" id="additionalExpenses" value="275000">
+                                            <label for="additionalExpenses">Include mess and hostel expenses (275,000 PKR)</label>
                                         </div>
                                 </div>
 
@@ -145,14 +145,14 @@
                                     <h4 class="text-dark mt-4">Donor Information:</h4>
                                    <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="donor_name">Donor Name:</label>
+                                        <label for="donor_name">Name:</label>
                                         <input type="text" id="donor_name" name="donor_name" class="form-control" required>
                                     </div>
                                    </div>
 
                                    <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="donor_email">Donor Email:</label>
+                                        <label for="donor_email"> Email:</label>
                                         <input type="email" id="donor_email" name="donor_email" class="form-control" required>
                                     </div>
                                    </div>
@@ -164,25 +164,9 @@
 
                                    </div>
                                 <div class="col-md-6">
-                                    {{-- <div class="form-group">
-                                        <label for="donor_email">Donor Email:</label>
-                                        <input type="radi" id="donor_email" name="donor_email" class="form-control" required>
-                                    </div> --}}
                                    </div>
                                 </div>
-                                {{-- <div class="form-check">
 
-                                    <input class="form-check-input ml-3" name="payments_status" type="radio" name="options" id="option2" value="option2">
-                                    <label class="form-check-label ml-3" for="make_a_pledge">
-                                        Make a Pledge
-                                    </label>
-                                    <input class="form-check-input ml-3" name="payments_status" type="radio" name="options" id="option2" value="Paynow">
-
-                                    <label class="form-check-label ml-4" for="make_a_pledge">
-                                        Paynow
-                                    </label>
-
-                                </div> --}}
 
                                 <input type="submit" name="submit" class="btn btn-primary">
                                </form>
@@ -231,8 +215,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input type="checkbox" id="pgAdditionalExpenses" value="240000">
-                                        <label for="pgAdditionalExpenses">Include mess and hostel expenses (240,000 PKR)</label>
+                                        <input type="checkbox" id="pgAdditionalExpenses" value="275000">
+                                        <label for="pgAdditionalExpenses">Include mess and hostel expenses (275,000 PKR)</label>
                                     </div>
                                 </div>
 
@@ -246,14 +230,14 @@
                                     <h4 class="text-dark mt-4">Donor Information:</h4>
                                    <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="donor_name">Donor Name:</label>
+                                        <label for="donor_name">Name:</label>
                                         <input type="text" id="donor_name" name="donor_name" class="form-control">
                                     </div>
                                    </div>
 
                                    <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="donor_email">Donor Email:</label>
+                                        <label for="donor_email">Email:</label>
                                         <input type="email" id="donor_email" name="donor_email" class="form-control">
                                     </div>
                                    </div>
@@ -265,19 +249,7 @@
                                    </div>
                                 </div>
 
-                                {{-- <div class="form-check">
 
-                                    <input class="form-check-input ml-3" name="payments_status" type="radio" name="options" id="option2" value="option2">
-                                    <label class="form-check-label ml-3" for="make_a_pledge">
-                                        Make a Pledge
-                                    </label>
-                                    <input class="form-check-input ml-3" name="payments_status" type="radio" name="options" id="option2" value="Paynow">
-
-                                    <label class="form-check-label ml-4" for="make_a_pledge">
-                                        Paynow
-                                    </label>
-
-                                </div> --}}
                                 <input type="submit" name="submit" class="btn  btn-primary">
                             </form>
                         </div>

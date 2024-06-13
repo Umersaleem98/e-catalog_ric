@@ -14,8 +14,7 @@ class StudentController extends Controller
         $students = Student::all();
         return view('template.stories', compact('students'));
     }
-
-    public function stuedent_stories(Request $request)
+    public function student_stories(Request $request)
     {
         $gender = $request->input('gender');
         $province = $request->input('province');
@@ -39,11 +38,13 @@ class StudentController extends Controller
             $query->where('degree', $degree);
         }
 
+        // Adjust the column name to the actual column storing image names
+        $query->orderByRaw("CASE WHEN images = 'dummy.png' THEN 1 ELSE 0 END, images");
+
         $students = $query->paginate(8); // Always paginate by default
 
         return view('template.support_scholar.index', compact('students'));
     }
-
 
 
 

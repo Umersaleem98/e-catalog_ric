@@ -25,7 +25,7 @@ Route::get('/meet_out_team/{id}', [TeamController::class, 'meet_team']);
 Route::get('/students', [StudentController::class, 'index']);
 
 // Stories screens
-Route::get('/student_stories', [StudentController::class, 'stuedent_stories']);
+Route::get('/student_stories', [StudentController::class, 'student_stories']);
 Route::get('/student_stories_indiviual/{id}', [StudentController::class, 'stuedent_stories_ind']);
 
 Route::get('/payment/{id}', [SupportScholarPaymentController::class, 'payment_index']);

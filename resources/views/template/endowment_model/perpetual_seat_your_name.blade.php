@@ -133,8 +133,8 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form-check mb-3">
-                                                <input type="checkbox" id="additionalExpenses" value="240000" class="form-check-input">
-                                                <label for="additionalExpenses" class="form-check-label">Include mess and hostel expenses (240,000 PKR)</label>
+                                                <input type="checkbox" id="additionalExpenses" value="275000" class="form-check-input">
+                                                <label for="additionalExpenses" class="form-check-label">Include mess and hostel expenses (275,000 PKR)</label>
                                             </div>
                                         </div>
 
@@ -149,14 +149,14 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="donor_name">Donor Name:</label>
+                                                        <label for="donor_name">Name:</label>
                                                         <input type="text" id="donor_name" name="donor_name" class="form-control form-control-sm" required>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="donor_email">Donor Email:</label>
+                                                        <label for="donor_email">Email:</label>
                                                         <input type="email" id="donor_email" name="donor_email" class="form-control form-control-sm" required>
                                                     </div>
                                                 </div>
@@ -175,7 +175,6 @@
                             </div>
                             {{-- Circular endowment --}}
 
-                            {{-- <div class="col-md-6"> --}}
                                 <div class="col-md-6 mt-5">
                                     <form action="{{url('perpetualseatyourname')}}" method="post">
                                         @csrf
@@ -215,8 +214,8 @@
                                             </div>
                                             <div class="col-12">
                                                 <div class="form-check mb-3">
-                                                    <input type="checkbox" id="circular_ugAdditionalExpenses" value="240000" class="form-check-input">
-                                                    <label for="circular_ugAdditionalExpenses" class="form-check-label">Include mess and hostel expenses (240,000 PKR)</label>
+                                                    <input type="checkbox" id="circular_ugAdditionalExpenses" value="275000" class="form-check-input">
+                                                    <label for="circular_ugAdditionalExpenses" class="form-check-label">Include mess and hostel expenses (275,000 PKR)</label>
                                                 </div>
                                             </div>
 
@@ -231,14 +230,14 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="circular_ugDonorName">Donor Name:</label>
+                                                            <label for="circular_ugDonorName">Name:</label>
                                                             <input type="text" id="circular_ugDonorName" name="donor_name" class="form-control form-control-sm" required>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="circular_ugDonorEmail">Donor Email:</label>
+                                                            <label for="circular_ugDonorEmail">Email:</label>
                                                             <input type="email" id="circular_ugDonorEmail" name="donor_email" class="form-control form-control-sm" required>
                                                         </div>
                                                     </div>
@@ -254,10 +253,7 @@
                                         </div>
                                         <input type="submit" name="submit" class="btn btn-primary mt-3">
                                     </form>
-
-
                                 </div>
-                            {{-- </div> --}}
                         </div>
                     </div>
                 </div>
@@ -268,7 +264,17 @@
                             <div class="col-md-6 mt-5">
                                 <form action="{{url('perpetualseatyourname')}}" method="post">
                                     @csrf
-                                    <h3 class="text-dark text-center mb-3">Single Endowment for PG:</h3>                                    <div class="row">
+                                    <h3 class="text-dark text-center mb-3">Single Endowment for PG:</h3>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="payments_status" type="radio" id="make_a_pledge" value="Make a Pledge">
+                                        <label class="form-check-label" for="make_a_pledge">Make a Pledge</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="payments_status" type="radio" id="paynow" value="Paynow">
+                                        <label class="form-check-label" for="paynow">Pay now</label>
+                                    </div>
+                                    <br>
+                                    <div class="row">
                                         <input type="text" name="program" value="PG" hidden>
                                         <input type="text" name="endowment_type" value="single endownment" hidden>
                                         <div class="col-md-6">
@@ -290,8 +296,8 @@
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group form-check">
-                                                <input type="checkbox" id="pgAdditionalExpenses" value="240000" class="form-check-input">
-                                                <label for="pgAdditionalExpenses" class="form-check-label">Include mess and hostel expenses (240,000 PKR)</label>
+                                                <input type="checkbox" id="pgAdditionalExpenses" value="275000" class="form-check-input">
+                                                <label for="pgAdditionalExpenses" class="form-check-label">Include mess and hostel expenses (275,000 PKR)</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -324,14 +330,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" name="payments_status" type="radio" id="make_a_pledge" value="Make a Pledge">
-                                        <label class="form-check-label" for="make_a_pledge">Make a Pledge</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" name="payments_status" type="radio" id="paynow" value="Paynow">
-                                        <label class="form-check-label" for="paynow">Pay now</label>
-                                    </div>
+
                                     <input type="submit" name="submit" class="btn btn-primary">
                                 </form>
 
@@ -340,7 +339,17 @@
 
                                 <form action="{{url('perpetualseatyourname')}}" method="post">
                                     @csrf
+
                                     <h3 class="text-dark text-center mb-3">Circular Endowment for PG:</h3>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="payments_status" type="radio" id="make_a_pledge" value="Make a Pledge">
+                                        <label class="form-check-label" for="make_a_pledge">Make a Pledge</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="payments_status" type="radio" id="paynow" value="Paynow">
+                                        <label class="form-check-label" for="paynow">Pay now</label>
+                                    </div>
+                                    <br>
                                     <div class="row">
                                         <input type="text" name="program" value="PG" hidden>
                                         <input type="text" name="endowment_type" value="circular endowment" hidden>
@@ -363,8 +372,8 @@
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group form-check">
-                                                <input type="checkbox" id="circularPgAdditionalExpenses" value="240000" class="form-check-input">
-                                                <label for="circularPgAdditionalExpenses" class="form-check-label">Include mess and hostel expenses (240,000 PKR)</label>
+                                                <input type="checkbox" id="circularPgAdditionalExpenses" value="275000" class="form-check-input">
+                                                <label for="circularPgAdditionalExpenses" class="form-check-label">Include mess and hostel expenses (275,000 PKR)</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -379,13 +388,13 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="donor_name">Donor Name:</label>
+                                                    <label for="donor_name">Name:</label>
                                                     <input type="text" id="donor_name" name="donor_name" class="form-control form-control-sm">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="donor_email">Donor Email:</label>
+                                                    <label for="donor_email">Email:</label>
                                                     <input type="email" id="donor_email" name="donor_email" class="form-control form-control-sm">
                                                 </div>
                                             </div>
@@ -397,28 +406,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" name="payments_status" type="radio" id="make_a_pledge" value="Make a Pledge">
-                                        <label class="form-check-label" for="make_a_pledge">Make a Pledge</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" name="payments_status" type="radio" id="paynow" value="Paynow">
-                                        <label class="form-check-label" for="paynow">Pay now</label>
-                                    </div>
+
                                     <input type="submit" name="submit" class="btn btn-primary">
                                 </form>
-
-                                <!-- JavaScript for Circular Endowment Form -->
-
-
                             </div>
                         </div>
                     </div>
                 </div>
-
-                {{-- <div class="tab-pane fade" id="phd" role="tabpanel" aria-labelledby="phd-tab">
-                    <h1>PHD</h1>
-                </div> --}}
             </div>
         </div>
     </div>
@@ -500,7 +494,7 @@
 
             // Add additional expenses for Circular Endowment if checkbox is checked
             if (circularPgAdditionalExpensesCheckbox.checked) {
-                totalCircularPgAmount += 240000; // Adding 240,000 PKR for mess and hostel expenses
+                totalCircularPgAmount += 275000; // Adding 240,000 PKR for mess and hostel expenses
             }
 
             // Update total amount input field for Circular Endowment
@@ -533,7 +527,7 @@
             let totalCircularUGAmount = selectedCircularUGDegreeFee * numberOfCircularUGSeats;
 
             if (circular_ugAdditionalExpensesCheckbox.checked) {
-                totalCircularUGAmount += 240000;
+                totalCircularUGAmount += 275000;
             }
 
             circular_ugTotalAmountInput.value = totalCircularUGAmount;

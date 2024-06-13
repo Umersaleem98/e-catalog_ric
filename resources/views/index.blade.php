@@ -59,6 +59,7 @@
         <!-- Header -->
         @include('template.navbar')
         @include('template.slider')
+        @include('template.statistics')
         <!-- Home -->
 
         <!-- Popular -->

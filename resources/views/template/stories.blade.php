@@ -1,5 +1,5 @@
 
-<div class="popular page_section" style="margin-top: -10%;">
+<div class="popular page_section" style="margin-top: -20px; ">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -10,7 +10,7 @@
         </div>
 
         <div class="row course_boxes" style="">
-            <div class="col-lg-12 course_box mt-5">
+            <div class="col-lg-12 course_box">
                 <div class="card col-12">
                     <video width="100%" height="500px" loop controls autoplay muted style="object-fit: cover;">
                         <source src="{{ asset('templates/videos/video.mp4') }}" type="video/mp4">
