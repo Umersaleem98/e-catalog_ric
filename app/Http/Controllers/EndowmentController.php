@@ -73,9 +73,10 @@ class EndowmentController extends Controller
         $oneyear->phone = $request->phone;
         $oneyear->payments_status = $request->payments_status;
         $oneyear->save();
+        return back()->with('success', 'Data saved successfully!');
 
         // return view('template.endowment_model.one_year', compact('undergraduate','postgraduate' ));
-        return view('template.endowment_model.fout_year', compact('undergraduate', 'postgraduate'))->with('success', 'Data saved successfully!');
+        // return view('template.endowment_model.fout_year', compact('undergraduate', 'postgraduate'))->with('success', 'Data saved successfully!');
     }
 
 
@@ -107,8 +108,9 @@ class EndowmentController extends Controller
         $oneyear->payments_status = $request->payments_status;
         $oneyear->save();
 
+        return back()->with('success', 'Data saved successfully!');
         // return view('template.endowment_model.one_year', compact('undergraduate','postgraduate' ));
-        return view('template.endowment_model.perpetual_seat_your_name', compact('undergraduate', 'postgraduate'))->with('success', 'Data saved successfully!');
+        // return view('template.endowment_model.perpetual_seat_your_name', compact('undergraduate', 'postgraduate'))->with('success', 'Data saved successfully!');
     }
 
     public function zakat()

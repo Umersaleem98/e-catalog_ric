@@ -18,8 +18,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light w-100 fixed-top">
     <!-- Left-side logos -->
     <a class="navbar-brand ml-3" href="{{url('/')}}">
-        <img src="{{ asset('templates/images/logo4.png') }}" style="max-width: 280px" alt="Left Logo" class="navbar-logo">
+        <img src="{{ asset('templates/logo/logo.png') }}"  alt="Left Logo" class="navbar-logo ml-4">
     </a>
+
 
     <!-- Toggler/collapsing button for small screens -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,6 +62,6 @@
 
     <!-- Right-side logo for large screens -->
     <a class="navbar-brand d-none d-lg-block mr-4" href="{{url('/')}}">
-        <img src="{{ asset('templates/images/logo3.png') }}" alt="Right Logo" class="navbar-logo img-fluid blinking-animation">
+        <img src="{{ asset('templates/logo/logo3.png') }}"  alt="Right Logo" class="navbar-logo img-fluid blinking-animation">
     </a>
 </nav>

@@ -47,17 +47,17 @@
                 <!-- Left Section for Images -->
                 <div class="col-lg-5 col-md-6 col-sm-12">
                     <div class="image_container">
-                        <img src="{{ asset('students_images/' . $students->images) }}" class="img-fluid" alt="Left Image" style="height: 400px; width:100%; filter: blur(10px)">
+                        <img src="{{ asset('students_images/' . $students->images) }}" class="img-fluid" alt="Left Image" style="height: 400px; width:100%; filter: blur(12px)">
 
                     </div>
                 </div>
                 <!-- Right Section for Information -->
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <div class="info_container" style="color: black;">
-                        <h2>Student Name: <span>{{$students->name}} </h2>
-                        <h2>Qalam ID: <span>{{$students->qalam_id}}</span></h2>
+                        {{-- <h2>Student Name: <span>{{$students->name}} </h2> --}}
+                        {{-- <h2>Qalam ID: <span>{{$students->qalam_id}}</span></h2> --}}
                         <!-- Add an ID to the paragraph tag for easier targeting with JavaScript -->
-                        <h2>Father Name: <span>{{$students->father_name}}</span></h2>
+                        <h2>Son/Doughter of <span>{{$students->father_name}}</span></h2>
                         <!-- Add a unique ID to the paragraph tag for targeting -->
                         <h3>Discipline: <span>{{$students->discipline}}</span></h3>
                         <!-- Add a unique ID to the paragraph tag for targeting -->

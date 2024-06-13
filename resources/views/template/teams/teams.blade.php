@@ -5,6 +5,7 @@
     @include('template.head')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
+        /* Your existing styles */
         .custom-paragraph {
             font-size: 16px;
             line-height: 1.2;
@@ -48,10 +49,13 @@
         .img-fluid {
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2; /* Adjusted z-index */
         }
         .img-fluid:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            z-index: 2; /* Adjusted z-index */
         }
         span {
             color: black; /* Changed to white */
@@ -87,9 +91,8 @@
 
 <div class="super_container">
     @include('template.navbar')
-<br><br>
-<br><br>
-<br>
+    <br><br><br><br><br>
+
     <div class="row mt-4">
         <div class="col">
             <div class="section_title text-center">
@@ -101,9 +104,13 @@
     <!-- Header -->
     <section class="container mt-5">
         <div class="row justify-content-center align-items-center no-gutters">
-            <div class="col-md-8 order-md-1 order-2 d-flex align-items-center">
+
+            <div class="col-md-4  order-1 ">
+                <img src="{{ asset('team/Arooba_Gillani.png') }}" class="img-fluid" alt="CEO Image" style="max-height: 550px; width: 100%; box-shadow: 0 0 20px red; border:6px solid orange; z-index: 2;"> <!-- Adjusted z-index -->
+            </div>
+            <div class="col-md-8  order-2">
                 <div class="owl-item">
-                    <div class="testimonials_item text-center" style="text-align: left; max-height: 500px; background-color: #F7F7F7;"> <!-- Changed background to gray -->
+                    <div class="testimonials_item text-center" style="text-align: left; max-height: 500px; background-color: #F7F7F7; z-index: 1;"> <!-- Changed background to gray -->
                         <p class="testimonials_text" style="text-align: justify; padding: 1rem;">
                             {{-- <span class="quote" style="font-size: 50px;">"</span> --}}
                             <b style="font-size: 30px; color: orange">"</b><b>A commitment</b> to quality faculty and students has fueled NUST’s impressive rise in rankings and the success of our international alumni network. As Director Advancement, I am privileged to steer a self-sustaining system that supports <span style="font-weight: bold;">Pakistan’s leading science and technology university.</span> Our aim is to become the driving force of Pakistan’s knowledge economy, with the <span style="font-weight: bold;">dream of making NUST a need-blind university.</span>
@@ -118,12 +125,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 order-md-2 order-1">
-                <img src="{{ asset('team/Arooba_Gillani.png') }}" class="img-fluid" alt="CEO Image" style="max-height: 550px; width: 100%; box-shadow: 0 0 20px red; border:6px solid orange;">
-            </div>
+
         </div>
     </section>
 
+
+<br>
     <div class="container mt-5">
         <div class="row">
             <!-- Add hover-card class to each card -->
@@ -146,5 +153,3 @@
     @include('template.event')
     @include('template.footer')
 </div>
-</body>
-</html>

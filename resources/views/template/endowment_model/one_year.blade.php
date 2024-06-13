@@ -63,7 +63,7 @@
             <div class="row mb-5">
                 <div class="col">
                     <div class="section_title text-center">
-                        <h1 class="text-dark">Soponser One Year Education</h1>
+                        <h1 class="text-dark">Sponsor One Year Education</h1>
                     </div>
                 </div>
             </div>

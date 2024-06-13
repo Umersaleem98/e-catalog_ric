@@ -68,7 +68,7 @@
             @endif
                 <div class="col">
                     <div class="section_title text-center">
-                        <h1 class="text-dark">Support the Entire Degree Program</h1>
+                        <h1 class="text-dark">Adopt a Scholar</h1>
                     </div>
                 </div>
             </div>

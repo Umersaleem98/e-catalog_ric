@@ -30,6 +30,18 @@
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-info" role="alert">
+                        If you're interested in learning more about impactful work and how you and your friends can contribute to this nation-building endeavor, please feel free to send a message, and our Gift Officers will get back to you!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="container mt-3">
             <div class="row">
                 <div class="col-md-6 mb-3">

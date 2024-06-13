@@ -9,9 +9,9 @@
             border-radius: 50%;
         }
 
-                    .justified-content {
-                        text-align: justify;
-                    }
+        .justified-content {
+            text-align: justify;
+        }
     </style>
 </head>
 <body>
@@ -62,25 +62,32 @@
             </div>
         </div>
     </div>
-    <!-- New Section with Image on the Right -->
-    {{-- <div class="container ">
-        <div class="row justify-content-center">
-            <div class="col-md-6 text-center">
-                <h2 class="text-dark">Our Vision</h2>
-                <p class="justified-content text-dark">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quia nam labore odio quisquam sapiente rerum dicta modi nisi voluptas, minus blanditiis doloremque porro incidunt beatae magnam illum ipsam odit!
-                </p>
-            </div>
-            <div class="col-md-6 text-center">
-                <h2 class="text-dark">Our Mission</h2>
-                <p class="justified-content text-dark">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quia nam labore odio quisquam sapiente rerum dicta modi nisi voluptas, minus blanditiis doloremque porro incidunt beatae magnam illum ipsam odit!
-                </p>
+
+
+    <div class="about-section" >
+        <div class="container">
+            <div class="row">
+                <!-- Left Section for Content -->
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                    <div class="content-container">
+                        <h2 class="text-center">Our Journey</h2>
+                        <p>
+                            Established in 2015, the NUST Office of University Advancement operates as the outreach arm of the institution, collaborating closely with alumni, government officials, community leaders, donors, and the corporate sector. Its broad spectrum of responsibilities encompasses community engagement, development, donor stewardship, and both national and international engagements, aiming to bridge the gap between industry and academia.
+                            <br>
+                            <br>
+                            While striving to establish NUST as a premier Science and Technology institution, the Advancement Office's primary focus is fundraising for financially challenged students and functioning as a resource mobilization unit. This sustainable collaboration, plays a crucial role in facilitating students to pursue their goals without financial constraints, contributing towards building the nation through transformative education. To date, 7000 + scholarship recipients have benefited from this initiative, and the office has set free 232 seats in the form of an endowment, thanks to the robust support from individual and corporate partners.
+                        </p>
+                    </div>
+                </div>
+                <!-- Right Section for Images -->
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="image-container mt-5">
+                        <img src="{{ asset('templates/images/8x8 Banners - 2.jpg') }}" alt="Image 2">
+                    </div>
+                </div>
             </div>
         </div>
-    </div> --}}
-
-
+    </div>
     <div class="about-section" >
         <div class="container">
             <div class="row">
@@ -90,8 +97,6 @@
                         <h2>What is the University Advancement Office?</h2>
                         <p>
                             For 8 years the University Advancement Office (UAO) has helped open collaborative avenues to make an impact. The word impact, though, has never meant as much – or as many different things – as it does now. With inflation having hit the country hard and 40% of the population below the poverty line, we feel duty-bound to fight harder than ever against all odds to bring in more funds, so the financial struggles of the deserving students do not keep them from NUST.
-
-                            <br>
                             <br>
                             Through our various programs and initiatives, we strive to create an inclusive and supportive community that values diversity and empowers individuals to reach their full potential. Join us in our journey to make a difference in the world through education and innovation.
                         </p>
@@ -109,7 +114,7 @@
 <!------ Include the above in your HEAD tag ---------->
 <!-- Team -->
 
-<section class="container ">
+<section class="container">
     <div class="row">
         <div class="col-12 col-md-12">
             <img src="{{ asset('templates/images/animation.gif') }}" class="img-fluid" alt="Responsive Image" style="min-height:400px; width:100%; margin-top:-6%">

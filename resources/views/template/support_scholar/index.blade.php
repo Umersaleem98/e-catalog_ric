@@ -114,8 +114,10 @@
                         </div>
 
                         <div class="card-body text-center">
-                            <div class="card-title"><a href="#">{{$item->name}}</a></div>
-                            <div class="card-text text-dark mb-2">{{$item->father_name}}</div>
+                            {{-- <div class="card-title"><a href="#">{{$item->name}}</a></div> --}}
+                            <br>
+                            <div class="card-title" hidden><a href="#">{{$item->father_name}}</a></div>
+                            <div class="card-text text-dark mb-2"><span class="text-dark text-bold">S/D of </span>{{$item->father_name}}</div>
                             <div class="card-text text-dark mb-2">{{$item->gender}}</div>
                             <div class="card-text text-dark mb-2">{{$item->province}}</div>
                         </div>
