@@ -70,7 +70,7 @@
                     </form>
                 </div>
                 <div class="col-md-6 d-flex align-items-center justify-content-center">
-                    <img src="{{ asset('templates/images/contact_us.jpg') }}" alt="Image 1" class="img-fluid rounded" style="max-width: 100%;">
+                    <img src="{{ asset('templates/contact_us/contact_us.jpg') }}" alt="Image 1" class="img-fluid rounded" style="max-width: 100%; max-height: 500px;">
                 </div>
 
             </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Program;
 use App\Models\Endowment;
+use App\Models\ZakatPayment;
 use Illuminate\Http\Request;
 use App\Models\PerpetualSeat;
 use App\Models\EndowmentCategory;
@@ -118,12 +119,26 @@ class EndowmentController extends Controller
         return view('template.endowment_model.zakat');
     }
 
-    public function payments()
+
+    public function zakat_payment()
     {
         return view('template.endowment_model.payments');
     }
+    public function store_zakat(Request $request)
+    {
+        $zakat = new ZakatPayment;
+        $zakat->payment_type = $request->payment_type;
+        $zakat->donor_name = $request->donor_name;
+        $zakat->donor_email = $request->donor_email;
+        $zakat->phone = $request->phone;
+        $zakat->duration = $request->duration;
+        $zakat->amount = $request->amount;
+        $zakat->save();
 
-    public function pledge_payments()
+        return back()->with('success', 'Data saved successfully!');
+    }
+
+    public function zakat_Make_a_Pledge()
     {
         return view('template.endowment_model.pledge_payments');
     }

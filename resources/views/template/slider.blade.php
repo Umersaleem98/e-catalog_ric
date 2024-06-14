@@ -21,7 +21,7 @@
             <!-- Additional slides -->
 
             <div class="hero_slide">
-                <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/ghi.jpg') }}')"></div>
+                <div class="hero_slide_background" style="background-image: url('{{ asset('templates/slider/a.jpg') }}')"></div>
                 {{-- <div class="hero_slide_background" style="background-image: url('images/def.jpg'); height: 100vh; background-size: cover; background-position: center;"></div> --}}
                 <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                     <div class="hero_slide_content text-center mt-5">
@@ -36,7 +36,7 @@
             </div>
             <!-- More slides can be added here in the same format -->
             <div class="hero_slide">
-                <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/ijk.jpg') }}')"></div>
+                <div class="hero_slide_background" style="background-image: url('{{ asset('templates/slider/b.jpg') }}')"></div>
                 {{-- <div class="hero_slide_background" style="background-image: url('images/new_image1.jpg'); height: 100vh; background-size: cover; background-position: center;"></div> --}}
                 <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                     <div class="hero_slide_content text-center mt-5">
@@ -51,7 +51,7 @@
             </div>
             <div class="hero_slide">
                 {{-- <div class="hero_slide_background" style="background-image: url('images/new_image2.jpg'); height: 100vh; background-size: cover; background-position: center;"></div> --}}
-                <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/def.jpg') }}')"></div>
+                <div class="hero_slide_background" style="background-image: url('{{ asset('templates/slider/c.jpg') }}')"></div>
                 <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                     <div class="hero_slide_content text-center mt-5">
                         <h1 class="display-4 font-weight-bold text-warning" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Sustainable Development</h1>

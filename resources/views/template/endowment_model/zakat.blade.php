@@ -58,24 +58,28 @@
                         </div>
 
                         <div class="card card-body">
-
-                            <div class="h3-box my-1 p-3">
-                                <h3>Zero Operational Overheads</h3>
-                            </div>
-                            <div class="h3-box my-1 p-3">
-                                <h3>Impact Oriented Giving</h3>
-                            </div>
-                            <div class="h3-box my-1 p-3">
-                                <h3>Shariah Compliant</h3>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4 bg-info">
+                                        <h3 class="text-light p-4">Zero Operational Overheads</h3>
+                                    </div>
+                                    <div class="col-md-4 bg-primary">
+                                        <h3 class="text-light p-4">Impact Oriented Giving</h3>
+                                    </div>
+                                    <div class="col-md-4 bg-success">
+                                        <h3 class="text-light p-4">Shariah Compliant</h3>
+                                    </div>
+                                </div>
                             </div>
                             <ul class="list-group list-group-flush text-dark">
                                 <!-- Use Bootstrap utility classes to center the buttons and add a gap -->
-                                <li class="btn-container d-flex justify-content-center gap-2">
-                                    <a href="{{url('Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a>
-                                    <a href="{{url('payment')}}" class="btn btn-primary">Pay Now</a>
+                                <li class="btn-container d-flex justify-content-center gap-2 py-2">
+                                    {{-- <a href="{{url('zakat_Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a> --}}
+                                    <a href="{{url('zakat_payment')}}" class="btn btn-primary">Pay Now</a>
                                 </li>
                             </ul>
                         </div>
+
                     </ul>
                 </div>
             </div>

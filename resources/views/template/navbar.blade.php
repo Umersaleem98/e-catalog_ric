@@ -9,9 +9,17 @@
         margin-left: 3px; /* Adjust the margin value as needed */
         margin-right: 3px; /* Adjust the margin value as needed */
     }
+    .navbar {
+    transition: background-color 0.5s ease;
+}
+
+.navbar.transparent {
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust transparency as needed */
+}
+
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light w-100 fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light w-100 fixed-top ">
     <!-- Left-side logos -->
     <a class="navbar-brand ml-3" href="{{ url('/') }}">
         <img src="{{ asset('templates/logo/logo.png') }}" alt="Left Logo" class="navbar-logo ml-4">
@@ -56,3 +64,14 @@
         <img src="{{ asset('templates/logo/logo3.png') }}" alt="Right Logo" class="navbar-logo img-fluid blinking-animation">
     </a>
 </nav>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) { // Adjust the scroll position value as needed
+            navbar.classList.add('transparent');
+        } else {
+            navbar.classList.remove('transparent');
+        }
+    });
+</script>

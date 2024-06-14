@@ -110,9 +110,9 @@
 
 
                     <div class="col-md-6">
-                        <form method="POST" action="{{ url('payments') }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ url('zakat_payments') }}" enctype="multipart/form-data">
                             @csrf
-                            {{-- <input type="text" name="student_name" class="form-control" value="{{$students->name}}" hidden> --}}
+                            <input type="text" name="payment_type" class="form-control" value="paynow" hidden>
                             <div class="row mb-3">
                                 <div class="col-10">
                                     <label for="donor_name" class="form-label">Your Name</label>
@@ -126,16 +126,11 @@
                                 </div>
 
                             </div>
-                            {{-- <div class="row mb-3">
-                                <div class="col-10">
-                                    <label for="cnic_number" class="form-label">CNIC Number</label>
-                                    <input type="text" class="form-control" placeholder="Enter Your CNIC" id="cnic_number" name="cnic_number">
-                                </div>
-                            </div> --}}
+
                             <div class="row mb-3">
                                 <div class="col-10">
                                     <label for="phone_number" class="form-label">Phone Number</label>
-                                    <input type="text" class="form-control" placeholder="Enter Your Phone Number" id="phone_number" name="phone_number">
+                                    <input type="text" class="form-control" placeholder="Enter Your Phone Number" id="phone_number" name="phone">
                                 </div>
                             </div>
 
@@ -143,10 +138,8 @@
                                 <div class="col">
                                     <label for="duration" class="form-label">Duration</label>
                                     <select class="form-control" aria-label="Default select example"  id="duration" name="duration">
-                                        <option value="6">6 Months</option>
-                                        <option value="1">1 Year</option>
-                                        <option value="2">2 Years</option>
-                                        <option value="4">4 Years</option>
+                                        <option value="ene_year">For One year</option>
+                                        <option value="entire_degree">Entire Degree</option>
                                     </select>
                                 </div>
                                 <div class="col">
@@ -155,14 +148,6 @@
                                 </div>
 
                             </div>
-
-                            {{-- <div class="row mb-3">
-                                <div class="col">
-                                    <label for="" class="form-label">Prove </label>
-                                    <input type="file" class="form-control"  name="prove">
-                                </div>
-
-                            </div> --}}
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
 

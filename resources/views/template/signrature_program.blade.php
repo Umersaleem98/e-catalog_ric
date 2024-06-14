@@ -35,7 +35,7 @@
         <!-- Section 1 -->
         <div class="row mb-4 align-items-center">
             <div class="col-md-5">
-                <img src="{{ asset('team/nust3.jpg') }}" alt="Image 1" style="border-radius: 5%; height:240px">
+                <img src="{{ asset('templates/signature_program/abc.jpg') }}" alt="Image 1" style="border-radius: 5%; height:240px; width: 100%">
             </div>
             <div class="col-md-7">
                 <h2 class="text-center">NUST Advisory Council for Resource Mobilization</h2>

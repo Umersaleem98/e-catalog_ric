@@ -34,7 +34,7 @@
                 <!-- Left Section for Images -->
                 <div class="col-lg-4 col-md-4 col-sm-12 ">
                     <div class="image-container" style="border-radius: 50%;">
-                        <img src="{{ asset('team/nust3.jpg') }}" alt="Image 1" style="border-radius: 5%; height:240px">
+                        <img src="{{ asset('templates/signature_program/abc.jpg') }}" alt="Image 1" style="border-radius: 5%; height:240px">
                     </div>
                 </div>
                 <!-- Right Section for Content -->
