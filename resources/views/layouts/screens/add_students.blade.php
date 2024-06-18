@@ -210,18 +210,7 @@
                         </div>
                         </div>
                         </div>
-                        <!--/ Company Table
 
-
-
-
-
-
-
-
-
-
-    <!-- BEGIN: Footer-->
 
   @include('layouts.footer')
     <!-- END: Footer-->

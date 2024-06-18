@@ -11,6 +11,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\EndowmentController;
 use App\Http\Controllers\CredentialController;
+use App\Http\Controllers\DashboardEndowmentController;
 use App\Http\Controllers\FundAProjectController;
 use App\Http\Controllers\SignatureStoryController;
 use App\Http\Controllers\SupportScholarPaymentController;
@@ -55,9 +56,9 @@ Route::get('/fund_project/{id}', [FundAProjectController::class, 'fund_project_s
 Route::get('/payments_project/{id}', [FundAProjectController::class, 'payments_project']);
 Route::post('/fund_a_project', [FundAProjectController::class, 'payment_fund_a_project']);
 
+// team
+Route::get('/our_team', [TeamController::class, 'team']);
 
-// Dashboard Screens Routes
-Route::get('/dashboard', [authController::class, 'index']);
 
 
 Route::get('/students_get', [authController::class, 'view_data']);
@@ -76,6 +77,10 @@ Route::get('/signature_stories_delete/{id}', [SignatureStoryController::class, '
 // index route
 Route::get('/signrature_program', [SignatureStoryController::class, 'signrature_program']);
 
+
+// Dashboard Screens Routes
+Route::get('/dashboard', [authController::class, 'index']);
+
 // Team routes
 Route::get('/add_team', [TeamController::class, 'index']);
 Route::post('/add_team_member', [TeamController::class, 'store']);
@@ -85,7 +90,16 @@ Route::post('/update/{id}', [TeamController::class, 'update']);
 Route::get('/delete/{id}', [TeamController::class, 'delete']);
 
 
-Route::get('/our_team', [TeamController::class, 'team']);
+Route::get('one_year_education', [DashboardEndowmentController::class, 'one_year']);
+Route::get('entire_degree_education', [DashboardEndowmentController::class, 'entire_degree']);
+Route::get('perpetual_seat_in__your__name', [DashboardEndowmentController::class, 'perpetual_seat']);
+Route::get('zakat_support', [DashboardEndowmentController::class, 'zakat_support_for_student']);
+
+Route::get('suport_scholor_payment', [DashboardEndowmentController::class, 'scholor_payment']);
+Route::get('suport_scholor_pledge', [DashboardEndowmentController::class, 'scholor_pledge']);
+Route::get('fundaproject', [DashboardEndowmentController::class, 'fund_project']);
+
+
 
 Route::get('login', [CredentialController::class, 'index']);
 Route::post('login', [CredentialController::class, 'login']);

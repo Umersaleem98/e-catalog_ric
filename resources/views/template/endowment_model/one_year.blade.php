@@ -97,7 +97,7 @@
                                 <h3 class="text-dark text-center mb-4">Detailed Breakdown for UG:</h3>
                                 <div class="form-check">
 
-                                    <input class="form-check-input ml-3" name="payments_status" type="radio"  id="option2" value="male_a_pledge">
+                                    <input class="form-check-input ml-3" name="payments_status" type="radio"  id="option2" value="make_a_pledge">
                                     <label class="form-check-label ml-3" for="make_a_pledge">
                                         Make a Pledge
                                     </label>
@@ -182,7 +182,7 @@
                                 <h3 class="text-dark text-center mb-4">Detailed Breakdown for PG:</h3>
                                 <div class="form-check">
 
-                                    <input class="form-check-input ml-3" name="payments_status" type="radio"  id="option2" value="male_a_pledge">
+                                    <input class="form-check-input ml-3" name="payments_status" type="radio"  id="option2" value="make_a_pledge">
                                     <label class="form-check-label ml-3" for="make_a_pledge">
                                         Make a Pledge
                                     </label>

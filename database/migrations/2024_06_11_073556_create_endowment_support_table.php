@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('donor_name');
             $table->string('donor_email');
             $table->string('phone');
+            $table->string('payments_status');
             $table->timestamps();
         });
     }
