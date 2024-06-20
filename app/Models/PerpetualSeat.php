@@ -15,6 +15,7 @@ class PerpetualSeat extends Model
         'endowment_type',
         'degree',
         'seats',
+        'degree_name',
         'totalAmount',
         'donor_name',
         'donor_email',

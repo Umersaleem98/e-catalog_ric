@@ -1,6 +1,6 @@
 
-<div class="popular page_section" style="margin-top: -20px; ">
-    <div class="container">
+<div class="popular page_section" >
+    <div class="container" style="margin-top: -60px; ">
         <div class="row">
             <div class="col">
                 <div class="section_title text-center">

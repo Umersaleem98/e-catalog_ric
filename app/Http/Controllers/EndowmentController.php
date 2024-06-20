@@ -39,6 +39,7 @@ class EndowmentController extends Controller
         $oneyear->program = $request->program;
         $oneyear->degree = $request->degree;
         $oneyear->seats = $request->seats;
+        $oneyear->degree_name = $request->degree_name;
         $oneyear->totalAmount = $request->totalAmount;
         $oneyear->donor_name = $request->donor_name;
         $oneyear->donor_email = $request->donor_email;
@@ -68,6 +69,7 @@ class EndowmentController extends Controller
         $oneyear->program = $request->program;
         $oneyear->degree = $request->degree;
         $oneyear->seats = $request->seats;
+        $oneyear->degree_name = $request->degree_name;
         $oneyear->totalAmount = $request->totalAmount;
         $oneyear->donor_name = $request->donor_name;
         $oneyear->donor_email = $request->donor_email;
@@ -102,6 +104,7 @@ class EndowmentController extends Controller
         $oneyear->endowment_type = $request->endowment_type;
         $oneyear->degree = $request->degree;
         $oneyear->seats = $request->seats;
+        $oneyear->degree_name = $request->degree_name;
         $oneyear->totalAmount = $request->totalAmount;
         $oneyear->donor_name = $request->donor_name;
         $oneyear->donor_email = $request->donor_email;

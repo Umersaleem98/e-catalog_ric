@@ -14,6 +14,7 @@ class EndowmentSupportEntireDegree extends Model
         'program',
         'degree',
         'seats',
+        'degree_name',
         'totalAmount',
         'donor_name',
         'donor_email',

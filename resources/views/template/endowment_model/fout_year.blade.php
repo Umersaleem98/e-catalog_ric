@@ -93,84 +93,81 @@
                         <div class="col-12">
                             <!-- Add your undergraduate content here -->
                             <!-- Example form structure -->
+
+
                             <form action="{{url('endowmentsupportentireyear')}}" method="post">
                                 @csrf
                                 <h3 class="text-dark text-center mb-4">Detailed Breakdown for UG:</h3>
                                 <div class="form-check">
-                                    <label class="form-check-label" for="make_a_pledge">
-                                        Make a Pledge
-                                    </label>
-                                    <input class="form-check-input ml-3" name="payments_status" type="radio" name="options" id="option2" value="option2">
-                                    <label class="form-check-label ml-4" for="make_a_pledge">
-                                        Paynow
-                                    </label>
-                                    <input class="form-check-input ml-3" name="payments_status" type="radio" name="options" id="option2" value="Paynow">
-
+                                    <label class="form-check-label" for="make_a_pledge">Make a Pledge</label>
+                                    <input class="form-check-input ml-3" name="payments_status" type="radio" id="ug_make_a_pledge" value="make_a_pledge">
+                                    <label class="form-check-label ml-4" for="paynow">Paynow</label>
+                                    <input class="form-check-input ml-3" name="payments_status" type="radio" id="ug_paynow" value="Paynow">
                                 </div>
                                 <br>
-
                                 <div class="row">
-
                                     <div class="col-md-6">
                                         <input type="text" name="program" id="" value="UG" hidden>
                                         <div class="form-group">
-                                            <label for="program">Select Options:</label>
-                                            <select id="program" name="degree" class="form-control">
+                                            <label for="ugDegree">Select Degree:</label>
+                                            <select id="ugDegree" name="degree" class="form-control">
                                                 <option value="">Select Degree</option>
                                                 @foreach ($undergraduate as $degree)
-                                                    <option value="{{ $degree->fee }}">{{ $degree->degree }}</option>
+                                                    <option value="{{ $degree->fee }}" data-degree-name="{{ $degree->degree }}">{{ $degree->degree }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="no_of_seat">No of seats:</label>
-                                            <input type="number" id="no_of_seat" name="seats" class="form-control" value="1" min="1">
+                                            <label for="ugQuantity">No of seats:</label>
+                                            <input type="number" id="ugQuantity" name="seats" class="form-control" value="1" min="1">
                                         </div>
                                     </div>
+                                    <div class="form-group ml-3">
+                                        <input type="checkbox" id="ugAdditionalExpenses" value="275000">
+                                        <label for="ugAdditionalExpenses">Include mess and hostel expenses (275,000 PKR)</label>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-6 additional-field" id="ugAdditionalFieldContainer" style="display: none;">
                                         <div class="form-group">
-                                            <input type="checkbox" id="additionalExpenses" value="275000">
-                                            <label for="additionalExpenses">Include mess and hostel expenses (275,000 PKR)</label>
+                                            <label for="ugSelectedDegree">Selected Degree:</label>
+                                            <input type="text" id="ugSelectedDegree" name="degree_name" class="form-control" readonly>
                                         </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="totalAmount">Total Amount (UG):</label>
-                                        <input type="text" id="totalAmount" name="totalAmount" class="form-control" readonly>
                                     </div>
                                 </div>
-                                <div id="donorInfo" style="">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="ugTotalAmount">Total Amount (UG):</label>
+                                        <input type="text" id="ugTotalAmount" name="totalAmount" class="form-control" readonly>
+                                    </div>
+                                </div>
+                                <div id="donorInfo">
                                     <h4 class="text-dark mt-4">Donor Information:</h4>
-                                   <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="donor_name">Name:</label>
-                                        <input type="text" id="donor_name" name="donor_name" class="form-control" required>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="donor_name">Name:</label>
+                                            <input type="text" id="donor_name" name="donor_name" class="form-control" required>
+                                        </div>
                                     </div>
-                                   </div>
-
-                                   <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="donor_email">Email:</label>
-                                        <input type="email" id="donor_email" name="donor_email" class="form-control" required>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="donor_email">Email:</label>
+                                            <input type="email" id="donor_email" name="donor_email" class="form-control" required>
+                                        </div>
                                     </div>
-                                   </div>
-                                   <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="phone">Phone:</label>
-                                        <input type="text" id="phone" name="phone" class="form-control" required>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="phone">Phone:</label>
+                                            <input type="text" id="phone" name="phone" class="form-control" required>
+                                        </div>
                                     </div>
-
-                                   </div>
-                                <div class="col-md-6">
-
-                                   </div>
                                 </div>
-
-
                                 <input type="submit" name="submit" class="btn btn-primary">
-                               </form>
+                            </form>
+
+
                         </div>
                     </div>
                 </div>
@@ -180,29 +177,23 @@
                         <div class="col-12">
                             <form action="{{url('endowmentsupportentireyear')}}" method="post">
                                 @csrf
-                                <h3 class="text-dark text-center">Detailed Breakdown for PG:</h3>
+                                <h3 class="text-dark text-center mb-4">Detailed Breakdown for PG:</h3>
                                 <div class="form-check">
-                                    <label class="form-check-label" for="make_a_pledge">
-                                        Make a Pledge
-                                    </label>
-                                    <input class="form-check-input ml-3" name="payments_status" type="radio"  id="option2" value="male_a_pledge">
-                                    <label class="form-check-label ml-4" for="make_a_pledge">
-                                        Paynow
-                                    </label>
-                                    <input class="form-check-input ml-3" name="payments_status" type="radio"  id="option2" value="Paynow">
-
+                                    <label class="form-check-label" for="make_a_pledge">Make a Pledge</label>
+                                    <input class="form-check-input ml-3" name="payments_status" type="radio" id="pg_make_a_pledge" value="make_a_pledge">
+                                    <label class="form-check-label ml-4" for="paynow">Paynow</label>
+                                    <input class="form-check-input ml-3" name="payments_status" type="radio" id="pg_paynow" value="Paynow">
                                 </div>
                                 <br>
-
                                 <div class="row">
-                                    <input type="text" name="program" value="PG" hidden id="">
                                     <div class="col-md-6">
+                                        <input type="text" name="program" id="" value="PG" hidden>
                                         <div class="form-group">
-                                            <label for="pgDegree">Select Options:</label>
+                                            <label for="pgDegree">Select Degree:</label>
                                             <select id="pgDegree" name="degree" class="form-control">
                                                 <option value="">Select Degree</option>
-                                                @foreach ($postgraduate as $pgDegree)
-                                                    <option value="{{ $pgDegree->fee }}">{{ $pgDegree->degree }}</option>
+                                                @foreach ($postgraduate as $degree)
+                                                    <option value="{{ $degree->fee }}" data-degree-name="{{ $degree->degree }}">{{ $degree->degree }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -213,54 +204,49 @@
                                             <input type="number" id="pgQuantity" name="seats" class="form-control" value="1" min="1">
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group ml-3">
                                         <input type="checkbox" id="pgAdditionalExpenses" value="275000">
                                         <label for="pgAdditionalExpenses">Include mess and hostel expenses (275,000 PKR)</label>
                                     </div>
                                 </div>
-
+                                <div class="row mt-3">
+                                    <div class="col-md-6 additional-field" id="pgAdditionalFieldContainer" style="display: none;">
+                                        <div class="form-group">
+                                            <label for="pgSelectedDegree">Selected Degree:</label>
+                                            <input type="text" id="pgSelectedDegree" name="degree_name" class="form-control" readonly>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="pgTotalAmount">Total Amount (PG):</label>
                                         <input type="text" id="pgTotalAmount" name="totalAmount" class="form-control" readonly>
                                     </div>
                                 </div>
-                                <div id="donorInfo1" style=";">
+                                <div id="donorInfo">
                                     <h4 class="text-dark mt-4">Donor Information:</h4>
-                                   <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="donor_name">Name:</label>
-                                        <input type="text" id="donor_name" name="donor_name" class="form-control">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="donor_name">Name:</label>
+                                            <input type="text" id="donor_name" name="donor_name" class="form-control" required>
+                                        </div>
                                     </div>
-                                   </div>
-
-                                   <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="donor_email">Email:</label>
-                                        <input type="email" id="donor_email" name="donor_email" class="form-control">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="donor_email">Email:</label>
+                                            <input type="email" id="donor_email" name="donor_email" class="form-control" required>
+                                        </div>
                                     </div>
-                                   </div>
-                                   <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="phone">Phone:</label>
-                                        <input type="text" id="phone" name="phone" class="form-control">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="phone">Phone:</label>
+                                            <input type="text" id="phone" name="phone" class="form-control" required>
+                                        </div>
                                     </div>
-                                   </div>
                                 </div>
-
-                                {{-- <div class="form-check">
-                                    <label class="form-check-label" for="make_a_pledge">
-                                        Make a Pledge
-                                    </label>
-                                    <input class="form-check-input ml-3" name="payments_status" type="radio" name="options" id="option2" value="option2">
-                                    <label class="form-check-label ml-4" for="make_a_pledge">
-                                        Paynow
-                                    </label>
-                                    <input class="form-check-input ml-3" name="payments_status" type="radio" name="options" id="option2" value="Paynow">
-
-                                </div> --}}
-                                <input type="submit" name="submit" class="btn  btn-primary">
+                                <input type="submit" name="submit" class="btn btn-primary">
                             </form>
+
                         </div>
                     </div>
                 </div>
@@ -278,26 +264,44 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const programSelect = document.getElementById('program');
-        const additionalExpensesCheckbox = document.getElementById('additionalExpenses');
-        const quantityInput = document.getElementById('no_of_seat');
-        const totalAmountInput = document.getElementById('totalAmount');
+        const ugDegreeSelect = document.getElementById('ugDegree');
+        const ugAdditionalFieldContainer = document.getElementById('ugAdditionalFieldContainer');
+        const ugAdditionalExpensesCheckbox = document.getElementById('ugAdditionalExpenses');
+        const ugQuantityInput = document.getElementById('ugQuantity');
+        const ugTotalAmountInput = document.getElementById('ugTotalAmount');
+        const ugSelectedDegreeInput = document.getElementById('ugSelectedDegree');
 
-        function calculateTotal() {
-            let total = (parseFloat(programSelect.value) || 0) * parseFloat(quantityInput.value);
-            if (additionalExpensesCheckbox.checked) {
-                total += parseFloat(additionalExpensesCheckbox.value) * parseFloat(quantityInput.value);
+        function calculateUgTotal() {
+            let ugTotal = (parseFloat(ugDegreeSelect.value) || 0) * parseFloat(ugQuantityInput.value);
+            if (ugAdditionalExpensesCheckbox.checked) {
+                ugTotal += parseFloat(ugAdditionalExpensesCheckbox.value) * parseFloat(ugQuantityInput.value);
             }
-            totalAmountInput.value = total.toFixed(2) + ' PKR';
+            ugTotalAmountInput.value = ugTotal.toFixed(2) + ' PKR';
         }
 
-        programSelect.addEventListener('change', calculateTotal);
-        additionalExpensesCheckbox.addEventListener('change', calculateTotal);
-        quantityInput.addEventListener('input', calculateTotal);
+        function toggleUgAdditionalField() {
+            if (ugDegreeSelect.value) {
+                ugAdditionalFieldContainer.style.display = 'block';
+                ugSelectedDegreeInput.value = ugDegreeSelect.options[ugDegreeSelect.selectedIndex].dataset.degreeName;
+            } else {
+                ugAdditionalFieldContainer.style.display = 'none';
+                ugSelectedDegreeInput.value = '';
+            }
+        }
 
-        calculateTotal();
+        ugDegreeSelect.addEventListener('change', function() {
+            calculateUgTotal();
+            toggleUgAdditionalField();
+        });
+        ugAdditionalExpensesCheckbox.addEventListener('change', calculateUgTotal);
+        ugQuantityInput.addEventListener('input', calculateUgTotal);
+
+        // Initialize calculation and field visibility
+        calculateUgTotal();
+        toggleUgAdditionalField();
     });
 </script>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -305,24 +309,35 @@
         const pgAdditionalExpensesCheckbox = document.getElementById('pgAdditionalExpenses');
         const pgQuantityInput = document.getElementById('pgQuantity');
         const pgTotalAmountInput = document.getElementById('pgTotalAmount');
+        const pgSelectedDegreeInput = document.getElementById('pgSelectedDegree');
 
         function calculatePgTotal() {
-            let pgTotal = (parseInt(pgDegreeSelect.value) || 0) * parseInt(pgQuantityInput.value);
+            let pgTotal = (parseFloat(pgDegreeSelect.value) || 0) * parseFloat(pgQuantityInput.value);
             if (pgAdditionalExpensesCheckbox.checked) {
-                pgTotal += parseInt(pgAdditionalExpensesCheckbox.value) * parseInt(pgQuantityInput.value);
+                pgTotal += parseFloat(pgAdditionalExpensesCheckbox.value) * parseFloat(pgQuantityInput.value);
             }
-            pgTotalAmountInput.value = pgTotal + ' PKR';
+            pgTotalAmountInput.value = pgTotal.toFixed(2) + ' PKR';
         }
 
-        pgDegreeSelect.addEventListener('change', calculatePgTotal);
+        function updatePgSelectedDegree() {
+            const selectedDegree = pgDegreeSelect.options[pgDegreeSelect.selectedIndex];
+            const degreeName = selectedDegree.dataset.degreeName;
+            pgSelectedDegreeInput.value = degreeName || '';
+        }
+
+        pgDegreeSelect.addEventListener('change', function() {
+            calculatePgTotal();
+            updatePgSelectedDegree();
+        });
+
         pgAdditionalExpensesCheckbox.addEventListener('change', calculatePgTotal);
         pgQuantityInput.addEventListener('input', calculatePgTotal);
 
         calculatePgTotal();
+        updatePgSelectedDegree();
     });
-
-
 </script>
+
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 <style>
     .nav-link {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
         color: black;
     }
@@ -19,7 +19,7 @@
 
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light w-100 fixed-top ">
+<nav class="navbar navbar-expand-lg navbar-light bg-\ w-100  ">
     <!-- Left-side logos -->
     <a class="navbar-brand ml-3" href="{{ url('/') }}">
         <img src="{{ asset('templates/logo/logo.png') }}" alt="Left Logo" class="navbar-logo ml-4">
@@ -40,10 +40,10 @@
                 <a class="nav-link" href="{{ url('about_us') }}">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('signrature_program') }}">Signature <br> Programs</a>
+                <a class="nav-link" href="{{ url('signrature_program') }}">Signature  Programs</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('r_m_o') }}">Resource Mobilization <br> Officers</a>
+                <a class="nav-link" href="{{ url('r_m_o') }}">Resource Mobilization  Officers</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('/our_team') }}">Our Team</a>

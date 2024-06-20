@@ -121,10 +121,11 @@
                                         <select id="degree" name="degree" class="form-control form-control-sm">
                                             <option value="">Select Degree</option>
                                             @foreach ($undergraduate as $degree)
-                                                <option value="{{ $degree->fee }}">{{ $degree->degree }}</option>
+                                                <option value="{{ $degree->fee }}" data-degree-name="{{ $degree->degree }}">{{ $degree->degree }}</option>
                                             @endforeach
                                         </select>
                                     </div>
+                                    <input type="hidden" id="degree_name" name="degree_name">
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -170,6 +171,7 @@
                             </div>
                             <input type="submit" name="submit" class="btn btn-primary mt-3">
                         </form>
+
                     </div>
                 </div>
 
@@ -193,7 +195,6 @@
                             <br>
 
                             <div class="row">
-
                                 <div class="col-md-6">
                                     <input type="text" name="program" value="UG" hidden>
                                     <input type="text" name="endowment_type" value="Circular_endowment" hidden>
@@ -202,10 +203,11 @@
                                         <select id="circular_ugDegree" name="degree" class="form-control form-control-sm">
                                             <option value="">Select Degree</option>
                                             @foreach ($undergraduate as $degree)
-                                                <option value="{{ $degree->fee }}">{{ $degree->degree }}</option>
+                                                <option value="{{ $degree->fee }}" data-degree-name="{{ $degree->degree }}">{{ $degree->degree }}</option>
                                             @endforeach
                                         </select>
                                     </div>
+                                    <input type="hidden" id="circular_ugDegreeName" name="degree_name">
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -254,6 +256,7 @@
                             </div>
                             <input type="submit" name="submit" class="btn btn-primary mt-3">
                         </form>
+
                     </div>
                     <!-- Add more content as needed -->
                 </div>
@@ -262,78 +265,84 @@
                 <div class="tab-pane fade" id="single-endowment-pg" role="tabpanel" aria-labelledby="single-endowment-pg-tab">
                     <h3 class="text-center text-dark mt-4">Single Endowment (PG)</h3>
                     <div class="col-md-12 mt-5">
+
                         <form action="{{url('perpetualseatyourname')}}" method="post">
                             @csrf
-                            {{-- <h3 class="text-dark text-center mb-3">Single Endowment for PG:</h3> --}}
-                            <div class="form-check">
-                                <input class="form-check-input" name="payments_status" type="radio" id="make_a_pledge" value="Make a Pledge">
-                                <label class="form-check-label" for="make_a_pledge">Make a Pledge</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" name="payments_status" type="radio" id="paynow" value="Paynow">
-                                <label class="form-check-label" for="paynow">Pay now</label>
+                            {{-- <h3 class="text-dark text-center mb-4">Single Endowment for PG:</h3> --}}
+                            <div class="col-12 mt-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" name="payments_status" type="radio" id="single_pgMakeAPledge" value="Make a Pledge">
+                                    <label class="form-check-label" for="single_pgMakeAPledge">Make a Pledge</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" name="payments_status" type="radio" id="single_pgPayNow" value="Paynow">
+                                    <label class="form-check-label" for="single_pgPayNow">Pay now</label>
+                                </div>
                             </div>
                             <br>
+
                             <div class="row">
-                                <input type="text" name="program" value="PG" hidden>
-                                <input type="text" name="endowment_type" value="single endownment" hidden>
                                 <div class="col-md-6">
+                                    <input type="text" name="program" value="PG" hidden>
+                                    <input type="text" name="endowment_type" value="Single_endowment" hidden>
                                     <div class="form-group">
-                                        <label for="pgDegree">Select Options:</label>
-                                        <select id="pgDegree" name="degree" class="form-control form-control-sm">
+                                        <label for="single_pgDegree">Select Options:</label>
+                                        <select id="single_pgDegree" name="degree" class="form-control form-control-sm">
                                             <option value="">Select Degree</option>
                                             @foreach ($postgraduate as $pgDegree)
-                                                <option value="{{ $pgDegree->fee }}">{{ $pgDegree->degree }}</option>
+                                                <option value="{{ $pgDegree->fee }}" data-degree-name="{{ $pgDegree->degree }}">{{ $pgDegree->degree }}</option>
                                             @endforeach
                                         </select>
                                     </div>
+                                    <input type="hidden" id="single_pgDegreeName" name="degree_name">
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="pgQuantity">No of seats:</label>
-                                        <input type="number" id="pgQuantity" name="seats" class="form-control form-control-sm" value="1" min="1">
+                                        <label for="single_pgNoOfSeat">No of seats:</label>
+                                        <input type="number" id="single_pgNoOfSeat" name="seats" class="form-control form-control-sm" value="1" min="1">
                                     </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="form-group form-check">
-                                        <input type="checkbox" id="pgAdditionalExpenses" value="275000" class="form-check-input">
-                                        <label for="pgAdditionalExpenses" class="form-check-label">Include mess and hostel expenses (275,000 PKR)</label>
+                                <div class="col-12">
+                                    <div class="form-check mb-3">
+                                        <input type="checkbox" id="single_pgAdditionalExpenses" value="275000" class="form-check-input">
+                                        <label for="single_pgAdditionalExpenses" class="form-check-label">Include mess and hostel expenses (275,000 PKR)</label>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="pgTotalAmount">Total Amount (PG):</label>
-                                        <input type="text" id="pgTotalAmount" name="totalAmount" class="form-control form-control-sm" readonly>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="donorInfo1">
-                                <h4 class="text-dark mt-3">Donor Information:</h4>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="donor_name">Donor Name:</label>
-                                            <input type="text" id="donor_name" name="donor_name" class="form-control form-control-sm">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="donor_email">Donor Email:</label>
-                                            <input type="email" id="donor_email" name="donor_email" class="form-control form-control-sm">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="phone">Phone:</label>
-                                            <input type="text" id="phone" name="phone" class="form-control form-control-sm">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <input type="submit" name="submit" class="btn btn-primary">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="single_pgTotalAmount">Total Amount (PG):</label>
+                                        <input type="text" id="single_pgTotalAmount" name="totalAmount" class="form-control form-control-sm" readonly>
+                                    </div>
+                                </div>
+                                <div id="single_pgDonorInfo" class="col-12">
+                                    <h4 class="text-dark mt-3">Donor Information:</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="single_pgDonorName">Name:</label>
+                                                <input type="text" id="single_pgDonorName" name="donor_name" class="form-control form-control-sm" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="single_pgDonorEmail">Email:</label>
+                                                <input type="email" id="single_pgDonorEmail" name="donor_email" class="form-control form-control-sm" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="single_pgPhone">Phone:</label>
+                                                <input type="text" id="single_pgPhone" name="phone" class="form-control form-control-sm" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <input type="submit" name="submit" class="btn btn-primary mt-3">
                         </form>
-
                     </div>
                     <!-- Add more content as needed -->
                 </div>
@@ -345,76 +354,83 @@
 
                         <form action="{{url('perpetualseatyourname')}}" method="post">
                             @csrf
-
-                            {{-- <h3 class="text-dark text-center mb-3">Circular Endowment for PG:</h3> --}}
-                            <div class="form-check">
-                                <input class="form-check-input" name="payments_status" type="radio" id="make_a_pledge" value="Make a Pledge">
-                                <label class="form-check-label" for="make_a_pledge">Make a Pledge</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" name="payments_status" type="radio" id="paynow" value="Paynow">
-                                <label class="form-check-label" for="paynow">Pay now</label>
+                            {{-- <h3 class="text-dark text-center mb-4">Circular Endowment for PG:</h3> --}}
+                            <div class="col-12 mt-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" name="payments_status" type="radio" id="circular_pgMakeAPledge" value="Make a Pledge">
+                                    <label class="form-check-label" for="circular_pgMakeAPledge">Make a Pledge</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" name="payments_status" type="radio" id="circular_pgPayNow" value="Paynow">
+                                    <label class="form-check-label" for="circular_pgPayNow">Pay now</label>
+                                </div>
                             </div>
                             <br>
+
                             <div class="row">
-                                <input type="text" name="program" value="PG" hidden>
-                                <input type="text" name="endowment_type" value="circular endowment" hidden>
                                 <div class="col-md-6">
+                                    <input type="text" name="program" value="PG" hidden>
+                                    <input type="text" name="endowment_type" value="Circular_endowment" hidden>
                                     <div class="form-group">
-                                        <label for="circularPgDegree">Select Options:</label>
-                                        <select id="circularPgDegree" name="degree" class="form-control form-control-sm">
+                                        <label for="circular_pgDegree">Select Options:</label>
+                                        <select id="circular_pgDegree" name="degree" class="form-control form-control-sm">
                                             <option value="">Select Degree</option>
                                             @foreach ($postgraduate as $pgDegree)
-                                                <option value="{{ $pgDegree->fee }}">{{ $pgDegree->degree }}</option>
+                                                <option value="{{ $pgDegree->fee }}" data-degree-name="{{ $pgDegree->degree }}">{{ $pgDegree->degree }}</option>
                                             @endforeach
                                         </select>
                                     </div>
+                                    <input type="hidden" id="circular_pgDegreeName" name="degree_name">
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="circularPgQuantity">No of seats:</label>
-                                        <input type="number" id="circularPgQuantity" name="seats" class="form-control form-control-sm" value="1" min="1">
+                                        <label for="circular_pgNoOfSeat">No of seats:</label>
+                                        <input type="number" id="circular_pgNoOfSeat" name="seats" class="form-control form-control-sm" value="1" min="1">
                                     </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="form-group form-check">
-                                        <input type="checkbox" id="circularPgAdditionalExpenses" value="275000" class="form-check-input">
-                                        <label for="circularPgAdditionalExpenses" class="form-check-label">Include mess and hostel expenses (275,000 PKR)</label>
+                                <div class="col-12">
+                                    <div class="form-check mb-3">
+                                        <input type="checkbox" id="circular_pgAdditionalExpenses" value="275000" class="form-check-input">
+                                        <label for="circular_pgAdditionalExpenses" class="form-check-label">Include mess and hostel expenses (275,000 PKR)</label>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="circularPgTotalAmount">Total Amount (PG):</label>
-                                        <input type="text" id="circularPgTotalAmount" name="totalAmount" class="form-control form-control-sm" readonly>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="donorInfo1">
-                                <h4 class="text-dark mt-3">Donor Information:</h4>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="donor_name">Name:</label>
-                                            <input type="text" id="donor_name" name="donor_name" class="form-control form-control-sm">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="donor_email">Email:</label>
-                                            <input type="email" id="donor_email" name="donor_email" class="form-control form-control-sm">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="phone">Phone:</label>
-                                            <input type="text" id="phone" name="phone" class="form-control form-control-sm">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <input type="submit" name="submit" class="btn btn-primary">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="circular_pgTotalAmount">Total Amount (PG):</label>
+                                        <input type="text" id="circular_pgTotalAmount" name="totalAmount" class="form-control form-control-sm" readonly>
+                                    </div>
+                                </div>
+                                <div id="circular_pgDonorInfo" class="col-12">
+                                    <h4 class="text-dark mt-3">Donor Information:</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="circular_pgDonorName">Name:</label>
+                                                <input type="text" id="circular_pgDonorName" name="donor_name" class="form-control form-control-sm" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="circular_pgDonorEmail">Email:</label>
+                                                <input type="email" id="circular_pgDonorEmail" name="donor_email" class="form-control form-control-sm" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="circular_pgPhone">Phone:</label>
+                                                <input type="text" id="circular_pgPhone" name="phone" class="form-control form-control-sm" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <input type="submit" name="submit" class="btn btn-primary mt-3">
                         </form>
+
+
                     </div>
                     <!-- Add more content as needed -->
                 </div>
@@ -432,103 +448,131 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
+
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const degreeSelect = document.getElementById("degree");
-        const seatInput = document.getElementById("no_of_seat");
-        const additionalExpensesCheckbox = document.getElementById("additionalExpenses");
-        const totalAmountInput = document.getElementById("totalAmount");
+    document.addEventListener('DOMContentLoaded', function() {
+        const degreeSelect = document.getElementById('degree');
+        const degreeNameInput = document.getElementById('degree_name');
+        const noOfSeatInput = document.getElementById('no_of_seat');
+        const totalAmountInput = document.getElementById('totalAmount');
 
-        function calculateTotal() {
-            let degreeFee = parseFloat(degreeSelect.value) || 0;
-            let numberOfSeats = parseInt(seatInput.value) || 1;
-            let additionalExpenses = additionalExpensesCheckbox.checked ? parseFloat(additionalExpensesCheckbox.value) : 0;
-
-            let totalAmount = (degreeFee * numberOfSeats) + additionalExpenses;
-            totalAmountInput.value = totalAmount.toLocaleString('en-PK', { style: 'currency', currency: 'PKR' });
+        function calculateTotalAmount() {
+            const selectedOption = degreeSelect.options[degreeSelect.selectedIndex];
+            const degreeFee = parseFloat(selectedOption.value) || 0;
+            const noOfSeats = parseInt(noOfSeatInput.value) || 1;
+            const additionalExpenses = document.getElementById('additionalExpenses').checked ? 275000 : 0;
+            const totalAmount = (degreeFee * noOfSeats) + additionalExpenses;
+            totalAmountInput.value = totalAmount.toFixed(2) + ' PKR';
         }
 
-        degreeSelect.addEventListener("change", calculateTotal);
-        seatInput.addEventListener("input", calculateTotal);
-        additionalExpensesCheckbox.addEventListener("change", calculateTotal);
+        degreeSelect.addEventListener('change', function() {
+            const selectedOption = degreeSelect.options[degreeSelect.selectedIndex];
+            const degreeName = selectedOption.dataset.degreeName || '';
+            degreeNameInput.value = degreeName;
+            calculateTotalAmount();
+        });
 
-        calculateTotal();
+        noOfSeatInput.addEventListener('input', calculateTotalAmount);
+        document.getElementById('additionalExpenses').addEventListener('change', calculateTotalAmount);
+
+        calculateTotalAmount(); // Calculate total amount on initial load
+    });
+</script>
+
+{{-- Circular endowment UG --}}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const degreeSelect = document.getElementById('circular_ugDegree');
+        const degreeNameInput = document.getElementById('circular_ugDegreeName');
+        const noOfSeatInput = document.getElementById('circular_ugNoOfSeat');
+        const totalAmountInput = document.getElementById('circular_ugTotalAmount');
+
+        function calculateTotalAmount() {
+            const selectedOption = degreeSelect.options[degreeSelect.selectedIndex];
+            const degreeFee = parseFloat(selectedOption.value) || 0;
+            const noOfSeats = parseInt(noOfSeatInput.value) || 1;
+            const additionalExpenses = document.getElementById('circular_ugAdditionalExpenses').checked ? 275000 : 0;
+            const totalAmount = (degreeFee * noOfSeats) + additionalExpenses;
+            totalAmountInput.value = totalAmount.toFixed(2) + ' PKR';
+        }
+
+        degreeSelect.addEventListener('change', function() {
+            const selectedOption = degreeSelect.options[degreeSelect.selectedIndex];
+            const degreeName = selectedOption.dataset.degreeName || '';
+            degreeNameInput.value = degreeName;
+            calculateTotalAmount();
+        });
+
+        noOfSeatInput.addEventListener('input', calculateTotalAmount);
+        document.getElementById('circular_ugAdditionalExpenses').addEventListener('change', calculateTotalAmount);
+
+        calculateTotalAmount(); // Calculate total amount on initial load
+    });
+</script>
+
+{{-- single endowmwnt of PG --}}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const degreeSelect = document.getElementById('single_pgDegree');
+        const degreeNameInput = document.getElementById('single_pgDegreeName');
+        const noOfSeatInput = document.getElementById('single_pgNoOfSeat');
+        const totalAmountInput = document.getElementById('single_pgTotalAmount');
+
+        function calculateTotalAmount() {
+            const selectedOption = degreeSelect.options[degreeSelect.selectedIndex];
+            const degreeFee = parseFloat(selectedOption.value) || 0;
+            const noOfSeats = parseInt(noOfSeatInput.value) || 1;
+            const additionalExpenses = document.getElementById('single_pgAdditionalExpenses').checked ? 275000 : 0;
+            const totalAmount = (degreeFee * noOfSeats) + additionalExpenses;
+            totalAmountInput.value = totalAmount.toFixed(2) + ' PKR';
+        }
+
+        degreeSelect.addEventListener('change', function() {
+            const selectedOption = degreeSelect.options[degreeSelect.selectedIndex];
+            const degreeName = selectedOption.dataset.degreeName || '';
+            degreeNameInput.value = degreeName;
+            calculateTotalAmount();
+        });
+
+        noOfSeatInput.addEventListener('input', calculateTotalAmount);
+        document.getElementById('single_pgAdditionalExpenses').addEventListener('change', calculateTotalAmount);
+
+        calculateTotalAmount(); // Calculate total amount on initial load
     });
 </script>
 
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const degreeSelect = document.getElementById("circular_ugDegree");
-        const seatInput = document.getElementById("circular_ugNoOfSeat");
-        const additionalExpensesCheckbox = document.getElementById("circular_ugAdditionalExpenses");
-        const totalAmountInput = document.getElementById("circular_ugTotalAmount");
-
-        function calculateTotal() {
-            let degreeFee = parseFloat(degreeSelect.value) || 0;
-            let numberOfSeats = parseInt(seatInput.value) || 1;
-            let additionalExpenses = additionalExpensesCheckbox.checked ? parseFloat(additionalExpensesCheckbox.value) : 0;
-
-            let totalAmount = (degreeFee * numberOfSeats) + additionalExpenses;
-            totalAmountInput.value = totalAmount.toLocaleString('en-PK', { style: 'currency', currency: 'PKR' });
-        }
-
-        degreeSelect.addEventListener("change", calculateTotal);
-        seatInput.addEventListener("input", calculateTotal);
-        additionalExpensesCheckbox.addEventListener("change", calculateTotal);
-
-        calculateTotal();
-    });
-</script>
-
-
+{{-- circular-endowment-pg --}}
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const degreeSelect = document.getElementById("pgDegree");
-        const seatInput = document.getElementById("pgQuantity");
-        const additionalExpensesCheckbox = document.getElementById("pgAdditionalExpenses");
-        const totalAmountInput = document.getElementById("pgTotalAmount");
+    document.addEventListener('DOMContentLoaded', function() {
+        const degreeSelect = document.getElementById('circular_pgDegree');
+        const degreeNameInput = document.getElementById('circular_pgDegreeName');
+        const noOfSeatInput = document.getElementById('circular_pgNoOfSeat');
+        const totalAmountInput = document.getElementById('circular_pgTotalAmount');
 
-        function calculateTotal() {
-            let degreeFee = parseFloat(degreeSelect.value) || 0;
-            let numberOfSeats = parseInt(seatInput.value) || 1;
-            let additionalExpenses = additionalExpensesCheckbox.checked ? parseFloat(additionalExpensesCheckbox.value) : 0;
-
-            let totalAmount = (degreeFee * numberOfSeats) + additionalExpenses;
-            totalAmountInput.value = totalAmount.toLocaleString('en-PK', { style: 'currency', currency: 'PKR' });
+        function calculateTotalAmount() {
+            const selectedOption = degreeSelect.options[degreeSelect.selectedIndex];
+            const degreeFee = parseFloat(selectedOption.value) || 0;
+            const noOfSeats = parseInt(noOfSeatInput.value) || 1;
+            const additionalExpenses = document.getElementById('circular_pgAdditionalExpenses').checked ? 275000 : 0;
+            const totalAmount = (degreeFee * noOfSeats) + additionalExpenses;
+            totalAmountInput.value = totalAmount.toFixed(2) + ' PKR';
         }
 
-        degreeSelect.addEventListener("change", calculateTotal);
-        seatInput.addEventListener("input", calculateTotal);
-        additionalExpensesCheckbox.addEventListener("change", calculateTotal);
+        degreeSelect.addEventListener('change', function() {
+            const selectedOption = degreeSelect.options[degreeSelect.selectedIndex];
+            const degreeName = selectedOption.dataset.degreeName || '';
+            degreeNameInput.value = degreeName;
+            calculateTotalAmount();
+        });
 
-        calculateTotal();
-    });
-</script>
+        noOfSeatInput.addEventListener('input', calculateTotalAmount);
+        document.getElementById('circular_pgAdditionalExpenses').addEventListener('change', calculateTotalAmount);
 
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const degreeSelect = document.getElementById("circularPgDegree");
-        const seatInput = document.getElementById("circularPgQuantity");
-        const additionalExpensesCheckbox = document.getElementById("circularPgAdditionalExpenses");
-        const totalAmountInput = document.getElementById("circularPgTotalAmount");
-
-        function calculateTotal() {
-            let degreeFee = parseFloat(degreeSelect.value) || 0;
-            let numberOfSeats = parseInt(seatInput.value) || 1;
-            let additionalExpenses = additionalExpensesCheckbox.checked ? parseFloat(additionalExpensesCheckbox.value) : 0;
-
-            let totalAmount = (degreeFee * numberOfSeats) + additionalExpenses;
-            totalAmountInput.value = totalAmount.toLocaleString('en-PK', { style: 'currency', currency: 'PKR' });
-        }
-
-        degreeSelect.addEventListener("change", calculateTotal);
-        seatInput.addEventListener("input", calculateTotal);
-        additionalExpensesCheckbox.addEventListener("change", calculateTotal);
-
-        calculateTotal();
+        calculateTotalAmount(); // Calculate total amount on initial load
     });
 </script>
 

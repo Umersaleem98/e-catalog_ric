@@ -3,6 +3,9 @@
 <head>
     @include('template.head')
     <style>
+        body{
+            background: #FFFFFF;
+        }
         #preloader {
             position: fixed;
             top: 0;
@@ -48,7 +51,7 @@
         }
     </style>
 </head>
-<body>
+<body style="background-color: #FFFFFF;">
     <div id="preloader">
         <div class="loader">
             <img src="{{ asset('templates/videos/preloader.gif') }}" alt="" class="img-fluid blinking-animation">
@@ -60,18 +63,13 @@
         @include('template.navbar')
         @include('template.slider')
         @include('template.statistics')
+        @include('template.note_of_gratitude')
         <!-- Home -->
 
         <!-- Popular -->
         @include('template.stories')
 
-        <!-- Register -->
-        {{-- @include('template.register') --}}
 
-        <!-- Services -->
-        {{-- @include('template.services') --}}
-
-        <!-- Testimonials -->
         @include('template.testimonial')
 
         <!-- Events -->
