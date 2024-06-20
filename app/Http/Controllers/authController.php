@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Message;
 use App\Models\Student;
 use Illuminate\Http\Request;
 
@@ -128,5 +129,9 @@ class authController extends Controller
         return redirect()->back()->with('success', 'Student updated successfully');
     }
 
-
+    public function messages()
+    {
+        $message = Message::orderBy('created_at', 'desc')->paginate(3);
+        return view('layouts.contact_us.contactus', compact('message'));
+    }
 }

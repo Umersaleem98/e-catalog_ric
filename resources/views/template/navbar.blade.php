@@ -19,7 +19,7 @@
 
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-\ w-100  ">
+<nav class="navbar navbar-expand-lg navbar-light bg-light w-100  ">
     <!-- Left-side logos -->
     <a class="navbar-brand ml-3" href="{{ url('/') }}">
         <img src="{{ asset('templates/logo/logo.png') }}" alt="Left Logo" class="navbar-logo ml-4">

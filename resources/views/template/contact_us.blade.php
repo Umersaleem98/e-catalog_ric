@@ -45,7 +45,8 @@
         <div class="container mt-3">
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <form action="submit_contact_form.php" method="POST">
+                    <form action="{{url('contactus')}}" method="POST">
+                        @csrf
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" class="form-control" id="name" name="name" required>

@@ -50,6 +50,13 @@
                     <li><a href="{{url('fundaproject')}}">Fund a Project</a></li>
                 </ul>
             </li>
+
+            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                        class="icon icon-world-2"></i><span class="nav-text">Contact us Messages</span></a>
+                <ul aria-expanded="false">
+                    <li><a href="{{url('contact_us_message')}}">messages</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 

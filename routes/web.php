@@ -22,6 +22,8 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/r_m_o', [HomeController::class, 'r_m_o_page']);
 Route::get('/about_us', [HomeController::class, 'about_us']);
 Route::get('/contact_us', [HomeController::class, 'contact_us']);
+Route::post('/contactus', [HomeController::class, 'message']);
+
 Route::get('/meet_out_team/{id}', [TeamController::class, 'meet_team']);
 Route::get('/students', [StudentController::class, 'index']);
 
@@ -80,6 +82,7 @@ Route::get('/signrature_program', [SignatureStoryController::class, 'signrature_
 
 // Dashboard Screens Routes
 Route::get('/dashboard', [authController::class, 'index']);
+Route::get('/contact_us_message', [authController::class, 'messages']);
 
 // Team routes
 Route::get('/add_team', [TeamController::class, 'index']);
@@ -97,6 +100,7 @@ Route::get('zakat_support', [DashboardEndowmentController::class, 'zakat_support
 
 Route::get('suport_scholor_payment', [DashboardEndowmentController::class, 'scholor_payment']);
 Route::get('suport_scholor_pledge', [DashboardEndowmentController::class, 'scholor_pledge']);
+Route::get('fundaproject', [DashboardEndowmentController::class, 'fund_project']);
 Route::get('fundaproject', [DashboardEndowmentController::class, 'fund_project']);
 
 

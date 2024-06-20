@@ -3,7 +3,17 @@
 
 <head>
     @include('layouts.css')
+    <style>
+        /* Custom CSS for smaller pagination */
+        .pagination {
+            justify-content: center; /* Center the pagination */
+        }
 
+        .pagination .page-item .page-link {
+            padding: 0.25rem 0.5rem; /* Adjust the padding to make pagination smaller */
+            font-size: 0.875rem; /* Adjust the font size to make pagination smaller */
+        }
+    </style>
 </head>
 
 <body>
@@ -61,17 +71,14 @@
         ***********************************-->
        @include('layouts.sidebar')
 
-
-
        <div class="content-body">
         <!-- row -->
         <div class="container-fluid">
             <div class="row">
-
+                <!-- Add any content here -->
             </div>
 
             <div class="row">
-
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
@@ -105,31 +112,29 @@
                                             <td>{{$item->donor_email}}</td>
                                             <td>{{$item->phone}}</td>
                                             <td>{{$item->payments_status}}</td>
-
                                         </tr>
                                         @endforeach
                                     </tbody>
-
                                 </table>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-center">
+                                {{ $oneyeareduction->links() }} <!-- Centered and smaller pagination links -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
-
-
-       @include('layouts.footer')
-
-
+    @include('layouts.footer')
 
     </div>
 
     <!-- Required vendors -->
-   @include('layouts.script')
+    @include('layouts.script')
 
 </body>
 

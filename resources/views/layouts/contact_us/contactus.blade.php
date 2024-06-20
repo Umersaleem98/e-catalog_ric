@@ -83,39 +83,26 @@
                                     <thead>
                                         <tr>
                                             <th>Id</th>
-                                            <th>Program</th>
-                                            <th>Degree</th>
-                                            <th>Seats</th>
-                                            <th>Total Amount</th>
-                                            <th>Donor Name</th>
-                                            <th>Donor Email</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
                                             <th>Phone</th>
-                                            <th>Status</th>
+                                            <th>Messages</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($entiredegree as $item)
+                                        @foreach ($message as $item)
                                         <tr>
                                             <td>{{$item->id}}</td>
-                                            <td>{{$item->program}}</td>
-                                            <td>{{$item->degree}}</td>
-                                            <td>{{$item->seats}}</td>
-                                            <td>{{$item->totalAmount}}</td>
-                                            <td>{{$item->donor_name}}</td>
-                                            <td>{{$item->donor_email}}</td>
+                                            <td>{{$item->name}}</td>
+                                            <td>{{$item->email}}</td>
                                             <td>{{$item->phone}}</td>
-                                            <td>{{$item->payments_status}}</td>
-
+                                            <td>{{$item->message}}</td>
                                         </tr>
                                         @endforeach
                                     </tbody>
 
                                 </table>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <div class="d-flex justify-content-center">
-                                {{ $entiredegree->links() }} <!-- Centered and smaller pagination links -->
                             </div>
                         </div>
                     </div>
