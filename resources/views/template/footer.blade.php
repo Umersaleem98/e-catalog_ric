@@ -13,13 +13,13 @@
                     <div class="logo_container">
                         <div class="logo">
                             <!-- Use asset function for the image URL -->
-                            <img src="{{ asset('templates/images/logo.png') }}" alt="" class="img-fluid" style="max-width: 80px;">
+                            <img src="{{ asset('templates/images/logo.png') }}" alt="" class="img-fluid ml-5" style="max-width: 80px;">
                             {{-- <span>course</span> --}}
                         </div>
                     </div>
 
 
-                    <p class="footer_about_text text-light">Transformative Education OR Creating Impact for a Better Tomorrow OR Empower Minds, Shape Futures.</p>
+                    <p class="footer_about_text text-light">Inspiring Minds, Crafting Futures</p>
 
                 </div>
 

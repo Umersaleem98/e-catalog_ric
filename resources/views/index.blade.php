@@ -61,9 +61,9 @@
     <div id="content" class="super_container">
         <!-- Header -->
         @include('template.navbar')
-        @include('template.slider')
+        @include('template.slider2')
         @include('template.statistics')
-        @include('template.note_of_gratitude')
+        @include('template.note_of_gratitude2')
         <!-- Home -->
 
         <!-- Popular -->

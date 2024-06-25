@@ -91,7 +91,7 @@
                                     <i class="fas fa-chair text-light"></i> <!-- Font Awesome icon for seat/chair -->
                                 </div>
                                 <div>
-                                    <h2 class="card-title text-warning">Endowment: GIft a Perpetual Generosity</h2>
+                                    <h2 class="card-title text-warning">Endowment: Gift a Perpetual Generosity</h2>
                                     <p class="card-text text-light">Ensure your gift lasts forever—one scholar graduates, and another takes their place, perpetuating the cycle of opportunity.</p>
                                 </div>
                             </a>
@@ -116,7 +116,6 @@
                 </div>
                 <!-- Repeat the structure for other cards -->
             </div>
-
         </div>
     </div>
 

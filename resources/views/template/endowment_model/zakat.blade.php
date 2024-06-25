@@ -16,6 +16,11 @@
     border-radius: 5px; /* Rounded corners */
 }
 
+.btn-large {
+        padding: 15px 30px;
+        font-size: 1.25rem;
+    }
+
     </style>
 </head>
 <body>
@@ -61,22 +66,25 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-4 bg-info">
-                                        <h3 class="text-light p-4">Zero Operational Overheads</h3>
+                                        <h3 class="text-light p-2">Zero Operational Overheads</h3>
                                     </div>
                                     <div class="col-md-4 bg-primary">
-                                        <h3 class="text-light p-4">Impact Oriented Giving</h3>
+                                        <h3 class="text-light p-2">Impact Oriented Giving</h3>
                                     </div>
                                     <div class="col-md-4 bg-success">
-                                        <h3 class="text-light p-4">Shariah Compliant</h3>
+                                        <h3 class="text-light p-2">Shariah Compliant</h3>
                                     </div>
                                 </div>
                             </div>
                             <ul class="list-group list-group-flush text-dark">
                                 <!-- Use Bootstrap utility classes to center the buttons and add a gap -->
+
+
                                 <li class="btn-container d-flex justify-content-center gap-2 py-2">
                                     {{-- <a href="{{url('zakat_Make_a_Pledge')}}" class="btn btn-success">Make a Pledge</a> --}}
-                                    <a href="{{url('zakat_payment')}}" class="btn btn-primary">Pay Now</a>
+                                    <a href="{{url('zakat_payment')}}" class="btn btn-primary btn-large">Pay Now</a>
                                 </li>
+
                             </ul>
                         </div>
 

@@ -33,7 +33,7 @@
         </div>
 
         <!-- Section 1 -->
-        <div class="row mb-4 align-items-center">
+        <div class="row align-items-center">
             <div class="col-md-5">
                 <img src="{{ asset('templates/signature_program/abc.jpg') }}" alt="Image 1" style="border-radius: 5%; height:240px; width: 100%">
             </div>
@@ -45,7 +45,7 @@
         </div>
 
         <!-- Section 2 -->
-        <div class="row mb-4 align-items-center">
+        <div class="row mt-5 align-items-center">
             <div class="col-md-5 order-md-2">
                 <img src="{{ asset('templates/rmo/haami.jpg') }}" alt="Image 1" style="border-radius: 5%; height:240px">
             </div>
@@ -54,7 +54,7 @@
                 <p>Launched in April 2024, the Haami Club is NUST's groundbreaking student-led fundraising initiative. With a rapidly growing membership of over 150 dedicated students, this trailblazing club aims to foster a more empathetic generation by deeply instilling the values of philanthropy and mutual aid. Our exceptional team of 'Haamis' has already showcased their unwavering commitment by raising an impressive PKR 300,000 through our impactful zakat drive, Al-Musaid. This initiative aligns with NUST's greater goal of producing a generation equipped with leadership skills, ready to lead with compassion and integrity. Join us in empowering these bright minds to make a lasting difference and shape a more compassionate future.</p>
             </div>
         </div>
-        <div class="row mb-5 align-items-center">
+        <div class="row mt-5 align-items-center">
             <div class="col-md-6">
                 <img src="{{ asset('templates/rmo/Alumni.jpg') }}" alt="Image 1" style="border-radius: 5%; height:240px">
             </div>
@@ -66,7 +66,7 @@
         </div>
 
         <!-- Section 2 -->
-        <div class="row mb-4 align-items-center">
+        <div class="row mt-5 align-items-center">
             <div class="col-md-5 order-md-2">
                 <img src="{{ asset('templates/rmo/musaid.jpg') }}" alt="Image 1" style="border-radius: 5%; height:240px">
             </div>
