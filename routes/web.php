@@ -6,14 +6,15 @@ use App\Http\Controllers\authController;
 use App\Http\Controllers\FundController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\HostelController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\EndowmentController;
 use App\Http\Controllers\CredentialController;
-use App\Http\Controllers\DashboardEndowmentController;
 use App\Http\Controllers\FundAProjectController;
 use App\Http\Controllers\SignatureStoryController;
+use App\Http\Controllers\DashboardEndowmentController;
 use App\Http\Controllers\SupportScholarPaymentController;
 use App\Http\Controllers\SupportADegreeForOneYearController;
 
@@ -107,10 +108,16 @@ Route::get('fundaproject', [DashboardEndowmentController::class, 'fund_project']
 
 Route::get('login', [CredentialController::class, 'index']);
 Route::post('login', [CredentialController::class, 'login']);
-Route::post('logout', [CredentialController::class, 'logout'])->name('logout');
-
-
-
+Route::get('logout', [CredentialController::class, 'logout']);
 
 
 Route::get('dashboard2', [authController::class, 'index2']);
+
+// User Routes
+Route::get('user_list', [UserController::class, 'index']);
+Route::get('create', [UserController::class, 'create']);
+Route::post('store_user', [UserController::class, 'store']);
+
+Route::get('edit/{id}', [UserController::class, 'edit']);
+Route::post('update/{id}', [UserController::class, 'update']);
+Route::get('delete/{id}', [UserController::class, 'delete']);

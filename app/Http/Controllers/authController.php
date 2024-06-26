@@ -5,16 +5,41 @@ namespace App\Http\Controllers;
 use App\Models\Message;
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class authController extends Controller
 {
-    public function index()
-    {
-        return view('dashboard');
-    }
+
     public function index2()
-    {
-        return view('dashboard2');
+    { $user = Auth::user();
+        $maleStudents = Student::where('gender', 'male')->get();
+        $femaleStudents = Student::where('gender', 'female')->get();
+
+        $disciplines = [
+            'Engineering & IT',
+            'Natural Sciences',
+            'Social Sciences',
+            'Bio Sciences',
+            'Management Sciences',
+            'Business Studies',
+            'Biotechnology',
+            'CE',
+            'Bachelor of Business Administration',
+            'MS in Clinical Psychology',
+            'Architecture',
+            'Chemical Engineering',
+            'Bachelor of Science in Mass Communication'
+        ];
+
+        $studentCounts = [];
+
+        foreach ($disciplines as $discipline) {
+            $count = Student::where('discipline', $discipline)->count();
+            $studentCounts[] = $count;
+        }
+
+        // return view('dashboard2', compact('user'));
+        return view('dashboard2', compact('maleStudents', 'femaleStudents', 'user', 'studentCounts','disciplines'));
     }
 
 

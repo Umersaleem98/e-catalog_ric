@@ -1,197 +1,144 @@
 <div class="content-wrapper">
     <div class="content">
-            <!-- Top Statistics -->
+        <div class="container-fluid">
             <div class="row">
-              <div class="col-xl-3 col-sm-6">
-                <div class="card card-default card-mini">
-                  <div class="card-header">
-                    <h2>$18,699</h2>
-                    <div class="dropdown">
-                      <a class="dropdown-toggle icon-burger-mini" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      </a>
+                <div class="col-md-12">
+                    <div class="row">
 
-                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </div>
-                    <div class="sub-title">
-                      <span class="mr-1">Sales of this year</span> |
-                      <span class="mx-1">45%</span>
-                      <i class="mdi mdi-arrow-up-bold text-success"></i>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="chart-wrapper">
-                      <div>
-                        <div id="spline-area-1"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-sm-6">
-                <div class="card card-default card-mini">
-                  <div class="card-header">
-                    <h2>$14,500</h2>
-                    <div class="dropdown">
-                      <a class="dropdown-toggle icon-burger-mini" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      </a>
-
-                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </div>
-                    <div class="sub-title">
-                      <span class="mr-1">Expense of this year</span> |
-                      <span class="mx-1">50%</span>
-                      <i class="mdi mdi-arrow-down-bold text-danger"></i>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="chart-wrapper">
-                      <div>
-                        <div id="spline-area-2"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-sm-6">
-                <div class="card card-default card-mini">
-                  <div class="card-header">
-                    <h2>$4199</h2>
-                    <div class="dropdown">
-                      <a class="dropdown-toggle icon-burger-mini" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      </a>
-
-                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </div>
-                    <div class="sub-title">
-                      <span class="mr-1">Profit of this year</span> |
-                      <span class="mx-1">20%</span>
-                      <i class="mdi mdi-arrow-down-bold text-danger"></i>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="chart-wrapper">
-                      <div>
-                        <div id="spline-area-3"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-sm-6">
-                <div class="card card-default card-mini">
-                  <div class="card-header">
-                    <h2>$20,199</h2>
-                    <div class="dropdown">
-                      <a class="dropdown-toggle icon-burger-mini" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      </a>
-
-                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </div>
-                    <div class="sub-title">
-                      <span class="mr-1">Revenue of this year</span> |
-                      <span class="mx-1">35%</span>
-                      <i class="mdi mdi-arrow-up-bold text-success"></i>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="chart-wrapper">
-                      <div>
-                        <div id="spline-area-4"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          <!-- Table Product -->
-          <div class="row">
-            <div class="col-12">
-              <div class="card card-default">
-                <div class="card-header">
-                  <h2>Products Inventory</h2>
-                  <div class="dropdown">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                      aria-expanded="false"> Yearly Chart
-                    </a>
-
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <table id="productsTable" class="table table-hover table-product" style="width:100%">
-                    <thead>
-                      <tr>
-                        <th></th>
-                        <th>Product Name</th>
-                        <th>ID</th>
-                        <th>Qty</th>
-                        <th>Variants</th>
-                        <th>Committed</th>
-                        <th>Daily Sale</th>
-                        <th>Sold</th>
-                        <th>In Stock</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-
-                      <tr>
-                        <td class="py-0">
-                          <img src="admin2/images/products/products-xs-01.jpg" alt="Product Image">
-                        </td>
-                        <td>Coach Swagger</td>
-                        <td>24541</td>
-                        <td>27</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>
-                          <div id="tbl-chart-01"></div>
-                        </td>
-                        <td>4</td>
-                        <td>18</td>
-                        <td>
-                          <div class="dropdown">
-                            <a class="dropdown-toggle icon-burger-mini" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="false">
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item" href="#">Action</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Male Students</h5>
+                                    <p class="card-text">Total: {{ $maleStudents->count() }}</p>
+                                    <!-- You can add more details or statistics here -->
+                                </div>
                             </div>
-                          </div>
-                        </td>
-                      </tr>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Female Students</h5>
+                                    <p class="card-text">Total: {{ $femaleStudents->count() }}</p>
+                                    <!-- You can add more details or statistics here -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Student Gender Distribution (Pie Chart)</h5>
+                                    <canvas id="genderPieChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
 
 
-                    </tbody>
-                  </table>
-
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
 
-  </div>
+            <div class="row mb-3">
+                    <div class="col-md-8">
+                        <!-- Bar Chart Section -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Students by Discipline (Bar Chart)</h5>
+                                <canvas id="disciplineBarChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var ctx = document.getElementById('genderPieChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Male', 'Female'],
+                datasets: [{
+                    label: 'Number of Students',
+                    data: [{{ $maleStudents->count() }}, {{ $femaleStudents->count() }}],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 99, 132, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(0);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var ctx = document.getElementById('disciplineBarChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: {!! json_encode($disciplines) !!},
+                datasets: [{
+                    label: 'Number of Students',
+                    data: {!! json_encode($studentCounts) !!},
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Students'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Discipline'
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(0);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>

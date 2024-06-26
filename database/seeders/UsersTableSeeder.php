@@ -16,13 +16,39 @@ class UsersTableSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
-            'name' => 'Admin User',
-            'email' => 'admin@example.com',
-            'email_verified_at' => now(),
-            'password' => Hash::make('password'), // Password should be hashed
-            'remember_token' => Str::random(10),
-            'created_at' => now(),
-            'updated_at' => now(),
+            [
+                'name' => 'Admin User',
+                'email' => 'admin@example.com',
+                'password' => Hash::make('password'),
+                'images' => 'abc.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'John Doe',
+                'email' => 'john@example.com',
+                'password' => Hash::make('password'),
+                'images' => 'abc.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'admin',
+                'email' => 'admin@gmail.com',
+                'password' => Hash::make('password'),
+                'images' => 'abc.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'user',
+                'email' => 'user@gmail.com',
+                'password' => Hash::make('password'),
+                'images' => 'abc.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+
         ]);
     }
 }

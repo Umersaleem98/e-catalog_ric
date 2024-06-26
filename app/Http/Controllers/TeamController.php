@@ -17,7 +17,7 @@ class TeamController extends Controller
     }
     public function index()
     {
-        return view('admin.team.index');
+        return view('layouts.team.index');
     }
 
 

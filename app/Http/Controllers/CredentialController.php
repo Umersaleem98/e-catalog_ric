@@ -11,7 +11,7 @@ class CredentialController extends Controller
 {
     public function index()
     {
-        return view('layouts.auth.login');
+        return view('admin.auth.login');
     }
 
     public function login(Request $request)
@@ -33,7 +33,7 @@ class CredentialController extends Controller
 
         if (Auth::attempt($credentials, $request->filled('remember'))) {
             // Authentication passed, redirect to intended route or home
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/dashboard2');
         }
 
         // Authentication failed, redirect back with input
@@ -48,6 +48,6 @@ class CredentialController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/login');
     }
 }
