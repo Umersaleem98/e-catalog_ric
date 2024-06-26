@@ -20,7 +20,12 @@
         padding: 15px 30px;
         font-size: 1.25rem;
     }
-
+    .modal-body img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%; /* Ensures the image takes up 100% of the modal's width */
+        }
     </style>
 </head>
 <body>
@@ -72,7 +77,10 @@
                                         <h3 class="text-light p-2">Impact Oriented Giving</h3>
                                     </div>
                                     <div class="col-md-4 bg-success">
-                                        <h3 class="text-light p-2">Shariah Compliant</h3>
+                                        {{-- <h3 class="text-light p-2">Shariah Compliant</h3> --}}
+                                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" style="width: 100%">
+                                            Shariah Compliant
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -95,6 +103,33 @@
             <!-- End of Undergraduate Students Section -->
         </div>
     </div>
+
+
+    <div class="container mt-5">
+
+        <!-- The Modal -->
+
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Shariah Approval Document</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal Body -->
+                        <div class="modal-body">
+                            <img src="{{ asset('templates/zakat_certificate/zakat_certificate.png') }}" alt="Shariah Approval Document" class="img-fluid">
+                        </div>
+                        <!-- Modal Footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     <!-- Footer -->
     @include('template.footer')

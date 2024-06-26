@@ -22,7 +22,7 @@
   font-size: 1.5rem; /* Increased font size */
   line-height: 2rem; /* Increased line height for better readability */
   color: rgb(75 85 99);
-  font-weight: 700;
+  font-weight: 900;
   font-family: Helvetica, sans-serif;
 }
 

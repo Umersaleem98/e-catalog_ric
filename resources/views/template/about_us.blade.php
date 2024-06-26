@@ -72,10 +72,10 @@
                     <div class="content-container">
                         <h2 class="text-center">Our Journey</h2>
                         <p>
-                            Established in 2015, the NUST Office of University Advancement operates as the outreach arm of the institution, collaborating closely with alumni, government officials, community leaders, donors, and the corporate sector. Its broad spectrum of responsibilities encompasses community engagement, development, donor stewardship, and both national and international engagements, aiming to bridge the gap between industry and academia.
+                            Established in 2015, the NUST Office of University Advancement connects with alumni, government officials, community leaders, donors, and the corporate sector. Its key responsibilities include community engagement, donor stewardship, and national and international collaborations to bridge industry and academia.
                             <br>
                             <br>
-                            While striving to establish NUST as a premier Science and Technology institution, the Advancement Office's primary focus is fundraising for financially challenged students and functioning as a resource mobilization unit. This sustainable collaboration, plays a crucial role in facilitating students to pursue their goals without financial constraints, contributing towards building the nation through transformative education. To date, 7000 + scholarship recipients have benefited from this initiative, and the office has set free 232 seats in the form of an endowment, thanks to the robust support from individual and corporate partners.
+                            Focused on establishing NUST as a leading science and technology institution, the office primarily fundraises for financially challenged students. This initiative has supported over 7,000 scholarship recipients and endowed 232 seats, thanks to strong individual and corporate partnerships, enabling students to achieve their goals without financial barriers.
                         </p>
                     </div>
                 </div>
@@ -114,67 +114,6 @@
 <!------ Include the above in your HEAD tag ---------->
 <!-- Team -->
 
-<section class="container">
-    <div class="row">
-        <div class="col-12 col-md-12">
-            <img src="{{ asset('templates/images/animation.gif') }}" class="img-fluid" alt="Responsive Image" style="min-height:400px; width:100%; margin-top:-6%">
-        </div>
-        {{-- <div class="col-12 col-md-6">
-            <h2>Section Title</h2>
-            <p>This is a description text that accompanies the image. It is placed beside the image on larger screens and below the image on smaller screens.</p>
-        </div> --}}
-    </div>
-</section>
-
-
-{{-- <div class="row mt-5">
-    <div class="col">
-        <div class="section_title text-center">
-            <h1 class="">Accomplishments</h1>
-        </div>
-    </div>
-</div>
-
-<section class="container my-5">
-    <div class="row">
-        <div class="col-12 col-md-6 col-lg-3 mb-4">
-            <div class="card">
-                <img src="path_to_image_1.jpg" class="card-img-top" alt="Accomplishment 1">
-                <div class="card-body">
-                    <h5 class="card-title">Accomplishment 1</h5>
-                    <p class="card-text">Description of accomplishment 1.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 mb-4">
-            <div class="card">
-                <img src="path_to_image_2.jpg" class="card-img-top" alt="Accomplishment 2">
-                <div class="card-body">
-                    <h5 class="card-title">Accomplishment 2</h5>
-                    <p class="card-text">Description of accomplishment 2.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 mb-4">
-            <div class="card">
-                <img src="path_to_image_3.jpg" class="card-img-top" alt="Accomplishment 3">
-                <div class="card-body">
-                    <h5 class="card-title">Accomplishment 3</h5>
-                    <p class="card-text">Description of accomplishment 3.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 mb-4">
-            <div class="card">
-                <img src="path_to_image_4.jpg" class="card-img-top" alt="Accomplishment 4">
-                <div class="card-body">
-                    <h5 class="card-title">Accomplishment 4</h5>
-                    <p class="card-text">Description of accomplishment 4.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
 
 </div>
 

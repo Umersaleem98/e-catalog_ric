@@ -12,6 +12,10 @@ class authController extends Controller
     {
         return view('dashboard');
     }
+    public function index2()
+    {
+        return view('dashboard2');
+    }
 
 
     public function view_data(Request $request)
@@ -35,7 +39,7 @@ class authController extends Controller
                   ->orWhere('monthly_income', 'like', '%' . $searchQuery . '%');
         })->get();
 
-        return view('layouts.screens.students_list', compact('students', 'searchQuery'));
+        return view('admin.screens.students_list', compact('students', 'searchQuery'));
     }
 
     public function store(Request $request)
@@ -65,7 +69,7 @@ class authController extends Controller
     public function edit($id)
     {
         $students = Student::find($id);
-        return view('layouts.screens.update_students', compact('students'));
+        return view('admin.screens.update_students', compact('students'));
     }
 
 
@@ -132,6 +136,6 @@ class authController extends Controller
     public function messages()
     {
         $message = Message::orderBy('created_at', 'desc')->paginate(3);
-        return view('layouts.contact_us.contactus', compact('message'));
+        return view('admin.contact_us.contactus', compact('message'));
     }
 }

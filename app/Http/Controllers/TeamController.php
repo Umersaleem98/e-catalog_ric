@@ -17,7 +17,7 @@ class TeamController extends Controller
     }
     public function index()
     {
-        return view('layouts.team.index');
+        return view('admin.team.index');
     }
 
 
@@ -26,7 +26,7 @@ class TeamController extends Controller
     public function show()
     {
         $teams = Team::all();
-        return view('layouts.team.team_list', compact('teams'));
+        return view('admin.team.team_list', compact('teams'));
     }
 
     public function store(Request $request)
@@ -64,7 +64,7 @@ public function edit($id)
 {
 
     $teams = Team::find($id);
-    return view('layouts.team.edit', compact('teams'));
+    return view('admin.team.edit', compact('teams'));
 }
 
 public function update(Request $request, $id)

@@ -21,11 +21,11 @@
             <!-- Additional slides -->
 
             <div class="hero_slide">
-                <div class="hero_slide_background" style="background-image: url('{{ asset('templates/slider/a.jpg') }}')"></div>
+                <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/def.jpg') }}')"></div>
                 {{-- <div class="hero_slide_background" style="background-image: url('images/def.jpg'); height: 100vh; background-size: cover; background-position: center;"></div> --}}
                 <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                     <div class="hero_slide_content text-center mt-5">
-                        <h1 class="display-4 font-weight-bold text-warning" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Empower Minds, Shape Futures</h1>
+                        <h1 class="display-4 font-weight-bold text-warning" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="font-family: Serif;">The support you lend today will remodel their tomorrow</h1>
                         <div class="hero_slide_buttons mt-3">
                             <a href="{{url('endowment_model')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Giving Avenues</a>
                             <a href="{{url('student_stories')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Awardee Profile</a>
@@ -36,11 +36,11 @@
             </div>
             <!-- More slides can be added here in the same format -->
             <div class="hero_slide">
-                <div class="hero_slide_background" style="background-image: url('{{ asset('templates/slider/b.jpg') }}')"></div>
+                <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/ghi.jpg') }}')"></div>
                 {{-- <div class="hero_slide_background" style="background-image: url('images/new_image1.jpg'); height: 100vh; background-size: cover; background-position: center;"></div> --}}
                 <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                     <div class="hero_slide_content text-center mt-5">
-                        <h1 class="display-4 font-weight-bold text-warning" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Innovative Solutions</h1>
+                        <h1 class="display-4 font-weight-bold text-warning" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="font-family: Serif;">Your gift will be passed down to generations</h1>
                         <div class="hero_slide_buttons mt-3">
                             <a href="{{url('endowment_model')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Giving Avenues</a>
                             <a href="{{url('student_stories')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Awardee Profile</a>
@@ -51,10 +51,10 @@
             </div>
             <div class="hero_slide">
                 {{-- <div class="hero_slide_background" style="background-image: url('images/new_image2.jpg'); height: 100vh; background-size: cover; background-position: center;"></div> --}}
-                <div class="hero_slide_background" style="background-image: url('{{ asset('templates/slider/c.jpg') }}')"></div>
+                <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/mno.jpg') }}')"></div>
                 <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                     <div class="hero_slide_content text-center mt-5">
-                        <h1 class="display-4 font-weight-bold text-warning" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Sustainable Development</h1>
+                        <h1 class="display-4 font-weight-bold text-warning" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="font-family: Serif;">Build a legacy of lasting change</h1>
                         <div class="hero_slide_buttons mt-3">
                             <a href="{{url('endowment_model')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Giving Avenues</a>
                             <a href="{{url('student_stories')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Awardee Profile</a>

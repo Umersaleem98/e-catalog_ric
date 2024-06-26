@@ -61,7 +61,7 @@
     <div id="content" class="super_container">
         <!-- Header -->
         @include('template.navbar')
-        @include('template.slider2')
+        @include('template.slider')
         @include('template.statistics')
         @include('template.note_of_gratitude2')
         <!-- Home -->

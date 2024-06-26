@@ -108,3 +108,9 @@ Route::get('fundaproject', [DashboardEndowmentController::class, 'fund_project']
 Route::get('login', [CredentialController::class, 'index']);
 Route::post('login', [CredentialController::class, 'login']);
 Route::post('logout', [CredentialController::class, 'logout'])->name('logout');
+
+
+
+
+
+Route::get('dashboard2', [authController::class, 'index2']);
