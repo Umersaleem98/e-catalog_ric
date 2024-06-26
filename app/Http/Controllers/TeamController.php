@@ -20,9 +20,6 @@ class TeamController extends Controller
         return view('layouts.team.index');
     }
 
-
-
-
     public function show()
     {
         $teams = Team::all();

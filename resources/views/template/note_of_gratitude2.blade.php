@@ -23,7 +23,8 @@
   line-height: 2rem; /* Increased line height for better readability */
   color: rgb(75 85 99);
   font-weight: 900;
-  font-family: Helvetica, sans-serif;
+  /* font-family: Helvetica, sans-serif, ; */
+  font-family: Mongolian Baliti  ;
 }
 
 .description a {
@@ -102,6 +103,7 @@
   background-repeat: no-repeat;
   position: relative;
   opacity: 1;
+  /* filter:  */
   padding: 2rem; /* Adding some padding */
 }
 

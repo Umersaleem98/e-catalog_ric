@@ -89,7 +89,7 @@ Route::get('/contact_us_message', [authController::class, 'messages']);
 Route::get('/add_team', [TeamController::class, 'index']);
 Route::post('/add_team_member', [TeamController::class, 'store']);
 Route::get('/team_list', [TeamController::class, 'show']);
-Route::get('/edit/{id}', [TeamController::class, 'edit']);
+Route::get('/team_edit/{id}', [TeamController::class, 'edit']);
 Route::post('/update/{id}', [TeamController::class, 'update']);
 Route::get('/delete/{id}', [TeamController::class, 'delete']);
 

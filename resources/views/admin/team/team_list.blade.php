@@ -70,7 +70,7 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <a href="{{ url('edit', $item->id) }}" class="btn btn-primary">Edit</a>
+                                            <a href="{{ url('team_edit', $item->id) }}" class="btn btn-primary">Edit</a>
                                         </td>
                                         <td>
                                             <a href="{{ url('delete', $item->id) }}" class="btn btn-danger">Delete</a>

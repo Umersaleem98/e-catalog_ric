@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Team Update</title>
 <html lang="en" dir="ltr">
   <head>
 
@@ -40,7 +41,7 @@
                     @endif
                       <div class="card card-default">
                         <div class="card-header">
-                          <h2>Students</h2>
+                          <h2>Team Update</h2>
 
                         </div>
                         <div class="card-body">
