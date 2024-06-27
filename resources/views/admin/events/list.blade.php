@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-
+<title>Event List</title>
 
  @include('admin.head')
 
@@ -49,7 +49,6 @@
                                     <th>Id</th>
                                     <th>Event Title</th>
                                     <th>Subtitle</th>
-                                    {{-- <th>Designation</th> --}}
                                     <th>Date</th>
                                     <th>Image</th>
                                     <th>Edit</th>

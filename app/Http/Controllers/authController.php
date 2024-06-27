@@ -11,36 +11,34 @@ class authController extends Controller
 {
 
     public function index2()
-    { $user = Auth::user();
-        $maleStudents = Student::where('gender', 'male')->get();
-        $femaleStudents = Student::where('gender', 'female')->get();
+{
+    $user = Auth::user();
 
-        $disciplines = [
-            'Engineering & IT',
-            'Natural Sciences',
-            'Social Sciences',
-            'Bio Sciences',
-            'Management Sciences',
-            'Business Studies',
-            'Biotechnology',
-            'CE',
-            'Bachelor of Business Administration',
-            'MS in Clinical Psychology',
-            'Architecture',
-            'Chemical Engineering',
-            'Bachelor of Science in Mass Communication'
-        ];
+    // Define the disciplines
+    $disciplines = [
+        'Engineering & IT',
+        'Natural Sciences',
+        'Social Sciences',
+        'Bio Sciences',
+        'Management Sciences',
+        'Business Studies',
+        'Biotechnology',
+        'CE',
+        'Bachelor of Business Administration',
+        'MS in Clinical Psychology',
+        'Architecture',
+        'Chemical Engineering',
+        'Bachelor of Science in Mass Communication',
+    ];
 
-        $studentCounts = [];
-
-        foreach ($disciplines as $discipline) {
-            $count = Student::where('discipline', $discipline)->count();
-            $studentCounts[] = $count;
-        }
-
-        // return view('dashboard2', compact('user'));
-        return view('dashboard2', compact('maleStudents', 'femaleStudents', 'user', 'studentCounts','disciplines'));
+    // Fetch the count of students in each discipline
+    $disciplineCounts = [];
+    foreach ($disciplines as $discipline) {
+        $disciplineCounts[$discipline] = Student::where('discipline', $discipline)->count();
     }
+
+    return view('dashboard2', compact('user', 'disciplineCounts'));
+}
 
 
     public function view_data(Request $request)

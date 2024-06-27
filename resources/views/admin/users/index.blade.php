@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <title>Users List</title>
 
 
  @include('admin.head')
@@ -40,7 +41,7 @@
                     @endif
                       <div class="card card-default">
                         <div class="card-header">
-                          <h2>Users</h2>
+                          <h2>Users List</h2>
 
                         </div>
                         <div class="card-body">

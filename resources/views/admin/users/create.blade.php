@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+    <title>Create User</title>
     @include('admin.head')
     <style>
         body, table, th, td {

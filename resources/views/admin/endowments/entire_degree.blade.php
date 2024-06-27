@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+    <title>Entire Degree </title>
   <head>
 
 
@@ -34,7 +35,7 @@
                     <div class="col-12">
                       <div class="card card-default">
                         <div class="card-header">
-                          <h2>Students</h2>
+                          <h2>Entire Degree List</h2>
 
                         </div>
                         <div class="card-body">

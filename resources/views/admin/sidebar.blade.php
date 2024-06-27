@@ -2,9 +2,11 @@
     <div id="sidebar" class="sidebar sidebar-with-footer">
         <!-- Application Brand -->
         <div class="app-brand">
-            <a href="{{url('dashboard2')}}">
-                <img src="admin2/images/logo.png" alt="Mono">
-                <span class="brand-name">Ecatalog</span>
+            <a href="{{ url('dashboard2') }}">
+                {{-- <img src="admin2/images/logo.png" alt="Mono" style="width: 30px; height: 30px;"> --}}
+                <img src="admin2/images/logo.png" alt="Mono" style="width: 40px; height: 40px; filter: brightness(250%);">
+
+                <span class="brand-name">catalog</span>
             </a>
         </div>
         <!-- begin sidebar scrollbar -->
@@ -12,7 +14,7 @@
             <!-- sidebar menu -->
             <ul class="nav sidebar-inner" id="sidebar-menu">
                 <li class="active">
-                    <a class="sidenav-item-link" href="{{url('dashboard2')}}">
+                    <a class="sidenav-item-link" href="{{ url('dashboard2') }}">
                         <i class="mdi mdi-view-dashboard"></i>
                         <span class="nav-text">Admin Dashboard</span>
                     </a>
@@ -27,7 +29,7 @@
                     <ul class="collapse" id="users" data-parent="#sidebar-menu">
                         <div class="sub-menu">
                             <li>
-                                <a class="sidenav-item-link" href="{{url('students_get')}}">
+                                <a class="sidenav-item-link" href="{{ url('students_get') }}">
                                     <span class="nav-text">Students List</span>
                                 </a>
                             </li>
@@ -44,22 +46,22 @@
                     <ul class="collapse" id="Giving_Avenues" data-parent="#sidebar-menu">
                         <div class="sub-menu">
                             <li>
-                                <a class="sidenav-item-link" href="{{url('one_year_education')}}">
+                                <a class="sidenav-item-link" href="{{ url('one_year_education') }}">
                                     <span class="nav-text">One year Education</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="{{url('entire_degree_education')}}">
+                                <a class="sidenav-item-link" href="{{ url('entire_degree_education') }}">
                                     <span class="nav-text">Entire Degree</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="{{url('perpetual_seat_in__your__name')}}">
+                                <a class="sidenav-item-link" href="{{ url('perpetual_seat_in__your__name') }}">
                                     <span class="nav-text">Perpetual Seat</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="{{url('zakat_support')}}">
+                                <a class="sidenav-item-link" href="{{ url('zakat_support') }}">
                                     <span class="nav-text">Zakat for Students</span>
                                 </a>
                             </li>
@@ -76,7 +78,7 @@
                     <ul class="collapse" id="FundaProject" data-parent="#sidebar-menu">
                         <div class="sub-menu">
                             <li>
-                                <a class="sidenav-item-link" href="{{url('fundaproject')}}">
+                                <a class="sidenav-item-link" href="{{ url('fundaproject') }}">
                                     <span class="nav-text">Fund a Project</span>
                                 </a>
                             </li>
@@ -93,12 +95,12 @@
                     <ul class="collapse" id="SupportScholor" data-parent="#sidebar-menu">
                         <div class="sub-menu">
                             <li>
-                                <a class="sidenav-item-link" href="{{url('suport_scholor_payment')}}">
+                                <a class="sidenav-item-link" href="{{ url('suport_scholor_payment') }}">
                                     <span class="nav-text">Payment Scholar</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="{{url('suport_scholor_pledge')}}">
+                                <a class="sidenav-item-link" href="{{ url('suport_scholor_pledge') }}">
                                     <span class="nav-text">Pledge Scholar</span>
                                 </a>
                             </li>
@@ -115,12 +117,12 @@
                     <ul class="collapse" id="Team" data-parent="#sidebar-menu">
                         <div class="sub-menu">
                             <li>
-                                <a class="sidenav-item-link" href="{{url('team_list')}}">
+                                <a class="sidenav-item-link" href="{{ url('team_list') }}">
                                     <span class="nav-text">Team List</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="{{url('add_team')}}">
+                                <a class="sidenav-item-link" href="{{ url('add_team') }}">
                                     <span class="nav-text">Add Team</span>
                                 </a>
                             </li>
@@ -137,7 +139,7 @@
                     <ul class="collapse" id="Messages" data-parent="#sidebar-menu">
                         <div class="sub-menu">
                             <li>
-                                <a class="sidenav-item-link" href="{{url('contact_us_message')}}">
+                                <a class="sidenav-item-link" href="{{ url('contact_us_message') }}">
                                     <span class="nav-text">Messages</span>
                                 </a>
                             </li>
@@ -147,18 +149,18 @@
                 <li class="has-sub">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#Users"
                        aria-expanded="false" aria-controls="Users">
-                        <i class="mdi mdi-email"></i>
+                        <i class="mdi mdi-account"></i>
                         <span class="nav-text">Users</span> <b class="caret"></b>
                     </a>
                     <ul class="collapse" id="Users" data-parent="#sidebar-menu">
                         <div class="sub-menu">
                             <li>
-                                <a class="sidenav-item-link" href="{{url('user_list')}}">
+                                <a class="sidenav-item-link" href="{{ url('user_list') }}">
                                     <span class="nav-text">User List</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="{{url('create')}}">
+                                <a class="sidenav-item-link" href="{{ url('create') }}">
                                     <span class="nav-text">Add User</span>
                                 </a>
                             </li>
@@ -169,18 +171,18 @@
                 <li class="has-sub">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#Events"
                        aria-expanded="false" aria-controls="Events">
-                        <i class="mdi mdi-email"></i>
+                        <i class="mdi mdi-calendar"></i>
                         <span class="nav-text">Events</span> <b class="caret"></b>
                     </a>
                     <ul class="collapse" id="Events" data-parent="#sidebar-menu">
                         <div class="sub-menu">
                             <li>
-                                <a class="sidenav-item-link" href="{{url('event_list')}}">
+                                <a class="sidenav-item-link" href="{{ url('event_list') }}">
                                     <span class="nav-text">Events List</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="sidenav-item-link" href="{{url('event_create')}}">
+                                <a class="sidenav-item-link" href="{{ url('event_create') }}">
                                     <span class="nav-text">Events User</span>
                                 </a>
                             </li>

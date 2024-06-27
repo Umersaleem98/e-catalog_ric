@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <title>Team List</title>
 
 
  @include('admin.head')
@@ -32,9 +33,14 @@
                   <!-- Table Product -->
                   <div class="row">
                     <div class="col-12">
+                        @if(session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
                       <div class="card card-default">
                         <div class="card-header">
-                          <h2>Students</h2>
+                          <h2>Team List</h2>
 
                         </div>
                         <div class="card-body">

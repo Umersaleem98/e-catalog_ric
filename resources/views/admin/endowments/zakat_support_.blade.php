@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <title>Zakat Fund List</title>
 
 
  @include('admin.head')
@@ -34,7 +35,7 @@
                     <div class="col-12">
                       <div class="card card-default">
                         <div class="card-header">
-                          <h2>Students</h2>
+                          <h2>Zakat Fund List</h2>
 
                         </div>
                         <div class="card-body">

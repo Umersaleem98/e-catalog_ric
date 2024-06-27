@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
 
+  <head>
+    <title>perpetual List</title>
 
  @include('admin.head')
 
@@ -34,7 +35,7 @@
                     <div class="col-12">
                       <div class="card card-default">
                         <div class="card-header">
-                          <h2>Students</h2>
+                          <h2>perpetual List</h2>
 
                         </div>
                         <div class="card-body">
