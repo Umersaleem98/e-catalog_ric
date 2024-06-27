@@ -31,7 +31,7 @@
                 <span>or use your email password</span>
                 <input type="email" name="email" placeholder="Email" value="{{ old('email') }}">
                 <input type="password" name="password" placeholder="Password">
-                <a href="#">→ Forget Your Password? ←</a>
+                {{-- <a href="#">→ Forget Your Password? ←</a> --}}
                 <button name="submit" type="submit">Sign In</button>
                 @if($errors->any())
                     <div class="alert alert-danger mt-2">
@@ -40,14 +40,14 @@
                 @endif
             </form>
         </div>
-        <div class="toggle-container">
-            <div class="toggle">
-                <div class="toggle-panel toggle-left">
+        <div class="toggle-container" >
+            <div class="toggle" >
+                <div class="toggle-panel toggle-left" style="background-color: #004476">
                     <h1>Welcome Back!</h1>
                     <p>Enter your personal details to use all of site features</p>
                     <button class="hidden" id="login">Sign In</button>
                 </div>
-                <div class="toggle-panel toggle-right">
+                <div class="toggle-panel toggle-right" style="background-color: #004476">
                     {{-- <h1>Hello, Friend!</h1> --}}
                     <p>Register with your personal details to use all of site features</p>
                     <button class="hidden" id="register">Sign Up</button>

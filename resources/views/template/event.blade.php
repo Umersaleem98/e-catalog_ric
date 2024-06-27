@@ -45,7 +45,7 @@
 
                         <div class="col-lg-4 order-lg-3 order-1">
                             <div class="event_image">
-                                <img src="{{ asset('templates/events/' . $item->images) }}" class="img-fluid mb-3" alt="{{ $item->images }} Image" style="max-height: 220px; width:100%">
+                                <img src="{{ asset('events/' . $item->images) }}" class="img-fluid mb-3" alt="{{ $item->images }} Image" style="max-height: 220px; width:100%">
                             </div>
                         </div>
 

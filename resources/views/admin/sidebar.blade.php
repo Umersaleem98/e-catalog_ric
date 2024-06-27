@@ -165,6 +165,28 @@
                         </div>
                     </ul>
                 </li>
+
+                <li class="has-sub">
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#Events"
+                       aria-expanded="false" aria-controls="Events">
+                        <i class="mdi mdi-email"></i>
+                        <span class="nav-text">Events</span> <b class="caret"></b>
+                    </a>
+                    <ul class="collapse" id="Events" data-parent="#sidebar-menu">
+                        <div class="sub-menu">
+                            <li>
+                                <a class="sidenav-item-link" href="{{url('event_list')}}">
+                                    <span class="nav-text">Events List</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sidenav-item-link" href="{{url('event_create')}}">
+                                    <span class="nav-text">Events User</span>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

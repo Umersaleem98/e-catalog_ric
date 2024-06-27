@@ -15,6 +15,7 @@ use App\Http\Controllers\CredentialController;
 use App\Http\Controllers\FundAProjectController;
 use App\Http\Controllers\SignatureStoryController;
 use App\Http\Controllers\DashboardEndowmentController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\SupportScholarPaymentController;
 use App\Http\Controllers\SupportADegreeForOneYearController;
 
@@ -121,3 +122,9 @@ Route::post('store_user', [UserController::class, 'store']);
 Route::get('edit/{id}', [UserController::class, 'edit']);
 Route::post('update/{id}', [UserController::class, 'update']);
 Route::get('delete/{id}', [UserController::class, 'delete']);
+
+
+Route::get('event_list', [EventController::class, 'index']);
+Route::get('event_create', [EventController::class, 'create']);
+Route::post('event_create', [EventController::class, 'store']);
+Route::get('event_delete/{id}', [EventController::class, 'delete']);
