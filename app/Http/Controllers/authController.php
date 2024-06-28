@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class authController extends Controller
 {
 
-    public function index2()
+    public function index()
 {
     $user = Auth::user();
 
@@ -37,7 +37,7 @@ class authController extends Controller
         $disciplineCounts[$discipline] = Student::where('discipline', $discipline)->count();
     }
 
-    return view('dashboard2', compact('user', 'disciplineCounts'));
+    return view('dashboard', compact('user', 'disciplineCounts'));
 }
 
 

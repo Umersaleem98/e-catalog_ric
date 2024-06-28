@@ -112,7 +112,7 @@ Route::post('login', [CredentialController::class, 'login']);
 Route::get('logout', [CredentialController::class, 'logout']);
 
 
-Route::get('dashboard2', [authController::class, 'index2']);
+// Route::get('dashboard2', [authController::class, 'index2']);
 
 // User Routes
 Route::get('user_list', [UserController::class, 'index']);

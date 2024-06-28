@@ -42,7 +42,7 @@
             <div class="row mb-5">
                 <div class="col">
                     <div class="section_title text-center">
-                        <h1 class="">Giving Avenues</h1>
+                        <h1 class="">Scholorship Giving Avenues</h1>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                                 </div>
                                 <div>
                                     <h2 class="card-title text-warning text">Sponsor One Year Education</h2>
-                                    <p class="card-text text-light">Empower a scholar with stress-free studies for an entire year at NUST. <h2 hidden>hhhhhh</h2>  </p>
+                                    <h3 class="card-text text-light">Empower a scholar with stress-free studies for an entire year at NUST. <h2 hidden>hhhhhh</h2>  </h3>
 
                                 </div>
                             </a>
@@ -76,7 +76,7 @@
                                 </div>
                                 <div>
                                     <h2 class="card-title text-warning">Adopt a Scholar</h2>
-                                    <p class="card-text text-light">Sponsor a scholar’s entire undergraduate journey, ensuring four years of education at NUST.</p>
+                                    <h3 class="card-text text-light">Sponsor a scholar’s entire undergraduate journey, ensuring four years of education at NUST.</h3>
                                 </div>
                             </a>
                         </div>
@@ -92,7 +92,7 @@
                                 </div>
                                 <div>
                                     <h2 class="card-title text-warning">Endowment: Gift a Perpetual Generosity</h2>
-                                    <p class="card-text text-light">Ensure your gift lasts forever—one scholar graduates, and another takes their place, perpetuating the cycle of opportunity.</p>
+                                    <h3 class="card-text text-light">Create a legacy by investing in education</h3>
                                 </div>
                             </a>
                         </div>
@@ -108,7 +108,7 @@
                                 </div>
                                 <div>
                                     <h2 class="card-title text-warning">Zakat: Intergenerational Impact </h2>
-                                    <p class="card-text text-light">Entrust your zakat in our  Shariah-compliant NEED Initiative & support needy scholars in their pursuit of higher education.</p>
+                                    <h3 class="card-text text-light">Entrust your zakat in our  Shariah-compliant NEED Initiative & support needy scholars in their pursuit of higher education.</h3>
                                 </div>
                             </a>
                         </div>

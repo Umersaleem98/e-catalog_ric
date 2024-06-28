@@ -40,42 +40,26 @@
                 </div>
             </div>
         </div>
-
-
-        <div class="container mt-3">
+        <div class="container mt-5">
             <div class="row">
-                <div class="col-md-6 mb-3">
-                    <form action="{{url('contactus')}}" method="POST">
-                        @csrf
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Your Phone</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                <div class="col-md-4 mb-3 mr-1 p-4 text-light" style="background-color: #085590;">
+                    <i></i>
+                    <h2 class="text-center"><i class="fas mr-3 fa-map-marker-alt"></i>Address</h2>
+                    <h3 class="text-center mt-3">RIC Secretariat NUST H-12 Islamabad</h3>
                 </div>
-                <div class="col-md-6 d-flex align-items-center justify-content-center">
-                    <img src="{{ asset('templates/contact_us/contact_us.jpg') }}" alt="Image 1" class="img-fluid rounded" style="max-width: 100%; max-height: 500px;">
+                <div class="col-md-3 mb-3 mr-1 p-4 text-light" style="background-color: #085590;">
+                    <h2 class="text-center"><i class="far mr-3 fa-envelope"></i>Email</h2>
+                    <h3 class="text-center mt-3">advancement.nust.edu.pk</h3>
                 </div>
-
+                <div class="col-md-4 mb-3 p-4 text-light" style="background-color: #085590;">
+                    <h2 class="text-center"><i class="fas mr-3 fa-phone"></i> phone</h2>
+                    <h3 class="text-center mt-3">+92 51 9085 6821</h3>
+                </div>
             </div>
         </div>
+
+
+
     </section>
     <br>
 </main>

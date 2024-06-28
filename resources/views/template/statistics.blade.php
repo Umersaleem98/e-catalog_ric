@@ -79,7 +79,7 @@
         </div>
         <div class="col-md-3 mb-1">
             <div class="stat-box">
-                <h3 class="stat-number text-warning" style="font-size: 25px;">94%</h3>
+                <h3 class="stat-number text-warning" style="font-size: 25px;">98%</h3>
                 <p class="stat-description text-light">GRADUATE EMPLOYMENT RATE</p>
             </div>
         </div>

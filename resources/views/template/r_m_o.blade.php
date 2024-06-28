@@ -59,6 +59,24 @@
                 </div>
             </div>
 
+            <div class="container-fluid py-2">
+                <div class="row">
+                    <div class="col-12">
+                        {{-- <h2 class="text-dark text-center mb-3">Members of NUST Advisory Council of Resource Mobilization</h2> --}}
+                    </div>
+                    <div class="col-md-12 mb-4">
+                        <p class="text-dark"><b>The NUST Advisory Council of Resource Mobilization includes dedicated</b> Resource Mobilization Officers who play a crucial role in executing strategies to secure support from corporate entities, businesses, and philanthropists. Their industrial insights and connections are instrumental in:</p>
+                        <p class="text-dark">
+                            <b>Developing NUST as an Inclusive Education Institution:</b> Leveraging their expertise and networks to promote inclusivity and diversity within the university, ensuring that education is accessible to all, regardless of financial barriers.
+                        </p>
+
+                        <p class="text-dark">
+                            <b>Strengthening Academic and Research Capabilities:</b>
+                            Facilitating partnerships and securing funding that enhance NUST's academic programs and research initiatives.
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class="row mb-3">
                 <!-- First Card -->
                 <div class="col-md-4">

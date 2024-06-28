@@ -27,9 +27,11 @@
                     <div class="hero_slide_content text-center mt-5">
                         <h1 class="display-4 font-weight-bold text-warning" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="font-family: Serif;">The support you lend today will remodel their tomorrow</h1>
                         <div class="hero_slide_buttons mt-3">
-                            <a href="{{url('endowment_model')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Giving Avenues</a>
-                            <a href="{{url('student_stories')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Awardee Profile</a>
-                            <a href="{{url('select_project')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Fund a Project</a>
+                            <a href="{{url('endowment_model')}}" class="btn btn-warning btn-lg m-2 display-3 p-4" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Scholorship Giving Avenues</a>
+                            <a href="{{url('student_stories')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Nurture a Dream
+                                <br><i>Stories of financially challenged Students</i>
+                            </a>
+                            <a href="{{url('select_project')}}" class="btn btn-warning btn-lg m-2 display-3 p-4" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Fund a Project</a>
                         </div>
                     </div>
                 </div>
@@ -42,9 +44,11 @@
                     <div class="hero_slide_content text-center mt-5">
                         <h1 class="display-4 font-weight-bold text-warning" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="font-family: Serif;">Your gift will be passed down to generations</h1>
                         <div class="hero_slide_buttons mt-3">
-                            <a href="{{url('endowment_model')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Giving Avenues</a>
-                            <a href="{{url('student_stories')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Awardee Profile</a>
-                            <a href="{{url('select_project')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Fund a Project</a>
+                            <a href="{{url('endowment_model')}}" class="btn btn-warning btn-lg m-2 display-3 p-4" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Scholorship Giving Avenues</a>
+                            <a href="{{url('student_stories')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Nurture a Dream
+                                <br><i>Stories of financially challenged Students</i>
+                            </a>
+                            <a href="{{url('select_project')}}" class="btn btn-warning btn-lg m-2 display-3 p-4" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Fund a Project</a>
                         </div>
                     </div>
                 </div>
@@ -56,9 +60,11 @@
                     <div class="hero_slide_content text-center mt-5">
                         <h1 class="display-4 font-weight-bold text-warning" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="font-family: Serif;">Build a legacy of lasting change</h1>
                         <div class="hero_slide_buttons mt-3">
-                            <a href="{{url('endowment_model')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Giving Avenues</a>
-                            <a href="{{url('student_stories')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Awardee Profile</a>
-                            <a href="{{url('select_project')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Fund a Project</a>
+                            <a href="{{url('endowment_model')}}" class="btn btn-warning btn-lg m-2 display-3 p-4" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Scholorship Giving Avenues</a>
+                            <a href="{{url('student_stories')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Nurture a Dream
+                                <br><i>Stories of financially challenged Students</i>
+                            </a>
+                            <a href="{{url('select_project')}}" class="btn btn-warning btn-lg m-2 display-3 p-4" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Fund a Project</a>
                         </div>
                     </div>
                 </div>

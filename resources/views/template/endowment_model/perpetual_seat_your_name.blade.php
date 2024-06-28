@@ -49,6 +49,14 @@
             background-color: #004476;
             color: white;
         }
+        .custom-tab {
+            background-color: #004476;
+            color: white;
+        }
+        .custom-tab.active {
+            background-color: orange !important;
+            color: white !important;
+        }
     </style>
 </head>
 <body>
@@ -77,16 +85,16 @@
             <div class="d-flex justify-content-center">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="single-endowment-ug-tab" data-bs-toggle="tab" data-bs-target="#single-endowment-ug" type="button" role="tab" aria-controls="single-endowment-ug" aria-selected="true" style="background-color: #004476; color:white">Single Endowment (UG)</button>
+                        <button class="nav-link custom-tab active" id="single-endowment-ug-tab" data-bs-toggle="tab" data-bs-target="#single-endowment-ug" type="button" role="tab" aria-controls="single-endowment-ug" aria-selected="true" style="background-color: #004476; color:white">Single Endowment (UG)</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="circular-endowment-ug-tab" data-bs-toggle="tab" data-bs-target="#circular-endowment-ug" type="button" role="tab" aria-controls="circular-endowment-ug" aria-selected="false" style="background-color: #004476; color:white">Circular Endowment (UG)</button>
+                        <button class="nav-link custom-tab" id="circular-endowment-ug-tab" data-bs-toggle="tab" data-bs-target="#circular-endowment-ug" type="button" role="tab" aria-controls="circular-endowment-ug" aria-selected="false" style="background-color: #004476; color:white">Circular Endowment (UG)</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="single-endowment-pg-tab" data-bs-toggle="tab" data-bs-target="#single-endowment-pg" type="button" role="tab" aria-controls="single-endowment-pg" aria-selected="false" style="background-color: #004476; color:white">Single Endowment (PG)</button>
+                        <button class="nav-link custom-tab" id="single-endowment-pg-tab" data-bs-toggle="tab" data-bs-target="#single-endowment-pg" type="button" role="tab" aria-controls="single-endowment-pg" aria-selected="false" style="background-color: #004476; color:white">Single Endowment (PG)</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="circular-endowment-pg-tab" data-bs-toggle="tab" data-bs-target="#circular-endowment-pg" type="button" role="tab" aria-controls="circular-endowment-pg" aria-selected="false" style="background-color: #004476; color:white">Circular Endowment (PG)</button>
+                        <button class="nav-link custom-tab" id="circular-endowment-pg-tab" data-bs-toggle="tab" data-bs-target="#circular-endowment-pg" type="button" role="tab" aria-controls="circular-endowment-pg" aria-selected="false" style="background-color: #004476; color:white">Circular Endowment (PG)</button>
                     </li>
 
                 </ul>

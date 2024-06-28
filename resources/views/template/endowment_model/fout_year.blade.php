@@ -49,6 +49,14 @@
             background-color: #004476;
             color: white;
         }
+        .custom-tab {
+            background-color: #004476;
+            color: white;
+        }
+        .custom-tab.active {
+            background-color: orange !important;
+            color: white !important;
+        }
     </style>
 </head>
 <body>
@@ -77,10 +85,10 @@
             <div class="d-flex justify-content-center">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="undergraduate-tab" data-bs-toggle="tab" data-bs-target="#undergraduate" type="button" role="tab" aria-controls="undergraduate" aria-selected="true" style="background-color: #004476 ; color:white" >Undergraduate</button>
+                        <button class="nav-link custom-tab active" id="undergraduate-tab" data-bs-toggle="tab" data-bs-target="#undergraduate" type="button" role="tab" aria-controls="undergraduate" aria-selected="true" style="background-color: #004476 ; color:white" >Undergraduate</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="postgraduate-tab" data-bs-toggle="tab" data-bs-target="#postgraduate" type="button" role="tab" aria-controls="postgraduate" aria-selected="false" style="background-color: #004476; color:white">Postgraduate</button>
+                        <button class="nav-link custom-tab" id="postgraduate-tab" data-bs-toggle="tab" data-bs-target="#postgraduate" type="button" role="tab" aria-controls="postgraduate" aria-selected="false" style="background-color: #004476; color:white">Postgraduate</button>
                     </li>
                 </ul>
             </div>

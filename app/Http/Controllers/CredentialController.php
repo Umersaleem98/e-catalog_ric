@@ -33,7 +33,7 @@ class CredentialController extends Controller
 
         if (Auth::attempt($credentials, $request->filled('remember'))) {
             // Authentication passed, redirect to intended route or home
-            return redirect()->intended('/dashboard2');
+            return redirect()->intended('/dashboard');
         }
 
         // Authentication failed, redirect back with input
