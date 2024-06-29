@@ -87,12 +87,12 @@ Route::get('/dashboard', [authController::class, 'index']);
 Route::get('/contact_us_message', [authController::class, 'messages']);
 
 // Team routes
-Route::get('/add_team', [TeamController::class, 'index']);
-Route::post('/add_team_member', [TeamController::class, 'store']);
-Route::get('/team_list', [TeamController::class, 'show']);
-Route::get('/team_edit/{id}', [TeamController::class, 'edit']);
-Route::post('/update/{id}', [TeamController::class, 'update']);
-Route::get('/delete/{id}', [TeamController::class, 'delete']);
+Route::get('add_team', [TeamController::class, 'index']);
+Route::post('add_team_member', [TeamController::class, 'store']);
+Route::get('team_list', [TeamController::class, 'show']);
+Route::get('team_edit/{id}', [TeamController::class, 'edit']);
+Route::post('update/{id}', [TeamController::class, 'update']);
+Route::get('team_delete/{id}', [TeamController::class, 'destory']);
 
 
 Route::get('one_year_education', [DashboardEndowmentController::class, 'one_year']);

@@ -79,7 +79,7 @@
                                             <a href="{{ url('team_edit', $item->id) }}" class="btn btn-primary">Edit</a>
                                         </td>
                                         <td>
-                                            <a href="{{ url('delete', $item->id) }}" class="btn btn-danger">Delete</a>
+                                            <a href="{{ url('team_delete', $item->id) }}" class="btn btn-danger">Delete</a>
                                         </td>
                                     </tr>
                                     @endforeach

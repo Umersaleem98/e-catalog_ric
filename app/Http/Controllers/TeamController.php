@@ -17,7 +17,7 @@ class TeamController extends Controller
     }
     public function index()
     {
-        return view('layouts.team.index');
+        return view('admin.team.index');
     }
 
     public function show()
@@ -108,7 +108,7 @@ public function update(Request $request, $id)
 }
 
 
-public function delete($id)
+public function destory($id)
 {
     $teams = Team::find($id);
     $teams->delete();

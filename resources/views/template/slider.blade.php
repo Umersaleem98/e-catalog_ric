@@ -1,127 +1,96 @@
-<style>
-    @keyframes popIn {
-        0% {
-            transform: scale(0.5);
-            opacity: 0;
+
+    <style>
+        .carousel-item {
+            height: 100vh;
+            min-height: 300px;
+            background: no-repeat center center scroll;
+            background-size: cover;
         }
-        100% {
-            transform: scale(1);
-            opacity: 1;
+        .carousel-caption {
+            bottom: 50%;
+            transform: translateY(50%);
         }
-    }
-    .btn{
+        .carousel-caption h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: yellow;
+        }
+        .carousel-caption p {
+            font-size: 1.5rem;
+            color: #FFBF39;
+        }
+        .carousel-caption a {
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-color: #FFBF39;
+            color: #FFBF39;
+        }
+        .carousel-caption a.btn {
+        margin-top: 1rem;
+        font-size: 1rem;
         font-weight: bold;
+        color: #000; /* Black text color */
+        background-color: #FFBF39; /* Button background color */
+        border-color: #FFBF39; /* Button border color */
     }
-</style>
 
-<div class="container-fluid">
-    <div class="hero_slider_container">
-        <div class="hero_slider owl-carousel">
+    .carousel-caption a.btn:hover {
+        background-color: #FFBF39; /* Change hover background color if needed */
+        color: #000; /* Change hover text color if needed */
+    }
+    </style>
+</head>
+<body>
 
-            <!-- Additional slides -->
-
-            <div class="hero_slide">
-                <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/def.jpg') }}')"></div>
-                {{-- <div class="hero_slide_background" style="background-image: url('images/def.jpg'); height: 100vh; background-size: cover; background-position: center;"></div> --}}
-                <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-                    <div class="hero_slide_content text-center mt-5">
-                        <h1 class="display-4 font-weight-bold text-warning" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="font-family: Serif;">The support you lend today will remodel their tomorrow</h1>
-                        <div class="hero_slide_buttons mt-3">
-                            <a href="{{url('endowment_model')}}" class="btn btn-warning btn-lg m-2 display-3 p-4" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Scholorship Giving Avenues</a>
-                            <a href="{{url('student_stories')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Nurture a Dream
-                                <br><i>Stories of financially challenged Students</i>
-                            </a>
-                            <a href="{{url('select_project')}}" class="btn btn-warning btn-lg m-2 display-3 p-4" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Fund a Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- More slides can be added here in the same format -->
-            <div class="hero_slide">
-                <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/ghi.jpg') }}')"></div>
-                {{-- <div class="hero_slide_background" style="background-image: url('images/new_image1.jpg'); height: 100vh; background-size: cover; background-position: center;"></div> --}}
-                <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-                    <div class="hero_slide_content text-center mt-5">
-                        <h1 class="display-4 font-weight-bold text-warning" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="font-family: Serif;">Your gift will be passed down to generations</h1>
-                        <div class="hero_slide_buttons mt-3">
-                            <a href="{{url('endowment_model')}}" class="btn btn-warning btn-lg m-2 display-3 p-4" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Scholorship Giving Avenues</a>
-                            <a href="{{url('student_stories')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Nurture a Dream
-                                <br><i>Stories of financially challenged Students</i>
-                            </a>
-                            <a href="{{url('select_project')}}" class="btn btn-warning btn-lg m-2 display-3 p-4" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Fund a Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero_slide">
-                {{-- <div class="hero_slide_background" style="background-image: url('images/new_image2.jpg'); height: 100vh; background-size: cover; background-position: center;"></div> --}}
-                <div class="hero_slide_background" style="background-image: url('{{ asset('templates/images/mno.jpg') }}')"></div>
-                <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-                    <div class="hero_slide_content text-center mt-5">
-                        <h1 class="display-4 font-weight-bold text-warning" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="font-family: Serif;">Build a legacy of lasting change</h1>
-                        <div class="hero_slide_buttons mt-3">
-                            <a href="{{url('endowment_model')}}" class="btn btn-warning btn-lg m-2 display-3 p-4" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Scholorship Giving Avenues</a>
-                            <a href="{{url('student_stories')}}" class="btn btn-warning btn-lg m-2 display-3" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Nurture a Dream
-                                <br><i>Stories of financially challenged Students</i>
-                            </a>
-                            <a href="{{url('select_project')}}" class="btn btn-warning btn-lg m-2 display-3 p-4" data-animation-in="popIn" style="animation: popIn 0.5s forwards; animation-delay: 0.3s;">Fund a Project</a>
-                        </div>
-                    </div>
-                </div>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url('{{ asset('templates/images/mno.jpg') }}'); ">
+            <div class="carousel-caption text-center">
+                <h1 style="color: #FFBF39;">The support you lend today will remodel their tomorrow</h1>
+                {{-- <p>Best & free guide of responsive web design</p> --}}
+                <a href="{{url('endowment_model')}}" class="btn btn-outline-light btn-lg">Scholarship Giving Avenues</a>
+                <a href="{{url('student_stories')}}" class="btn btn-outline-light btn-lg">Nurture a Dream</a>
+                {{-- <a href="{{url('student_stories')}}" class="btn btn-outline-light btn-lg">Nurture a Dream<br> Stories of financially challenged Students</a> --}}
+                <a href="{{url('select_project')}}" class="btn btn-outline-light btn-lg">Fund a Project</a>
             </div>
         </div>
-
-        <!-- Navigation arrows (optional) -->
-
-        {{-- <div class="hero_slider_left hero_slider_nav trans_200"><span class="trans_200">prev</span></div>
-        <div class="hero_slider_right hero_slider_nav trans_200"><span class="trans_200">next</span></div> --}}
-
+        <div class="carousel-item" style="background-image: url('{{ asset('templates/images/def.jpg') }}'); ">
+            <div class="carousel-caption text-center">
+                <h1 style="color: #FFBF39;">Your gift will be passed down to generations</h1>
+                {{-- <p>Description for the second slide</p> --}}
+                <a href="{{url('endowment_model')}}" class="btn btn-outline-light btn-lg">Scholarship Giving Avenues</a>
+                <a href="{{url('student_stories')}}" class="btn btn-outline-light btn-lg">Nurture a Dream</a>
+                {{-- <a href="{{url('student_stories')}}" class="btn btn-outline-light btn-lg">Nurture a Dream<br> Stories of financially challenged Students</a> --}}
+                <a href="{{url('select_project')}}" class="btn btn-outline-light btn-lg">Fund a Project</a>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('{{ asset('templates/images/abc.jpg') }}');  ">
+            <div class="carousel-caption text-center">
+                <h1 style="color: #FFBF39;">Build a legacy of lasting change</h1>
+                <a href="{{url('endowment_model')}}" class="btn btn-outline-light btn-lg">Scholarship Giving Avenues</a>
+                <a href="{{url('student_stories')}}" class="btn btn-outline-light btn-lg">Nurture a Dream</a>
+                {{-- <a href="{{url('student_stories')}}" class="btn btn-outline-light btn-lg">Nurture a Dream<br> Stories of financially challenged Students</a> --}}
+                <a href="{{url('select_project')}}" class="btn btn-outline-light btn-lg">Fund a Project</a>
+            </div>
+        </div>
     </div>
 </div>
 
+<!-- Link Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0-beta2/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript for automatic sliding -->
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const heroBoxes = document.querySelectorAll('.hero_box');
-        const heroSlider = document.querySelector('.hero_slider');
-        const heroSlides = document.querySelectorAll('.hero_slide');
-
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    const buttons = entry.target.querySelectorAll('.button[data-animation-in]');
-                    buttons.forEach(button => {
-                        const animationIn = button.getAttribute('data-animation-in');
-                        button.style.animationName = animationIn;
-                    });
-                } else {
-                    entry.target.classList.remove('visible');
-                }
-            });
-        }, observerOptions);
-
-        heroBoxes.forEach(box => {
-            observer.observe(box);
-        });
-
-        heroSlides.forEach(slide => {
-            observer.observe(slide);
-        });
-
-        // Add event listener to the Owl Carousel slider
-        heroSlider.addEventListener('changed.owl.carousel', (event) => {
-            const currentSlide = event.item.index;
-            const buttons = heroSlides[currentSlide].querySelectorAll('.button[data-animation-in]');
-            buttons.forEach(button => {
-                const animationIn = button.getAttribute('data-animation-in');
-                button.style.animationName = animationIn;
-            });
-        });
+    var carousel = document.getElementById('carouselExampleIndicators');
+    var carouselInstance = new bootstrap.Carousel(carousel, {
+        interval: 1500, // Adjusts the speed (milliseconds)
+        wrap: true, // Enables continuous sliding
+        keyboard: false, // Disables keyboard navigation
+        pause: 'hover', // Pauses on mouse hover
+        ride: 'carousel' // Autostart the carousel
     });
 </script>
+
+</body>
+</html>
